@@ -1,0 +1,706 @@
+{
+  "environment_artifact": "results/mace_off23_small_global_environment_balanced.npz",
+  "experiment": "E6_projected_first_branch_diagnostics",
+  "full_rank_gate_maximum_energy_or_force_error": 6.217248937900877e-15,
+  "full_rank_gate_methods": [
+    "global_environment",
+    "local_radial_svd"
+  ],
+  "full_rank_maximum_energy_or_force_error": 1.709112851244754e-10,
+  "full_rank_tolerance": 5e-10,
+  "gate_passed": true,
+  "map_residual_tolerance": 5e-05,
+  "methods": [
+    {
+      "method": "global_environment",
+      "rank_ladder": [
+        {
+          "canonical_coordinate_count_per_species": 64,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.6440746816865062,
+              "energy_error_eV": 0.6440746816865062,
+              "force_max_absolute_error_eV_per_A": 0.11217560488537731,
+              "force_rmse_eV_per_A": 0.10033291117634417,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -5.9180277835434465
+            },
+            {
+              "energy_absolute_error_eV": 0.38204805081515936,
+              "energy_error_eV": 0.38204805081515936,
+              "force_max_absolute_error_eV_per_A": 0.3217758842480376,
+              "force_rmse_eV_per_A": 0.17908736215749252,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -2.9210556998785506
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.6440746816865062,
+          "maximum_force_absolute_error_eV_per_A": 0.3217758842480376,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 8.982115692920033e-15,
+          "multiplicity_rank_per_irrep": 4
+        },
+        {
+          "canonical_coordinate_count_per_species": 128,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.1635774038368094,
+              "energy_error_eV": 0.1635774038368094,
+              "force_max_absolute_error_eV_per_A": 0.07457691958108219,
+              "force_rmse_eV_per_A": 0.06670362469433384,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.398525061393143
+            },
+            {
+              "energy_absolute_error_eV": 0.46033482945547943,
+              "energy_error_eV": 0.46033482945547943,
+              "force_max_absolute_error_eV_per_A": 0.2661237464299778,
+              "force_rmse_eV_per_A": 0.16004284699837443,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -2.8427689212382306
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.46033482945547943,
+          "maximum_force_absolute_error_eV_per_A": 0.2661237464299778,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 7.052291798459559e-15,
+          "multiplicity_rank_per_irrep": 8
+        },
+        {
+          "canonical_coordinate_count_per_species": 256,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.11224387464661234,
+              "energy_error_eV": 0.11224387464661234,
+              "force_max_absolute_error_eV_per_A": 0.17194687025083796,
+              "force_rmse_eV_per_A": 0.1537939561596838,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.44985859058334
+            },
+            {
+              "energy_absolute_error_eV": 0.09253480374425838,
+              "energy_error_eV": 0.09253480374425838,
+              "force_max_absolute_error_eV_per_A": 0.13486103767370775,
+              "force_rmse_eV_per_A": 0.06962900906392087,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.2105689469494516
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.11224387464661234,
+          "maximum_force_absolute_error_eV_per_A": 0.17194687025083796,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 5.877157513597898e-15,
+          "multiplicity_rank_per_irrep": 16
+        },
+        {
+          "canonical_coordinate_count_per_species": 512,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.01576780737782002,
+              "energy_error_eV": -0.01576780737782002,
+              "force_max_absolute_error_eV_per_A": 0.0330402345062949,
+              "force_rmse_eV_per_A": 0.029552084139443668,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.577870272607773
+            },
+            {
+              "energy_absolute_error_eV": 0.034169220942771084,
+              "energy_error_eV": 0.034169220942771084,
+              "force_max_absolute_error_eV_per_A": 0.020623161231188597,
+              "force_rmse_eV_per_A": 0.012328815626366717,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.268934529750939
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.034169220942771084,
+          "maximum_force_absolute_error_eV_per_A": 0.0330402345062949,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 6.911923853602666e-15,
+          "multiplicity_rank_per_irrep": 32
+        },
+        {
+          "canonical_coordinate_count_per_species": 768,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.006808576399728317,
+              "energy_error_eV": 0.006808576399728317,
+              "force_max_absolute_error_eV_per_A": 0.006004178740456889,
+              "force_rmse_eV_per_A": 0.005370300725088003,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.555293888830224
+            },
+            {
+              "energy_absolute_error_eV": 0.013119763355765812,
+              "energy_error_eV": 0.013119763355765812,
+              "force_max_absolute_error_eV_per_A": 0.004985626703113144,
+              "force_rmse_eV_per_A": 0.002740733183560945,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.289983987337944
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.013119763355765812,
+          "maximum_force_absolute_error_eV_per_A": 0.006004178740456889,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 7.220304488076614e-15,
+          "multiplicity_rank_per_irrep": 48
+        },
+        {
+          "canonical_coordinate_count_per_species": 1024,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.0004746853040291654,
+              "energy_error_eV": 0.0004746853040291654,
+              "force_max_absolute_error_eV_per_A": 0.00040074169522816283,
+              "force_rmse_eV_per_A": 0.00035843426877927144,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.5616277799259235
+            },
+            {
+              "energy_absolute_error_eV": 0.0013766667620007667,
+              "energy_error_eV": 0.0013766667620007667,
+              "force_max_absolute_error_eV_per_A": 0.0016836397953642057,
+              "force_rmse_eV_per_A": 0.0010173349259324951,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.301727083931709
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.0013766667620007667,
+          "maximum_force_absolute_error_eV_per_A": 0.0016836397953642057,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 1.002339954712517e-14,
+          "multiplicity_rank_per_irrep": 64
+        },
+        {
+          "canonical_coordinate_count_per_species": 1280,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 1.7448983312462474e-05,
+              "energy_error_eV": -1.7448983312462474e-05,
+              "force_max_absolute_error_eV_per_A": 9.420408929694535e-05,
+              "force_rmse_eV_per_A": 8.42586989703083e-05,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.562119914213265
+            },
+            {
+              "energy_absolute_error_eV": 3.6904740514653867e-05,
+              "energy_error_eV": 3.6904740514653867e-05,
+              "force_max_absolute_error_eV_per_A": 0.00015799090210250055,
+              "force_rmse_eV_per_A": 8.100358484504717e-05,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.3030668459531953
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 3.6904740514653867e-05,
+          "maximum_force_absolute_error_eV_per_A": 0.00015799090210250055,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 1.4882629077583465e-14,
+          "multiplicity_rank_per_irrep": 80
+        },
+        {
+          "canonical_coordinate_count_per_species": 1536,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 6.217248937900877e-15,
+              "energy_error_eV": 6.217248937900877e-15,
+              "force_max_absolute_error_eV_per_A": 1.970645868709653e-15,
+              "force_rmse_eV_per_A": 1.5462496407634837e-15,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.5621024652299464
+            },
+            {
+              "energy_absolute_error_eV": 8.881784197001252e-16,
+              "energy_error_eV": -8.881784197001252e-16,
+              "force_max_absolute_error_eV_per_A": 3.3306690738754696e-15,
+              "force_rmse_eV_per_A": 1.5417327715656556e-15,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.303103750693711
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 6.217248937900877e-15,
+          "maximum_force_absolute_error_eV_per_A": 3.3306690738754696e-15,
+          "maximum_map_algebra_residual": 5.576312692459814e-08,
+          "maximum_relative_projector_idempotence_residual": 9.717439685276885e-12,
+          "multiplicity_rank_per_irrep": 96
+        }
+      ]
+    },
+    {
+      "method": "local_radial_svd",
+      "rank_ladder": [
+        {
+          "canonical_coordinate_count_per_species": 64,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 1.337115471037043,
+              "energy_error_eV": 1.337115471037043,
+              "force_max_absolute_error_eV_per_A": 0.028581931407606787,
+              "force_rmse_eV_per_A": 0.0255644566222578,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -5.22498699419291
+            },
+            {
+              "energy_absolute_error_eV": 1.1192346452446778,
+              "energy_error_eV": 1.1192346452446778,
+              "force_max_absolute_error_eV_per_A": 0.4722939309537857,
+              "force_rmse_eV_per_A": 0.2773413020567439,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -2.1838691054490322
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 1.337115471037043,
+          "maximum_force_absolute_error_eV_per_A": 0.4722939309537857,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 1.0697687547499866e-14,
+          "multiplicity_rank_per_irrep": 4
+        },
+        {
+          "canonical_coordinate_count_per_species": 128,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 1.0129454297816816,
+              "energy_error_eV": 1.0129454297816816,
+              "force_max_absolute_error_eV_per_A": 0.10596392184080511,
+              "force_rmse_eV_per_A": 0.09477701295940583,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -5.549157035448271
+            },
+            {
+              "energy_absolute_error_eV": 0.687208159446401,
+              "energy_error_eV": 0.687208159446401,
+              "force_max_absolute_error_eV_per_A": 0.3953252535834678,
+              "force_rmse_eV_per_A": 0.22670142139883112,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -2.615895591247309
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 1.0129454297816816,
+          "maximum_force_absolute_error_eV_per_A": 0.3953252535834678,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 7.648254078451136e-15,
+          "multiplicity_rank_per_irrep": 8
+        },
+        {
+          "canonical_coordinate_count_per_species": 256,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.6157791775720449,
+              "energy_error_eV": 0.6157791775720449,
+              "force_max_absolute_error_eV_per_A": 0.038878299476011374,
+              "force_rmse_eV_per_A": 0.03477380819118223,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -5.946323287657908
+            },
+            {
+              "energy_absolute_error_eV": 0.2803201848860457,
+              "energy_error_eV": 0.2803201848860457,
+              "force_max_absolute_error_eV_per_A": 0.4481319219315458,
+              "force_rmse_eV_per_A": 0.2471204929023306,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.0227835658076643
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.6157791775720449,
+          "maximum_force_absolute_error_eV_per_A": 0.4481319219315458,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 5.570105745435829e-15,
+          "multiplicity_rank_per_irrep": 16
+        },
+        {
+          "canonical_coordinate_count_per_species": 512,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.18044782128970738,
+              "energy_error_eV": 0.18044782128970738,
+              "force_max_absolute_error_eV_per_A": 0.13792765977259744,
+              "force_rmse_eV_per_A": 0.12336624929159629,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.381654643940245
+            },
+            {
+              "energy_absolute_error_eV": 0.10150555916179771,
+              "energy_error_eV": 0.10150555916179771,
+              "force_max_absolute_error_eV_per_A": 0.16233758536894524,
+              "force_rmse_eV_per_A": 0.08832497814337435,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.2015981915319123
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.18044782128970738,
+          "maximum_force_absolute_error_eV_per_A": 0.16233758536894524,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 6.319894672210884e-15,
+          "multiplicity_rank_per_irrep": 32
+        },
+        {
+          "canonical_coordinate_count_per_species": 768,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.03743344763940204,
+              "energy_error_eV": 0.03743344763940204,
+              "force_max_absolute_error_eV_per_A": 0.004595070559859388,
+              "force_rmse_eV_per_A": 0.004109956053301193,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.524669017590551
+            },
+            {
+              "energy_absolute_error_eV": 0.026120159484725125,
+              "energy_error_eV": 0.026120159484725125,
+              "force_max_absolute_error_eV_per_A": 0.015422293024803913,
+              "force_rmse_eV_per_A": 0.008220222808293352,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.276983591208985
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.03743344763940204,
+          "maximum_force_absolute_error_eV_per_A": 0.015422293024803913,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 5.7543819705616294e-15,
+          "multiplicity_rank_per_irrep": 48
+        },
+        {
+          "canonical_coordinate_count_per_species": 1024,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.0016285761973238166,
+              "energy_error_eV": -0.0016285761973238166,
+              "force_max_absolute_error_eV_per_A": 0.006149203403605641,
+              "force_rmse_eV_per_A": 0.005500014727173937,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.5637310414272765
+            },
+            {
+              "energy_absolute_error_eV": 0.005561901250403345,
+              "energy_error_eV": 0.005561901250403345,
+              "force_max_absolute_error_eV_per_A": 0.008548016505964096,
+              "force_rmse_eV_per_A": 0.004491596474116982,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.2975418494433066
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.005561901250403345,
+          "maximum_force_absolute_error_eV_per_A": 0.008548016505964096,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 1.1563982587656245e-14,
+          "multiplicity_rank_per_irrep": 64
+        },
+        {
+          "canonical_coordinate_count_per_species": 1280,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 0.0007895804842359411,
+              "energy_error_eV": -0.0007895804842359411,
+              "force_max_absolute_error_eV_per_A": 0.0013383433121391952,
+              "force_rmse_eV_per_A": 0.0011970506492699853,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.562892045714189
+            },
+            {
+              "energy_absolute_error_eV": 0.00016956866269790538,
+              "energy_error_eV": 0.00016956866269790538,
+              "force_max_absolute_error_eV_per_A": 0.001712313136378485,
+              "force_rmse_eV_per_A": 0.000890545820844371,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.302934182031012
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 0.0007895804842359411,
+          "maximum_force_absolute_error_eV_per_A": 0.001712313136378485,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 1.2372470181041011e-14,
+          "multiplicity_rank_per_irrep": 80
+        },
+        {
+          "canonical_coordinate_count_per_species": 1536,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 5.329070518200751e-15,
+              "energy_error_eV": 5.329070518200751e-15,
+              "force_max_absolute_error_eV_per_A": 1.7208456881689926e-15,
+              "force_rmse_eV_per_A": 1.3052451069710953e-15,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.562102465229947
+            },
+            {
+              "energy_absolute_error_eV": 1.3322676295501878e-15,
+              "energy_error_eV": -1.3322676295501878e-15,
+              "force_max_absolute_error_eV_per_A": 3.7192471324942744e-15,
+              "force_rmse_eV_per_A": 1.7609910840231755e-15,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.3031037506937113
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 5.329070518200751e-15,
+          "maximum_force_absolute_error_eV_per_A": 3.7192471324942744e-15,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 9.717421584276821e-12,
+          "multiplicity_rank_per_irrep": 96
+        }
+      ]
+    },
+    {
+      "method": "canonical_random",
+      "rank_ladder": [
+        {
+          "canonical_coordinate_count_per_species": 64,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 7.508659333529914,
+              "energy_error_eV": 7.508659333529914,
+              "force_max_absolute_error_eV_per_A": 0.5744457989531775,
+              "force_rmse_eV_per_A": 0.5137999423390833,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": 0.9465568682999612
+            },
+            {
+              "energy_absolute_error_eV": 3.968651991141798,
+              "energy_error_eV": 3.968651991141798,
+              "force_max_absolute_error_eV_per_A": 4.8026664762256015,
+              "force_rmse_eV_per_A": 2.690942406053176,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": 0.665548240448088
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 7.508659333529914,
+          "maximum_force_absolute_error_eV_per_A": 4.8026664762256015,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 2.33470891157724e-10,
+          "multiplicity_rank_per_irrep": 4
+        },
+        {
+          "canonical_coordinate_count_per_species": 128,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 8.986630362190684,
+              "energy_error_eV": 8.986630362190684,
+              "force_max_absolute_error_eV_per_A": 1.7213672913676685,
+              "force_rmse_eV_per_A": 1.5396377110968458,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": 2.424527896960732
+            },
+            {
+              "energy_absolute_error_eV": 3.2656139819168004,
+              "energy_error_eV": 3.2656139819168004,
+              "force_max_absolute_error_eV_per_A": 4.528164870996365,
+              "force_rmse_eV_per_A": 2.5632973773806973,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -0.03748976877690978
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 8.986630362190684,
+          "maximum_force_absolute_error_eV_per_A": 4.528164870996365,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 2.345706151460351e-10,
+          "multiplicity_rank_per_irrep": 8
+        },
+        {
+          "canonical_coordinate_count_per_species": 256,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 9.785242194675362,
+              "energy_error_eV": 9.785242194675362,
+              "force_max_absolute_error_eV_per_A": 2.0194845295964226,
+              "force_rmse_eV_per_A": 1.80628187506951,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": 3.2231397294454087
+            },
+            {
+              "energy_absolute_error_eV": 2.821830410478225,
+              "energy_error_eV": 2.821830410478225,
+              "force_max_absolute_error_eV_per_A": 6.226457584041888,
+              "force_rmse_eV_per_A": 3.5453021909216424,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -0.4812733402154852
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 9.785242194675362,
+          "maximum_force_absolute_error_eV_per_A": 6.226457584041888,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 2.9283866511361696e-09,
+          "multiplicity_rank_per_irrep": 16
+        },
+        {
+          "canonical_coordinate_count_per_species": 512,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 8.798821069576238,
+              "energy_error_eV": 8.798821069576238,
+              "force_max_absolute_error_eV_per_A": 0.2995050257259647,
+              "force_rmse_eV_per_A": 0.2678854388406839,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": 2.236718604346285
+            },
+            {
+              "energy_absolute_error_eV": 3.061490517795385,
+              "energy_error_eV": 3.061490517795385,
+              "force_max_absolute_error_eV_per_A": 0.9730537274428959,
+              "force_rmse_eV_per_A": 0.5348410233281868,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -0.24161323289832495
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 8.798821069576238,
+          "maximum_force_absolute_error_eV_per_A": 0.9730537274428959,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 9.679355381126787e-10,
+          "multiplicity_rank_per_irrep": 32
+        },
+        {
+          "canonical_coordinate_count_per_species": 768,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 7.3073043208740796,
+              "energy_error_eV": 7.3073043208740796,
+              "force_max_absolute_error_eV_per_A": 1.8374988134190093,
+              "force_rmse_eV_per_A": 1.6435089021484095,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": 0.7452018556441271
+            },
+            {
+              "energy_absolute_error_eV": 2.1659354175760956,
+              "energy_error_eV": 2.1659354175760956,
+              "force_max_absolute_error_eV_per_A": 2.421794521505327,
+              "force_rmse_eV_per_A": 1.2867757426070583,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -1.1371683331176146
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 7.3073043208740796,
+          "maximum_force_absolute_error_eV_per_A": 2.421794521505327,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 2.1950818953045225e-09,
+          "multiplicity_rank_per_irrep": 48
+        },
+        {
+          "canonical_coordinate_count_per_species": 1024,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 1.6933816292366117,
+              "energy_error_eV": 1.6933816292366117,
+              "force_max_absolute_error_eV_per_A": 1.4389076045032847,
+              "force_rmse_eV_per_A": 1.286998086793291,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -4.868720835993341
+            },
+            {
+              "energy_absolute_error_eV": 0.7392239721248011,
+              "energy_error_eV": 0.7392239721248011,
+              "force_max_absolute_error_eV_per_A": 1.2580598504987541,
+              "force_rmse_eV_per_A": 0.6684360503854034,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -2.563879778568909
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 1.6933816292366117,
+          "maximum_force_absolute_error_eV_per_A": 1.4389076045032847,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 4.931886663326427e-09,
+          "multiplicity_rank_per_irrep": 64
+        },
+        {
+          "canonical_coordinate_count_per_species": 1280,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 1.7346261143718458,
+              "energy_error_eV": 1.7346261143718458,
+              "force_max_absolute_error_eV_per_A": 0.23884419041279112,
+              "force_rmse_eV_per_A": 0.213628738309376,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -4.827476350858107
+            },
+            {
+              "energy_absolute_error_eV": 0.18771343904637483,
+              "energy_error_eV": 0.18771343904637483,
+              "force_max_absolute_error_eV_per_A": 0.5541303721492936,
+              "force_rmse_eV_per_A": 0.3092291025477248,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.115390311647335
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 1.7346261143718458,
+          "maximum_force_absolute_error_eV_per_A": 0.5541303721492936,
+          "maximum_map_algebra_residual": 4.027406470318601e-08,
+          "maximum_relative_projector_idempotence_residual": 3.186922894242455e-09,
+          "multiplicity_rank_per_irrep": 80
+        },
+        {
+          "canonical_coordinate_count_per_species": 1536,
+          "geometries": [
+            {
+              "energy_absolute_error_eV": 5.923972423715895e-11,
+              "energy_error_eV": -5.923972423715895e-11,
+              "force_max_absolute_error_eV_per_A": 2.2233395680082424e-11,
+              "force_rmse_eV_per_A": 1.3948676142844202e-11,
+              "formula": "CH4",
+              "native_branch_energy_eV": -6.562102465229953,
+              "projected_branch_energy_eV": -6.562102465289192
+            },
+            {
+              "energy_absolute_error_eV": 1.709112851244754e-10,
+              "energy_error_eV": 1.709112851244754e-10,
+              "force_max_absolute_error_eV_per_A": 1.3846168656073132e-10,
+              "force_rmse_eV_per_A": 6.696939866385207e-11,
+              "formula": "H2O",
+              "native_branch_energy_eV": -3.30310375069371,
+              "projected_branch_energy_eV": -3.3031037505227987
+            }
+          ],
+          "maximum_energy_absolute_error_eV": 1.709112851244754e-10,
+          "maximum_force_absolute_error_eV_per_A": 1.3846168656073132e-10,
+          "maximum_map_algebra_residual": 4.383252417077639e-08,
+          "maximum_relative_projector_idempotence_residual": 6.696214505075344e-09,
+          "multiplicity_rank_per_irrep": 96
+        }
+      ]
+    }
+  ],
+  "radial_artifact": "results/mace_off23_small_radial_interface.npz",
+  "random_seed": 20260924,
+  "schema_version": 1,
+  "scope": "These two molecules are integration diagnostics only. They are not a held-out fidelity result and cannot establish a scientific advantage."
+}

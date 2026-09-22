@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "scope": "Independent algebraic tests; no real-MACE execution.",
+  "number_of_test_groups": 8,
+  "tests": {
+    "angular_counts": {
+      "counts": [
+        {
+          "ell": 0,
+          "parity": 1,
+          "ordered_paths": 23,
+          "symmetric_multiplicity": 8,
+          "nullity": 15
+        },
+        {
+          "ell": 1,
+          "parity": -1,
+          "ordered_paths": 51,
+          "symmetric_multiplicity": 12,
+          "nullity": 39
+        },
+        {
+          "ell": 2,
+          "parity": 1,
+          "ordered_paths": 65,
+          "symmetric_multiplicity": 14,
+          "nullity": 51
+        }
+      ],
+      "scalar_order_1_paths": 1,
+      "scalar_order_2_paths": 4,
+      "scope": "Representation-theoretic counts; not a check of serialized MACE buffers."
+    },
+    "sharp_factor_three_example": {
+      "eta": 0.001,
+      "gamma": [
+        [
+          2.999,
+          0.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "spectral_squared_error": 2.999,
+      "optimal_squared_error": 1.0,
+      "squared_error_ratio": 2.999,
+      "norm_error_ratio": 1.7317621083740111
+    },
+    "mixed_order_projector_sandwich": {
+      "cases": 200,
+      "violations": 0,
+      "largest_bound_over_error": 2.4633707373616485
+    },
+    "degenerate_cut": {
+      "gamma": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "rank_one_axis_squared_error": 1.0,
+      "rank_one_diagonal_squared_error": 2.0000000000000004
+    },
+    "two_layer_binary_network": {
+      "reparameterized_tensor": 9.141821426241488e-16,
+      "intermediate_environment": 3.43449765863716e-16,
+      "leaf_environment": 9.12493277814631e-16
+    },
+    "adaptive_nullspace_counterexample": {
+      "loss_gradient_kernel_component": 0.0,
+      "first_adam_step_kernel_component": -0.004472135887917542,
+      "weight_decay": 0,
+      "scope": "Generic non-coordinate-aligned nullspace; not a simulation of the specific MACE optimizer."
+    },
+    "fvu_readout_counterexample": {
+      "fvu_both": 0.1,
+      "readout_mse_a": 0.2,
+      "readout_mse_b": 0.0,
+      "fvu_times_readout_variance": 0.1
+    },
+    "post_product_feature_gauge_algebra": {
+      "linear_up_input": 2.0861737769547614e-16,
+      "linear_readout": 3.733954879998303e-16,
+      "skip_inputs": 2.664291621741914e-16
+    }
+  }
+}

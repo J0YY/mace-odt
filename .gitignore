@@ -1,0 +1,31 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local source manuscripts and extracted text
+comp-tdooms.pdf
+shared.html
+tmp/
+
+# Regenerable numerical arrays and scheduler logs
+results/*.npz
+results/*.out
+results/*.err
+logs/
+slurm-*.out
+slurm-*.err
+
+# Duplicate package and document build products
+MACE_ODT_Overleaf.zip
+output/
+MACE_ODT_Overleaf/*.aux
+MACE_ODT_Overleaf/*.bbl
+MACE_ODT_Overleaf/*.blg
+MACE_ODT_Overleaf/*.fdb_latexmk
+MACE_ODT_Overleaf/*.fls
+MACE_ODT_Overleaf/*.log
+MACE_ODT_Overleaf/*.out
+MACE_ODT_Overleaf/*.toc
+MACE_ODT_Overleaf/main.pdf

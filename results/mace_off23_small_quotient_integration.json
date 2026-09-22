@@ -1,0 +1,116 @@
+{
+  "dtype": "float64",
+  "experiment": "E2_live_path_quotient_integration",
+  "gate_passed": true,
+  "layer_records": [
+    {
+      "layer": 0,
+      "quotients": [
+        {
+          "null_dimension": 0,
+          "null_residual": 0.0,
+          "order": 1,
+          "stored_dimension": 1,
+          "supported_dimension": 1
+        },
+        {
+          "null_dimension": 0,
+          "null_residual": 0.0,
+          "order": 2,
+          "stored_dimension": 4,
+          "supported_dimension": 4
+        },
+        {
+          "null_dimension": 15,
+          "null_residual": 2.0384972098146883e-15,
+          "order": 3,
+          "stored_dimension": 23,
+          "supported_dimension": 8
+        }
+      ],
+      "random_feature_equivalence": {
+        "max_absolute_error": 2.2737367544323206e-13,
+        "relative_l2_error": 3.3476640507547084e-16
+      }
+    },
+    {
+      "layer": 1,
+      "quotients": [
+        {
+          "null_dimension": 0,
+          "null_residual": 0.0,
+          "order": 1,
+          "stored_dimension": 1,
+          "supported_dimension": 1
+        },
+        {
+          "null_dimension": 0,
+          "null_residual": 0.0,
+          "order": 2,
+          "stored_dimension": 4,
+          "supported_dimension": 4
+        },
+        {
+          "null_dimension": 15,
+          "null_residual": 2.0384972098146883e-15,
+          "order": 3,
+          "stored_dimension": 23,
+          "supported_dimension": 8
+        }
+      ],
+      "random_feature_equivalence": {
+        "max_absolute_error": 2.8421709430404007e-13,
+        "relative_l2_error": 4.131449555418444e-16
+      }
+    }
+  ],
+  "requested_model": "small",
+  "schema_version": 1,
+  "scope": "The replacement changes path coordinates only. It does not reduce the 96-channel representation and is not an ODT truncation.",
+  "staged_results": [
+    {
+      "comparison_to_native": {
+        "max_energy_absolute_error_eV": 0.0,
+        "max_force_absolute_error_eV_per_A": 8.604228440844963e-16,
+        "records": [
+          {
+            "energy_absolute_error_eV": 0.0,
+            "force_max_absolute_error_eV_per_A": 8.604228440844963e-16,
+            "formula": "CH4"
+          },
+          {
+            "energy_absolute_error_eV": 0.0,
+            "force_max_absolute_error_eV_per_A": 7.91033905045424e-16,
+            "formula": "H2O"
+          }
+        ]
+      },
+      "layers_replaced": [
+        0
+      ]
+    },
+    {
+      "comparison_to_native": {
+        "max_energy_absolute_error_eV": 0.0,
+        "max_force_absolute_error_eV_per_A": 8.881784197001252e-16,
+        "records": [
+          {
+            "energy_absolute_error_eV": 0.0,
+            "force_max_absolute_error_eV_per_A": 8.881784197001252e-16,
+            "formula": "CH4"
+          },
+          {
+            "energy_absolute_error_eV": 0.0,
+            "force_max_absolute_error_eV_per_A": 7.91033905045424e-16,
+            "formula": "H2O"
+          }
+        ]
+      },
+      "layers_replaced": [
+        0,
+        1
+      ]
+    }
+  ],
+  "tolerance": 2e-10
+}

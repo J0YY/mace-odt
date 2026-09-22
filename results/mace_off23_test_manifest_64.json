@@ -1,0 +1,427 @@
+{
+  "claim_boundary": "Selection uses metadata only and was frozen before projected model errors were evaluated. Reference labels are not used to fit subspaces.",
+  "dataset": {
+    "group_sizes": {
+      "DES370K Dimers": 13908,
+      "DES370K Monomers": 889,
+      "Dipeptides": 1025,
+      "PubChem": 34093,
+      "QMugs": 144,
+      "Solvated Amino Acids": 52,
+      "water": 84
+    },
+    "num_atoms": 1551806,
+    "num_configurations": 50195
+  },
+  "experiment": "E7_frozen_evaluation_manifest",
+  "schema_version": 1,
+  "selected": [
+    {
+      "config_type": "PubChem",
+      "formula": "C8H12ClN5",
+      "index": 696,
+      "num_atoms": 26
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "H4S2",
+      "index": 1392,
+      "num_atoms": 6
+    },
+    {
+      "config_type": "Dipeptides",
+      "formula": "C11H21N3O3S",
+      "index": 1593,
+      "num_atoms": 39
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C18H17N3O3",
+      "index": 1919,
+      "num_atoms": 41
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C19H15N7O",
+      "index": 2590,
+      "num_atoms": 42
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C17H21N7O4",
+      "index": 3269,
+      "num_atoms": 49
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C20H22N4O2S",
+      "index": 3625,
+      "num_atoms": 49
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C20H15BrN4O2S",
+      "index": 3881,
+      "num_atoms": 43
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C19H23NS",
+      "index": 4446,
+      "num_atoms": 44
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C17H24O5",
+      "index": 4499,
+      "num_atoms": 46
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C13H25NO3",
+      "index": 5917,
+      "num_atoms": 42
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C2H4O2",
+      "index": 7246,
+      "num_atoms": 8
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C8H10",
+      "index": 7507,
+      "num_atoms": 18
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C18H17N3",
+      "index": 7980,
+      "num_atoms": 38
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C13H12F3N3O3",
+      "index": 9086,
+      "num_atoms": 34
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H12N2O2",
+      "index": 10482,
+      "num_atoms": 20
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "Br3N",
+      "index": 10649,
+      "num_atoms": 4
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H7NO",
+      "index": 12364,
+      "num_atoms": 13
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H8N2O",
+      "index": 13368,
+      "num_atoms": 15
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C17H20N4O5",
+      "index": 15962,
+      "num_atoms": 46
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C2H6O",
+      "index": 16116,
+      "num_atoms": 9
+    },
+    {
+      "config_type": "Solvated Amino Acids",
+      "formula": "C12H56N2O22",
+      "index": 17212,
+      "num_atoms": 92
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C3H9NO2",
+      "index": 17850,
+      "num_atoms": 15
+    },
+    {
+      "config_type": "water",
+      "formula": "H22O11",
+      "index": 17914,
+      "num_atoms": 33
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C23H20FN3S",
+      "index": 18222,
+      "num_atoms": 48
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C5H6N6O2",
+      "index": 18719,
+      "num_atoms": 19
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C13H4Br4Cl6",
+      "index": 19514,
+      "num_atoms": 27
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C5H15NO",
+      "index": 19622,
+      "num_atoms": 22
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H12O2",
+      "index": 19991,
+      "num_atoms": 18
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H10O3",
+      "index": 20203,
+      "num_atoms": 17
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C13H18BrN7",
+      "index": 20333,
+      "num_atoms": 39
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C12H18N2O3S",
+      "index": 21256,
+      "num_atoms": 36
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C4H11NO2",
+      "index": 23409,
+      "num_atoms": 18
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C21H23N3O3",
+      "index": 25064,
+      "num_atoms": 50
+    },
+    {
+      "config_type": "QMugs",
+      "formula": "C28H30N4O4",
+      "index": 25187,
+      "num_atoms": 66
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C15H20N2O3S",
+      "index": 25397,
+      "num_atoms": 41
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C4H8N2O3S",
+      "index": 25857,
+      "num_atoms": 18
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C7H8ClF3N2S",
+      "index": 26481,
+      "num_atoms": 22
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C15H13N3OS",
+      "index": 26485,
+      "num_atoms": 33
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C16H11F2N3OS2",
+      "index": 26516,
+      "num_atoms": 35
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C20H22N4OS2",
+      "index": 27554,
+      "num_atoms": 49
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C22H16N8OS",
+      "index": 27654,
+      "num_atoms": 48
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C16H18F4N2O2S",
+      "index": 28414,
+      "num_atoms": 43
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C8H16ClO3PS",
+      "index": 30121,
+      "num_atoms": 30
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C8H8",
+      "index": 31090,
+      "num_atoms": 16
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C17H20Cl2N2S",
+      "index": 31536,
+      "num_atoms": 42
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "H6N2",
+      "index": 31834,
+      "num_atoms": 8
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C20H22ClN5O2",
+      "index": 33366,
+      "num_atoms": 50
+    },
+    {
+      "config_type": "DES370K Monomers",
+      "formula": "C4H10O",
+      "index": 34172,
+      "num_atoms": 15
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C5H14OS2",
+      "index": 34414,
+      "num_atoms": 22
+    },
+    {
+      "config_type": "DES370K Monomers",
+      "formula": "C5H10N2O2",
+      "index": 34820,
+      "num_atoms": 19
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C6H12O4",
+      "index": 35848,
+      "num_atoms": 22
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C21H21F2N3O2S",
+      "index": 39484,
+      "num_atoms": 50
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C9H6N6O4",
+      "index": 42125,
+      "num_atoms": 25
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C18H15N5O",
+      "index": 42436,
+      "num_atoms": 39
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C8H14N4O2S",
+      "index": 43329,
+      "num_atoms": 29
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C20H13Br2FN2O5",
+      "index": 43909,
+      "num_atoms": 43
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C8H11Br",
+      "index": 44856,
+      "num_atoms": 20
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "H6N2",
+      "index": 45569,
+      "num_atoms": 8
+    },
+    {
+      "config_type": "DES370K Dimers",
+      "formula": "C6H14O",
+      "index": 45964,
+      "num_atoms": 21
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C23H23N3O",
+      "index": 47597,
+      "num_atoms": 50
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C7H8N2O",
+      "index": 48321,
+      "num_atoms": 18
+    },
+    {
+      "config_type": "Dipeptides",
+      "formula": "C14H21N5O3",
+      "index": 48686,
+      "num_atoms": 43
+    },
+    {
+      "config_type": "PubChem",
+      "formula": "C14H13FN4O",
+      "index": 48988,
+      "num_atoms": 33
+    }
+  ],
+  "selected_group_counts": {
+    "DES370K Dimers": 17,
+    "DES370K Monomers": 2,
+    "Dipeptides": 2,
+    "PubChem": 40,
+    "QMugs": 1,
+    "Solvated Amino Acids": 1,
+    "water": 1
+  },
+  "selection": {
+    "rule": "One item per config_type, then proportional allocation by group size. Within each group choose the lowest SHA-256 score of seed and original frame index.",
+    "sample_size": 64,
+    "seed": 20260922,
+    "stratification_field": "config_type"
+  },
+  "source": {
+    "archive_id": "cb8351dd-f09c-413f-921c-67a702a7f0c5",
+    "archive_md5": "bf1f7c7ff1714e6ac6af2cdc642a130a",
+    "repository_doi": "10.17863/CAM.107498",
+    "source_url": "https://doi.org/10.17863/CAM.107498",
+    "xyz_path": "/work/joy/datasets/mace-off23/test_large_neut_all.xyz",
+    "xyz_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e"
+  }
+}

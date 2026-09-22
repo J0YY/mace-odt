@@ -1,0 +1,199 @@
+# MACE-ODT research log
+
+## 2026-09-22: lean physical representation hypothesis
+
+### Origin
+
+David Olloqui relayed a research hope discussed with Ward. It would be valuable
+if the large internal MACE representation could be replaced with a much leaner
+weight, function, or parameter space whose coordinates have a direct physical
+organization.
+
+### Logged hypothesis
+
+A pretrained MACE potential may contain a compact, gauge-stable basis of
+element-pair radial and angular functions that can replace part of its hidden
+representation without retraining while preserving relative energies and
+forces.
+
+The first target is the bounded-order polynomial branch feeding the first
+linear energy readout. For central species `z`, neighbor species `z'`, angular
+degree `l`, and retained mode `k`, the desired coordinates have the form
+
+```text
+phi[k, z, z', l](r, Omega) = f[k, z, z', l](r) Y[l](Omega)
+```
+
+The retained functions are paired with compact interaction cores for the
+linear, quadratic, and cubic density terms.
+
+### Why this is more than ordinary compression
+
+The retained coordinates must satisfy four requirements.
+
+1. They are selected using the composed energy computation rather than one
+   local matrix.
+2. They are represented as functions of species and geometry rather than raw
+   channel vectors.
+3. Their projectors and interventions transport correctly under allowed hidden
+   coordinate changes.
+4. Their value is tested with energy differences and forces rather than only a
+   coefficient spectrum.
+
+### Two-stage research program
+
+**Stage 1, discovery.** Extract a lean physical function space from frozen
+checkpoints. No model training is required. This stage tests whether global ODT
+selection improves the rank needed for physical fidelity.
+
+**Stage 2, architecture.** Determine whether modes recur across seeds, model
+sizes, and checkpoints. If they do, approximate them with a compact spline or
+analytic radial family and test them as a trainable MACE parameterization.
+
+Stage 2 is not assumed to work. A checkpoint-specific compact basis can still
+be useful for model analysis and compiled inference.
+
+### Scope and claim boundary
+
+An exact or compressed first-readout branch is not a compressed full MACE
+model. A branch-only evaluator may leave the original nonlinear branch in
+place, so it may not improve end-to-end runtime. Full representation
+replacement requires adapting every consumer of the selected interface.
+
+A visually simple radial mode is not automatically a chemical mechanism. The
+reduced interaction core and controlled interventions must be reported with
+the function image.
+
+### First decision criterion
+
+Continue to the full rank study only if the untruncated compiler reproduces the
+checkpoint's first branch and coordinate derivatives at the calibrated
+floating-point floor.
+
+The first positive scientific result would be a lower retained rank than local
+weight or radial-function baselines at the same preregistered relative-energy
+and force tolerance.
+
+### Implementation status
+
+- Synthetic algebra checks are complete.
+- Independent finite-dimensional audit checks are complete.
+- Athena access and Slurm partitions were verified.
+- No MACE environment or MACE checkpoint was present before this implementation.
+- A work-mounted Athena environment was created with MACE 0.3.16 and PyTorch
+  2.6.0 CPU.
+- E1 completed on Slurm job 399950 using the official MACE-OFF23 small
+  checkpoint. All checkpoint smoke tests passed.
+- E2 completed on Slurm job 399952. The serialized cubic scalar coupling map
+  has 23 stored paths and an eight-dimensional supported repeated-slot image in
+  both layers.
+- The live exact path quotient passed on Slurm job 399969. Replacing both
+  product contractions changed tested forces by at most `8.88e-16
+  eV/angstrom`.
+- The registered radial interface passed on Slurm job 399973. Its multineighbor
+  density, first-branch energy, and force reconstruction errors were at the
+  floating-point floor.
+- The exact first-branch compiler passed on Slurm job 399988. It includes the
+  post-product map, linear readout, and checkpoint scale.
+- Equal-weight and coefficient-balanced global environments passed on Slurm
+  jobs 399993 and 399994. Every slot is contracted explicitly and all
+  cross-path terms are retained.
+
+### First real-checkpoint evidence
+
+The checkpoint audit found 694,320 parameters, two interaction blocks, 96
+channels in each scalar product output, ten supported elements, and a 4.5
+angstrom cutoff. The first readout is linear with 96 weights. The second
+readout is a nonlinear 96 to 16 to 1 head.
+
+The energy and force evaluator passed translation, rotation, and atom-order
+checks on methane and water. The methane force finite-difference discrepancy
+was approximately `2.05e-8 eV/angstrom`.
+
+For both product layers, the order-one, order-two, and order-three path maps
+have stored-to-supported dimensions `1 to 1`, `4 to 4`, and `23 to 8`. A
+random cubic null perturbation produced a response norm of approximately
+`2.50e-16`, while a retained perturbation produced a response norm of
+approximately `4.73` in the same synthetic check.
+
+This is a successful reproduction of exact architectural redundancy. It is not
+by itself evidence of a smaller end-to-end potential.
+
+### 2026-09-22: first global coefficient spectra
+
+The exact branch compiler matches random aggregate features within
+`6.54e-13 eV`. On methane and water, branch energy errors are at most
+`8.88e-16 eV` and force errors are at most `9.99e-16 eV/angstrom`.
+
+The global environment obeys the required rotational block form. Across all
+central species, the relative off-block norm is below `8.2e-19`, magnetic-copy
+deviation is below `4.5e-17`, and the occurrence-weighted trace identity holds
+within `1.4e-15` relative error.
+
+Equal order weights are dominated by the linear coefficient norm. A second,
+predeclared formula sets each order weight to the inverse full coefficient norm
+for that species and order. Under this coefficient-balanced convention, a
+uniform multiplicity rank of 16 per irrep leaves about `0.0033` to `0.020`
+relative squared coefficient error across central species. Rank 32 leaves about
+`0.00024` to `0.00125`.
+
+This is preliminary evidence of composed coefficient low rank. It is not yet a
+held-out force-fidelity result. The next decision requires a frozen molecular
+evaluation set and matched global, local radial, local weight, and random
+baselines.
+
+### 2026-09-22: frozen official test subset
+
+The official MACE-OFF23 test archive was downloaded from the Cambridge
+repository record `10.17863/CAM.107498`. The archive bitstream identifier is
+`cb8351dd-f09c-413f-921c-67a702a7f0c5`, and its verified MD5 checksum is
+`bf1f7c7ff1714e6ac6af2cdc642a130a`.
+
+The extracted test file contains 50,195 configurations across seven declared
+configuration types. Before evaluating any projected errors, a 64-configuration
+subset was frozen by metadata strata and SHA-256 scores of the seed and original
+frame index. The extracted XYZ SHA-256 is
+`c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e`.
+
+The held-out branch-fidelity run compares the global environment, local radial
+SVD, and three canonical random seeds at ranks 16, 32, 48, 64, and 80. It
+reports paired bootstrap intervals for local minus global error. The subspaces
+remain weight-derived and do not use these configurations for fitting.
+
+### 2026-09-22: first held-out rank-fidelity result
+
+Athena job 400007 evaluated the frozen 64-configuration subset. The global
+environment has lower mean per-atom branch energy error and lower mean branch
+force RMSE than local radial SVD at every tested rank.
+
+At multiplicity rank 64 per irrep, the global mean force RMSE is
+`0.00319 eV/angstrom`, compared with `0.00921 eV/angstrom` for local radial
+SVD. At rank 80, the values are `0.000306` and `0.00120 eV/angstrom`.
+
+Paired configuration-level bootstrap intervals for local minus global mean
+force error exclude zero at every tested rank. At rank 64 the mean difference
+is `0.00602 eV/angstrom`, with a 95 percent interval from `0.00533` to
+`0.00660`. At rank 80 the mean difference is `0.000895 eV/angstrom`, with an
+interval from `0.000832` to `0.000961`.
+
+This clears the first branch-level feasibility question. It does not yet show
+that the full model can use the same reduced representation, that runtime is
+lower, or that the retained functions have a stable chemical interpretation.
+
+### 2026-09-22: shared-interface boundary result
+
+The same encoder and decoder were inserted before product block zero, so the
+first readout and every later consumer received projected features. This tests
+the full frozen model without retraining.
+
+The first-branch global advantage does not transfer automatically. At rank 64,
+mean shared-model force RMSE is `0.00925 eV/angstrom` for the first-branch
+global basis and `0.00763 eV/angstrom` for local radial SVD. At rank 80, the
+values are `0.00174` and `0.000913 eV/angstrom`.
+
+This is a useful negative boundary rather than a failure of the branch result.
+It shows that the nonlinear consumer uses directions that the first-readout
+environment discounts. A full-model method must add the later consumer to the
+environment objective or solve an explicitly multi-consumer projection
+problem. Reusing the first-branch score is not sufficient evidence for general
+MACE compression.

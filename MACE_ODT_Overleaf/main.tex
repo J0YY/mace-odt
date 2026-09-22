@@ -1,0 +1,373 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage{mace_neurips}
+
+\title{MACE-ODT: Global Functional Subspaces in Pretrained Interatomic Potentials}
+\author{Research direction note based on the supplied MACE package}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Can a large hidden channel space in a pretrained MACE potential be replaced by a much smaller set of geometry-dependent functions, chosen from the whole computation rather than from one local layer, while preserving the model's energies and forces? This question matters for two reasons. A positive answer could yield a smaller and faster evaluator. It could also expose model structure in objects that do not depend on arbitrary hidden coordinates. The question follows directly from two supplied sources. Dooms et al. show that global tensor-network environments can reveal low rank that local singular value decompositions miss. Olloqui shows that MACE channel coordinates are partly non-identifiable, that some stored coupling paths are exactly redundant, and that a gauge-stable radial representation can separate shared geometry from shared behavioral effect. We propose MACE-ODT as the missing bridge. The first target is the bounded-order polynomial branch feeding the first linear energy readout. The method removes exact path redundancy, orthogonalizes checkpoint-defined radial functions, composes the full branch coefficients, and selects a shared equivariant subspace from a downstream-aware operator. Synthetic checks and an independent audit support the core mathematics. A real-checkpoint implementation, compression result, and mechanistic interpretation remain open empirical work.
+\end{abstract}
+
+\section{Introduction}
+
+Machine-learned interatomic potentials are used because quantum calculations are too expensive for long molecular simulations. Their outputs matter at every simulation step. A useful compression must therefore preserve small relative energies and coordinate derivatives, not only total energy dominated by atomic reference terms.
+
+The central question is intentionally concrete:
+
+\begin{quote}
+\itshape
+Can we replace a large internal MACE representation with a much smaller set of functions of element pair, distance, and angle, selected using the full composed energy computation, while keeping the original model's energy differences and forces?
+\end{quote}
+
+This matters even if no human-readable chemistry is found. A smaller faithful subspace would reveal the model's effective dimension and could reduce storage or runtime. If the same subspace can also be rendered as stable geometric functions, it becomes a better object for interpretation than a raw channel vector.
+
+The question is forced by a tension between the two source papers. \citet{dooms2025compositionality} show that local tensors can look high rank while a composed network is low rank. Their ODT algorithm exposes the relevant global bond environments in a structured $\chi$-net. \citet{olloqui2026inside} show that local MACE coordinates can change without changing any prediction, and that agreement in leading radial modes need not carry a benchmark effect. The natural next step is therefore to combine global composition with gauge-stable physical function spaces.
+
+\begin{figure*}[t]
+\centering
+\begin{tabularx}{0.98\textwidth}{>{\raggedright\arraybackslash}X c >{\raggedright\arraybackslash}X c >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Dooms et al.} & & \textbf{Gap} & & \textbf{Olloqui HTML} \\
+Global environments can reveal composed low rank hidden from local SVD & $\Longrightarrow$ & Select a subspace from the whole MACE branch, then express it as a physical function & $\Longleftarrow$ & Raw MACE coordinates are not reliable objects, while radial images and exact quotients can be stable \\
+\midrule
+\multicolumn{5}{c}{\textbf{MACE-ODT: composed selection plus invariant rendering plus matched controls}} \\
+\bottomrule
+\end{tabularx}
+\caption{Why the research question follows from the two sources. Neither source alone supplies the proposed MACE decomposition.}
+\label{fig:lineage}
+\end{figure*}
+
+The proposed study makes four contributions if its empirical tests succeed.
+
+\begin{enumerate}[leftmargin=1.3em]
+\item An exact compiler for one bounded-order MACE energy branch.
+\item A shared, symmetry-preserving coefficient projection with a proved error bound.
+\item Gauge-covariant encoder and decoder maps with invariant radial images.
+\item A controlled test of whether global selection improves rank versus physical fidelity beyond local baselines.
+\end{enumerate}
+
+The fourth point is the scientific claim. The first three are the machinery needed to test it.
+
+\section{Source lineage and the missing bridge}
+
+\subsection{What ODT contributes}
+
+A $\chi$-net alternates repeated use of a hidden vector with bilinear cores. In simplified notation,
+
+\begin{equation}
+h_1=e\bar x,
+\quad
+h_{i+1}=F_i[h_i\otimes h_i],
+\quad
+y=uh_{L+1}.
+\label{eq:chinet}
+\end{equation}
+
+Unfolding repeated inputs gives a tree tensor network. ODT orthogonalizes input-side subtrees, contracts the output-side environment, diagonalizes the resulting bond operator, and truncates its leading eigenspace. The source reports substantial compression of a small SVHN model and much smaller ODT effective dimensions than local SVD effective dimensions \citep{dooms2025compositionality}.
+
+The transferable principle is that importance belongs to a composed operator. It is not generally visible in one local core. The source does not establish that its binary-tree recursion applies unchanged to MACE.
+
+\subsection{What the MACE HTML contributes}
+
+The HTML paper identifies a compensated coordinate change at a stated layer-one interface,
+
+\begin{equation}
+A\mapsto MA,
+\qquad
+B_z\mapsto B_zM^{-1},
+\label{eq:gauge}
+\end{equation}
+
+which leaves the composite unchanged. It also identifies an exact kernel in the symmetrized contraction. Under its representation assumptions, 23 stored scalar correlation-three paths map to eight independent combinations. The remaining 15 directions do not reach the output. The corresponding reported counts are $51\to12$ and $65\to14$ for vector and rank-two outputs \citep{olloqui2026inside}. These counts must be recomputed from the actual checkpoint convention.
+
+The paper then constructs a stable physical representation. If $F_{zz'}^{(\ell)}(r)$ is a vector of radial curves and $d$ is a covector at the same registered interface, define
+
+\begin{equation}
+f_d(z,z',r)=d^\top F_{zz'}^{(\ell)}(r).
+\label{eq:image}
+\end{equation}
+
+Under $F\mapsto MF$ and $d\mapsto M^{-\top}d$, the function is unchanged. This is a scoped invariance statement, not proof of full functional identifiability under every possible rewrite.
+
+The HTML also supplies the main negative lesson. Directions selected by a benchmark agree strongly as radial images, but their shared leading curve component does not reproduce the benchmark effect. Local geometric amplitude and composed behavioral importance are different quantities. Its support, steering, random-direction, and intervention-dual controls define the standard that a new interpretation must meet.
+
+\subsection{The derived research gap}
+
+Dooms et al. provide downstream-aware selection without a MACE-specific invariant semantic map. The HTML provides an invariant semantic map and exact MACE quotients without a downstream-composed selection rule. MACE-ODT asks whether joining those pieces yields smaller faithful subspaces than either local approach alone.
+
+\section{Problem formulation}
+
+\subsection{Target branch}
+
+The source description separates the site energy as
+
+\begin{equation}
+E_i=E_0(z_i)+s\left[w^\top h_i^{(1)}+g(h_i^{(2)})\right]+b.
+\label{eq:readout}
+\end{equation}
+
+The first target is only the linear branch $w^\top h_i^{(1)}$. The final head $g$ is nonlinear and remains unchanged in a branch-only evaluator. This separation is essential because the HTML places some chemical effects, including the sign of its difluoroethane preference, in the nonlinear branch.
+
+For central species $z$, let one neighbor primitive be $t=(z',r,\Omega)$. Let $q_z(t)$ be a vector of orthonormal radial and angular functions, and define
+
+\begin{equation}
+b_z(X)=\sum_{t_j\in X}q_z(t_j).
+\label{eq:aggregate}
+\end{equation}
+
+If the audited checkpoint branch contains only supported operations, it can be compiled as
+
+\begin{equation}
+E_{L,z}(X)=c_z+sum_{\nu=1}^{3}
+K_{z,\nu}\left[b_z(X)^{\otimes\nu}\right].
+\label{eq:branch}
+\end{equation}
+
+Each $K_{z,\nu}$ includes the full path from primitive functions to the linear energy readout. It is not one weight matrix. The representation is exact only after the untruncated compiler matches the loaded checkpoint in energy and derivatives.
+
+\subsection{Primary objective}
+
+The primary empirical objective is to reduce the rank needed to preserve the original branch on unseen configurations. Reference-label improvement is a separate outcome. A faithful decomposition may preserve a model error, while a deletion that improves reference accuracy may remove a real model mechanism.
+
+\section{Method}
+
+\subsection{Exact quotient and structural metric}
+
+First construct the map from stored coupling paths to the fully symmetrized coupling tensor. Restrict to its supported row space. Null perturbations must leave the composed tensor, branch energy, and forces unchanged. Retained perturbations provide positive controls.
+
+Next declare a structural measure over neighbor species and distance. For each central species and irrep block,
+
+\begin{equation}
+L_{z,\ell}=\sum_{z'}\pi(z'\mid z)
+\int F F^\top w_z(r)\,dr.
+\label{eq:metric}
+\end{equation}
+
+Factor $L=CC^\top$ on its supported space and write $F=Cq$. The components of $q$ are orthonormal under the declared measure. The radial interval, weights, angular normalization, and quadrature are part of the method.
+
+\subsection{Composed mixed-order operator}
+
+For each order and slot, form the reduced operator
+
+\begin{equation}
+\rho_{z,\nu,a}=
+\operatorname{Tr}_{\neg a}
+\left(\lvert K_{z,\nu}\rangle
+\langle K_{z,\nu}\rvert\right).
+\label{eq:marginal}
+\end{equation}
+
+Then define
+
+\begin{equation}
+\Gamma_z=\sum_{\nu=1}^{3}\beta_\nu
+\sum_{a=1}^{\nu}\rho_{z,\nu,a}.
+\label{eq:gamma}
+\end{equation}
+
+The positive weights $\beta_\nu$ define the relative coefficient norm across correlation orders. The same projector acts on every repeated slot,
+
+\begin{equation}
+K_{z,\nu}^{\Pi}
+=\Pi^{\otimes\nu}K_{z,\nu}.
+\label{eq:projection}
+\end{equation}
+
+Projection is restricted to whole $O(3)$ irreducible multiplets. A degenerate spectral block that crosses the desired rank cutoff must be retained as a block or reported as non-unique.
+
+\subsection{Native maps and physical images}
+
+For a square supported factor $C$ and canonical eigenvector $u_k$, define
+
+\begin{equation}
+d_k=C^{-\top}u_k,
+\qquad
+b_k=Cu_k,
+\qquad
+P_k=b_kd_k^\top.
+\label{eq:maps}
+\end{equation}
+
+For rectangular $C$, replace $C^{-\top}$ with the transpose of a declared supported left inverse. The encoder covector $d_k$ and decoder vector $b_k$ have different transport laws. Their physical radial image is
+
+\begin{equation}
+\phi_k(z,z',r)=d_k^\top F_{zz'}^{(\ell)}(r)
+=u_k^\top q_{zz'}^{(\ell)}(r).
+\label{eq:mode-image}
+\end{equation}
+
+This formula applies only when the eigenmode and radial curves belong to the same registered interface. A post-product decoder cannot be inserted into a pre-product radial formula without a derived transport map.
+
+\section{Correctness and feasibility}
+
+\subsection{Mathematical status}
+
+For an orthogonal canonical projector, define
+
+\begin{equation}
+\mathcal E_z(\Pi)=\sum_{\nu=1}^{3}\beta_\nu
+\left\lVert K_{z,\nu}-
+\Pi^{\otimes\nu}K_{z,\nu}\right\rVert_F^2.
+\label{eq:error}
+\end{equation}
+
+The proposed score satisfies
+
+\begin{equation}
+\mathcal E_z(\Pi)
+\leq
+\operatorname{Tr}\left[(I-\Pi)\Gamma_z\right]
+\leq 3\mathcal E_z(\Pi).
+\label{eq:sandwich}
+\end{equation}
+
+If the leading spectral projector minimizes the middle quantity over the same admissible rank and symmetry class as the comparator, then its squared coefficient error is at most three times optimal. The norm factor is $\sqrt{3}$. The independent audit constructs an example approaching this factor, so the result must not be described as an exact SVD solution to the tied objective.
+
+The package's 16 bundled checks and 8 independent audit groups were rerun for this revision. All passed. They verify finite-dimensional identities, counterexamples, and transport laws. They do not execute MACE or establish empirical compressibility.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabularx}{0.98\textwidth}{>{\bfseries}p{0.19\textwidth} >{\centering\arraybackslash}p{0.12\textwidth} X X}
+\toprule
+Component & Verdict & Evidence now available & Main remaining risk \\
+\midrule
+ODT reference mechanics & Correct in scope & Dense synthetic cut spectra and two-layer environment recursions agree to numerical precision & General MACE graphs are not binary trees \\
+Mixed-order shared projection & Correct in scope & The bound in \cref{eq:sandwich}, gauge transport, cross-term cancellation, and a sharp factor-three example are checked & The chosen structural norm may not predict force fidelity \\
+MACE path quotient & Algebraically credible & Source counts are reproduced by independent representation-theoretic enumeration & Serialized checkpoint conventions still require reconstruction \\
+Radial functional image & Correct at a registered interface & Covector and decoder transport laws are checked & The exact source hook and all native consumers must be resolved \\
+First-branch implementation & Feasible first milestone & The branch has bounded order under the stated architecture and dense channel cubes are not inherently prohibitive & Angular, species, and path expansions require factorized contractions and memory preflight \\
+Full nonlinear model & Plausible but high risk & Polynomial preactivations can in principle feed the original exact head & Shared graph structure, domain bounds, and contraction cost are unresolved \\
+Compression and interpretation & Unknown & The experimental design has matched baselines and rejection criteria & Real spectra may be flat, forces may fail, or modes may remain chemically mixed \\
+\bottomrule
+\end{tabularx}
+\caption{Correctness and feasibility assessment. Feasible means technically worth implementing, not empirically established.}
+\label{tab:feasibility}
+\end{table*}
+
+\subsection{Printed ODT bound qualification}
+
+The supplied ODT paper states one condition using squared Frobenius norms of Gram matrices. Read literally, it sums fourth powers of singular values. Tensor residuals require discarded Gram eigenvalues, which are squared singular values. The package gives a one-layer $\chi$-net counterexample where the printed condition passes at tolerance 0.1 but the actual relative tensor error is about 0.171. This project therefore uses discarded-eigenvalue sums and the separately proved bound in \cref{eq:sandwich}. This does not challenge the ODT architecture or its empirical SVHN observations.
+
+\subsection{Practical feasibility verdict}
+
+The exact first branch is a realistic research milestone if a trusted checkpoint and version-pinned loader are obtained. The highest-priority risks are integration risks rather than missing mathematics. They are the exact hook location, all-consumer compensation under a gauge, complete coefficient composition, and a factorized contraction backend. The project should stop before spectral analysis if the untruncated branch fails to reproduce energy and force derivatives.
+
+The full nonlinear potential should be a later milestone. A branch-only result can support a paper about effective dimension and gauge-stable representation. It cannot support a claim of full-model compression.
+
+\section{Experimental design}
+
+\subsection{Exactness gates}
+
+The study should proceed in the following order.
+
+\begin{enumerate}[leftmargin=1.3em]
+\item Pin the checkpoint, source revision, module graph, and target interface.
+\item Reconstruct the exact path quotient with null and retained controls.
+\item Rebuild the radial interface on multineighbor environments, including derivatives.
+\item Compile the untruncated first branch and match original energies and forces.
+\item Verify quadrature convergence, supported rank, and $O(3)$ block structure.
+\item Match factorized marginals against dense tiny-instance oracles.
+\item Apply compensated gauges and verify spectra, encoded functions, projectors, and exports.
+\item Freeze ranks and measures before inspecting final reference-label outcomes.
+\end{enumerate}
+
+\subsection{Baselines and outcomes}
+
+At a shared rank ladder, compare the global method with local weight SVD, local radial-function SVD, canonical random subspaces, exact quotient only, and a clearly labeled activation-aware baseline. Every method must use the same evaluator and retain complete symmetry multiplets.
+
+Report coefficient error, energy fidelity, conformer-difference fidelity, force fidelity, storage, peak memory, and runtime. Report reference-label accuracy separately. The decisive result is the rank required to reach a preregistered physical fidelity tolerance, not a visually sharp spectrum.
+
+\subsection{Interpretation controls}
+
+Each proposed mechanism must survive four controls inherited from the HTML.
+
+\begin{enumerate}[leftmargin=1.3em]
+\item Hold edit support and amplitude fixed.
+\item Subtract the response fixed by the linear readout coefficient.
+\item Compare the canonical encoder-decoder edit with other declared duals.
+\item Compare with random subspaces matched for rank, symmetry, metric, and leading-mode mass.
+\end{enumerate}
+
+The reduced interaction core must be shown with the mode images. A simple radial curve can participate in a chemically mixed off-diagonal interaction. No unique additive mode attribution is assumed.
+
+\section{Body order and chemical cases}
+
+The first branch can be translated into distinct-neighbor terms. With the no-factorial convention, a cubic density term contributes to two-body, three-body, and four-body site interactions through repeated indices. For distinct $j$, $k$, and $l$,
+
+\begin{align}
+V(\{j\})={}&k_1(j)+k_2(j,j)+k_3(j,j,j),\\
+V(\{j,k\})={}&2k_2(j,k)+3k_3(j,j,k)
++3k_3(j,k,k),\\
+V(\{j,k,l\})={}&6k_3(j,k,l).
+\label{eq:body}
+\end{align}
+
+These formulas must agree with a separate subset inclusion-exclusion implementation.
+
+The HTML suggests a useful scope contrast. Its ethane torsional barrier lies mainly in the linear branch and is suitable for a first-branch case study. Its difluoroethane gauche preference is not. For the small model, the reported linear contribution is $+35.1$ meV and the nonlinear contribution is $-59.9$ meV. The latter case requires the full nonlinear path \citep{olloqui2026inside}.
+
+\section{Limitations and rejection criteria}
+
+The current proposal has five important limits.
+
+\begin{itemize}[leftmargin=1.3em]
+\item The source gauge family is not proven exhaustive.
+\item The structural coefficient norm is not a physical molecular distribution.
+\item A small coefficient tail may still give poor forces.
+\item Separate central-species projectors are not one shared native rank.
+\item A readable functional image is not sufficient evidence of a mechanism.
+\end{itemize}
+
+The method is invalid as implemented if the untruncated compiler fails, its bound fails beyond numerical tolerance, or its claimed gauge transport fails. It remains valid with a negative empirical result if local methods match it or if no useful low rank appears.
+
+The independent audit also requires care with source claims about optimizer nullspaces and feature reconstruction. A null loss gradient does not generally imply zero kernel motion under coordinate-wise Adam. Feature variance unexplained does not determine readout error without the residual covariance. These claims are not used as foundations of the proposed method.
+
+\section{Conclusion}
+
+The central question is now both understandable and testable. Dooms et al. show why global composition may uncover compact structure. The HTML shows why raw MACE coordinates and uncontrolled interventions are not reliable evidence, while radial images and exact quotients offer better objects. MACE-ODT joins those lessons by selecting a subspace from the complete first energy branch and rendering it as stable functions of geometry.
+
+The first-branch mathematics appears correct and the implementation is feasible enough to justify the project. The main uncertainty is empirical. The global subspace may or may not preserve energy differences and forces at lower rank than local baselines. That uncertainty is the research result, not a defect in the design.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+
+\section{Audit checklist}
+
+Before any result is called global, invariant, or physically faithful, confirm the following.
+
+\begin{itemize}[leftmargin=1.3em]
+\item The target function, interface, metric, and domain are named.
+\item Path-space redundancy is not confused with channel-space rank.
+\item The external partition is a true separator or a different objective is derived.
+\item Encoders and decoders use the correct dual transport laws.
+\item Degenerate blocks crossing a cutoff are not split arbitrarily.
+\item All repeated occurrences and consumers receive the intended edit.
+\item Branch-only results are not labeled full-model compression.
+\item Energy differences and forces are reported separately from total energy.
+\item Runtime is measured on the exported evaluator.
+\item Negative findings remain in the report.
+\end{itemize}
+
+\section{Recommended milestone sequence}
+
+\textbf{M0, audit.} Freeze the checkpoint, code revision, operation graph, and interface registry.
+
+\textbf{M1, algebra.} Reproduce the original ODT reference checks and the mixed-order synthetic checks.
+
+\textbf{M2, compiler.} Reconstruct the radial interface, path quotient, and exact first branch.
+
+\textbf{M3, science.} Compare global, local, and random rank-versus-fidelity curves.
+
+\textbf{M4, interpretation.} Produce mode cards, interaction cores, body-order kernels, and matched interventions.
+
+\textbf{M5, extension.} Attempt the second layer and original nonlinear head only after M3 is informative.
+
+\end{document}

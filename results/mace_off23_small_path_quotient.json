@@ -1,0 +1,375 @@
+{
+  "environment": {
+    "executable": "/work/joy/envs/mace-odt-cpu/bin/python",
+    "git": {
+      "commit": null,
+      "status": null
+    },
+    "hostname": "cnode403",
+    "packages": {
+      "ase": "3.29.0",
+      "e3nn": "0.4.4",
+      "mace-torch": "0.3.16",
+      "numpy": "2.2.6",
+      "opt-einsum": "3.4.0",
+      "scipy": "1.15.3",
+      "torch": "2.6.0+cpu",
+      "torch-ema": "0.3",
+      "torchmetrics": "1.9.0"
+    },
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "schema_version": 1,
+    "slurm": {
+      "job_id": "400065",
+      "node_list": "cnode403",
+      "partition": "compute"
+    },
+    "torch": {
+      "cuda_available": false,
+      "cuda_version": null,
+      "default_dtype": "torch.float32",
+      "device_count": 0,
+      "version": "2.6.0+cpu"
+    }
+  },
+  "experiment": "E2_exact_coupling_path_quotient",
+  "gate_passed": true,
+  "records": [
+    {
+      "coupling_shape": [
+        16,
+        1
+      ],
+      "gate_residual_tolerance": 3.552713678800501e-13,
+      "layer": 0,
+      "null_basis": [
+        []
+      ],
+      "null_dimension": 0,
+      "null_residual": 0.0,
+      "order": 1,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 0.0,
+      "random_functional_check": {
+        "null_response_norm": 0.0,
+        "relative_null_response": 0.0,
+        "relative_null_tolerance": 3.552713678800501e-13,
+        "retained_response_norm": 1.8423062704626185,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0
+      ],
+      "stored_dimension": 1,
+      "support_basis": [
+        [
+          1.0
+        ]
+      ],
+      "supported_dimension": 1,
+      "tolerance": 3.552713678800501e-15
+    },
+    {
+      "coupling_shape": [
+        16,
+        16,
+        4
+      ],
+      "gate_residual_tolerance": 7.105427357601002e-13,
+      "layer": 0,
+      "null_basis": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_dimension": 0,
+      "null_residual": 0.0,
+      "order": 2,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 0.0,
+      "random_functional_check": {
+        "null_response_norm": 0.0,
+        "relative_null_response": 0.0,
+        "relative_null_tolerance": 7.105427357601002e-13,
+        "retained_response_norm": 0.8474284905714129,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stored_dimension": 4,
+      "support_basis": [
+        [
+          -0.0,
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ]
+      ],
+      "supported_dimension": 4,
+      "tolerance": 5.684341886080803e-14
+    },
+    {
+      "coupling_shape": [
+        16,
+        16,
+        16,
+        23
+      ],
+      "gate_residual_tolerance": 2.4492435865262636e-12,
+      "layer": 0,
+      "null_basis": {
+        "dtype": "float64",
+        "shape": [
+          23,
+          15
+        ]
+      },
+      "null_dimension": 15,
+      "null_residual": 3.270850202083717e-15,
+      "order": 3,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 3.102785282810633e-15,
+      "random_functional_check": {
+        "null_response_norm": 2.498001805406602e-16,
+        "relative_null_response": 5.2805891966165803e-17,
+        "relative_null_tolerance": 2.4492435865262636e-12,
+        "retained_response_norm": 4.730536143593865,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0000000000000004,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        3.017263642333401e-16,
+        2.978257436386342e-16,
+        2.899618561753094e-16,
+        2.622417749177655e-16,
+        2.5072916296359643e-16,
+        1.4741830817025986e-16,
+        1.222685707689518e-16,
+        1.1059055005611769e-16,
+        9.540481719347734e-17,
+        5.322110354076921e-17,
+        1.8341009082262186e-17,
+        1.1749329854449102e-17,
+        5.481992368575651e-18,
+        4.3099880133179677e-32,
+        1.509209149314484e-32
+      ],
+      "stored_dimension": 23,
+      "support_basis": {
+        "dtype": "float64",
+        "shape": [
+          23,
+          8
+        ]
+      },
+      "supported_dimension": 8,
+      "tolerance": 9.094947017729286e-13
+    },
+    {
+      "coupling_shape": [
+        16,
+        1
+      ],
+      "gate_residual_tolerance": 3.552713678800501e-13,
+      "layer": 1,
+      "null_basis": [
+        []
+      ],
+      "null_dimension": 0,
+      "null_residual": 0.0,
+      "order": 1,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 0.0,
+      "random_functional_check": {
+        "null_response_norm": 0.0,
+        "relative_null_response": 0.0,
+        "relative_null_tolerance": 3.552713678800501e-13,
+        "retained_response_norm": 1.8423062704626185,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0
+      ],
+      "stored_dimension": 1,
+      "support_basis": [
+        [
+          1.0
+        ]
+      ],
+      "supported_dimension": 1,
+      "tolerance": 3.552713678800501e-15
+    },
+    {
+      "coupling_shape": [
+        16,
+        16,
+        4
+      ],
+      "gate_residual_tolerance": 7.105427357601002e-13,
+      "layer": 1,
+      "null_basis": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "null_dimension": 0,
+      "null_residual": 0.0,
+      "order": 2,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 0.0,
+      "random_functional_check": {
+        "null_response_norm": 0.0,
+        "relative_null_response": 0.0,
+        "relative_null_tolerance": 7.105427357601002e-13,
+        "retained_response_norm": 0.8474284905714129,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stored_dimension": 4,
+      "support_basis": [
+        [
+          -0.0,
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          -0.0,
+          -0.0,
+          0.0
+        ]
+      ],
+      "supported_dimension": 4,
+      "tolerance": 5.684341886080803e-14
+    },
+    {
+      "coupling_shape": [
+        16,
+        16,
+        16,
+        23
+      ],
+      "gate_residual_tolerance": 2.4492435865262636e-12,
+      "layer": 1,
+      "null_basis": {
+        "dtype": "float64",
+        "shape": [
+          23,
+          15
+        ]
+      },
+      "null_dimension": 15,
+      "null_residual": 3.270850202083717e-15,
+      "order": 3,
+      "output_index": 0,
+      "output_irrep": "96x0e",
+      "projector_residual": 3.102785282810633e-15,
+      "random_functional_check": {
+        "null_response_norm": 2.498001805406602e-16,
+        "relative_null_response": 5.2805891966165803e-17,
+        "relative_null_tolerance": 2.4492435865262636e-12,
+        "retained_response_norm": 4.730536143593865,
+        "seed": 20260922,
+        "status": "passed"
+      },
+      "singular_values": [
+        1.0000000000000004,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        3.017263642333401e-16,
+        2.978257436386342e-16,
+        2.899618561753094e-16,
+        2.622417749177655e-16,
+        2.5072916296359643e-16,
+        1.4741830817025986e-16,
+        1.222685707689518e-16,
+        1.1059055005611769e-16,
+        9.540481719347734e-17,
+        5.322110354076921e-17,
+        1.8341009082262186e-17,
+        1.1749329854449102e-17,
+        5.481992368575651e-18,
+        4.3099880133179677e-32,
+        1.509209149314484e-32
+      ],
+      "stored_dimension": 23,
+      "support_basis": {
+        "dtype": "float64",
+        "shape": [
+          23,
+          8
+        ]
+      },
+      "supported_dimension": 8,
+      "tolerance": 9.094947017729286e-13
+    }
+  ],
+  "requested_model": "small",
+  "schema_version": 1,
+  "scope": "This verifies the serialized repeated-slot coupling maps. A converted full-checkpoint forward comparison remains a separate integration gate."
+}

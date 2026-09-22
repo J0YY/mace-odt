@@ -1,0 +1,274 @@
+# Preliminary real-checkpoint results
+
+## Status
+
+These results establish checkpoint provenance, ordinary forward correctness,
+exact repeated-slot path redundancy, an exact first-branch compiler, and the
+first global coefficient rank ladders. They do not establish held-out molecular
+fidelity or full-model replacement.
+
+## Environment
+
+- Cluster: Athena
+- Scheduler: Slurm
+- Project directory: `/work/joy/mace-odt`
+- Environment: `/work/joy/envs/mace-odt-cpu`
+- MACE: 0.3.16
+- PyTorch: 2.6.0 CPU
+- NumPy: 2.2.6
+- e3nn: 0.4.4
+
+The CPU environment is intentional for the initial exactness gates. Later
+matrix-free and molecular rank ladders can use a separate GPU environment.
+
+## Checkpoint provenance
+
+- Model: official MACE-OFF23 small
+- License reported by the loader: Academic Software License
+- File size: 7,347,350 bytes
+- SHA-256: `165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f`
+- Audit job: 399950
+
+## Architecture audit
+
+| Quantity | Observed value |
+|---|---:|
+| Total parameters | 694,320 |
+| Interaction blocks | 2 |
+| Supported elements | 10 |
+| Cutoff | 4.5 angstrom |
+| Product output | `96x0e` |
+| First readout weights | 96 |
+| Nonlinear readout | 96 to 16 to 1 |
+| Cubic path-weight shape per layer | `10 x 23 x 96` |
+
+The calculator freezes model parameters for inference, which is why the audit
+reports zero parameters with `requires_grad=True`. This does not mean the
+serialized model contains no learned parameters.
+
+## Forward correctness smoke tests
+
+| Check | Maximum discrepancy | Tolerance | Result |
+|---|---:|---:|---|
+| Methane translation | `3.94e-15` | `1e-7` | Pass |
+| Methane rotation | `5.21e-15` | `1e-7` | Pass |
+| Methane atom order | `2.27e-13` | `1e-7` | Pass |
+| Water translation | `3.11e-15` | `1e-7` | Pass |
+| Water rotation | `6.69e-15` | `1e-7` | Pass |
+| Water atom order | `0` | `1e-7` | Pass |
+| Methane force finite difference | `2.05e-8 eV/angstrom` | `2e-4 eV/angstrom` | Pass |
+
+Translation, rotation, and atom-order entries combine energy and force
+discrepancies in their respective native units. They are software integration
+checks rather than model-accuracy measurements.
+
+## Exact path quotient audit
+
+- Audit job: 399952
+- Output irrep in both layers: `96x0e`
+
+| Layer | Correlation order | Coupling shape | Stored paths | Supported paths | Null paths |
+|---:|---:|---|---:|---:|---:|
+| 0 | 1 | `16 x 1` | 1 | 1 | 0 |
+| 0 | 2 | `16 x 16 x 4` | 4 | 4 | 0 |
+| 0 | 3 | `16 x 16 x 16 x 23` | 23 | 8 | 15 |
+| 1 | 1 | `16 x 1` | 1 | 1 | 0 |
+| 1 | 2 | `16 x 16 x 4` | 4 | 4 | 0 |
+| 1 | 3 | `16 x 16 x 16 x 23` | 23 | 8 | 15 |
+
+For the cubic map, the numerical null residual is `3.27e-15` and the support
+plus null projector residual is `3.10e-15`. A deterministic random functional
+test produced the following norms.
+
+- Null direction response: `2.50e-16`
+- Retained direction response: `4.73`
+- Relative null response: `5.28e-17`
+
+This matches the supplied HTML's scalar count of 23 stored paths and eight
+independent repeated-slot combinations. The identical count in both layers is
+an architectural fact about their shared coupling construction.
+
+## Live quotient integration
+
+- Integration job: 399969
+- Random feature maximum error: `2.84e-13`
+- Both product layers replaced, maximum energy error: `0 eV`
+- Both product layers replaced, maximum force error: `8.88e-16 eV/angstrom`
+
+The replacement stores only the supported path coordinates. It does not reduce
+the 96-channel representation and is not a learned low-rank result.
+
+## Registered radial function interface
+
+- Interface job: 399973
+- Structural measure: equal neighbor-species weight
+- Radial measure: normalized uniform distance from 0.5 to 4.5 angstrom
+- Quadrature: 128-point Gauss-Legendre
+- Angular measure: uniform sphere with component-normalized harmonics
+
+All four angular blocks and all ten central species have numerical support rank
+96 under the strict floating support threshold. The smallest retained singular
+values range from about `9.65e-10` to `5.49e-7`. The upstream function map is
+therefore full rank but very ill-conditioned.
+
+The relative metric change between 64-point and 128-point quadrature is at
+most `9.12e-7`, below the declared convergence tolerance of `2e-6`.
+
+On methane and water, the reconstructed aggregate density differs from the
+native interaction by at most `3.33e-16`. First-branch energies differ by at
+most `1.78e-15 eV`, and forces differ by at most `1.83e-15 eV/angstrom`.
+
+## Exact first-branch compiler
+
+- Compiler job: 399988
+- Random aggregate-feature maximum error: `6.54e-13 eV`
+- Repeated-slot symmetry residual through order three: `3.55e-15`
+- Cubic path-null coefficient change: `4.44e-15`
+- Methane and water branch energy maximum error: `8.88e-16 eV`
+- Methane and water branch force maximum error: `9.99e-16 eV/angstrom`
+
+The compiled tensors include the learned path coefficients, symmetric angular
+couplings, post-product linear map, first scalar readout, and checkpoint scale.
+They do not include the second interaction branch or atomic reference energies.
+
+## Global mixed-order environment
+
+- Equal-order job: 399993
+- Coefficient-balanced job: 399994
+
+The implementation contracts every slot separately, including all channel and
+path cross terms. It then absorbs the registered upstream radial factors and
+extracts complete O(3) multiplicity blocks. Across all central species:
+
+| Diagnostic | Maximum observed value |
+|---|---:|
+| Relative off-block norm | `8.11e-19` |
+| Relative magnetic-copy deviation | `4.44e-17` |
+| Relative trace identity residual | `1.32e-15` |
+
+Every tested rank satisfies the actual tied-error bound and its factor-three
+reverse comparison within the declared numerical tolerance.
+
+Equal order weights make the linear term dominant. The coefficient-balanced
+arm uses `beta[z, order] = 1 / ||K[z, order]||^2`, so every order contributes
+equally to the direct-sum coefficient norm before occurrence counting.
+
+| Uniform multiplicity rank per irrep | Best species error | Worst species error |
+|---:|---:|---:|
+| 4 | `0.0508` | `0.211` |
+| 8 | `0.0163` | `0.0818` |
+| 16 | `0.00326` | `0.0196` |
+| 32 | `0.000243` | `0.00125` |
+| 48 | `7.28e-6` | `6.74e-5` |
+| 64 | `8.43e-8` | `1.14e-6` |
+
+These entries are relative squared coefficient errors. They are not energy or
+force errors on a molecular test set.
+
+## End-to-end projector diagnostic
+
+- Projector job: 399999
+- Projector form: native encoder followed by native decoder
+- Geometries: methane and water only
+
+The sequential map is necessary because the full upstream radial factor is
+ill-conditioned. Forming `C Pi C+` as one dense native matrix caused a failed
+random-baseline algebra diagnostic. Applying the encoder and decoder separately
+reduced the relative idempotence residual to at most `4.93e-9` for truncated
+random maps and about `1.5e-14` for the global maps.
+
+| Rank per irrep | Global max energy error | Local radial max energy error | Global max force error | Local radial max force error |
+|---:|---:|---:|---:|---:|
+| 16 | `0.112 eV` | `0.616 eV` | `0.172 eV/angstrom` | `0.448 eV/angstrom` |
+| 32 | `0.0342 eV` | `0.180 eV` | `0.0330 eV/angstrom` | `0.162 eV/angstrom` |
+| 48 | `0.0131 eV` | `0.0374 eV` | `0.00600 eV/angstrom` | `0.0154 eV/angstrom` |
+| 64 | `0.00138 eV` | `0.00556 eV` | `0.00168 eV/angstrom` | `0.00855 eV/angstrom` |
+
+At full rank, the evaluator now applies every encoder and decoder rather than
+taking an identity shortcut. The worst energy or force discrepancy is
+`1.71e-10`, and the global and local bases agree at about `6.22e-15` or better.
+This passes the declared `5e-10` integration gate. The lower-rank comparison is
+encouraging but uses only two integration geometries. It is not a held-out
+benchmark or an uncertainty estimate.
+
+## Frozen held-out branch fidelity
+
+- Dataset: official MACE-OFF23 test archive
+- Repository DOI: `10.17863/CAM.107498`
+- Full test set: 50,195 configurations
+- Frozen metadata-stratified subset: 64 configurations
+- Fidelity job: 400007
+- Random controls: three fixed canonical seeds
+
+The subspaces were derived only from checkpoint weights and the declared
+function measure. The evaluation configurations were selected before projected
+errors were computed.
+
+| Rank per irrep | Global mean energy error per atom | Local radial mean energy error per atom | Global mean force RMSE | Local radial mean force RMSE |
+|---:|---:|---:|---:|---:|
+| 16 | `0.0312 eV` | `0.144 eV` | `0.193 eV/angstrom` | `0.278 eV/angstrom` |
+| 32 | `0.00312 eV` | `0.0188 eV` | `0.0573 eV/angstrom` | `0.126 eV/angstrom` |
+| 48 | `0.00158 eV` | `0.00311 eV` | `0.0249 eV/angstrom` | `0.0429 eV/angstrom` |
+| 64 | `0.000248 eV` | `0.000594 eV` | `0.00319 eV/angstrom` | `0.00921 eV/angstrom` |
+| 80 | `0.0000249 eV` | `0.000124 eV` | `0.000306 eV/angstrom` | `0.00120 eV/angstrom` |
+
+For local minus global mean force RMSE, every paired 95 percent bootstrap
+interval excludes zero. At rank 64 the interval is `0.00533` to `0.00660
+eV/angstrom`. At rank 80 it is `0.000832` to `0.000961 eV/angstrom`.
+
+This is the first evidence that downstream-composed selection provides a real
+fidelity advantage over local radial SVD at matched function rank. It remains a
+single-checkpoint, first-branch result. The next test must insert the maps at the
+shared interface and measure every downstream consumer.
+
+## Shared-interface boundary
+
+- Shared-interface jobs: 400013 and 400023
+- Insertion point: first interaction density before product block zero
+- Consumers affected: first scalar readout and the later nonlinear branch
+
+| Rank per irrep | Global shared mean force RMSE | Local radial shared mean force RMSE | Global shared mean energy error per atom | Local radial shared mean energy error per atom |
+|---:|---:|---:|---:|---:|
+| 48 | `0.0327 eV/angstrom` | `0.0316 eV/angstrom` | `0.00406 eV` | `0.00193 eV` |
+| 64 | `0.00925 eV/angstrom` | `0.00763 eV/angstrom` | `0.000754 eV` | `0.000420 eV` |
+| 80 | `0.00174 eV/angstrom` | `0.000913 eV/angstrom` | `0.0000735 eV` | `0.0000986 eV` |
+
+The first-branch global basis is therefore not a general full-model basis. The
+later nonlinear consumer changes which directions matter. Generalizing the ODT
+goal now means constructing a multi-consumer environment, not claiming that the
+first-readout environment already compresses all of MACE.
+
+For shared force RMSE at rank 64, the paired local-minus-global 95 percent
+interval is `-0.00217` to `-0.00106 eV/angstrom`. At rank 80 it is `-0.000992`
+to `-0.000686 eV/angstrom`. Negative values mean local radial SVD is better for
+the full shared-interface target at these ranks.
+
+## Result files
+
+| File | SHA-256 |
+|---|---|
+| `results/athena_environment.json` | `a41521bec527bea6f902c6ab0451c0a3da74cb950c9ac99add73c9b87a9522b6` |
+| `results/athena_environment_job.json` | `16a58630ced6980d3400063433709c8a8e730d2076a780789a42cad61744b8bf` |
+| `results/mace_off23_small_checkpoint_audit.json` | `a6af05bfa8c487738e23fa3ee83a88417a4f3787e4e04a32e1434df1edccfcc2` |
+| `results/mace_off23_small_path_quotient.json` | `022f32d297a0691c650f7d02dc20236e48faa270b8c01ada557ddb56df71f18f` |
+| `results/mace_off23_small_quotient_integration.json` | `582789a202f6f83703016e658dcee4630211a100c016b31afa26be6c35873997` |
+| `results/mace_off23_small_radial_interface.json` | `675f6c7771b7c9b22321b0c69c94adbd6b825e98cd195ea0d616d2f2c5960a53` |
+| `results/mace_off23_small_first_branch.json` | `c9a3d916f5823a0a3aedf8233ff27a0b4dcc9a674e8f775dcbb9760cc99999cc` |
+| `results/mace_off23_small_global_environment.json` | `a3975acc08525ea8aef19abe1e9a78801d14ebbd33bac682f53162ea3ed5c3e6` |
+| `results/mace_off23_small_global_environment_balanced.json` | `b55a91213a442a9428544f54e2e44052d3f61cb2a81ea487ef44a6e3a032ae9c` |
+| `results/mace_off23_small_projected_branch_balanced.json` | `7980ea21baea63c25f11f7627df00d2851adf9682ad13a9c3da242b623fa2f14` |
+| `results/mace_off23_test_manifest_64.json` | `5e7314c41fedbb614a457d7f4b91c87e615f08f95a35e843b224cd0b9aa82835` |
+| `results/mace_off23_small_heldout_branch_balanced_64.json` | `80290e13ac4c68c7b5d7469b7f538b355162c9b0bcf5da8646d1160dce0fe298` |
+| `results/mace_off23_small_shared_interface_balanced_64.json` | `08763df73a35e4e6171c6388c1f82217644a9522023b661a6a4ef362c9ca7903` |
+
+## Immediate next implementation
+
+1. Freeze a molecular evaluation manifest with configuration identifiers and
+   hashes.
+2. Run the same branch evaluator for global, local radial, local weight, and
+   canonical random subspaces.
+3. Report paired energy and force fidelity with uncertainty at the frozen rank
+   ladder.
+4. Insert each native encoder and decoder at the shared interface and quantify
+   the gap between branch-only and all-consumer fidelity.
+5. Build physical mode cards only after the fidelity result is frozen.

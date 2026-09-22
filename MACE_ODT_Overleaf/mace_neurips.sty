@@ -1,0 +1,54 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mace_neurips}[2026/09/21 NeurIPS-inspired research note style]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage[letterpaper,top=0.72in,bottom=0.78in,left=0.72in,right=0.72in]{geometry}
+\RequirePackage{microtype}
+\RequirePackage{amsmath,amssymb,mathtools}
+\RequirePackage{booktabs,tabularx,array}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{enumitem}
+\RequirePackage{natbib}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[nameinlink,noabbrev]{cleveref}
+
+\definecolor{linkblue}{HTML}{1F5A94}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue}
+
+\setlength{\columnsep}{0.26in}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlength{\textfloatsep}{9pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\renewcommand{\arraystretch}{1.12}
+\setlist{itemsep=1pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+
+\makeatletter
+\renewcommand{\maketitle}{
+  \twocolumn[
+    \begin{center}
+      {\LARGE\bfseries \@title\par}
+      \vspace{0.65em}
+      {\normalsize \@author\par}
+      \vspace{1.1em}
+    \end{center}
+  ]
+}
+\renewenvironment{abstract}
+  {\begin{center}\begin{minipage}{0.94\columnwidth}\small\textbf{Abstract.}\ }
+  {\end{minipage}\end{center}\vspace{0.5em}}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}
+  {-2.1ex plus -0.5ex minus -0.2ex}
+  {1.0ex plus 0.2ex}
+  {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}
+  {-1.7ex plus -0.4ex minus -0.2ex}
+  {0.7ex plus 0.15ex}
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\pagestyle{plain}

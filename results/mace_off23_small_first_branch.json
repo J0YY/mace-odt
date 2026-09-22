@@ -1,0 +1,83 @@
+{
+  "angular_dimension": 16,
+  "channels": 96,
+  "coefficient_axes": {
+    "order_1": [
+      "central_species",
+      "channel",
+      "angular_1"
+    ],
+    "order_2": [
+      "central_species",
+      "channel",
+      "angular_1",
+      "angular_2"
+    ],
+    "order_3": [
+      "central_species",
+      "channel",
+      "angular_1",
+      "angular_2",
+      "angular_3"
+    ]
+  },
+  "constant_max_absolute_eV": 0.0,
+  "dtype": "float64",
+  "experiment": "E4_exact_first_branch_compiler",
+  "gate_passed": true,
+  "geometry_checks": [
+    {
+      "force_max_absolute_error_eV_per_A": 4.996003610813204e-16,
+      "formula": "CH4",
+      "node_energy_max_absolute_error_eV": 8.881784197001252e-16,
+      "total_energy_absolute_error_eV": 8.881784197001252e-16
+    },
+    {
+      "force_max_absolute_error_eV_per_A": 9.992007221626409e-16,
+      "formula": "H2O",
+      "node_energy_max_absolute_error_eV": 2.220446049250313e-16,
+      "total_energy_absolute_error_eV": 8.881784197001252e-16
+    }
+  ],
+  "npz": "results/mace_off23_small_first_branch.npz",
+  "num_elements": 10,
+  "path_null_invariance": [
+    {
+      "coefficient_max_absolute_change": 0.0,
+      "coefficient_relative_change": 0.0,
+      "null_dimension": 0,
+      "order": 1,
+      "path_dimension": 1,
+      "supported_dimension": 1
+    },
+    {
+      "coefficient_max_absolute_change": 0.0,
+      "coefficient_relative_change": 0.0,
+      "null_dimension": 0,
+      "order": 2,
+      "path_dimension": 4,
+      "supported_dimension": 4
+    },
+    {
+      "coefficient_max_absolute_change": 4.440892098500626e-15,
+      "coefficient_relative_change": 1.69621578913631e-16,
+      "null_dimension": 15,
+      "order": 3,
+      "path_dimension": 23,
+      "supported_dimension": 8
+    }
+  ],
+  "random_feature_check": {
+    "max_absolute_error_eV": 6.536993168992922e-13,
+    "relative_l2_error": 6.040837044576034e-16
+  },
+  "requested_model": "small",
+  "schema_version": 1,
+  "scope": "The arrays exactly compile the first scalar readout branch. They do not include later interaction blocks or atomic reference energies.",
+  "symmetry_max_absolute_residuals": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 3.552713678800501e-15
+  },
+  "tolerance": 5e-10
+}

@@ -1,0 +1,62 @@
+{
+  "project": "MACE-ODT standalone research specification",
+  "date": "2026-09-21",
+  "sources": [
+    {
+      "source_id": "D",
+      "filename": "chi-nets.txt",
+      "size_bytes": 64484,
+      "sha256": "83155e93e542392b2ad41245b01367e93a0d716e3a13de949d168349d7bc24d8",
+      "role": "primary supplied source"
+    },
+    {
+      "source_id": "H",
+      "filename": "shared(1).html",
+      "size_bytes": 1238431,
+      "sha256": "df13c7b44753902606ba6b86296c4d883ece3cdfacf8e752c0a6db7f31882fb8",
+      "role": "primary supplied source"
+    },
+    {
+      "source_id": "P",
+      "filename": "Pasted markdown(7).md",
+      "size_bytes": 21304,
+      "sha256": "72f19d065e2d54d309c6ac07a611c1b228b5fbbb216909983c63defb61eb3810",
+      "role": "exploratory design input"
+    }
+  ],
+  "artifacts": [
+    {
+      "filename": "MACE_ODT_Research_Specification.md",
+      "size_bytes": 179628,
+      "sha256": "bf1732fe8a05e8bf9bf4285444afad0708fe56352fdba2723a2ddc985385c534"
+    },
+    {
+      "filename": "verify_mace_odt_math.py",
+      "size_bytes": 16124,
+      "sha256": "1bdf3270e1f7f3b0f65318e166a58e8af77ff5f46fc378922ed667bb6e9f8286"
+    },
+    {
+      "filename": "mace_odt_math_checks.json",
+      "size_bytes": 3901,
+      "sha256": "2bc882a19b919ad2c815b65ca1cbd0db52d0de9d8648c8783113d07541bdb69b"
+    }
+  ],
+  "specification": {
+    "word_count_whitespace_tokenized": 23664,
+    "numbered_sections": 27,
+    "appendices": 3,
+    "numbered_equations": 61,
+    "display_math_blocks": 117
+  },
+  "verification": {
+    "status": "passed",
+    "synthetic_tests": 16,
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "real_mace_experiments_run": false,
+    "svhn_reproduction_run": false
+  },
+  "source_scope": "Supplied manuscripts and limited supplementary primary-source verification; no exhaustive novelty certification.",
+  "public_mace_code_scope": "Public main-branch inspection on 2026-09-21; not a pinned checkpoint implementation."
+}

@@ -1,0 +1,1641 @@
+{
+  "checkpoint_files": [
+    {
+      "path": "/work/joy/cache/mace-odt/mace/MACE-OFF23_small.model",
+      "sha256": "165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f",
+      "size_bytes": 7347350
+    }
+  ],
+  "device": "cpu",
+  "dtype": "float64",
+  "environment": {
+    "executable": "/work/joy/envs/mace-odt-cpu/bin/python",
+    "git": {
+      "commit": null,
+      "status": null
+    },
+    "hostname": "cnode403",
+    "packages": {
+      "ase": "3.29.0",
+      "e3nn": "0.4.4",
+      "mace-torch": "0.3.16",
+      "numpy": "2.2.6",
+      "opt-einsum": "3.4.0",
+      "scipy": "1.15.3",
+      "torch": "2.6.0+cpu",
+      "torch-ema": "0.3",
+      "torchmetrics": "1.9.0"
+    },
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "schema_version": 1,
+    "slurm": {
+      "job_id": "400072",
+      "node_list": "cnode403",
+      "partition": "compute"
+    },
+    "torch": {
+      "cuda_available": false,
+      "cuda_version": null,
+      "default_dtype": "torch.float32",
+      "device_count": 0,
+      "version": "2.6.0+cpu"
+    }
+  },
+  "experiment": "E1_checkpoint_architecture_audit",
+  "gate_passed": true,
+  "metadata": {
+    "atomic_energies_fn": "AtomicEnergiesBlock(energies=[[-13.5720, -1030.5672, -1486.3750, -2043.9337, -2715.3185, -9287.4071, -10834.4845, -12522.6493, -70045.2839, -8102.5246]])",
+    "atomic_numbers": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      15,
+      16,
+      17,
+      35,
+      53
+    ],
+    "num_interactions": 2,
+    "r_max": 4.5,
+    "scale_shift": "ScaleShiftBlock(scale=1.0757, shift=0.0000)"
+  },
+  "model_type": "mace.modules.models.ScaleShiftMACE",
+  "modules": [
+    {
+      "direct_buffers": {
+        "atomic_numbers": {
+          "dtype": "torch.int64",
+          "shape": [
+            10
+          ]
+        },
+        "num_interactions": {
+          "dtype": "torch.int64",
+          "shape": []
+        },
+        "r_max": {
+          "dtype": "torch.float64",
+          "shape": []
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "<root>",
+      "type": "mace.modules.models.ScaleShiftMACE"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "node_embedding",
+      "type": "mace.modules.blocks.LinearNodeEmbeddingBlock"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 960,
+      "direct_parameter_shapes": [
+        [
+          960
+        ]
+      ],
+      "name": "node_embedding.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "node_embedding.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "radial_embedding",
+      "type": "mace.modules.blocks.RadialEmbeddingBlock"
+    },
+    {
+      "direct_buffers": {
+        "bessel_weights": {
+          "dtype": "torch.float64",
+          "shape": [
+            8
+          ]
+        },
+        "prefactor": {
+          "dtype": "torch.float64",
+          "shape": []
+        },
+        "r_max": {
+          "dtype": "torch.float64",
+          "shape": []
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "radial_embedding.bessel_fn",
+      "type": "mace.modules.radial.BesselBasis"
+    },
+    {
+      "direct_buffers": {
+        "p": {
+          "dtype": "torch.float64",
+          "shape": []
+        },
+        "r_max": {
+          "dtype": "torch.float64",
+          "shape": []
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "radial_embedding.cutoff_fn",
+      "type": "mace.modules.radial.PolynomialCutoff"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "spherical_harmonics",
+      "type": "e3nn.o3._spherical_harmonics.SphericalHarmonics"
+    },
+    {
+      "direct_buffers": {
+        "atomic_energies": {
+          "dtype": "torch.float64",
+          "shape": [
+            10
+          ]
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "atomic_energies_fn",
+      "type": "mace.modules.blocks.AtomicEnergiesBlock"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0",
+      "type": "mace.modules.blocks.RealAgnosticInteractionBlock"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 9216,
+      "direct_parameter_shapes": [
+        [
+          9216
+        ]
+      ],
+      "name": "interactions.0.linear_up",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.linear_up._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1536
+          ]
+        },
+        "weight": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.conv_tp",
+      "type": "e3nn.o3._tensor_product._tensor_product.TensorProduct"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.conv_tp._compiled_main_left_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.conv_tp._compiled_main_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.conv_tp_weights",
+      "type": "e3nn.nn._fc.FullyConnectedNet"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 512,
+      "direct_parameter_shapes": [
+        [
+          8,
+          64
+        ]
+      ],
+      "name": "interactions.0.conv_tp_weights.layer0",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.conv_tp_weights.layer0.act",
+      "type": "e3nn.math._normalize_activation.normalize2mom"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4096,
+      "direct_parameter_shapes": [
+        [
+          64,
+          64
+        ]
+      ],
+      "name": "interactions.0.conv_tp_weights.layer1",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4096,
+      "direct_parameter_shapes": [
+        [
+          64,
+          64
+        ]
+      ],
+      "name": "interactions.0.conv_tp_weights.layer2",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 24576,
+      "direct_parameter_shapes": [
+        [
+          64,
+          384
+        ]
+      ],
+      "name": "interactions.0.conv_tp_weights.layer3",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1536
+          ]
+        }
+      },
+      "direct_parameter_count": 36864,
+      "direct_parameter_shapes": [
+        [
+          36864
+        ]
+      ],
+      "name": "interactions.0.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1536
+          ]
+        }
+      },
+      "direct_parameter_count": 368640,
+      "direct_parameter_shapes": [
+        [
+          368640
+        ]
+      ],
+      "name": "interactions.0.skip_tp",
+      "type": "e3nn.o3._tensor_product._sub.FullyConnectedTensorProduct"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.skip_tp._compiled_main_left_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.skip_tp._compiled_main_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.0.reshape",
+      "type": "mace.modules.irreps_tools.reshape_irreps"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1",
+      "type": "mace.modules.blocks.RealAgnosticResidualInteractionBlock"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 9216,
+      "direct_parameter_shapes": [
+        [
+          9216
+        ]
+      ],
+      "name": "interactions.1.linear_up",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.linear_up._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1536
+          ]
+        },
+        "weight": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.conv_tp",
+      "type": "e3nn.o3._tensor_product._tensor_product.TensorProduct"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.conv_tp._compiled_main_left_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.conv_tp._compiled_main_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.conv_tp_weights",
+      "type": "e3nn.nn._fc.FullyConnectedNet"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 512,
+      "direct_parameter_shapes": [
+        [
+          8,
+          64
+        ]
+      ],
+      "name": "interactions.1.conv_tp_weights.layer0",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.conv_tp_weights.layer0.act",
+      "type": "e3nn.math._normalize_activation.normalize2mom"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4096,
+      "direct_parameter_shapes": [
+        [
+          64,
+          64
+        ]
+      ],
+      "name": "interactions.1.conv_tp_weights.layer1",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4096,
+      "direct_parameter_shapes": [
+        [
+          64,
+          64
+        ]
+      ],
+      "name": "interactions.1.conv_tp_weights.layer2",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 24576,
+      "direct_parameter_shapes": [
+        [
+          64,
+          384
+        ]
+      ],
+      "name": "interactions.1.conv_tp_weights.layer3",
+      "type": "e3nn.nn._fc._Layer"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1536
+          ]
+        }
+      },
+      "direct_parameter_count": 36864,
+      "direct_parameter_shapes": [
+        [
+          36864
+        ]
+      ],
+      "name": "interactions.1.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 92160,
+      "direct_parameter_shapes": [
+        [
+          92160
+        ]
+      ],
+      "name": "interactions.1.skip_tp",
+      "type": "e3nn.o3._tensor_product._sub.FullyConnectedTensorProduct"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.skip_tp._compiled_main_left_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.skip_tp._compiled_main_right",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "interactions.1.reshape",
+      "type": "mace.modules.irreps_tools.reshape_irreps"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0",
+      "type": "mace.modules.blocks.EquivariantProductBasisBlock"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions",
+      "type": "mace.modules.symmetric_contraction.SymmetricContraction"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {
+        "U_matrix_1": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            1
+          ]
+        },
+        "U_matrix_2": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            16,
+            4
+          ]
+        },
+        "U_matrix_3": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            16,
+            16,
+            23
+          ]
+        }
+      },
+      "direct_parameter_count": 22080,
+      "direct_parameter_shapes": [
+        [
+          10,
+          23,
+          96
+        ]
+      ],
+      "name": "products.0.symmetric_contractions.contractions.0",
+      "type": "mace.modules.symmetric_contraction.Contraction"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_weighting",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_weighting.0",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_weighting.1",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_features",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_features.0",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.contractions_features.1",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4800,
+      "direct_parameter_shapes": [
+        [
+          10,
+          4,
+          96
+        ],
+        [
+          10,
+          1,
+          96
+        ]
+      ],
+      "name": "products.0.symmetric_contractions.contractions.0.weights",
+      "type": "torch.nn.modules.container.ParameterList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.symmetric_contractions.contractions.0.graph_opt_main",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 9216,
+      "direct_parameter_shapes": [
+        [
+          9216
+        ]
+      ],
+      "name": "products.0.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.0.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1",
+      "type": "mace.modules.blocks.EquivariantProductBasisBlock"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions",
+      "type": "mace.modules.symmetric_contraction.SymmetricContraction"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {
+        "U_matrix_1": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            1
+          ]
+        },
+        "U_matrix_2": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            16,
+            4
+          ]
+        },
+        "U_matrix_3": {
+          "dtype": "torch.float64",
+          "shape": [
+            16,
+            16,
+            16,
+            23
+          ]
+        }
+      },
+      "direct_parameter_count": 22080,
+      "direct_parameter_shapes": [
+        [
+          10,
+          23,
+          96
+        ]
+      ],
+      "name": "products.1.symmetric_contractions.contractions.0",
+      "type": "mace.modules.symmetric_contraction.Contraction"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_weighting",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_weighting.0",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_weighting.1",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_features",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_features.0",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.contractions_features.1",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 4800,
+      "direct_parameter_shapes": [
+        [
+          10,
+          4,
+          96
+        ],
+        [
+          10,
+          1,
+          96
+        ]
+      ],
+      "name": "products.1.symmetric_contractions.contractions.0.weights",
+      "type": "torch.nn.modules.container.ParameterList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.symmetric_contractions.contractions.0.graph_opt_main",
+      "type": "torch.fx.graph_module.GraphModule"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            96
+          ]
+        }
+      },
+      "direct_parameter_count": 9216,
+      "direct_parameter_shapes": [
+        [
+          9216
+        ]
+      ],
+      "name": "products.1.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "products.1.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.0",
+      "type": "mace.modules.blocks.LinearReadoutBlock"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1
+          ]
+        }
+      },
+      "direct_parameter_count": 96,
+      "direct_parameter_shapes": [
+        [
+          96
+        ]
+      ],
+      "name": "readouts.0.linear",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.0.linear._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1",
+      "type": "mace.modules.blocks.NonLinearReadoutBlock"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            16
+          ]
+        }
+      },
+      "direct_parameter_count": 1536,
+      "direct_parameter_shapes": [
+        [
+          1536
+        ]
+      ],
+      "name": "readouts.1.linear_1",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1.linear_1._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1.non_linearity",
+      "type": "e3nn.nn._activation.Activation"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1.non_linearity.acts",
+      "type": "torch.nn.modules.container.ModuleList"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1.non_linearity.acts.0",
+      "type": "e3nn.math._normalize_activation.normalize2mom"
+    },
+    {
+      "direct_buffers": {
+        "bias": {
+          "dtype": "torch.float64",
+          "shape": [
+            0
+          ]
+        },
+        "output_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1
+          ]
+        }
+      },
+      "direct_parameter_count": 16,
+      "direct_parameter_shapes": [
+        [
+          16
+        ]
+      ],
+      "name": "readouts.1.linear_2",
+      "type": "e3nn.o3._linear.Linear"
+    },
+    {
+      "direct_buffers": {},
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "readouts.1.linear_2._compiled_main",
+      "type": "torch.jit._script.RecursiveScriptModule"
+    },
+    {
+      "direct_buffers": {
+        "scale": {
+          "dtype": "torch.float64",
+          "shape": []
+        },
+        "shift": {
+          "dtype": "torch.float64",
+          "shape": []
+        }
+      },
+      "direct_parameter_count": 0,
+      "direct_parameter_shapes": [],
+      "name": "scale_shift",
+      "type": "mace.modules.blocks.ScaleShiftBlock"
+    }
+  ],
+  "parameter_counts": {
+    "<total>": 694320,
+    "<trainable>": 0,
+    "atomic_energies_fn": 0,
+    "interactions": 619520,
+    "node_embedding": 960,
+    "products": 72192,
+    "radial_embedding": 0,
+    "readouts": 1648,
+    "scale_shift": 0,
+    "spherical_harmonics": 0
+  },
+  "requested_model": "small",
+  "schema_version": 1,
+  "smoke_tests": {
+    "checks": [
+      {
+        "name": "CH4_translation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 0.0
+      },
+      {
+        "name": "CH4_translation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 3.941291737419306e-15
+      },
+      {
+        "name": "CH4_rotation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 0.0
+      },
+      {
+        "name": "CH4_rotation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 5.211363490025173e-15
+      },
+      {
+        "name": "CH4_permutation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 2.2737367544323206e-13
+      },
+      {
+        "name": "CH4_permutation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 3.0531133177191805e-16
+      },
+      {
+        "name": "H2O_translation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 0.0
+      },
+      {
+        "name": "H2O_translation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 3.1086244689504383e-15
+      },
+      {
+        "name": "H2O_rotation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 0.0
+      },
+      {
+        "name": "H2O_rotation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 6.689093723366568e-15
+      },
+      {
+        "name": "H2O_permutation_energy",
+        "passed": true,
+        "tolerance": 1e-08,
+        "units": "eV",
+        "value": 0.0
+      },
+      {
+        "name": "H2O_permutation_force",
+        "passed": true,
+        "tolerance": 1e-07,
+        "units": "eV_per_A",
+        "value": 0.0
+      },
+      {
+        "name": "CH4_force_finite_difference",
+        "passed": true,
+        "tolerance": 0.0002,
+        "units": "eV_per_A",
+        "value": 2.0458692712166382e-08
+      }
+    ],
+    "declared_tolerances": {
+      "energy": 1e-08,
+      "finite_difference_force": 0.0002,
+      "finite_difference_step": 0.0001,
+      "force": 1e-07
+    },
+    "examples": [
+      {
+        "energy_eV": -1103.059205343848,
+        "force_norm_eV_per_A": 0.23585087995869444,
+        "formula": "CH4"
+      },
+      {
+        "energy_eV": -2081.1209244826714,
+        "force_norm_eV_per_A": 0.1316516907592361,
+        "formula": "H2O"
+      }
+    ],
+    "passed": true
+  },
+  "state_dict": {
+    "atomic_energies_fn.atomic_energies": {
+      "dtype": "torch.float64",
+      "shape": [
+        10
+      ]
+    },
+    "atomic_numbers": {
+      "dtype": "torch.int64",
+      "shape": [
+        10
+      ]
+    },
+    "interactions.0.conv_tp.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "interactions.0.conv_tp.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.0.conv_tp_weights.layer0.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    "interactions.0.conv_tp_weights.layer1.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        64
+      ]
+    },
+    "interactions.0.conv_tp_weights.layer2.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        64
+      ]
+    },
+    "interactions.0.conv_tp_weights.layer3.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        384
+      ]
+    },
+    "interactions.0.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.0.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "interactions.0.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        36864
+      ]
+    },
+    "interactions.0.linear_up.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.0.linear_up.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "interactions.0.linear_up.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        9216
+      ]
+    },
+    "interactions.0.skip_tp.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "interactions.0.skip_tp.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        368640
+      ]
+    },
+    "interactions.1.conv_tp.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "interactions.1.conv_tp.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.1.conv_tp_weights.layer0.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        8,
+        64
+      ]
+    },
+    "interactions.1.conv_tp_weights.layer1.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        64
+      ]
+    },
+    "interactions.1.conv_tp_weights.layer2.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        64
+      ]
+    },
+    "interactions.1.conv_tp_weights.layer3.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        64,
+        384
+      ]
+    },
+    "interactions.1.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.1.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "interactions.1.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        36864
+      ]
+    },
+    "interactions.1.linear_up.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "interactions.1.linear_up.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "interactions.1.linear_up.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        9216
+      ]
+    },
+    "interactions.1.skip_tp.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "interactions.1.skip_tp.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        92160
+      ]
+    },
+    "node_embedding.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "node_embedding.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "node_embedding.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        960
+      ]
+    },
+    "num_interactions": {
+      "dtype": "torch.int64",
+      "shape": []
+    },
+    "products.0.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "products.0.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "products.0.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        9216
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.U_matrix_1": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        1
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.U_matrix_2": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        16,
+        4
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.U_matrix_3": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        16,
+        16,
+        23
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.weights.0": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        4,
+        96
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.weights.1": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        1,
+        96
+      ]
+    },
+    "products.0.symmetric_contractions.contractions.0.weights_max": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        23,
+        96
+      ]
+    },
+    "products.1.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "products.1.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "products.1.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        9216
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.U_matrix_1": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        1
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.U_matrix_2": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        16,
+        4
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.U_matrix_3": {
+      "dtype": "torch.float64",
+      "shape": [
+        16,
+        16,
+        16,
+        23
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.weights.0": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        4,
+        96
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.weights.1": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        1,
+        96
+      ]
+    },
+    "products.1.symmetric_contractions.contractions.0.weights_max": {
+      "dtype": "torch.float64",
+      "shape": [
+        10,
+        23,
+        96
+      ]
+    },
+    "r_max": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "radial_embedding.bessel_fn.bessel_weights": {
+      "dtype": "torch.float64",
+      "shape": [
+        8
+      ]
+    },
+    "radial_embedding.bessel_fn.prefactor": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "radial_embedding.bessel_fn.r_max": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "radial_embedding.cutoff_fn.p": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "radial_embedding.cutoff_fn.r_max": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "readouts.0.linear.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "readouts.0.linear.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1
+      ]
+    },
+    "readouts.0.linear.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        96
+      ]
+    },
+    "readouts.1.linear_1.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "readouts.1.linear_1.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        16
+      ]
+    },
+    "readouts.1.linear_1.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        1536
+      ]
+    },
+    "readouts.1.linear_2.bias": {
+      "dtype": "torch.float64",
+      "shape": [
+        0
+      ]
+    },
+    "readouts.1.linear_2.output_mask": {
+      "dtype": "torch.float64",
+      "shape": [
+        1
+      ]
+    },
+    "readouts.1.linear_2.weight": {
+      "dtype": "torch.float64",
+      "shape": [
+        16
+      ]
+    },
+    "scale_shift.scale": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "scale_shift.shift": {
+      "dtype": "torch.float64",
+      "shape": []
+    }
+  }
+}

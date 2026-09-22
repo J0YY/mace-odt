@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "seed": 260921,
+  "test_count": 16,
+  "scope": "finite-dimensional synthetic checks only; no MACE or SVHN experiments",
+  "tests": {
+    "single_bridge_svd": {
+      "spectrum_relative_error": 5.44783629017395e-16,
+      "residual_squared": 24.58193817146084,
+      "discarded_eigenvalue_sum": 24.58193817146083,
+      "projector_idempotence_error": 7.460321244251613e-16
+    },
+    "bridge_gauge_invariance": {
+      "gauge_condition_number": 20.000000000000036,
+      "spectrum_relative_error": 3.06208449901485e-15,
+      "projector_covariance_error": 8.019939923071558e-15,
+      "truncated_function_error": 6.446561352653517e-15,
+      "raw_upstream_spectrum_change": 0.9931811286978558
+    },
+    "local_vs_composed_svd": {
+      "local_rank_one_error": 1.0,
+      "global_rank_one_error": 0.01
+    },
+    "mixed_order_shared_projector_bound": {
+      "actual_squared_error": 10.47982464762321,
+      "marginal_tail_bound": 18.19036002129861,
+      "discarded_eigenvalue_sum": 18.19036002129861,
+      "largest_error_ratio_to_100_competitors": 1.0883538752936,
+      "quasioptimality_squared_factor_proved_in_spec": 3
+    },
+    "tree_lift_null_polynomial": {
+      "unsymmetrized_tensor_norm": 0.8660254037844386,
+      "full_symmetrization_norm": 0.0,
+      "max_diagonal_evaluation": 1.563383500502469e-15
+    },
+    "gram_fourth_moment_counterexample": {
+      "target_relative_tensor_error": 0.1,
+      "gram_squared_norm_tail_fraction": 0.0024937655860349135,
+      "actual_relative_tensor_error": 0.21821789023599236,
+      "scope": "generic single-cut test; not a full reproduction of the paper theorem"
+    },
+    "truncation_does_not_preserve_all_isometries": {
+      "original_one_row_core_norm_squared": 0.9999999999999998,
+      "input_projected_core_norm_squared": 0.4999999999999999
+    },
+    "density_to_distinct_body_order": {
+      "explicit": [
+        -1.0374645939614797,
+        -1.3338498810218695,
+        -19.539543578106695
+      ],
+      "inclusion_exclusion": [
+        -1.0374645939614797,
+        -1.33384988102187,
+        -19.539543578106702
+      ],
+      "relative_error": 3.6299808753621964e-16
+    },
+    "physical_vs_independent_copy_metric": {
+      "uniform_x_fourth_moment": 0.2,
+      "product_of_second_moments": 0.1111111111111111
+    },
+    "scalar_terminal_rank_ceiling": {
+      "rank": 1,
+      "hidden_dimension": 4
+    },
+    "singular_support_transport": {
+      "reachable_error": 8.518136352334215e-16,
+      "off_support_non_covariance": 0.2863263940919156
+    },
+    "mixed_order_gauge_transport": {
+      "spectrum_relative_error": 7.188068054534544e-16,
+      "projector_covariance_error": 1.726015326276203e-15,
+      "condition_number": 3.0021420550655367
+    },
+    "semantic_covector_and_decoder_transport": {
+      "functional_image_error": 1.0121412644391506e-16,
+      "dual_pairing_error": 2.220446049250313e-16
+    },
+    "energy_and_force_coefficient_bounds": {
+      "absolute_energy_error": 30.9863069757574,
+      "energy_bound": 164.44393912184938,
+      "coordinate_gradient_error": 91.0545822268915,
+      "coordinate_gradient_bound": 836.1215506923671
+    },
+    "factorized_marginal_cross_terms": {
+      "factorized_vs_dense_error": 1.922172047471966e-16,
+      "cancelled_tensor_norm": 0.0,
+      "incorrect_sum_of_path_squared_norms": 399.73998167843786
+    },
+    "literal_source_bound_one_layer_chi": {
+      "depth": 1,
+      "projection_occurrences": 3,
+      "literal_gram_tail_fractions": [
+        0.000899190728344391,
+        0.000899190728344391
+      ],
+      "literal_threshold_fraction": 0.003333333333333334,
+      "actual_relative_tensor_error": 0.17066403719657228,
+      "requested_relative_tensor_error": 0.1,
+      "interpretation": "Counterexample to the printed Gram-squared-Frobenius condition read literally; not to correctly formulated HSVD tail bounds."
+    }
+  }
+}

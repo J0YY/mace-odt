@@ -1,0 +1,3693 @@
+{
+  "branch_results": "results/mace_off23_small_heldout_branch_balanced_64.json",
+  "claim_boundary": "The projector is inserted before product zero, so both the first readout and every later consumer receive the altered features. This tests fidelity only and does not yet compile a faster architecture.",
+  "configuration_count": 64,
+  "experiment": "E8_shared_interface_fidelity",
+  "manifest": "results/mace_off23_test_manifest_64.json",
+  "paired_local_minus_global": [
+    {
+      "multiplicity_rank_per_irrep": 48,
+      "shared_energy_absolute_error_per_atom_eV": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20263048,
+        "ci95_lower": -0.0026016134021536845,
+        "ci95_upper": -0.0016045912354768223,
+        "mean_local_minus_global": -0.002126763185411497
+      },
+      "shared_force_rmse_eV_per_A": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20264048,
+        "ci95_lower": -0.0033955495416135685,
+        "ci95_upper": 0.001318825454280582,
+        "mean_local_minus_global": -0.00110556086928713
+      }
+    },
+    {
+      "multiplicity_rank_per_irrep": 64,
+      "shared_energy_absolute_error_per_atom_eV": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20263064,
+        "ci95_lower": -0.0004824567797598977,
+        "ci95_upper": -0.00019836191461020098,
+        "mean_local_minus_global": -0.0003337678376233084
+      },
+      "shared_force_rmse_eV_per_A": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20264064,
+        "ci95_lower": -0.002167298695272237,
+        "ci95_upper": -0.0010631756391911624,
+        "mean_local_minus_global": -0.0016228703437771276
+      }
+    },
+    {
+      "multiplicity_rank_per_irrep": 80,
+      "shared_energy_absolute_error_per_atom_eV": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20263080,
+        "ci95_lower": 7.362451184878189e-06,
+        "ci95_upper": 4.254907568808739e-05,
+        "mean_local_minus_global": 2.503379916042239e-05
+      },
+      "shared_force_rmse_eV_per_A": {
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20264080,
+        "ci95_lower": -0.0009917965318526672,
+        "ci95_upper": -0.0006858238308278776,
+        "mean_local_minus_global": -0.0008220967843935476
+      }
+    }
+  ],
+  "records": [
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.024919632818266913,
+      "method": "global_environment",
+      "multiplicity_rank_per_irrep": 48,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.006681299984428244,
+          "energy_error_eV": 0.17371379959513433,
+          "force_max_absolute_error_eV_per_A": 0.08685854991686898,
+          "force_rmse_eV_per_A": 0.026576922588876797,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0005248904393132156,
+          "energy_error_eV": -0.003149342635879293,
+          "force_max_absolute_error_eV_per_A": 0.03103260133696284,
+          "force_rmse_eV_per_A": 0.016302366337544817,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.005479170198668726,
+          "energy_error_eV": 0.2136876377480803,
+          "force_max_absolute_error_eV_per_A": 0.11508121994534992,
+          "force_rmse_eV_per_A": 0.03492739300544171,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0050064006286336775,
+          "energy_error_eV": 0.2052624257739808,
+          "force_max_absolute_error_eV_per_A": 0.14910718572557702,
+          "force_rmse_eV_per_A": 0.043021298856976545,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00489255936450458,
+          "energy_error_eV": 0.20548749330919236,
+          "force_max_absolute_error_eV_per_A": 0.12219939361624588,
+          "force_rmse_eV_per_A": 0.03466525707605236,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0040797399824998365,
+          "energy_error_eV": 0.19990725914249197,
+          "force_max_absolute_error_eV_per_A": 0.18457510901386875,
+          "force_rmse_eV_per_A": 0.040076128278062895,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004695119408413065,
+          "energy_error_eV": 0.23006085101224016,
+          "force_max_absolute_error_eV_per_A": 0.22254468604459698,
+          "force_rmse_eV_per_A": 0.039330777664687046,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004316311966841716,
+          "energy_error_eV": 0.18560141457419377,
+          "force_max_absolute_error_eV_per_A": 0.10125963910664781,
+          "force_rmse_eV_per_A": 0.03203912775157858,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0032533845869693323,
+          "energy_error_eV": 0.14314892182665062,
+          "force_max_absolute_error_eV_per_A": 0.10327434907272431,
+          "force_rmse_eV_per_A": 0.03349275923307046,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004476980767756923,
+          "energy_error_eV": 0.20594111531681847,
+          "force_max_absolute_error_eV_per_A": 0.10946344962092125,
+          "force_rmse_eV_per_A": 0.029405623531777135,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.006567050996506753,
+          "energy_error_eV": 0.2758161418532836,
+          "force_max_absolute_error_eV_per_A": 0.12160523905212639,
+          "force_rmse_eV_per_A": 0.03236842286744682,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.004930372972694386,
+          "energy_error_eV": 0.039442983781555085,
+          "force_max_absolute_error_eV_per_A": 0.0783179164464678,
+          "force_rmse_eV_per_A": 0.037570688607607164,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.007840794822489746,
+          "energy_error_eV": 0.14113430680481542,
+          "force_max_absolute_error_eV_per_A": 0.1793600824386673,
+          "force_rmse_eV_per_A": 0.05892858463073901,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0033430477419881897,
+          "energy_error_eV": 0.1270358141955512,
+          "force_max_absolute_error_eV_per_A": 0.133484983769789,
+          "force_rmse_eV_per_A": 0.033848637212788704,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003193289854714428,
+          "energy_error_eV": 0.10857185506029055,
+          "force_max_absolute_error_eV_per_A": 0.13605242747326907,
+          "force_rmse_eV_per_A": 0.0362893442324507,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.002813095009787503,
+          "energy_error_eV": 0.05626190019575006,
+          "force_max_absolute_error_eV_per_A": 0.11272499359463217,
+          "force_rmse_eV_per_A": 0.029051684262178187,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0053234033766784705,
+          "energy_error_eV": -0.021293613506713882,
+          "force_max_absolute_error_eV_per_A": 0.027753786190478524,
+          "force_rmse_eV_per_A": 0.015039296070400235,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0021945693159488235,
+          "energy_error_eV": 0.028529401107334706,
+          "force_max_absolute_error_eV_per_A": 0.08359798220568271,
+          "force_rmse_eV_per_A": 0.02241322474664559,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.004892079317505705,
+          "energy_error_eV": 0.07338118976258556,
+          "force_max_absolute_error_eV_per_A": 0.07506455207658846,
+          "force_rmse_eV_per_A": 0.025761080752596158,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.005597682770040474,
+          "energy_error_eV": 0.2574934074218618,
+          "force_max_absolute_error_eV_per_A": 0.16395134454955684,
+          "force_rmse_eV_per_A": 0.04005862223603657,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0019206993681816836,
+          "energy_error_eV": 0.017286294313635153,
+          "force_max_absolute_error_eV_per_A": 0.03611554958042795,
+          "force_rmse_eV_per_A": 0.014318705434047112,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 0.00291189134267093,
+          "energy_error_eV": 0.26789400352572557,
+          "force_max_absolute_error_eV_per_A": 0.19906386929632958,
+          "force_rmse_eV_per_A": 0.03945290335882072,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0023407939599564996,
+          "energy_error_eV": 0.035111909399347496,
+          "force_max_absolute_error_eV_per_A": 0.04394671836949238,
+          "force_rmse_eV_per_A": 0.01798057161274665,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 0.0016348699089466015,
+          "energy_error_eV": 0.05395070699523785,
+          "force_max_absolute_error_eV_per_A": 0.06893845982127633,
+          "force_rmse_eV_per_A": 0.026736945681092503,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003458006596095705,
+          "energy_error_eV": 0.16598431661259383,
+          "force_max_absolute_error_eV_per_A": 0.1189606403342548,
+          "force_rmse_eV_per_A": 0.031158816639306537,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004421980392324163,
+          "energy_error_eV": 0.08401762745415908,
+          "force_max_absolute_error_eV_per_A": 0.1373738393962437,
+          "force_rmse_eV_per_A": 0.03874517535974087,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0030572374881659117,
+          "energy_error_eV": 0.08254541218047962,
+          "force_max_absolute_error_eV_per_A": 0.07835576408976141,
+          "force_rmse_eV_per_A": 0.030573916609248485,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.002924475575872004,
+          "energy_error_eV": 0.06433846266918408,
+          "force_max_absolute_error_eV_per_A": 0.0759881179300188,
+          "force_rmse_eV_per_A": 0.024489476569548002,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.004415565474321031,
+          "energy_error_eV": 0.07948017853777856,
+          "force_max_absolute_error_eV_per_A": 0.07113649000679712,
+          "force_rmse_eV_per_A": 0.020642769378254707,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.004290457141156795,
+          "energy_error_eV": 0.07293777139966551,
+          "force_max_absolute_error_eV_per_A": 0.09067587992773385,
+          "force_rmse_eV_per_A": 0.024605294442205685,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0050527274404139,
+          "energy_error_eV": 0.19705637017614208,
+          "force_max_absolute_error_eV_per_A": 0.19686167954789413,
+          "force_rmse_eV_per_A": 0.03955525161248775,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0046009903552557165,
+          "energy_error_eV": 0.16563565278920578,
+          "force_max_absolute_error_eV_per_A": 0.15148646950905498,
+          "force_rmse_eV_per_A": 0.0363719463472988,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0033525458278139317,
+          "energy_error_eV": 0.06034582490065077,
+          "force_max_absolute_error_eV_per_A": 0.05285566709412359,
+          "force_rmse_eV_per_A": 0.021963274905171408,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.006083085230493453,
+          "energy_error_eV": 0.3041542615246726,
+          "force_max_absolute_error_eV_per_A": 0.14556970557388915,
+          "force_rmse_eV_per_A": 0.03858976185145744,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.004196909471912394,
+          "energy_error_eV": 0.276996025146218,
+          "force_max_absolute_error_eV_per_A": 0.15134299850175748,
+          "force_rmse_eV_per_A": 0.03696041185172191,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004882382675288416,
+          "energy_error_eV": 0.20017768968682503,
+          "force_max_absolute_error_eV_per_A": 0.11935128644588433,
+          "force_rmse_eV_per_A": 0.03296434226111919,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004798894917661932,
+          "energy_error_eV": 0.08638010851791478,
+          "force_max_absolute_error_eV_per_A": 0.07819919945700837,
+          "force_rmse_eV_per_A": 0.030268252665233746,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0035238190450234633,
+          "energy_error_eV": 0.0775240189905162,
+          "force_max_absolute_error_eV_per_A": 0.1051597036297568,
+          "force_rmse_eV_per_A": 0.038256679437696436,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.005062249981027421,
+          "energy_error_eV": 0.1670542493739049,
+          "force_max_absolute_error_eV_per_A": 0.17542574322554494,
+          "force_rmse_eV_per_A": 0.04387997613313885,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0025200786665664056,
+          "energy_error_eV": 0.08820275332982419,
+          "force_max_absolute_error_eV_per_A": 0.10867040264867178,
+          "force_rmse_eV_per_A": 0.029166307084060265,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004069669939410084,
+          "energy_error_eV": 0.19941382703109412,
+          "force_max_absolute_error_eV_per_A": 0.12963208946193194,
+          "force_rmse_eV_per_A": 0.033771788939836414,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0025702031277129813,
+          "energy_error_eV": 0.12336975013022311,
+          "force_max_absolute_error_eV_per_A": 0.1987715541072328,
+          "force_rmse_eV_per_A": 0.0417834455434266,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004993807628336579,
+          "energy_error_eV": 0.2147337280184729,
+          "force_max_absolute_error_eV_per_A": 0.18439646469422866,
+          "force_rmse_eV_per_A": 0.034954970424074645,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003444157397704354,
+          "energy_error_eV": 0.10332472193113063,
+          "force_max_absolute_error_eV_per_A": 0.11935285689973263,
+          "force_rmse_eV_per_A": 0.030474017375481412,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00012900700392037834,
+          "energy_error_eV": -0.0020641120627260534,
+          "force_max_absolute_error_eV_per_A": 0.08920480825954513,
+          "force_rmse_eV_per_A": 0.039629513685808,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0033750853085837747,
+          "energy_error_eV": 0.14175358296051854,
+          "force_max_absolute_error_eV_per_A": 0.22407799653520266,
+          "force_rmse_eV_per_A": 0.04167802829953508,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.001534845370997573,
+          "energy_error_eV": -0.012278762967980583,
+          "force_max_absolute_error_eV_per_A": 0.0417412506163537,
+          "force_rmse_eV_per_A": 0.022156481157145986,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0045564300891419406,
+          "energy_error_eV": 0.22782150445709703,
+          "force_max_absolute_error_eV_per_A": 0.1318247182180593,
+          "force_rmse_eV_per_A": 0.0384286049483477,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.004594948997752605,
+          "energy_error_eV": 0.06892423496628908,
+          "force_max_absolute_error_eV_per_A": 0.07146473403571063,
+          "force_rmse_eV_per_A": 0.019978621420104516,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.003438764832356934,
+          "energy_error_eV": 0.07565282631185255,
+          "force_max_absolute_error_eV_per_A": 0.06160033734912718,
+          "force_rmse_eV_per_A": 0.023850841622221716,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.004085656078180028,
+          "energy_error_eV": 0.07762746548542054,
+          "force_max_absolute_error_eV_per_A": 0.11394681292086428,
+          "force_rmse_eV_per_A": 0.035367358739430026,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.003969770837019579,
+          "energy_error_eV": 0.08733495841443073,
+          "force_max_absolute_error_eV_per_A": 0.04961720343610354,
+          "force_rmse_eV_per_A": 0.020561419806640665,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004566886068205349,
+          "energy_error_eV": 0.22834430341026746,
+          "force_max_absolute_error_eV_per_A": 0.10227067720690552,
+          "force_rmse_eV_per_A": 0.033010807533093496,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.010885336614010158,
+          "energy_error_eV": 0.2721334153502539,
+          "force_max_absolute_error_eV_per_A": 0.25922957616978115,
+          "force_rmse_eV_per_A": 0.08963607148481449,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003372028710892221,
+          "energy_error_eV": 0.13150911972479662,
+          "force_max_absolute_error_eV_per_A": 0.15599748825887616,
+          "force_rmse_eV_per_A": 0.03524189483088882,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004437894661256498,
+          "energy_error_eV": 0.12869894517643843,
+          "force_max_absolute_error_eV_per_A": 0.15629592469535192,
+          "force_rmse_eV_per_A": 0.04279670365201206,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0049204924123545804,
+          "energy_error_eV": 0.21158117373124696,
+          "force_max_absolute_error_eV_per_A": 0.11050497501806356,
+          "force_rmse_eV_per_A": 0.029556847306288127,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.003927952073718188,
+          "energy_error_eV": 0.07855904147436377,
+          "force_max_absolute_error_eV_per_A": 0.16360514793227465,
+          "force_rmse_eV_per_A": 0.03803847050057389,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0015348470220146737,
+          "energy_error_eV": -0.01227877617611739,
+          "force_max_absolute_error_eV_per_A": 0.04152895290434344,
+          "force_rmse_eV_per_A": 0.022156669184515965,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0023063085843334974,
+          "energy_error_eV": 0.04843248027100344,
+          "force_max_absolute_error_eV_per_A": 0.05666974262766511,
+          "force_rmse_eV_per_A": 0.01826355046986627,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004341436248287209,
+          "energy_error_eV": 0.21707181241436047,
+          "force_max_absolute_error_eV_per_A": 0.08419898167336798,
+          "force_rmse_eV_per_A": 0.02521887560640154,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004010516564853283,
+          "energy_error_eV": 0.07218929816735908,
+          "force_max_absolute_error_eV_per_A": 0.09581619789231155,
+          "force_rmse_eV_per_A": 0.029059019360982992,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.0050571718042361725,
+          "energy_error_eV": 0.2174583875821554,
+          "force_max_absolute_error_eV_per_A": 0.12150596812988324,
+          "force_rmse_eV_per_A": 0.028924953552047886,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.004258173266311077,
+          "energy_error_eV": 0.14051971778826555,
+          "force_max_absolute_error_eV_per_A": 0.12441194608680983,
+          "force_rmse_eV_per_A": 0.04155589206356968,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.010885336614010158,
+        "mean": 0.004061442109486279,
+        "median": 0.0042275413691117356,
+        "p90": 0.00543244015207165,
+        "p95": 0.006494456131604755
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.25922957616978115,
+        "mean": 0.11610084501113549,
+        "median": 0.11333590325774823,
+        "p90": 0.18452151571797673,
+        "p95": 0.19902002201796506
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.08963607148481449,
+        "mean": 0.032717857291944735,
+        "median": 0.03298757489710634,
+        "p90": 0.041641387428745465,
+        "p95": 0.04298760957623187
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 1.3129349670016592
+    },
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.0031914267959739506,
+      "method": "global_environment",
+      "multiplicity_rank_per_irrep": 64,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0011035436972843644,
+          "energy_error_eV": 0.028692136129393475,
+          "force_max_absolute_error_eV_per_A": 0.04092204008238243,
+          "force_rmse_eV_per_A": 0.009270662367803505,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0005154754805213694,
+          "energy_error_eV": 0.0030928528831282165,
+          "force_max_absolute_error_eV_per_A": 0.012486561554563624,
+          "force_rmse_eV_per_A": 0.0066268484466911895,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 9.198407776868687e-05,
+          "energy_error_eV": 0.003587379032978788,
+          "force_max_absolute_error_eV_per_A": 0.04252731392397169,
+          "force_rmse_eV_per_A": 0.007958815951937407,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007608929445268586,
+          "energy_error_eV": 0.031196610725601204,
+          "force_max_absolute_error_eV_per_A": 0.038578777376031104,
+          "force_rmse_eV_per_A": 0.012810714310847375,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00028432493508305577,
+          "energy_error_eV": 0.011941647273488343,
+          "force_max_absolute_error_eV_per_A": 0.048074751267472626,
+          "force_rmse_eV_per_A": 0.011605558781853688,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0011804507901578458,
+          "energy_error_eV": 0.05784208871773444,
+          "force_max_absolute_error_eV_per_A": 0.03612573219789095,
+          "force_rmse_eV_per_A": 0.009625214680733452,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0003426000731284445,
+          "energy_error_eV": 0.01678740358329378,
+          "force_max_absolute_error_eV_per_A": 0.025927706297375286,
+          "force_rmse_eV_per_A": 0.00817650625860209,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.000606405365329539,
+          "energy_error_eV": 0.026075430709170178,
+          "force_max_absolute_error_eV_per_A": 0.03787093090293914,
+          "force_rmse_eV_per_A": 0.010455002500424885,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008065577855880044,
+          "energy_error_eV": 0.035488542565872194,
+          "force_max_absolute_error_eV_per_A": 0.02653117994288956,
+          "force_rmse_eV_per_A": 0.008053702165821533,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009659691796000318,
+          "energy_error_eV": 0.04443458226160146,
+          "force_max_absolute_error_eV_per_A": 0.03241367621140756,
+          "force_rmse_eV_per_A": 0.008089538311997949,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009991495924276976,
+          "energy_error_eV": 0.0419642828819633,
+          "force_max_absolute_error_eV_per_A": 0.03509635827219343,
+          "force_rmse_eV_per_A": 0.008968259948852286,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 3.3958766607611324e-06,
+          "energy_error_eV": 2.716701328608906e-05,
+          "force_max_absolute_error_eV_per_A": 0.021982789759720456,
+          "force_rmse_eV_per_A": 0.009306889606409331,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0038420602226728485,
+          "energy_error_eV": 0.06915708400811127,
+          "force_max_absolute_error_eV_per_A": 0.07295656157457142,
+          "force_rmse_eV_per_A": 0.02260991488701428,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007562627001071201,
+          "energy_error_eV": 0.028737982604070567,
+          "force_max_absolute_error_eV_per_A": 0.032468183460503175,
+          "force_rmse_eV_per_A": 0.010231327027401796,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00023592591220649947,
+          "energy_error_eV": 0.008021481015020981,
+          "force_max_absolute_error_eV_per_A": 0.03550968151313105,
+          "force_rmse_eV_per_A": 0.010739917068431817,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.000108320787694538,
+          "energy_error_eV": 0.0021664157538907602,
+          "force_max_absolute_error_eV_per_A": 0.043177990424959845,
+          "force_rmse_eV_per_A": 0.009610966770831618,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007726469630142674,
+          "energy_error_eV": 0.0030905878520570695,
+          "force_max_absolute_error_eV_per_A": 0.0170992068705606,
+          "force_rmse_eV_per_A": 0.007573097196595055,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004885206155030084,
+          "energy_error_eV": 0.006350768001539109,
+          "force_max_absolute_error_eV_per_A": 0.016063444308258845,
+          "force_rmse_eV_per_A": 0.005001374556715268,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004727135530022982,
+          "energy_error_eV": 0.007090703295034473,
+          "force_max_absolute_error_eV_per_A": 0.01967699931278416,
+          "force_rmse_eV_per_A": 0.006721690266989185,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.000417648126407901,
+          "energy_error_eV": 0.019211813814763445,
+          "force_max_absolute_error_eV_per_A": 0.030899362687360155,
+          "force_rmse_eV_per_A": 0.008558202828817604,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00023172354879837562,
+          "energy_error_eV": 0.0020855119391853805,
+          "force_max_absolute_error_eV_per_A": 0.004520597992814235,
+          "force_rmse_eV_per_A": 0.002140447129772769,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 0.0014522362999623115,
+          "energy_error_eV": 0.13360573959653266,
+          "force_max_absolute_error_eV_per_A": 0.041755758957993994,
+          "force_rmse_eV_per_A": 0.011397535776747557,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 2.702213896554895e-06,
+          "energy_error_eV": 4.053320844832342e-05,
+          "force_max_absolute_error_eV_per_A": 0.016030495543327028,
+          "force_rmse_eV_per_A": 0.005364766172875915,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 0.0012858885332234697,
+          "energy_error_eV": 0.0424343215963745,
+          "force_max_absolute_error_eV_per_A": 0.03888185841597935,
+          "force_rmse_eV_per_A": 0.012907526099381967,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0010626536786730867,
+          "energy_error_eV": 0.05100737657630816,
+          "force_max_absolute_error_eV_per_A": 0.02927406058457338,
+          "force_rmse_eV_per_A": 0.010431911801860922,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009382543989647131,
+          "energy_error_eV": 0.01782683358032955,
+          "force_max_absolute_error_eV_per_A": 0.033974492190197436,
+          "force_rmse_eV_per_A": 0.013093140154778415,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006812103653188657,
+          "energy_error_eV": 0.018392679863609374,
+          "force_max_absolute_error_eV_per_A": 0.0295733997044918,
+          "force_rmse_eV_per_A": 0.009405373084931086,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0007935076471932751,
+          "energy_error_eV": 0.017457168238252052,
+          "force_max_absolute_error_eV_per_A": 0.02157725488033481,
+          "force_rmse_eV_per_A": 0.006723590760765385,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0008851217770724259,
+          "energy_error_eV": 0.015932191987303668,
+          "force_max_absolute_error_eV_per_A": 0.021409544524457647,
+          "force_rmse_eV_per_A": 0.008907919126346383,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0009275213861281587,
+          "energy_error_eV": 0.015767863564178697,
+          "force_max_absolute_error_eV_per_A": 0.027599034554979723,
+          "force_rmse_eV_per_A": 0.007275347703249604,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008611097496796924,
+          "energy_error_eV": 0.033583280237508006,
+          "force_max_absolute_error_eV_per_A": 0.02453399442423665,
+          "force_rmse_eV_per_A": 0.0075804473037396035,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008408771222497711,
+          "energy_error_eV": 0.030271576400991762,
+          "force_max_absolute_error_eV_per_A": 0.027421710547086864,
+          "force_rmse_eV_per_A": 0.009278315524695567,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00032833128544653946,
+          "energy_error_eV": 0.0059099631380377105,
+          "force_max_absolute_error_eV_per_A": 0.014923822803706743,
+          "force_rmse_eV_per_A": 0.005291207104134385,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007840282167308032,
+          "energy_error_eV": 0.03920141083654016,
+          "force_max_absolute_error_eV_per_A": 0.031905090343572695,
+          "force_rmse_eV_per_A": 0.009089730519688852,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.00038516581976595757,
+          "energy_error_eV": 0.0254209441045532,
+          "force_max_absolute_error_eV_per_A": 0.04641156323183737,
+          "force_rmse_eV_per_A": 0.011266050116421362,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006987512915213479,
+          "energy_error_eV": 0.028648802952375263,
+          "force_max_absolute_error_eV_per_A": 0.03554038820824812,
+          "force_rmse_eV_per_A": 0.009858934322107906,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005202266852898498,
+          "energy_error_eV": 0.009364080335217295,
+          "force_max_absolute_error_eV_per_A": 0.03864587967972222,
+          "force_rmse_eV_per_A": 0.009964343180049337,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006047819710643539,
+          "energy_error_eV": 0.013305203363415785,
+          "force_max_absolute_error_eV_per_A": 0.023701940265556942,
+          "force_rmse_eV_per_A": 0.008086630359667286,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009796145071353142,
+          "energy_error_eV": 0.03232727873546537,
+          "force_max_absolute_error_eV_per_A": 0.03795841516847798,
+          "force_rmse_eV_per_A": 0.011164050889979073,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004827600722949553,
+          "energy_error_eV": 0.016896602530323435,
+          "force_max_absolute_error_eV_per_A": 0.027257206078067364,
+          "force_rmse_eV_per_A": 0.008220662658534056,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005510338868385143,
+          "energy_error_eV": 0.0270006604550872,
+          "force_max_absolute_error_eV_per_A": 0.02784607102027581,
+          "force_rmse_eV_per_A": 0.007782959567243535,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005441619840288089,
+          "energy_error_eV": 0.026119775233382825,
+          "force_max_absolute_error_eV_per_A": 0.05877977601479123,
+          "force_rmse_eV_per_A": 0.015076965602788145,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001451839337383971,
+          "energy_error_eV": 0.06242909150751075,
+          "force_max_absolute_error_eV_per_A": 0.031193158046051384,
+          "force_rmse_eV_per_A": 0.008712255657245486,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0011185013429591587,
+          "energy_error_eV": 0.03355504028877476,
+          "force_max_absolute_error_eV_per_A": 0.030149630056027832,
+          "force_rmse_eV_per_A": 0.00982089955243867,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009536780814869417,
+          "energy_error_eV": -0.015258849303791067,
+          "force_max_absolute_error_eV_per_A": 0.04257135844560955,
+          "force_rmse_eV_per_A": 0.020994876788654204,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005022685666820811,
+          "energy_error_eV": 0.021095279800647404,
+          "force_max_absolute_error_eV_per_A": 0.029370830940878,
+          "force_rmse_eV_per_A": 0.008095697188503368,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004428825656077606,
+          "energy_error_eV": -0.003543060524862085,
+          "force_max_absolute_error_eV_per_A": 0.004093467653935534,
+          "force_rmse_eV_per_A": 0.001960459352703846,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0011018454347504303,
+          "energy_error_eV": 0.055092271737521514,
+          "force_max_absolute_error_eV_per_A": 0.024251758100609783,
+          "force_rmse_eV_per_A": 0.007939968713644012,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.0010122325888005435,
+          "energy_error_eV": 0.015183488832008152,
+          "force_max_absolute_error_eV_per_A": 0.016285944525305796,
+          "force_rmse_eV_per_A": 0.005296887436029737,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0005576875457997878,
+          "energy_error_eV": 0.012269126007595332,
+          "force_max_absolute_error_eV_per_A": 0.019224435339969204,
+          "force_rmse_eV_per_A": 0.004582208386332591,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.00040405422231216156,
+          "energy_error_eV": -0.0076770302239310695,
+          "force_max_absolute_error_eV_per_A": 0.03723001499628076,
+          "force_rmse_eV_per_A": 0.009553929061291228,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0005340898391792011,
+          "energy_error_eV": 0.011749976461942424,
+          "force_max_absolute_error_eV_per_A": 0.030460383895512422,
+          "force_rmse_eV_per_A": 0.008285838153808902,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00041243450687034056,
+          "energy_error_eV": 0.020621725343517028,
+          "force_max_absolute_error_eV_per_A": 0.0455910475513539,
+          "force_rmse_eV_per_A": 0.009973525971183114,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001983817450236529,
+          "energy_error_eV": 0.04959543625591323,
+          "force_max_absolute_error_eV_per_A": 0.06763694395265896,
+          "force_rmse_eV_per_A": 0.021127960100922254,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007354789617798255,
+          "energy_error_eV": 0.028683679509413196,
+          "force_max_absolute_error_eV_per_A": 0.03513639600389512,
+          "force_rmse_eV_per_A": 0.009765050654014661,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006763980827286262,
+          "energy_error_eV": 0.019615544399130158,
+          "force_max_absolute_error_eV_per_A": 0.03508614819853095,
+          "force_rmse_eV_per_A": 0.008779702702708012,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00048179406507568823,
+          "energy_error_eV": 0.020717144798254594,
+          "force_max_absolute_error_eV_per_A": 0.034246297633145684,
+          "force_rmse_eV_per_A": 0.00952707941019783,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0016542603065317963,
+          "energy_error_eV": 0.033085206130635925,
+          "force_max_absolute_error_eV_per_A": 0.07639389107570915,
+          "force_rmse_eV_per_A": 0.015332494163271109,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00044287154196354095,
+          "energy_error_eV": -0.0035429723357083276,
+          "force_max_absolute_error_eV_per_A": 0.004944630574934772,
+          "force_rmse_eV_per_A": 0.001960466375560817,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0006160094607843174,
+          "energy_error_eV": 0.012936198676470667,
+          "force_max_absolute_error_eV_per_A": 0.012702991229128102,
+          "force_rmse_eV_per_A": 0.004431348425459364,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008339956503914436,
+          "energy_error_eV": 0.04169978251957218,
+          "force_max_absolute_error_eV_per_A": 0.02775317539977823,
+          "force_rmse_eV_per_A": 0.007274382732428415,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005065373235184881,
+          "energy_error_eV": 0.009117671823332785,
+          "force_max_absolute_error_eV_per_A": 0.05090359553395185,
+          "force_rmse_eV_per_A": 0.010343038957230063,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.00031112897721509084,
+          "energy_error_eV": 0.013378546020248905,
+          "force_max_absolute_error_eV_per_A": 0.029737241473863585,
+          "force_rmse_eV_per_A": 0.008556515860413226,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009274394377081825,
+          "energy_error_eV": 0.03060550144437002,
+          "force_max_absolute_error_eV_per_A": 0.03394280665618499,
+          "force_rmse_eV_per_A": 0.007651363433482317,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.0038420602226728485,
+        "mean": 0.000754027443902003,
+        "median": 0.0006788042240237459,
+        "p90": 0.00116186595599824,
+        "p95": 0.0014521767555755604
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.07639389107570915,
+        "mean": 0.03195027734935956,
+        "median": 0.03104626036670577,
+        "p90": 0.04616540852769233,
+        "p95": 0.05759834894266528
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.02260991488701428,
+        "mean": 0.009254187624563339,
+        "median": 0.008938089537599335,
+        "p90": 0.01287848256282159,
+        "p95": 0.015294164879198663
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 2.8997023012521184
+    },
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.00030624418778657037,
+      "method": "global_environment",
+      "multiplicity_rank_per_irrep": 80,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.994250356013743e-05,
+          "energy_error_eV": 0.0012985050925635733,
+          "force_max_absolute_error_eV_per_A": 0.005888954485961717,
+          "force_rmse_eV_per_A": 0.00198746016469241,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0001571298998896964,
+          "energy_error_eV": 0.0009427793993381783,
+          "force_max_absolute_error_eV_per_A": 0.0009343808399358833,
+          "force_rmse_eV_per_A": 0.0005134668643900789,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 3.2527923907857774e-05,
+          "energy_error_eV": 0.001268589032406453,
+          "force_max_absolute_error_eV_per_A": 0.004582502313322134,
+          "force_rmse_eV_per_A": 0.0014337095022102391,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011234595983363007,
+          "energy_error_eV": 0.004606184353178833,
+          "force_max_absolute_error_eV_per_A": 0.008800522805503252,
+          "force_rmse_eV_per_A": 0.002049363824277393,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.898794830097661e-05,
+          "energy_error_eV": 0.002897493828641018,
+          "force_max_absolute_error_eV_per_A": 0.007533420251688461,
+          "force_rmse_eV_per_A": 0.0019577200237367387,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 2.7714241789036183e-05,
+          "energy_error_eV": 0.001357997847662773,
+          "force_max_absolute_error_eV_per_A": 0.006014691550138007,
+          "force_rmse_eV_per_A": 0.0015917941869387634,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 1.5128796803764999e-05,
+          "energy_error_eV": -0.000741311043384485,
+          "force_max_absolute_error_eV_per_A": 0.005742821808101262,
+          "force_rmse_eV_per_A": 0.0017517382589059,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.070235496397715e-05,
+          "energy_error_eV": 0.0026102012634510174,
+          "force_max_absolute_error_eV_per_A": 0.007784074448640599,
+          "force_rmse_eV_per_A": 0.0018377374778677069,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016554413204258626,
+          "energy_error_eV": 0.007283941809873795,
+          "force_max_absolute_error_eV_per_A": 0.0067996980488382874,
+          "force_rmse_eV_per_A": 0.0016969916025896333,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 8.482190226103462e-06,
+          "energy_error_eV": -0.0003901807504007593,
+          "force_max_absolute_error_eV_per_A": 0.006340985093765461,
+          "force_rmse_eV_per_A": 0.0016567581851997736,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011427920539322908,
+          "energy_error_eV": -0.004799726626515621,
+          "force_max_absolute_error_eV_per_A": 0.0068989466265452215,
+          "force_rmse_eV_per_A": 0.002243960118922491,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 5.575403952207125e-05,
+          "energy_error_eV": -0.00044603231617657,
+          "force_max_absolute_error_eV_per_A": 0.0031489065377233727,
+          "force_rmse_eV_per_A": 0.0011367651866357597,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00041065846309922764,
+          "energy_error_eV": 0.007391852335786098,
+          "force_max_absolute_error_eV_per_A": 0.007567729545581603,
+          "force_rmse_eV_per_A": 0.0032893183410410824,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 1.455642143953714e-05,
+          "energy_error_eV": -0.0005531440147024114,
+          "force_max_absolute_error_eV_per_A": 0.007424438647771758,
+          "force_rmse_eV_per_A": 0.0023116998939495402,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017230988829824664,
+          "energy_error_eV": 0.005858536202140385,
+          "force_max_absolute_error_eV_per_A": 0.006110197311721688,
+          "force_rmse_eV_per_A": 0.0016992307338874234,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 1.2026613148918841e-05,
+          "energy_error_eV": 0.00024053226297837682,
+          "force_max_absolute_error_eV_per_A": 0.00543379146902101,
+          "force_rmse_eV_per_A": 0.0012376242630033382,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.053233225131407e-05,
+          "energy_error_eV": -0.0003621293290052563,
+          "force_max_absolute_error_eV_per_A": 0.0024602281760378597,
+          "force_rmse_eV_per_A": 0.001088234780450233,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 5.826663779701518e-05,
+          "energy_error_eV": 0.0007574662913611974,
+          "force_max_absolute_error_eV_per_A": 0.0034210376864860503,
+          "force_rmse_eV_per_A": 0.001061778162421967,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 4.59846106726521e-05,
+          "energy_error_eV": -0.0006897691600897815,
+          "force_max_absolute_error_eV_per_A": 0.003669021146679441,
+          "force_rmse_eV_per_A": 0.0012165592333337608,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 2.3892487977560528e-05,
+          "energy_error_eV": -0.0010990544469677843,
+          "force_max_absolute_error_eV_per_A": 0.009745872125261457,
+          "force_rmse_eV_per_A": 0.0019490680784944848,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 7.072311746014748e-05,
+          "energy_error_eV": 0.0006365080571413273,
+          "force_max_absolute_error_eV_per_A": 0.0019450869970163431,
+          "force_rmse_eV_per_A": 0.000715617571215969,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 5.743803763913962e-05,
+          "energy_error_eV": 0.0052842994628008455,
+          "force_max_absolute_error_eV_per_A": 0.009666624310881167,
+          "force_rmse_eV_per_A": 0.002285849023897643,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 9.315667193732225e-06,
+          "energy_error_eV": -0.00013973500790598337,
+          "force_max_absolute_error_eV_per_A": 0.003677513419992562,
+          "force_rmse_eV_per_A": 0.0013105971597817596,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 1.9944695381899223e-05,
+          "energy_error_eV": -0.0006581749476026744,
+          "force_max_absolute_error_eV_per_A": 0.008792966923816037,
+          "force_rmse_eV_per_A": 0.002527921251013752,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.000267481692541575,
+          "energy_error_eV": 0.012839121241995599,
+          "force_max_absolute_error_eV_per_A": 0.006445182638953606,
+          "force_rmse_eV_per_A": 0.0020689734593328955,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 1.0830424511560091e-05,
+          "energy_error_eV": -0.00020577806571964175,
+          "force_max_absolute_error_eV_per_A": 0.008496650137172601,
+          "force_rmse_eV_per_A": 0.002961615097447543,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016888529407205405,
+          "energy_error_eV": 0.004559902939945459,
+          "force_max_absolute_error_eV_per_A": 0.006222461849626715,
+          "force_rmse_eV_per_A": 0.0018020847032368488,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 4.491096296987962e-05,
+          "energy_error_eV": -0.0009880411853373516,
+          "force_max_absolute_error_eV_per_A": 0.005153266189917627,
+          "force_rmse_eV_per_A": 0.001647026298713568,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 7.700738994268856e-05,
+          "energy_error_eV": 0.001386133018968394,
+          "force_max_absolute_error_eV_per_A": 0.002039260058999237,
+          "force_rmse_eV_per_A": 0.0008982430034594963,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0001005803080582101,
+          "energy_error_eV": 0.0017098652369895717,
+          "force_max_absolute_error_eV_per_A": 0.005380366142486215,
+          "force_rmse_eV_per_A": 0.0014618592325258526,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 8.683983767882753e-06,
+          "energy_error_eV": 0.0003386753669474274,
+          "force_max_absolute_error_eV_per_A": 0.005206548656093712,
+          "force_rmse_eV_per_A": 0.001698730274351908,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.460471215379786e-06,
+          "energy_error_eV": -0.00023257696375367232,
+          "force_max_absolute_error_eV_per_A": 0.006034724022093485,
+          "force_rmse_eV_per_A": 0.001988269674687005,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 2.768461035884684e-05,
+          "energy_error_eV": -0.0004983229864592431,
+          "force_max_absolute_error_eV_per_A": 0.004600996264205959,
+          "force_rmse_eV_per_A": 0.0014917188221847506,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 3.14781851193402e-05,
+          "energy_error_eV": -0.0015739092559670098,
+          "force_max_absolute_error_eV_per_A": 0.006200462923132477,
+          "force_rmse_eV_per_A": 0.0020747104978753234,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.00011425486853554365,
+          "energy_error_eV": 0.007540821323345881,
+          "force_max_absolute_error_eV_per_A": 0.008503980841841896,
+          "force_rmse_eV_per_A": 0.0021609850348390737,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 8.518476800129908e-06,
+          "energy_error_eV": -0.0003492575488053262,
+          "force_max_absolute_error_eV_per_A": 0.005836245960029851,
+          "force_rmse_eV_per_A": 0.0018069858527114317,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 2.6933110752401666e-05,
+          "energy_error_eV": 0.00048479599354323,
+          "force_max_absolute_error_eV_per_A": 0.00445740885622703,
+          "force_rmse_eV_per_A": 0.0014502456407108782,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.530085308688947e-06,
+          "energy_error_eV": 0.00014366187679115683,
+          "force_max_absolute_error_eV_per_A": 0.00586567456440068,
+          "force_rmse_eV_per_A": 0.0015083598373557788,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011132006704539174,
+          "energy_error_eV": 0.0036735622124979272,
+          "force_max_absolute_error_eV_per_A": 0.005802005243738417,
+          "force_rmse_eV_per_A": 0.0017034270900752714,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016579273630798396,
+          "energy_error_eV": 0.005802745770779438,
+          "force_max_absolute_error_eV_per_A": 0.0071214796334535535,
+          "force_rmse_eV_per_A": 0.0019056600220974946,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 3.2375037595297075e-05,
+          "energy_error_eV": 0.0015863768421695568,
+          "force_max_absolute_error_eV_per_A": 0.004722149461321767,
+          "force_rmse_eV_per_A": 0.00149335395136749,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00010096173279331803,
+          "energy_error_eV": 0.0048461631740792654,
+          "force_max_absolute_error_eV_per_A": 0.009349557148319754,
+          "force_rmse_eV_per_A": 0.002324778722271104,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.92816039315035e-05,
+          "energy_error_eV": 0.0021191089690546505,
+          "force_max_absolute_error_eV_per_A": 0.004392078536797239,
+          "force_rmse_eV_per_A": 0.0014825269598484883,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 5.7782689448989304e-05,
+          "energy_error_eV": 0.0017334806834696792,
+          "force_max_absolute_error_eV_per_A": 0.004540521396306563,
+          "force_rmse_eV_per_A": 0.0014378007695763488,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00014506561910820892,
+          "energy_error_eV": 0.0023210499057313427,
+          "force_max_absolute_error_eV_per_A": 0.00906271825504451,
+          "force_rmse_eV_per_A": 0.002988861281068706,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 1.2688951496134645e-05,
+          "energy_error_eV": 0.0005329359628376551,
+          "force_max_absolute_error_eV_per_A": 0.0053539985354318365,
+          "force_rmse_eV_per_A": 0.0015835660981458133,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 9.689377520771814e-06,
+          "energy_error_eV": -7.751502016617451e-05,
+          "force_max_absolute_error_eV_per_A": 0.0008788130469177258,
+          "force_rmse_eV_per_A": 0.0004801487129736619,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00013433250642265194,
+          "energy_error_eV": 0.006716625321132597,
+          "force_max_absolute_error_eV_per_A": 0.007500035484410028,
+          "force_rmse_eV_per_A": 0.002001763644290836,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 2.7645468314100678e-05,
+          "energy_error_eV": -0.00041468202471151017,
+          "force_max_absolute_error_eV_per_A": 0.003995496718650682,
+          "force_rmse_eV_per_A": 0.0015495020679216355,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 5.938444155617617e-05,
+          "energy_error_eV": 0.0013064577142358758,
+          "force_max_absolute_error_eV_per_A": 0.003911730140515379,
+          "force_rmse_eV_per_A": 0.001375852459649076,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 1.2110918856035968e-05,
+          "energy_error_eV": -0.00023010745826468337,
+          "force_max_absolute_error_eV_per_A": 0.0041539386324007666,
+          "force_rmse_eV_per_A": 0.0013083775618551758,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 6.760110632471465e-05,
+          "energy_error_eV": 0.0014872243391437223,
+          "force_max_absolute_error_eV_per_A": 0.004314694627554738,
+          "force_rmse_eV_per_A": 0.001296435873034069,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 2.4632211570860817e-05,
+          "energy_error_eV": 0.001231610578543041,
+          "force_max_absolute_error_eV_per_A": 0.006549075386227621,
+          "force_rmse_eV_per_A": 0.0017168838688279586,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00018182302010245622,
+          "energy_error_eV": -0.004545575502561405,
+          "force_max_absolute_error_eV_per_A": 0.016705725280950823,
+          "force_rmse_eV_per_A": 0.0055520098456103536,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.783500784643902e-05,
+          "energy_error_eV": 0.0026455653060111217,
+          "force_max_absolute_error_eV_per_A": 0.005878992726305654,
+          "force_rmse_eV_per_A": 0.0014987772337450957,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.837037089726374e-05,
+          "energy_error_eV": 0.0014027407560206484,
+          "force_max_absolute_error_eV_per_A": 0.0038706932417511553,
+          "force_rmse_eV_per_A": 0.0015574928340722325,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011864233068948569,
+          "energy_error_eV": 0.005101620219647884,
+          "force_max_absolute_error_eV_per_A": 0.0042202184430109035,
+          "force_rmse_eV_per_A": 0.0014787209516274372,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0001595280431502033,
+          "energy_error_eV": 0.003190560863004066,
+          "force_max_absolute_error_eV_per_A": 0.009416733388425857,
+          "force_rmse_eV_per_A": 0.0023655836035180538,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 9.69015007967755e-06,
+          "energy_error_eV": -7.75212006374204e-05,
+          "force_max_absolute_error_eV_per_A": 0.0008650595591233046,
+          "force_rmse_eV_per_A": 0.0004801475120543716,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 5.98666808530522e-05,
+          "energy_error_eV": -0.0012572002979140962,
+          "force_max_absolute_error_eV_per_A": 0.0025469631379974045,
+          "force_rmse_eV_per_A": 0.0008302813693010729,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.810936982219573e-05,
+          "energy_error_eV": 0.0034054684911097866,
+          "force_max_absolute_error_eV_per_A": 0.007344296327936761,
+          "force_rmse_eV_per_A": 0.0015310470669457512,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00013203914305550925,
+          "energy_error_eV": 0.0023767045749991667,
+          "force_max_absolute_error_eV_per_A": 0.00876283991027016,
+          "force_rmse_eV_per_A": 0.002310240114564113,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 2.1768304323750484e-05,
+          "energy_error_eV": -0.0009360370859212708,
+          "force_max_absolute_error_eV_per_A": 0.0072178802261499975,
+          "force_rmse_eV_per_A": 0.0017637187629144138,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 7.40341189763664e-05,
+          "energy_error_eV": 0.002443125926220091,
+          "force_max_absolute_error_eV_per_A": 0.005844470760442588,
+          "force_rmse_eV_per_A": 0.0014541579015623558,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.00041065846309922764,
+        "mean": 7.354373500992464e-05,
+        "median": 5.7610363544064467e-05,
+        "p90": 0.0001637393053748714,
+        "p95": 0.00017179619916431773
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.016705725280950823,
+        "mean": 0.005861715733204171,
+        "median": 0.005855072662421634,
+        "p90": 0.008798256040997088,
+        "p95": 0.009406656952409942
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.0055520098456103536,
+        "mean": 0.0017350294937063838,
+        "median": 0.0016518922419566707,
+        "p90": 0.002320855073774635,
+        "p95": 0.002896561020482472
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 5.665509952194004
+    },
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.04292195043676346,
+      "method": "local_radial_svd",
+      "multiplicity_rank_per_irrep": 48,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003339050402596163,
+          "energy_error_eV": 0.08681531046750024,
+          "force_max_absolute_error_eV_per_A": 0.11458169011510722,
+          "force_rmse_eV_per_A": 0.03254891294814365,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0012541129035525955,
+          "energy_error_eV": -0.007524677421315573,
+          "force_max_absolute_error_eV_per_A": 0.04934816173105974,
+          "force_rmse_eV_per_A": 0.03092934347495616,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.0026078343610443436,
+          "energy_error_eV": 0.1017055400807294,
+          "force_max_absolute_error_eV_per_A": 0.0859171327767877,
+          "force_rmse_eV_per_A": 0.027548774394337908,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009012119563277982,
+          "energy_error_eV": 0.03694969020943972,
+          "force_max_absolute_error_eV_per_A": 0.10068482346555285,
+          "force_rmse_eV_per_A": 0.028084010539548267,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0014631295972711606,
+          "energy_error_eV": 0.061451443085388746,
+          "force_max_absolute_error_eV_per_A": 0.1060417337442,
+          "force_rmse_eV_per_A": 0.03404525370468058,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0013724603838398957,
+          "energy_error_eV": 0.06725055880815489,
+          "force_max_absolute_error_eV_per_A": 0.11613284438384475,
+          "force_rmse_eV_per_A": 0.03344229604713064,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001755115807137205,
+          "energy_error_eV": 0.08600067454972304,
+          "force_max_absolute_error_eV_per_A": 0.13239911896618595,
+          "force_rmse_eV_per_A": 0.03112600232492428,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.002768405243080261,
+          "energy_error_eV": 0.11904142545245122,
+          "force_max_absolute_error_eV_per_A": 0.1438928446121922,
+          "force_rmse_eV_per_A": 0.04150452231606734,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.000715568197268691,
+          "energy_error_eV": 0.031485000679822406,
+          "force_max_absolute_error_eV_per_A": 0.09163774512311573,
+          "force_rmse_eV_per_A": 0.02693644484902722,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.5818473786905244e-05,
+          "energy_error_eV": -0.0021076497941976413,
+          "force_max_absolute_error_eV_per_A": 0.12933374443980328,
+          "force_rmse_eV_per_A": 0.03239051942794113,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00010301820821907659,
+          "energy_error_eV": 0.004326764745201217,
+          "force_max_absolute_error_eV_per_A": 0.07553184283949688,
+          "force_rmse_eV_per_A": 0.023577805437103756,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0027926146515255823,
+          "energy_error_eV": 0.02234091721220466,
+          "force_max_absolute_error_eV_per_A": 0.04066146370895807,
+          "force_rmse_eV_per_A": 0.01699323769844968,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.005337105363550008,
+          "energy_error_eV": 0.09606789654390013,
+          "force_max_absolute_error_eV_per_A": 0.133820665945259,
+          "force_rmse_eV_per_A": 0.045718642959326934,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0002812654646205422,
+          "energy_error_eV": 0.010688087655580603,
+          "force_max_absolute_error_eV_per_A": 0.15144048956847284,
+          "force_rmse_eV_per_A": 0.03507889141034935,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0017153184267312206,
+          "energy_error_eV": 0.0583208265088615,
+          "force_max_absolute_error_eV_per_A": 0.12334033498950925,
+          "force_rmse_eV_per_A": 0.03434329102711132,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0027922119376853514,
+          "energy_error_eV": 0.05584423875370703,
+          "force_max_absolute_error_eV_per_A": 0.09570398377094735,
+          "force_rmse_eV_per_A": 0.02716688578639183,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00489057922095526,
+          "energy_error_eV": -0.01956231688382104,
+          "force_max_absolute_error_eV_per_A": 0.021328285004059255,
+          "force_rmse_eV_per_A": 0.01099544155232949,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.001577327589984634,
+          "energy_error_eV": 0.02050525866980024,
+          "force_max_absolute_error_eV_per_A": 0.0903733480535921,
+          "force_rmse_eV_per_A": 0.032790713616783006,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0029658839288458695,
+          "energy_error_eV": 0.04448825893268804,
+          "force_max_absolute_error_eV_per_A": 0.0993771756482773,
+          "force_rmse_eV_per_A": 0.027119400446390652,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0019242099002914747,
+          "energy_error_eV": 0.08851365541340783,
+          "force_max_absolute_error_eV_per_A": 0.12293297011986049,
+          "force_rmse_eV_per_A": 0.033490165219561864,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.003916889399382247,
+          "energy_error_eV": 0.03525200459444022,
+          "force_max_absolute_error_eV_per_A": 0.09350820149515382,
+          "force_rmse_eV_per_A": 0.03409291890639434,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 0.0022288653574081686,
+          "energy_error_eV": 0.2050556128815515,
+          "force_max_absolute_error_eV_per_A": 0.1907559373680745,
+          "force_rmse_eV_per_A": 0.03730702121846612,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0017290481936167148,
+          "energy_error_eV": 0.025935722904250724,
+          "force_max_absolute_error_eV_per_A": 0.0709667536763453,
+          "force_rmse_eV_per_A": 0.022080233222911007,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 0.002310046884248908,
+          "energy_error_eV": 0.07623154718021397,
+          "force_max_absolute_error_eV_per_A": 0.06773401783928334,
+          "force_rmse_eV_per_A": 0.026010032985572647,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008619808689521354,
+          "energy_error_eV": 0.0413750817097025,
+          "force_max_absolute_error_eV_per_A": 0.11375385611355071,
+          "force_rmse_eV_per_A": 0.03404216495729071,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.008011423284187913,
+          "energy_error_eV": 0.15221704239957035,
+          "force_max_absolute_error_eV_per_A": 0.10380815566325596,
+          "force_rmse_eV_per_A": 0.05133776015141477,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0025249277608020712,
+          "energy_error_eV": -0.06817304954165593,
+          "force_max_absolute_error_eV_per_A": 0.07616949096190467,
+          "force_rmse_eV_per_A": 0.0273972539973549,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0016713469070633767,
+          "energy_error_eV": 0.03676963195539429,
+          "force_max_absolute_error_eV_per_A": 0.06852965771911812,
+          "force_rmse_eV_per_A": 0.02275896739761147,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0015749649899387602,
+          "energy_error_eV": 0.028349369818897685,
+          "force_max_absolute_error_eV_per_A": 0.04477563326378631,
+          "force_rmse_eV_per_A": 0.017633972568714865,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0014345338122973986,
+          "energy_error_eV": 0.024387074809055775,
+          "force_max_absolute_error_eV_per_A": 0.09836324388450723,
+          "force_rmse_eV_per_A": 0.022472602395162383,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001765253080893905,
+          "energy_error_eV": 0.06884487015486229,
+          "force_max_absolute_error_eV_per_A": 0.17547421682296901,
+          "force_rmse_eV_per_A": 0.03919729732962208,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001816521341829179,
+          "energy_error_eV": 0.06539476830585045,
+          "force_max_absolute_error_eV_per_A": 0.07807743908442433,
+          "force_rmse_eV_per_A": 0.0296770860567295,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0019507789876216622,
+          "energy_error_eV": 0.03511402177718992,
+          "force_max_absolute_error_eV_per_A": 0.08376391519018278,
+          "force_rmse_eV_per_A": 0.023412203023059252,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0011708180952700786,
+          "energy_error_eV": 0.05854090476350393,
+          "force_max_absolute_error_eV_per_A": 0.14721675307481563,
+          "force_rmse_eV_per_A": 0.03736055414662452,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.0007417945782821555,
+          "energy_error_eV": 0.04895844216662226,
+          "force_max_absolute_error_eV_per_A": 0.09531017148732834,
+          "force_rmse_eV_per_A": 0.030720354202818965,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.002694814667359801,
+          "energy_error_eV": 0.11048740136175184,
+          "force_max_absolute_error_eV_per_A": 0.13030659504777853,
+          "force_rmse_eV_per_A": 0.031004524551051273,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.003955843769088258,
+          "energy_error_eV": 0.07120518784358865,
+          "force_max_absolute_error_eV_per_A": 0.1263158482161899,
+          "force_rmse_eV_per_A": 0.03126202147494879,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0042966342113107785,
+          "energy_error_eV": 0.09452595264883712,
+          "force_max_absolute_error_eV_per_A": 0.10450524262269534,
+          "force_rmse_eV_per_A": 0.03235690810156143,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001647567881622253,
+          "energy_error_eV": 0.05436974009353435,
+          "force_max_absolute_error_eV_per_A": 0.10410252535412434,
+          "force_rmse_eV_per_A": 0.030403352002084192,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001037480260336971,
+          "energy_error_eV": 0.03631180911179399,
+          "force_max_absolute_error_eV_per_A": 0.07663398962724222,
+          "force_rmse_eV_per_A": 0.028276210167923303,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0010717666774159012,
+          "energy_error_eV": 0.05251656719337916,
+          "force_max_absolute_error_eV_per_A": 0.08814864779933784,
+          "force_rmse_eV_per_A": 0.02788349052165784,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005068875810441872,
+          "energy_error_eV": -0.024330603890120983,
+          "force_max_absolute_error_eV_per_A": 0.13147763823593484,
+          "force_rmse_eV_per_A": 0.03771754273995983,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004235395246596877,
+          "energy_error_eV": -0.01821219956036657,
+          "force_max_absolute_error_eV_per_A": 0.10442773071207923,
+          "force_rmse_eV_per_A": 0.032990766178034425,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00045386510707127553,
+          "energy_error_eV": 0.013615953212138265,
+          "force_max_absolute_error_eV_per_A": 0.07358796184143096,
+          "force_rmse_eV_per_A": 0.024353784474037635,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.002924554468677343,
+          "energy_error_eV": 0.046792871498837485,
+          "force_max_absolute_error_eV_per_A": 0.22236262540259066,
+          "force_rmse_eV_per_A": 0.08233037985919181,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00038759505488477383,
+          "energy_error_eV": 0.0162789923051605,
+          "force_max_absolute_error_eV_per_A": 0.12128727495966785,
+          "force_rmse_eV_per_A": 0.03318058119552766,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0028880017446226702,
+          "energy_error_eV": 0.023104013956981362,
+          "force_max_absolute_error_eV_per_A": 0.06224636542403705,
+          "force_rmse_eV_per_A": 0.03310391466833731,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0016447363659972325,
+          "energy_error_eV": 0.08223681829986162,
+          "force_max_absolute_error_eV_per_A": 0.12972193631665085,
+          "force_rmse_eV_per_A": 0.03202143393856256,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.0003609651967053651,
+          "energy_error_eV": 0.005414477950580476,
+          "force_max_absolute_error_eV_per_A": 0.05636631667376757,
+          "force_rmse_eV_per_A": 0.023447970024703006,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.002884487569893033,
+          "energy_error_eV": 0.06345872653764673,
+          "force_max_absolute_error_eV_per_A": 0.08407489100876253,
+          "force_rmse_eV_per_A": 0.02536551549809334,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.0028691661090737113,
+          "energy_error_eV": 0.05451415607240051,
+          "force_max_absolute_error_eV_per_A": 0.08566442661676299,
+          "force_rmse_eV_per_A": 0.023430134155984633,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004258008799628111,
+          "energy_error_eV": 0.009367619359181845,
+          "force_max_absolute_error_eV_per_A": 0.08723693384918385,
+          "force_rmse_eV_per_A": 0.020144577903023524,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007495602594281081,
+          "energy_error_eV": 0.037478012971405406,
+          "force_max_absolute_error_eV_per_A": 0.13457831543087617,
+          "force_rmse_eV_per_A": 0.031362281096634595,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.005753959392604884,
+          "energy_error_eV": 0.1438489848151221,
+          "force_max_absolute_error_eV_per_A": 0.15967486719967616,
+          "force_rmse_eV_per_A": 0.061511073522206756,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004057902297063265,
+          "energy_error_eV": 0.015825818958546733,
+          "force_max_absolute_error_eV_per_A": 0.08526890446712332,
+          "force_rmse_eV_per_A": 0.030764951968003423,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009827054044731554,
+          "energy_error_eV": -0.02849845672972151,
+          "force_max_absolute_error_eV_per_A": 0.13122136385258398,
+          "force_rmse_eV_per_A": 0.03967933289997991,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0007789265059833523,
+          "energy_error_eV": 0.03349383975728415,
+          "force_max_absolute_error_eV_per_A": 0.13271270333532348,
+          "force_rmse_eV_per_A": 0.030774699357261636,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 7.241657440317794e-05,
+          "energy_error_eV": -0.001448331488063559,
+          "force_max_absolute_error_eV_per_A": 0.14279383952542313,
+          "force_rmse_eV_per_A": 0.03991732091388133,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.002887994346679079,
+          "energy_error_eV": 0.023103954773432633,
+          "force_max_absolute_error_eV_per_A": 0.061986373455774624,
+          "force_rmse_eV_per_A": 0.033103525055677756,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.001406334449018773,
+          "energy_error_eV": -0.029533023429394234,
+          "force_max_absolute_error_eV_per_A": 0.09822362518008365,
+          "force_rmse_eV_per_A": 0.023296918910234703,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00018567759390862194,
+          "energy_error_eV": 0.009283879695431096,
+          "force_max_absolute_error_eV_per_A": 0.09268103757346391,
+          "force_rmse_eV_per_A": 0.023216380380138027,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.002137496760446488,
+          "energy_error_eV": 0.03847494168803678,
+          "force_max_absolute_error_eV_per_A": 0.08630495660235571,
+          "force_rmse_eV_per_A": 0.03441577827273844,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.001380879123073185,
+          "energy_error_eV": 0.05937780229214695,
+          "force_max_absolute_error_eV_per_A": 0.11639753805825404,
+          "force_rmse_eV_per_A": 0.02636900202519141,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.002292567871226118,
+          "energy_error_eV": 0.07565473975046189,
+          "force_max_absolute_error_eV_per_A": 0.14813307887475768,
+          "force_rmse_eV_per_A": 0.038171621453153046,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.008011423284187913,
+        "mean": 0.0019346789240747815,
+        "median": 0.001659457394342815,
+        "p90": 0.003743537700346423,
+        "p95": 0.004801487469508585
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.22236262540259066,
+        "mean": 0.10486142806117053,
+        "median": 0.10003099955691508,
+        "p90": 0.14621958053602863,
+        "p95": 0.15843971055499562
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.08233037985919181,
+        "mean": 0.031612296422657594,
+        "median": 0.031065263437987774,
+        "p90": 0.03953472222887256,
+        "p95": 0.04508652486283797
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 0.7365065217441998
+    },
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.009206776960296823,
+      "method": "local_radial_svd",
+      "multiplicity_rank_per_irrep": 64,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0013884468055319022,
+          "energy_error_eV": 0.03609961694382946,
+          "force_max_absolute_error_eV_per_A": 0.02345057308181836,
+          "force_rmse_eV_per_A": 0.006698019329587896,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.000366993464922416,
+          "energy_error_eV": 0.002201960789534496,
+          "force_max_absolute_error_eV_per_A": 0.005282835268367203,
+          "force_rmse_eV_per_A": 0.0032828756498426647,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.00019519126493459902,
+          "energy_error_eV": -0.007612459332449362,
+          "force_max_absolute_error_eV_per_A": 0.01791562905904437,
+          "force_rmse_eV_per_A": 0.0058614780913480245,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00039984349194394493,
+          "energy_error_eV": -0.016393583169701742,
+          "force_max_absolute_error_eV_per_A": 0.03293322499795126,
+          "force_rmse_eV_per_A": 0.009084014666156165,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.000730661004473361,
+          "energy_error_eV": -0.030687762187881162,
+          "force_max_absolute_error_eV_per_A": 0.04113953478912524,
+          "force_rmse_eV_per_A": 0.008966718247416633,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017208023423243466,
+          "energy_error_eV": -0.008431931477389298,
+          "force_max_absolute_error_eV_per_A": 0.027453639520137685,
+          "force_rmse_eV_per_A": 0.008687145563838334,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004165153577745588,
+          "energy_error_eV": -0.02040925253095338,
+          "force_max_absolute_error_eV_per_A": 0.020813399467250915,
+          "force_rmse_eV_per_A": 0.005950091965749764,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006948053585717368,
+          "energy_error_eV": -0.029876630418584682,
+          "force_max_absolute_error_eV_per_A": 0.030870606672998235,
+          "force_rmse_eV_per_A": 0.008876483150028135,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.365242336075012e-05,
+          "energy_error_eV": -0.004120706627873005,
+          "force_max_absolute_error_eV_per_A": 0.03034342426893666,
+          "force_rmse_eV_per_A": 0.006529744198954647,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001699630907830357,
+          "energy_error_eV": -0.007818302176019643,
+          "force_max_absolute_error_eV_per_A": 0.029822954217117198,
+          "force_rmse_eV_per_A": 0.006685151081920346,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004361546858230473,
+          "energy_error_eV": 0.018318496804567985,
+          "force_max_absolute_error_eV_per_A": 0.016592911783850806,
+          "force_rmse_eV_per_A": 0.006059749445304777,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0003216445346652108,
+          "energy_error_eV": 0.0025731562773216865,
+          "force_max_absolute_error_eV_per_A": 0.014954902525905034,
+          "force_rmse_eV_per_A": 0.0056007123067418636,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006728857142661582,
+          "energy_error_eV": 0.012111942856790847,
+          "force_max_absolute_error_eV_per_A": 0.047403516652274824,
+          "force_rmse_eV_per_A": 0.015876734270041517,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008559568869761853,
+          "energy_error_eV": -0.03252636170509504,
+          "force_max_absolute_error_eV_per_A": 0.04449154755676532,
+          "force_rmse_eV_per_A": 0.011324703986867765,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005635112122356933,
+          "energy_error_eV": -0.01915938121601357,
+          "force_max_absolute_error_eV_per_A": 0.02821159826123454,
+          "force_rmse_eV_per_A": 0.008506040838243604,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 3.13343632114993e-05,
+          "energy_error_eV": 0.0006266872642299859,
+          "force_max_absolute_error_eV_per_A": 0.01788220242233285,
+          "force_rmse_eV_per_A": 0.0062448271921689,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001470269780838862,
+          "energy_error_eV": -0.0005881079123355448,
+          "force_max_absolute_error_eV_per_A": 0.00791492879553668,
+          "force_rmse_eV_per_A": 0.004378556902226337,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004009934555142536,
+          "energy_error_eV": -0.005212914921685297,
+          "force_max_absolute_error_eV_per_A": 0.022300451395418364,
+          "force_rmse_eV_per_A": 0.007552495991845781,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 5.4284607661732785e-05,
+          "energy_error_eV": -0.0008142691149259917,
+          "force_max_absolute_error_eV_per_A": 0.024008034055894578,
+          "force_rmse_eV_per_A": 0.007829992720106921,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0004121428387209206,
+          "energy_error_eV": -0.01895857058116235,
+          "force_max_absolute_error_eV_per_A": 0.03057393808591724,
+          "force_rmse_eV_per_A": 0.0075373219556703515,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00035049178202623606,
+          "energy_error_eV": 0.0031544260382361244,
+          "force_max_absolute_error_eV_per_A": 0.021303886427388452,
+          "force_rmse_eV_per_A": 0.0070922602264587775,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 0.0007701961650404289,
+          "energy_error_eV": 0.07085804718371946,
+          "force_max_absolute_error_eV_per_A": 0.03731174377356394,
+          "force_rmse_eV_per_A": 0.00903509826776193,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0003349328041319192,
+          "energy_error_eV": -0.005023992061978788,
+          "force_max_absolute_error_eV_per_A": 0.015763274523014292,
+          "force_rmse_eV_per_A": 0.005687011650495134,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 0.0007296548466194619,
+          "energy_error_eV": 0.02407860993844224,
+          "force_max_absolute_error_eV_per_A": 0.028939211276128085,
+          "force_rmse_eV_per_A": 0.009208309656263205,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00042639888806661475,
+          "energy_error_eV": -0.020467146627197508,
+          "force_max_absolute_error_eV_per_A": 0.03369468186159619,
+          "force_rmse_eV_per_A": 0.00727699751089092,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00041642556358343236,
+          "energy_error_eV": -0.007912085708085215,
+          "force_max_absolute_error_eV_per_A": 0.028017390122708763,
+          "force_rmse_eV_per_A": 0.00987100055806792,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00019201442504439642,
+          "energy_error_eV": -0.005184389476198703,
+          "force_max_absolute_error_eV_per_A": 0.037675857979748484,
+          "force_rmse_eV_per_A": 0.009840746586466487,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0001326135640159588,
+          "energy_error_eV": -0.0029174984083510935,
+          "force_max_absolute_error_eV_per_A": 0.03067870058646638,
+          "force_rmse_eV_per_A": 0.006997860646701297,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0005682483478166331,
+          "energy_error_eV": 0.010228470260699396,
+          "force_max_absolute_error_eV_per_A": 0.01557145050247366,
+          "force_rmse_eV_per_A": 0.006380688174202706,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00010553643808046164,
+          "energy_error_eV": -0.001794119447367848,
+          "force_max_absolute_error_eV_per_A": 0.01609987615586289,
+          "force_rmse_eV_per_A": 0.00679095107107866,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015009532366186762,
+          "energy_error_eV": 0.005853717622812837,
+          "force_max_absolute_error_eV_per_A": 0.03518825375276366,
+          "force_rmse_eV_per_A": 0.009449950104067788,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00020159401669338372,
+          "energy_error_eV": 0.007257384600961814,
+          "force_max_absolute_error_eV_per_A": 0.03177716179225765,
+          "force_rmse_eV_per_A": 0.007530942503408077,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00017964614431144178,
+          "energy_error_eV": 0.003233630597605952,
+          "force_max_absolute_error_eV_per_A": 0.017963864257984907,
+          "force_rmse_eV_per_A": 0.006726661138287391,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 2.472424414008856e-05,
+          "energy_error_eV": -0.001236212207004428,
+          "force_max_absolute_error_eV_per_A": 0.03895770554088385,
+          "force_rmse_eV_per_A": 0.008842594834966392,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.0006472753497787794,
+          "energy_error_eV": -0.04272017308539944,
+          "force_max_absolute_error_eV_per_A": 0.028251765671598372,
+          "force_rmse_eV_per_A": 0.008579906672356138,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00019674005307024345,
+          "energy_error_eV": -0.008066342175879981,
+          "force_max_absolute_error_eV_per_A": 0.02019308257168495,
+          "force_rmse_eV_per_A": 0.00699584924937072,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.124497495973224e-05,
+          "energy_error_eV": -0.0007424095492751803,
+          "force_max_absolute_error_eV_per_A": 0.017368274725891197,
+          "force_rmse_eV_per_A": 0.007195273479418044,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015280666114201514,
+          "energy_error_eV": -0.0033617465451243334,
+          "force_max_absolute_error_eV_per_A": 0.019234169266427154,
+          "force_rmse_eV_per_A": 0.007034185458979215,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0003858951871128132,
+          "energy_error_eV": -0.012734541174722835,
+          "force_max_absolute_error_eV_per_A": 0.027168753337864615,
+          "force_rmse_eV_per_A": 0.008577108806600047,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0005524078847624228,
+          "energy_error_eV": -0.0193342759666848,
+          "force_max_absolute_error_eV_per_A": 0.021239218155164108,
+          "force_rmse_eV_per_A": 0.0072245561705520074,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00033926082479800764,
+          "energy_error_eV": -0.016623780415102374,
+          "force_max_absolute_error_eV_per_A": 0.029438860145184154,
+          "force_rmse_eV_per_A": 0.007122007499725353,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00038043051654312876,
+          "energy_error_eV": -0.01826066479407018,
+          "force_max_absolute_error_eV_per_A": 0.05210541990987139,
+          "force_rmse_eV_per_A": 0.010727160667457998,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0008989845884444062,
+          "energy_error_eV": 0.03865633730310947,
+          "force_max_absolute_error_eV_per_A": 0.016829165845452798,
+          "force_rmse_eV_per_A": 0.005547837706485827,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001285781877716848,
+          "energy_error_eV": 0.003857345633150544,
+          "force_max_absolute_error_eV_per_A": 0.027677030256261226,
+          "force_rmse_eV_per_A": 0.006964082367604346,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.001003560113417734,
+          "energy_error_eV": -0.016056961814683746,
+          "force_max_absolute_error_eV_per_A": 0.056057952792327614,
+          "force_rmse_eV_per_A": 0.022460629203402364,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00047514496050314934,
+          "energy_error_eV": -0.019956088341132272,
+          "force_max_absolute_error_eV_per_A": 0.018203340941644663,
+          "force_rmse_eV_per_A": 0.007377231116327103,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0010916227746520235,
+          "energy_error_eV": -0.008732982197216188,
+          "force_max_absolute_error_eV_per_A": 0.0019583004311589103,
+          "force_rmse_eV_per_A": 0.0011416297267517414,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0002316103858174756,
+          "energy_error_eV": 0.01158051929087378,
+          "force_max_absolute_error_eV_per_A": 0.025428140493135132,
+          "force_rmse_eV_per_A": 0.00762792733213858,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 1.4374898031140522e-05,
+          "energy_error_eV": 0.00021562347046710784,
+          "force_max_absolute_error_eV_per_A": 0.016086694734491813,
+          "force_rmse_eV_per_A": 0.005679957589888283,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0004438444901263045,
+          "energy_error_eV": 0.009764578782778699,
+          "force_max_absolute_error_eV_per_A": 0.012647893647493968,
+          "force_rmse_eV_per_A": 0.005010640546004011,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 0.00034586034866821905,
+          "energy_error_eV": -0.006571346624696162,
+          "force_max_absolute_error_eV_per_A": 0.015861088377690846,
+          "force_rmse_eV_per_A": 0.007676753921069317,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00029111313837016826,
+          "energy_error_eV": -0.006404489044143702,
+          "force_max_absolute_error_eV_per_A": 0.015495154496118269,
+          "force_rmse_eV_per_A": 0.005988876005892609,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00047791674471227454,
+          "energy_error_eV": -0.023895837235613726,
+          "force_max_absolute_error_eV_per_A": 0.038695157629607735,
+          "force_rmse_eV_per_A": 0.009035137339188154,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006487412771093659,
+          "energy_error_eV": -0.016218531927734148,
+          "force_max_absolute_error_eV_per_A": 0.04079389448133919,
+          "force_rmse_eV_per_A": 0.012942024278985644,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006528698928051222,
+          "energy_error_eV": -0.025461925819399767,
+          "force_max_absolute_error_eV_per_A": 0.02068310968965459,
+          "force_rmse_eV_per_A": 0.00780414389507709,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00010493575170804779,
+          "energy_error_eV": 0.003043136799533386,
+          "force_max_absolute_error_eV_per_A": 0.02747041726767563,
+          "force_rmse_eV_per_A": 0.007463410950790577,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0006611955055674582,
+          "energy_error_eV": -0.0284314067394007,
+          "force_max_absolute_error_eV_per_A": 0.029337199184563345,
+          "force_rmse_eV_per_A": 0.008124231212681457,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00024648469625390137,
+          "energy_error_eV": -0.004929693925078027,
+          "force_max_absolute_error_eV_per_A": 0.022628509841001815,
+          "force_rmse_eV_per_A": 0.007307129347880891,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0010916285226585387,
+          "energy_error_eV": -0.00873302818126831,
+          "force_max_absolute_error_eV_per_A": 0.0023646870267114983,
+          "force_rmse_eV_per_A": 0.0011415089576709916,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 8.459709767651345e-05,
+          "energy_error_eV": 0.0017765390512067825,
+          "force_max_absolute_error_eV_per_A": 0.013782759312002513,
+          "force_rmse_eV_per_A": 0.005140690754365107,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00036731604363012595,
+          "energy_error_eV": -0.018365802181506297,
+          "force_max_absolute_error_eV_per_A": 0.021042156165312242,
+          "force_rmse_eV_per_A": 0.006535429208728981,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0009605821093524961,
+          "energy_error_eV": -0.01729047796834493,
+          "force_max_absolute_error_eV_per_A": 0.020793158437828474,
+          "force_rmse_eV_per_A": 0.007018349475457706,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 0.0005876038647033437,
+          "energy_error_eV": -0.025266966182243777,
+          "force_max_absolute_error_eV_per_A": 0.02376663527212408,
+          "force_rmse_eV_per_A": 0.006902040858006976,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00028532763077016693,
+          "energy_error_eV": -0.009415811815415509,
+          "force_max_absolute_error_eV_per_A": 0.02308276880747928,
+          "force_rmse_eV_per_A": 0.00779466568828308,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.0013884468055319022,
+        "mean": 0.0004202596062786946,
+        "median": 0.00037387328008662733,
+        "p90": 0.0008302286703954586,
+        "p95": 0.0009971134128079482
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.056057952792327614,
+        "mean": 0.025140432349148128,
+        "median": 0.02360860417697122,
+        "p90": 0.03887894116750101,
+        "p95": 0.04398874564161929
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.022460629203402364,
+        "mean": 0.0076313172807862106,
+        "median": 0.007250776840721463,
+        "p90": 0.009723507641746879,
+        "p95": 0.011235072488956296
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 0.8288804338038597
+    },
+    {
+      "branch_only_force_rmse_mean_eV_per_A": 0.0012007502204090849,
+      "method": "local_radial_svd",
+      "multiplicity_rank_per_irrep": 80,
+      "per_configuration": [
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 5.444005994202318e-05,
+          "energy_error_eV": 0.0014154415584926028,
+          "force_max_absolute_error_eV_per_A": 0.0038638730055240433,
+          "force_rmse_eV_per_A": 0.0009358083257245461,
+          "index": 696,
+          "num_atoms": 26
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 7.872655260143802e-06,
+          "energy_error_eV": 4.723593156086281e-05,
+          "force_max_absolute_error_eV_per_A": 0.00035216738598201763,
+          "force_rmse_eV_per_A": 0.00019733412688124766,
+          "index": 1392,
+          "num_atoms": 6
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 1.1543459550011903e-05,
+          "energy_error_eV": -0.0004501949224504642,
+          "force_max_absolute_error_eV_per_A": 0.002353617514758488,
+          "force_rmse_eV_per_A": 0.0007152839738614463,
+          "index": 1593,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016351826405564392,
+          "energy_error_eV": 0.0067042488262814,
+          "force_max_absolute_error_eV_per_A": 0.005118865431123165,
+          "force_rmse_eV_per_A": 0.0010367538547106372,
+          "index": 1919,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016715054689917625,
+          "energy_error_eV": 0.007020322969765402,
+          "force_max_absolute_error_eV_per_A": 0.004750628197730478,
+          "force_rmse_eV_per_A": 0.001220569299782089,
+          "index": 2590,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 7.985128824508805e-05,
+          "energy_error_eV": 0.003912713124009315,
+          "force_max_absolute_error_eV_per_A": 0.0052055028544888415,
+          "force_rmse_eV_per_A": 0.0011768805812788796,
+          "index": 3269,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011136864471767212,
+          "energy_error_eV": 0.005457063591165934,
+          "force_max_absolute_error_eV_per_A": 0.0022229243634694917,
+          "force_rmse_eV_per_A": 0.0008095694130445766,
+          "index": 3625,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016545580847589515,
+          "energy_error_eV": 0.007114599764463492,
+          "force_max_absolute_error_eV_per_A": 0.00316501301027583,
+          "force_rmse_eV_per_A": 0.0009879562383055306,
+          "index": 3881,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017682756928975735,
+          "energy_error_eV": 0.007780413048749324,
+          "force_max_absolute_error_eV_per_A": 0.003260292967206535,
+          "force_rmse_eV_per_A": 0.0008677741587455313,
+          "index": 4446,
+          "num_atoms": 44
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.824126351779104e-05,
+          "energy_error_eV": 0.004519098121818388,
+          "force_max_absolute_error_eV_per_A": 0.003983693234347385,
+          "force_rmse_eV_per_A": 0.0010332213861551725,
+          "index": 4499,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011422632381990774,
+          "energy_error_eV": 0.004797505600436125,
+          "force_max_absolute_error_eV_per_A": 0.002321304364038823,
+          "force_rmse_eV_per_A": 0.0007483035310389603,
+          "index": 5917,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 3.888978551458422e-05,
+          "energy_error_eV": -0.00031111828411667375,
+          "force_max_absolute_error_eV_per_A": 0.0008897335613500257,
+          "force_rmse_eV_per_A": 0.0003243302640694531,
+          "index": 7246,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015732827301285902,
+          "energy_error_eV": 0.0028319089142314624,
+          "force_max_absolute_error_eV_per_A": 0.0035734131194236074,
+          "force_rmse_eV_per_A": 0.0015015017623734753,
+          "index": 7507,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015240095480725072,
+          "energy_error_eV": 0.005791236282675527,
+          "force_max_absolute_error_eV_per_A": 0.0027657145531252425,
+          "force_rmse_eV_per_A": 0.0008754142727620308,
+          "index": 7980,
+          "num_atoms": 38
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00012886924057110103,
+          "energy_error_eV": 0.004381554179417435,
+          "force_max_absolute_error_eV_per_A": 0.0045518051162625195,
+          "force_rmse_eV_per_A": 0.001089227260700285,
+          "index": 9086,
+          "num_atoms": 34
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 6.267088792810682e-06,
+          "energy_error_eV": -0.00012534177585621364,
+          "force_max_absolute_error_eV_per_A": 0.002182817114053992,
+          "force_rmse_eV_per_A": 0.0006398305427480253,
+          "index": 10482,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001026074678520672,
+          "energy_error_eV": -0.0004104298714082688,
+          "force_max_absolute_error_eV_per_A": 0.0007576145597902872,
+          "force_rmse_eV_per_A": 0.00035124831771234316,
+          "index": 10649,
+          "num_atoms": 4
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 9.414879759088553e-06,
+          "energy_error_eV": 0.00012239343686815118,
+          "force_max_absolute_error_eV_per_A": 0.004072311432975262,
+          "force_rmse_eV_per_A": 0.0008151700794807328,
+          "index": 12364,
+          "num_atoms": 13
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 1.6293883163598366e-05,
+          "energy_error_eV": 0.0002444082474539755,
+          "force_max_absolute_error_eV_per_A": 0.0025101461887606646,
+          "force_rmse_eV_per_A": 0.0008622050078509911,
+          "index": 13368,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 8.404462230670185e-05,
+          "energy_error_eV": 0.003866052626108285,
+          "force_max_absolute_error_eV_per_A": 0.002166627670081245,
+          "force_rmse_eV_per_A": 0.0007457031235733355,
+          "index": 15962,
+          "num_atoms": 46
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 2.6224394989387496e-05,
+          "energy_error_eV": 0.00023601955490448745,
+          "force_max_absolute_error_eV_per_A": 0.0009330692250610895,
+          "force_rmse_eV_per_A": 0.0003541382769920401,
+          "index": 16116,
+          "num_atoms": 9
+        },
+        {
+          "config_type": "Solvated Amino Acids",
+          "energy_absolute_error_per_atom_eV": 8.693154877223803e-06,
+          "energy_error_eV": -0.0007997702487045899,
+          "force_max_absolute_error_eV_per_A": 0.004118180711300878,
+          "force_rmse_eV_per_A": 0.0011015745091700491,
+          "index": 17212,
+          "num_atoms": 92
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 6.170519433605175e-05,
+          "energy_error_eV": -0.0009255779150407761,
+          "force_max_absolute_error_eV_per_A": 0.0022854920406938373,
+          "force_rmse_eV_per_A": 0.0005355740506067308,
+          "index": 17850,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "water",
+          "energy_absolute_error_per_atom_eV": 2.0185619646464616e-05,
+          "energy_error_eV": -0.0006661254483333323,
+          "force_max_absolute_error_eV_per_A": 0.004178663497665713,
+          "force_rmse_eV_per_A": 0.001153999875219194,
+          "index": 17914,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00021918677415063334,
+          "energy_error_eV": 0.0105209651592304,
+          "force_max_absolute_error_eV_per_A": 0.003406139511633599,
+          "force_rmse_eV_per_A": 0.0008399074396934254,
+          "index": 18222,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.574136849106779e-05,
+          "energy_error_eV": 0.0008690860013302881,
+          "force_max_absolute_error_eV_per_A": 0.0027895593352535997,
+          "force_rmse_eV_per_A": 0.0008715112285065709,
+          "index": 18719,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001440454636596971,
+          "energy_error_eV": 0.003889227518811822,
+          "force_max_absolute_error_eV_per_A": 0.0028424200918626408,
+          "force_rmse_eV_per_A": 0.0008289881803400112,
+          "index": 19514,
+          "num_atoms": 27
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 6.623580074202354e-05,
+          "energy_error_eV": 0.0014571876163245179,
+          "force_max_absolute_error_eV_per_A": 0.0037888232651213105,
+          "force_rmse_eV_per_A": 0.0006683940479139047,
+          "index": 19622,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 2.564859369158512e-05,
+          "energy_error_eV": 0.00046167468644853216,
+          "force_max_absolute_error_eV_per_A": 0.002785539949371474,
+          "force_rmse_eV_per_A": 0.000864615040822516,
+          "index": 19991,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 6.667819166871007e-06,
+          "energy_error_eV": 0.00011335292583680712,
+          "force_max_absolute_error_eV_per_A": 0.00271686257309689,
+          "force_rmse_eV_per_A": 0.0008154879004935685,
+          "index": 20203,
+          "num_atoms": 17
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.772909069374108e-05,
+          "energy_error_eV": 0.003811434537055902,
+          "force_max_absolute_error_eV_per_A": 0.0030083964967939636,
+          "force_rmse_eV_per_A": 0.0008775959942959209,
+          "index": 20333,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.22520415163793e-05,
+          "energy_error_eV": 0.0033210734945896547,
+          "force_max_absolute_error_eV_per_A": 0.004044452490919337,
+          "force_rmse_eV_per_A": 0.0009447413113706899,
+          "index": 21256,
+          "num_atoms": 36
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 4.236065413149643e-05,
+          "energy_error_eV": -0.0007624917743669357,
+          "force_max_absolute_error_eV_per_A": 0.0017228583560595645,
+          "force_rmse_eV_per_A": 0.0006493655161081606,
+          "index": 23409,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015005350549472497,
+          "energy_error_eV": 0.007502675274736248,
+          "force_max_absolute_error_eV_per_A": 0.003534866322034924,
+          "force_rmse_eV_per_A": 0.0010119008152818668,
+          "index": 25064,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "QMugs",
+          "energy_absolute_error_per_atom_eV": 0.00011888009700641939,
+          "energy_error_eV": 0.00784608640242368,
+          "force_max_absolute_error_eV_per_A": 0.00334368414369024,
+          "force_rmse_eV_per_A": 0.0010347272992326938,
+          "index": 25187,
+          "num_atoms": 66
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.593782075482035e-05,
+          "energy_error_eV": 0.003933450650947634,
+          "force_max_absolute_error_eV_per_A": 0.0044505688417672,
+          "force_rmse_eV_per_A": 0.0009908249381348957,
+          "index": 25397,
+          "num_atoms": 41
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 4.272546134921463e-05,
+          "energy_error_eV": -0.0007690583042858634,
+          "force_max_absolute_error_eV_per_A": 0.005800981769033431,
+          "force_rmse_eV_per_A": 0.0011302223969695522,
+          "index": 25857,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 6.158799144693397e-05,
+          "energy_error_eV": 0.0013549358118325472,
+          "force_max_absolute_error_eV_per_A": 0.0030994446245984353,
+          "force_rmse_eV_per_A": 0.000855495489092735,
+          "index": 26481,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.0001720771298013543,
+          "energy_error_eV": 0.0056785452834446914,
+          "force_max_absolute_error_eV_per_A": 0.0035888824961936017,
+          "force_rmse_eV_per_A": 0.0012158366251367081,
+          "index": 26485,
+          "num_atoms": 33
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015983333287294954,
+          "energy_error_eV": 0.005594166650553234,
+          "force_max_absolute_error_eV_per_A": 0.002089075363772841,
+          "force_rmse_eV_per_A": 0.0008183673841976936,
+          "index": 26516,
+          "num_atoms": 35
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00010182689420988176,
+          "energy_error_eV": 0.004989517816284206,
+          "force_max_absolute_error_eV_per_A": 0.003441082145037244,
+          "force_rmse_eV_per_A": 0.0009615686653589743,
+          "index": 27554,
+          "num_atoms": 49
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017814248440117808,
+          "energy_error_eV": 0.008550839251256548,
+          "force_max_absolute_error_eV_per_A": 0.006509457267107166,
+          "force_rmse_eV_per_A": 0.0012941006144517686,
+          "index": 27654,
+          "num_atoms": 48
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00019506158254401716,
+          "energy_error_eV": 0.008387648049392737,
+          "force_max_absolute_error_eV_per_A": 0.0037336218258927634,
+          "force_rmse_eV_per_A": 0.0008473954859144154,
+          "index": 28414,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 3.8341300629933055e-05,
+          "energy_error_eV": 0.0011502390188979916,
+          "force_max_absolute_error_eV_per_A": 0.0026758858675561825,
+          "force_rmse_eV_per_A": 0.0006527835369937627,
+          "index": 30121,
+          "num_atoms": 30
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015698136996888934,
+          "energy_error_eV": 0.0025117019195022294,
+          "force_max_absolute_error_eV_per_A": 0.009087766113523799,
+          "force_rmse_eV_per_A": 0.003112266877240208,
+          "index": 31090,
+          "num_atoms": 16
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011821245148201429,
+          "energy_error_eV": 0.0049649229622446,
+          "force_max_absolute_error_eV_per_A": 0.0023034244142108307,
+          "force_rmse_eV_per_A": 0.0007789765331498814,
+          "index": 31536,
+          "num_atoms": 42
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0001464662730654709,
+          "energy_error_eV": -0.001171730184523767,
+          "force_max_absolute_error_eV_per_A": 0.0013371980125296279,
+          "force_rmse_eV_per_A": 0.0008577332007201506,
+          "index": 31834,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017803179725888184,
+          "energy_error_eV": 0.008901589862944093,
+          "force_max_absolute_error_eV_per_A": 0.00557821962999383,
+          "force_rmse_eV_per_A": 0.0010526878022328891,
+          "index": 33366,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 8.166289559691601e-05,
+          "energy_error_eV": 0.0012249434339537402,
+          "force_max_absolute_error_eV_per_A": 0.0015563822104961433,
+          "force_rmse_eV_per_A": 0.0005232898116292774,
+          "index": 34172,
+          "num_atoms": 15
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 2.3556005048290402e-05,
+          "energy_error_eV": 0.0005182321110623889,
+          "force_max_absolute_error_eV_per_A": 0.003106734268831124,
+          "force_rmse_eV_per_A": 0.0008101476217461388,
+          "index": 34414,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "DES370K Monomers",
+          "energy_absolute_error_per_atom_eV": 5.1131530582145055e-05,
+          "energy_error_eV": -0.000971499081060756,
+          "force_max_absolute_error_eV_per_A": 0.0027212602552924015,
+          "force_rmse_eV_per_A": 0.000830965521136682,
+          "index": 34820,
+          "num_atoms": 19
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 4.3511707438235383e-05,
+          "energy_error_eV": -0.0009572575636411784,
+          "force_max_absolute_error_eV_per_A": 0.002827953022073615,
+          "force_rmse_eV_per_A": 0.0008486608324768612,
+          "index": 35848,
+          "num_atoms": 22
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00016885029399418272,
+          "energy_error_eV": 0.008442514699709136,
+          "force_max_absolute_error_eV_per_A": 0.0027091764010382935,
+          "force_rmse_eV_per_A": 0.0009165471390139356,
+          "index": 39484,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011875004769535735,
+          "energy_error_eV": 0.002968751192383934,
+          "force_max_absolute_error_eV_per_A": 0.004170866084467151,
+          "force_rmse_eV_per_A": 0.001381305191256395,
+          "index": 42125,
+          "num_atoms": 25
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00011439557951794435,
+          "energy_error_eV": 0.00446142760119983,
+          "force_max_absolute_error_eV_per_A": 0.002755174623384038,
+          "force_rmse_eV_per_A": 0.0009953856382582521,
+          "index": 42436,
+          "num_atoms": 39
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 5.935228583784292e-05,
+          "energy_error_eV": 0.0017212162892974447,
+          "force_max_absolute_error_eV_per_A": 0.004493387878704624,
+          "force_rmse_eV_per_A": 0.0012192840344186324,
+          "index": 43329,
+          "num_atoms": 29
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00015523601499342813,
+          "energy_error_eV": 0.00667514864471741,
+          "force_max_absolute_error_eV_per_A": 0.0038957555784175923,
+          "force_rmse_eV_per_A": 0.0009533491072845934,
+          "index": 43909,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.0002812727783748414,
+          "energy_error_eV": 0.005625455567496829,
+          "force_max_absolute_error_eV_per_A": 0.0026090832264893393,
+          "force_rmse_eV_per_A": 0.0009389407141363331,
+          "index": 44856,
+          "num_atoms": 20
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 0.00014646916434912782,
+          "energy_error_eV": -0.0011717533147930226,
+          "force_max_absolute_error_eV_per_A": 0.0015643563898801727,
+          "force_rmse_eV_per_A": 0.0008577322236009714,
+          "index": 45569,
+          "num_atoms": 8
+        },
+        {
+          "config_type": "DES370K Dimers",
+          "energy_absolute_error_per_atom_eV": 3.55639845760639e-05,
+          "energy_error_eV": 0.0007468436760973418,
+          "force_max_absolute_error_eV_per_A": 0.002786877573867752,
+          "force_rmse_eV_per_A": 0.0006871076099474184,
+          "index": 45964,
+          "num_atoms": 21
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00017002605025481898,
+          "energy_error_eV": 0.00850130251274095,
+          "force_max_absolute_error_eV_per_A": 0.0033710172437204644,
+          "force_rmse_eV_per_A": 0.0010170456903906147,
+          "index": 47597,
+          "num_atoms": 50
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 9.20298683316408e-05,
+          "energy_error_eV": 0.0016565376299695345,
+          "force_max_absolute_error_eV_per_A": 0.001942458147823345,
+          "force_rmse_eV_per_A": 0.0008209776131060546,
+          "index": 48321,
+          "num_atoms": 18
+        },
+        {
+          "config_type": "Dipeptides",
+          "energy_absolute_error_per_atom_eV": 5.308612365530111e-06,
+          "energy_error_eV": 0.00022827033171779476,
+          "force_max_absolute_error_eV_per_A": 0.0026271970221414254,
+          "force_rmse_eV_per_A": 0.0007526157558775703,
+          "index": 48686,
+          "num_atoms": 43
+        },
+        {
+          "config_type": "PubChem",
+          "energy_absolute_error_per_atom_eV": 0.00014439782601336694,
+          "energy_error_eV": 0.004765128258441109,
+          "force_max_absolute_error_eV_per_A": 0.0019121262360375368,
+          "force_rmse_eV_per_A": 0.0008194723353015255,
+          "index": 48988,
+          "num_atoms": 33
+        }
+      ],
+      "shared_energy_absolute_error_per_atom_eV": {
+        "maximum": 0.0002812727783748414,
+        "mean": 9.857753417034704e-05,
+        "median": 9.798517710576607e-05,
+        "p90": 0.0001714618059373937,
+        "p95": 0.00017812588132983364
+      },
+      "shared_force_max_absolute_error_eV_per_A": {
+        "maximum": 0.009087766113523799,
+        "mean": 0.00319238262795639,
+        "median": 0.002925408294328302,
+        "p90": 0.0046909812732900905,
+        "p95": 0.00552231211366808
+      },
+      "shared_force_rmse_eV_per_A": {
+        "maximum": 0.003112266877240208,
+        "mean": 0.0009129327093128363,
+        "median": 0.0008634100243367535,
+        "p90": 0.0012041498119793597,
+        "p95": 0.0012830709172513162
+      },
+      "shared_to_branch_force_rmse_mean_ratio": 0.7603019294069405
+    }
+  ],
+  "schema_version": 1
+}

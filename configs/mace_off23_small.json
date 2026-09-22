@@ -1,0 +1,11 @@
+{
+  "checkpoint_family": "MACE-OFF23",
+  "checkpoint_size": "small",
+  "default_dtype": "float64",
+  "device": "cpu",
+  "primary_interface": "first interaction branch feeding the first linear readout",
+  "discovery_uses_activations": false,
+  "retraining": false,
+  "preserve_full_o3_multiplets": true,
+  "status": "architecture audit"
+}
