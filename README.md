@@ -41,6 +41,19 @@ Athena entry points for the completed exactness and coefficient experiments are
 under `cluster`. Run them in numerical order. The frozen held-out fidelity job
 uses the official MACE-OFF23 test archive and a checked-in metadata manifest.
 
+The data-assisted two-consumer pilot uses three additional entry points:
+
+```text
+cluster/discovery_manifest.sbatch
+cluster/multi_consumer_environment.sbatch
+cluster/multi_consumer_fidelity.sbatch
+```
+
+This pilot uses frozen readout gradients and does not retrain MACE. It is an
+additive sensitivity baseline, not an exact ODT environment. Its artifacts are
+bound to the checkpoint, radial factors, discovery split, and excluded
+evaluation indices by SHA-256 records.
+
 The checkpoint audit downloads the official MACE-OFF23 checkpoint through the
 official MACE loader. The model has a separate academic software license.
 

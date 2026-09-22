@@ -8,7 +8,7 @@ from typing import Any
 
 import numpy as np
 
-from mace_odt.audit import write_json
+from mace_odt.audit import sha256_file, write_json
 from mace_odt.decomposition import symmetric_eigh_descending
 from mace_odt.global_environment import (
     angular_ell_labels,
@@ -82,6 +82,8 @@ def main() -> None:
     arrays: dict[str, np.ndarray] = {
         "atomic_numbers": branch_numbers,
         "angular_ell_labels": ell_labels,
+        "provenance_radial_sha256": np.asarray(sha256_file(args.radial_npz)),
+        "provenance_branch_sha256": np.asarray(sha256_file(args.branch_npz)),
     }
     beta_rows = []
     species_records = []
@@ -277,11 +279,14 @@ def main() -> None:
     arrays["beta_by_central_species_and_order"] = np.asarray(beta_rows)
     args.npz.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(args.npz, **arrays)
+    output_npz_sha256 = sha256_file(args.npz)
     payload = {
         "schema_version": 1,
         "experiment": "E5_global_mixed_order_environment",
         "radial_artifact": str(args.radial_npz),
         "branch_artifact": str(args.branch_npz),
+        "branch_artifact_sha256": sha256_file(args.branch_npz),
+        "radial_artifact_sha256": sha256_file(args.radial_npz),
         "order_weight_convention": args.beta_convention,
         "order_weight_definition": (
             "beta_nu equals one for every order"
@@ -303,6 +308,7 @@ def main() -> None:
         "diagnostic_tolerance": diagnostic_tolerance,
         "gate_passed": gate_passed,
         "npz": str(args.npz),
+        "npz_sha256": output_npz_sha256,
     }
     write_json(args.output, payload)
     print(f"wrote {args.output}")

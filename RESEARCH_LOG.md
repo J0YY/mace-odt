@@ -2,6 +2,55 @@
 
 ## 2026-09-22: lean physical representation hypothesis
 
+### Multi-consumer tangent pilot locked
+
+The shared-interface result showed that the first-branch basis does not preserve
+the full model as well as the local radial baseline. The next falsification test
+uses both learned energy readouts at the first interaction density. It does not
+retrain MACE. It learns only a frozen post-training subspace from 128 label-free
+discovery geometries that exclude the existing 64 evaluation geometries.
+
+The hopeful outcome is precise. The nonlinear branch may reveal a lean shared
+radial function space that the first linear branch cannot identify alone. If the
+rank-64 data-assisted basis beats both existing baselines in held-out force
+fidelity without sacrificing energy fidelity, the direction remains worth
+pursuing. If it fails at ranks 64 and 80, this tangent construction is rejected.
+
+This pilot is not labeled ODT. An exact ODT-aligned next step would compile the
+first readout together with the second-layer immediate consumer bundle, or the
+sixteen nonlinear-head preactivations, as a factorized polynomial target.
+
+The first T1 execution stopped at its preregistered fold-coverage gate before
+any fidelity evaluation. Both iodine configurations had landed in fold B under
+hash parity. The fold assignment was changed using geometry-only species
+presence, with rare species assigned first and balanced deterministically. This
+change does not use gradients, model errors, or reference labels. One iodine
+configuration per fold establishes definedness only. It is not evidence that an
+iodine-specific subspace is stable.
+
+### T2 result
+
+The data-assisted two-consumer basis passes the weak feasibility rule on the
+frozen 64. At rank 64 it reduces mean force RMSE from `0.00763` to `0.00495
+eV/angstrom` against local radial SVD, and reduces mean energy error per atom
+from `0.000420` to `0.000127 eV`. It also beats the first-branch global basis.
+The corrected paired intervals exclude zero.
+
+The strong rank-64 rule fails. Rank 64 is not yet accurate enough and retains
+two thirds of each multiplicity space. Rank 80 reaches `0.000499 eV/angstrom`
+and `0.0000171 eV` per atom, but retains five sixths of the space. This is a
+positive direction-selection result, not a compact architecture result.
+
+The nonlinear-only basis beats the linear-only basis on force fidelity,
+nonlinear-branch fidelity, and final-head preactivations. The balanced basis
+beats either alone. This supports the claim that the deeper consumer changes
+which radial function directions matter. The summed-energy basis is best for
+force fidelity but permits larger cancelling branch errors.
+
+The next method is the exact immediate-consumer coefficient environment. The
+data-assisted tangent basis remains a useful baseline. It is not renamed ODT
+and receives no coefficient-tail certificate.
+
 ### Origin
 
 David Olloqui relayed a research hope discussed with Ward. It would be valuable

@@ -17,7 +17,8 @@ from mace_odt.cli.heldout_branch_fidelity import (
 )
 from mace_odt.cli.projected_branch_diagnostics import method_bases, retained_rank_ladder
 from mace_odt.functional_projector import native_functional_map
-from mace_odt.projected_product import ProjectedProductBlock
+from mace_odt.projected_product import ProjectedProductBlock, projected_product_context
+from mace_odt.radial_interface import angular_blocks
 
 
 def validate_branch_results(
@@ -78,6 +79,9 @@ def main() -> None:
         if method in ("global_environment", "local_radial_svd")
     }
     native_product = model.products[0]
+    angular_slices = {
+        block.ell: slice(block.start, block.stop) for block in angular_blocks(model)
+    }
     records = []
     for method, basis_by_block in bases.items():
         for retained in ranks:
@@ -91,10 +95,14 @@ def main() -> None:
                     maps[(central, ell)] = native_functional_map(
                         factor, basis_by_block[(central, ell)][:, :retained]
                     )
-            model.products[0] = ProjectedProductBlock(
-                native_product, maps, num_elements=len(model_numbers)
+            replacement = ProjectedProductBlock(
+                native_product,
+                maps,
+                num_elements=len(model_numbers),
+                angular_slices=angular_slices,
             )
-            candidate = [evaluate(calc, atoms) for atoms in atoms_list]
+            with projected_product_context(model, replacement):
+                candidate = [evaluate(calc, atoms) for atoms in atoms_list]
             per_configuration = []
             for (metadata, atoms), (energy_ref, force_ref), (energy_new, force_new) in zip(
                 geometries, reference, candidate
@@ -152,7 +160,6 @@ def main() -> None:
                     "per_configuration": per_configuration,
                 }
             )
-    model.products[0] = native_product
     paired = []
     for rank in ranks:
         global_record = next(

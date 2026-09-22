@@ -243,6 +243,74 @@ interval is `-0.00217` to `-0.00106 eV/angstrom`. At rank 80 it is `-0.000992`
 to `-0.000686 eV/angstrom`. Negative values mean local radial SVD is better for
 the full shared-interface target at these ranks.
 
+## Data-assisted two-consumer pilot
+
+- Discovery manifest job: 400135
+- Gradient environment job: 400136
+- Frozen fidelity job: 400155
+- Discovery set: 128 label-free configurations
+- Evaluation set: the existing frozen 64 configurations
+- Interface: first interaction density before product block zero
+
+The primary basis averages gradient Grams from the first linear readout and the
+later nonlinear readout after giving both consumers equal global trace. A second
+basis uses the gradient of their summed energy and therefore preserves branch
+cancellation. These are additive local sensitivity bases. They are not exact
+ODT environments or finite projector optima.
+
+The T1 graph checks close at `4.44e-16`, branch-gradient addition closes at
+`2.07e-15`, and every stored radial curve matches the live checkpoint exactly.
+The largest radial metric reconstruction residual is `1.34e-14`. The full-rank
+held-out evaluator has a worst total-energy or force error of `2.41e-9`, below
+the `5e-9` gate.
+
+| Rank per irrep | Balanced gradient energy error per atom | Local energy error per atom | Balanced gradient force RMSE | Local force RMSE |
+|---:|---:|---:|---:|---:|
+| 48 | `0.000594 eV` | `0.00193 eV` | `0.0226 eV/angstrom` | `0.0316 eV/angstrom` |
+| 64 | `0.000127 eV` | `0.000420 eV` | `0.00495 eV/angstrom` | `0.00763 eV/angstrom` |
+| 80 | `0.0000171 eV` | `0.0000986 eV` | `0.000499 eV/angstrom` | `0.000913 eV/angstrom` |
+
+At rank 64, local minus balanced-gradient force RMSE is `0.00268
+eV/angstrom`, with paired 95 percent interval `0.00226` to `0.00308`. The
+Holm-adjusted sign-flip probability is `0.000200`. The energy advantage is
+`0.000293 eV` per atom, with interval `0.000217` to `0.000372`.
+
+The weak feasibility rule passes. The strong rank-64 rule fails because force
+RMSE remains above `0.001 eV/angstrom` and energy error remains above `0.0001
+eV` per atom. Rank 80 passes both absolute point thresholds, but retains five
+sixths of each 96-dimensional multiplicity space. This is evidence for useful
+downstream-aware selection, not yet evidence for a very lean compiled model.
+
+The summed-energy-gradient basis is better for force fidelity than the balanced
+basis at ranks 64 and 80. At rank 64 its force RMSE is `0.00404
+eV/angstrom`. Its separate linear and nonlinear branch errors are much larger,
+which shows that branch cancellation is real. The balanced basis is therefore
+the safer analysis representation. The summed basis is currently the better
+output-fidelity representation.
+
+The consumer-specific ablation supports the intended attribution. At rank 64,
+the nonlinear-only gradient basis improves force RMSE over the linear-only basis
+from `0.00960` to `0.00801 eV/angstrom`. It reduces nonlinear-branch error from
+`0.000364` to `0.0000794 eV` per atom and head-preactivation RMSE from `0.0117`
+to `0.00476`. Every paired interval for these differences excludes zero, with
+sign-flip probability `0.000100`. Combining both consumers is still materially
+better than either consumer alone.
+
+Activation PCA is much worse, with rank-64 force RMSE `0.177
+eV/angstrom`. Five canonical random controls range from `7.01` to `27.5
+eV/angstrom` at rank 64. The improvement is tied to downstream sensitivity and
+is not generic variance preservation.
+
+Rare-species blocks remain underdetermined. Phosphorus appears in four discovery
+configurations, bromine in eight, and iodine in two. One iodine configuration
+appears in each deterministic fold. Iodine fold comparison establishes only
+that the calculation is defined. It does not establish a stable iodine mode.
+
+The exact next test is a coefficient environment for the first readout, the
+second-interaction message density, and its skip path. That construction remains
+degree three at product block zero and can recover a Dooms-aligned marginal
+tail bound for its declared immediate-consumer norm.
+
 ## Result files
 
 | File | SHA-256 |
@@ -255,20 +323,23 @@ the full shared-interface target at these ranks.
 | `results/mace_off23_small_radial_interface.json` | `675f6c7771b7c9b22321b0c69c94adbd6b825e98cd195ea0d616d2f2c5960a53` |
 | `results/mace_off23_small_first_branch.json` | `c9a3d916f5823a0a3aedf8233ff27a0b4dcc9a674e8f775dcbb9760cc99999cc` |
 | `results/mace_off23_small_global_environment.json` | `a3975acc08525ea8aef19abe1e9a78801d14ebbd33bac682f53162ea3ed5c3e6` |
-| `results/mace_off23_small_global_environment_balanced.json` | `b55a91213a442a9428544f54e2e44052d3f61cb2a81ea487ef44a6e3a032ae9c` |
+| `results/mace_off23_small_global_environment_balanced.json` | `082deae6e5f1d1416c15d0c28c201348ed208a7773b93965bee89886c86267f8` |
 | `results/mace_off23_small_projected_branch_balanced.json` | `7980ea21baea63c25f11f7627df00d2851adf9682ad13a9c3da242b623fa2f14` |
 | `results/mace_off23_test_manifest_64.json` | `5e7314c41fedbb614a457d7f4b91c87e615f08f95a35e843b224cd0b9aa82835` |
 | `results/mace_off23_small_heldout_branch_balanced_64.json` | `80290e13ac4c68c7b5d7469b7f538b355162c9b0bcf5da8646d1160dce0fe298` |
 | `results/mace_off23_small_shared_interface_balanced_64.json` | `08763df73a35e4e6171c6388c1f82217644a9522023b661a6a4ef362c9ca7903` |
+| `results/mace_off23_discovery_manifest_128.json` | `a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c` |
+| `results/mace_off23_small_multi_consumer_environment_128.json` | `26c1ca405ccfa09b66438c301548dd686e36ca897c6fd62450b27d9fab89f46f` |
+| `results/mace_off23_small_multi_consumer_fidelity_64.json` | `8e0741c33dd64066e160b33703e956c3306ec9f2282c45bf28325ba9b56db32c` |
 
 ## Immediate next implementation
 
-1. Freeze a molecular evaluation manifest with configuration identifiers and
-   hashes.
-2. Run the same branch evaluator for global, local radial, local weight, and
-   canonical random subspaces.
-3. Report paired energy and force fidelity with uncertainty at the frozen rank
-   ladder.
-4. Insert each native encoder and decoder at the shared interface and quantify
-   the gap between branch-only and all-consumer fidelity.
-5. Build physical mode cards only after the fidelity result is frozen.
+1. Compile vector-valued product-zero coefficients for the first readout,
+   second-interaction message density, and second-interaction skip path.
+2. Construct the exact immediate-consumer marginal operator with all path cross
+   terms and a declared output metric.
+3. Validate its matrix-free action against a dense tiny-graph oracle and test the
+   tied factor-three bound.
+4. Evaluate its basis through the same frozen T2 rank ladder.
+5. Only after the exact method passes, compile the sixteen nonlinear-head
+   preactivations as a factorized degree-nine target.

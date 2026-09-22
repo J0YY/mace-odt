@@ -41,7 +41,10 @@ No spectrum is interpreted before the exactness gates above it pass.
 | E6 diagnostic rank ladder | Passed | Slurm job 399999, smoke geometries only |
 | E7 frozen held-out rank ladder | Passed | Athena job 400007 on 64 frozen official test configurations |
 | E8 shared-interface fidelity | Passed | Athena jobs 400013 and 400023 on the frozen subset |
-| E9 and E10 | Not started | E8 requires a multi-consumer method before a full-model claim |
+| T0 discovery split | Passed | Athena job 400135, 128 configurations disjoint from the frozen 64 |
+| T1 data-assisted readout-gradient pilot | Passed | Athena job 400136, every numerical and provenance gate passed |
+| T2 frozen full-model fidelity | Passed weak criterion | Athena job 400155, final consumer-specific ablation included |
+| Exact two-layer coefficient extension | Not started | Separate from the tangent pilot and required for an ODT theorem claim |
 
 ## Common experimental rules
 
@@ -244,6 +247,67 @@ parameterization.
 
 **Claim boundary:** Branch-only speed is not full-model speed. A checkpoint
 basis that fails to recur can still be a valid post hoc representation.
+
+## T0: disjoint discovery set
+
+**Question:** Can a data-assisted basis be learned without inspecting the frozen
+64-configuration evaluation set?
+
+**Implementation:** `python -m mace_odt.cli.discovery_manifest`
+
+Select 128 configurations using metadata and geometry only. Exclude every
+evaluation index and every byte-identical ordered Cartesian geometry. Record a
+hash of the evaluation manifest and the excluded evaluation indices. Do not read
+reference energies or forces.
+
+## T1: data-assisted readout-gradient pilot
+
+**Question:** Does the later nonlinear readout expose a shared low-dimensional
+functional subspace that the first branch alone misses?
+
+**Implementation:** `python -m mace_odt.cli.multi_consumer_environment`
+
+At the first interaction density, differentiate the two scaled learned energy
+branches separately. Divide each molecular energy by the square root of its atom
+count. Transform native channel gradients with the transpose of the supported
+radial metric factor. Sum over nodes, average over each complete magnetic
+multiplet, and average equally over discovery configurations.
+
+The primary matrix gives the linear and nonlinear branches equal global trace.
+A second matrix uses the gradient of their summed energy and preserves branch
+cancellation. Activation PCA, the exact first-branch environment, local radial
+SVD, and random bases are controls.
+
+This is an additive local sensitivity analysis. It is not the finite projector
+loss, an exact coefficient environment, or a Dooms truncation certificate.
+
+**Numerical gates:** exact graph tracing, branch-gradient additivity, PSD checks,
+species coverage in both deterministic folds, deterministic nullspace completion,
+and cryptographic binding to the checkpoint, radial artifact, discovery manifest,
+source archive, and excluded test indices.
+
+## T2: frozen full-model fidelity
+
+**Question:** At the same rank, does the T1 basis preserve the complete model
+better than the first-branch and local baselines?
+
+**Implementation:** `python -m mace_odt.cli.multi_consumer_fidelity`
+
+Use ranks 48, 64, 80, and 96. Insert every basis through the same encoder and
+decoder before product block zero. Measure total energy, force, both learned
+readout branches, and all sixteen final-head preactivations on the frozen 64.
+Rank 96 must reproduce total energy and maximum force error below the float64
+gate.
+
+The primary rank-64 comparisons use paired bootstrap intervals and paired
+sign-flip tests with Holm correction. Weak feasibility requires lower force
+error than both local radial SVD and the first-branch environment, plus energy
+noninferiority against local radial SVD. Strong feasibility requires force RMSE
+at most 0.001 eV/A and energy error at most 0.0001 eV per atom.
+
+If the pilot does not beat local radial SVD at ranks 64 and 80, reject this
+data-assisted gradient construction. That result would not reject the exact
+coefficient-based multi-consumer extension.
 
 ## First preliminary result package
 

@@ -1,0 +1,1892 @@
+{
+  "claim_boundary": "Selection uses configuration metadata and geometry only. Reference energies and forces are not read and the existing held-out structures are excluded.",
+  "convergence_fold_sizes": {
+    "A": 64,
+    "B": 64
+  },
+  "convergence_fold_species_counts": {
+    "A": {
+      "1": 63,
+      "6": 63,
+      "7": 41,
+      "8": 50,
+      "9": 9,
+      "15": 2,
+      "16": 21,
+      "17": 11,
+      "35": 4,
+      "53": 1
+    },
+    "B": {
+      "1": 62,
+      "6": 62,
+      "7": 42,
+      "8": 50,
+      "9": 9,
+      "15": 2,
+      "16": 21,
+      "17": 11,
+      "35": 4,
+      "53": 1
+    }
+  },
+  "dataset": {
+    "eligible_group_sizes": {
+      "DES370K Dimers": 13891,
+      "DES370K Monomers": 887,
+      "Dipeptides": 1023,
+      "PubChem": 34053,
+      "QMugs": 143,
+      "Solvated Amino Acids": 51,
+      "water": 83
+    },
+    "excluded_duplicate_count": 0,
+    "excluded_evaluation_count": 64,
+    "num_configurations": 50195
+  },
+  "disjointness": {
+    "discovery_structure_hash_count": 128,
+    "evaluation_structure_hash_count": 64,
+    "overlap_count": 0
+  },
+  "evaluation_indices_sha256": "606f0b938e1cbedb6939c716ebdbd3d42677cd9a436bcd51d1cfef1405df2e8d",
+  "evaluation_manifest": "results/mace_off23_test_manifest_64.json",
+  "evaluation_manifest_sha256": "5e7314c41fedbb614a457d7f4b91c87e615f08f95a35e843b224cd0b9aa82835",
+  "experiment": "T0_data_assisted_discovery_manifest",
+  "schema_version": 1,
+  "selected": [
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "6f433e856ef46a86e60169075c04567151723c6a9aafc060e02fccfcebeb0328",
+      "formula": "C5H11N3",
+      "index": 36,
+      "num_atoms": 19
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "0aa3a0c309fa0298e18c4a249882ed5f08594d4983846a10d195c573bc383696",
+      "formula": "C17H20N6O4",
+      "index": 390,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "c48d7c3cdd6870010543066ed9e3e83b236629b9519b229405702a7bf3489fb6",
+      "formula": "C19H19F3N6O",
+      "index": 397,
+      "num_atoms": 48
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "40e4d9043a2dc31e90c6c40b17492de1891826a1d90dd53a0e17d09445ee5269",
+      "formula": "C8H16O2",
+      "index": 1180,
+      "num_atoms": 26
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "0cdd76304d9b064427ad520b9802f6683541242ddf4b73d2384e8168d77a4ead",
+      "formula": "C2H6O2",
+      "index": 1343,
+      "num_atoms": 10
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "67bd747e3378009abd77b27fc980d56c833af163fe186f7757dd862d5d99ce9f",
+      "formula": "CH6O2",
+      "index": 1665,
+      "num_atoms": 9
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "6c6f56976fe8e6e65f17e8e33d51025c50bb19bef6abeafc38676ae5e732a7ef",
+      "formula": "C15H11BrO3",
+      "index": 2917,
+      "num_atoms": 30
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        15,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "bd66e512adb74fc3ffc4c9ad6d9b4ac10d26c8a41b5429d22295be66c34b8d65",
+      "formula": "C8H16N3OPS",
+      "index": 3004,
+      "num_atoms": 30
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "ed3c50a1b5840b9813f32b498060ac1930ebae540e1375500455f8ae1e2ec7f5",
+      "formula": "C22H20ClN5O2",
+      "index": 3023,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "Dipeptides",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "0ac159f15b8ab95736a50484bcd37185dd226bf8c8dd28fb702e8f31fa30d6b8",
+      "formula": "C14H22N6O4",
+      "index": 3476,
+      "num_atoms": 46
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "9c6705098ad38940b7cb37fd01710d0e298acfd9f60130ff28c0e40f8f82fab4",
+      "formula": "C2H8OS",
+      "index": 3544,
+      "num_atoms": 12
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "44c42e30725e8859e66c1dd6222d5ca1049dff9f1e25ec925a22d1fc61a6e9c1",
+      "formula": "C9H9Br2NO3",
+      "index": 4478,
+      "num_atoms": 24
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "be18e9cdaa37296a5a716218e7e0791527b6c7e4450bdb0fa50c5126244f3ee4",
+      "formula": "C3H10OS2",
+      "index": 5092,
+      "num_atoms": 16
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "8573265759e7e0113af5ffd6afc70ae764ac42581a51f7aef6fa3a7ead97b61f",
+      "formula": "C22H19ClN4O4",
+      "index": 5099,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "fc0d51a152c6d90ba71c9d263656e1eb21c6be56bd74d40b20f2626634c0030d",
+      "formula": "C2H6O3S",
+      "index": 5379,
+      "num_atoms": 12
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "b0ff499df2ed989034e73a135a30100adb98793a3455c01e85ebca7a348950b8",
+      "formula": "C3H7NS2",
+      "index": 5688,
+      "num_atoms": 13
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "2a0775ab2fc8763cd61b58ddeab3861f5b44db1e264420aaca43b056575d2f7e",
+      "formula": "C20H18Cl2N4O4",
+      "index": 5812,
+      "num_atoms": 48
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "825a23bcec111e2ecad7c6150c05c6df0c21c9bacaaa590300fb7ef94133efc5",
+      "formula": "C6H14O",
+      "index": 5962,
+      "num_atoms": 21
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "Solvated Amino Acids",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "71391a91c9e9b5b783c928dc06a826eb0c99bc2d87d06990dd2a0ff055eb12b5",
+      "formula": "C8H54N2O24",
+      "index": 7124,
+      "num_atoms": 88
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "014e76503edb5b6d0a48870b397dabfe2189f118d0cfffa27d680fda1e23516f",
+      "formula": "C17H21FN6O",
+      "index": 7260,
+      "num_atoms": 46
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "cb5b907fa440267d9492e07cd3ba0fe7eff65053e29f2e58c646f56415d79707",
+      "formula": "C5H14S",
+      "index": 7675,
+      "num_atoms": 20
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "6def0f5a4540c50b96badff1b71c8ea06ff6787a25ffcb2792c7d230583f552b",
+      "formula": "C6H13NO",
+      "index": 7757,
+      "num_atoms": 21
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "5e0b635b4c3d45aa6c120ef3e2ec96db8fce4cd3937bdf8bcb54e70030f82cf6",
+      "formula": "C11H9NO",
+      "index": 8306,
+      "num_atoms": 22
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        35
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "73f88ebfd4284cfde2f03c205d9df2f6cf5619625d97ac2c54382793c98f82a5",
+      "formula": "C8H9Br",
+      "index": 8477,
+      "num_atoms": 18
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "0795467e6f9557da97d0aae9ced7ab17fcb2269ca8e4d254a4684623236efbd6",
+      "formula": "C10H11ClO4S2",
+      "index": 9193,
+      "num_atoms": 28
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "7bc7a863b1c9603ab702ad49b5e044c3abac235e987fde770d336bcfed6c947d",
+      "formula": "C19H11Cl",
+      "index": 9252,
+      "num_atoms": 31
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "4c48bd75c127453eddb6c7038d35ec0805cabd1c250545a0393f8b2c8c42bb4c",
+      "formula": "C18H21N5OS",
+      "index": 9294,
+      "num_atoms": 46
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        53
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "9763fbf3de0a77ed0cdb0fd5636fb92a4244ba87b07c704dee74ffea01fbe967",
+      "formula": "C4H3I",
+      "index": 9334,
+      "num_atoms": 8
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "8aa2ff929d2b10ac9561c98843b8460797d4870436cea95811966bd1dc56a95e",
+      "formula": "C8H8O",
+      "index": 9894,
+      "num_atoms": 17
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "71f4eaae1971614dfd75074dfe6488a6b9134a3e0587dae5ac60bba3ea5d5871",
+      "formula": "C23H16F3N5O2S",
+      "index": 10244,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "41c1694d613d0b65ee8c2b9b5627c46a89c5b491d89240a5e09d795a0e557a80",
+      "formula": "C3H9NO2",
+      "index": 10733,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "97241d7fb20e7e4e5f93966f54d19ea5f81b196929dad4179f89dace93881574",
+      "formula": "C3H10O2",
+      "index": 10873,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "6d7ddeecaae5e9961990293409eaec2f56908751fa220b5da2899a81a05ea7f5",
+      "formula": "C18H16Cl2N2O2",
+      "index": 11222,
+      "num_atoms": 40
+    },
+    {
+      "atomic_numbers": [
+        15,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "b6eda1c509d7abc5bfb271f73c1b04107863a6d9edbd81c0f167de32c8e0e81a",
+      "formula": "ClPS",
+      "index": 11573,
+      "num_atoms": 3
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "d6c6b367455a6b77fff56922ba590b0a3106844c2cebffa9f505102cb15e274d",
+      "formula": "C21H20FN3O3S",
+      "index": 11712,
+      "num_atoms": 49
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "666e4639c5b40355a8b678010f7994abfdfd8ddd06f724eb4a8a3965ad62ad66",
+      "formula": "C20H17BrN2O6S",
+      "index": 11717,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "ff747f2fb5087bad8aa55df5137923cd3a371ae13a4a4690a0638c45f652f13a",
+      "formula": "C15H13NO2",
+      "index": 11855,
+      "num_atoms": 31
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "bbedba52d3cc2089793a95b5795e68f0de64fbb3c7cdf856ebec589322f51e99",
+      "formula": "C15H20O3",
+      "index": 13187,
+      "num_atoms": 38
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "16f777459ff382fcac921772019635ad3b6ac3123e801a8ccefc719e2e295778",
+      "formula": "C9H22N2O2",
+      "index": 13612,
+      "num_atoms": 35
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "3fd26773c35675362668cadc062c4bbb8c65026b491c1cb80408cad2f06bc3a8",
+      "formula": "C14H12N2O4",
+      "index": 13663,
+      "num_atoms": 32
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "6652f8aeef91bd5d7cb0c97637fd4ba64523e8d1b1ee02d7cb21c9d51b8193d1",
+      "formula": "C3H9NO3",
+      "index": 14387,
+      "num_atoms": 16
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "a78565be9b262421b7e567223ac77e66f5a464962a828d8b5f69e89506567824",
+      "formula": "C7H14O3S2",
+      "index": 14398,
+      "num_atoms": 26
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "6efcc6aab3a5c9bf60d606ee195e12a99c3eb788b301018a34242c16f39c2582",
+      "formula": "C11H20O3",
+      "index": 15029,
+      "num_atoms": 34
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "95836b1d37bf50b62fd188ef8ad0fb49b0a5068ff81e3de46dcbee565e581875",
+      "formula": "C15H17NO3",
+      "index": 15077,
+      "num_atoms": 36
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        15,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "ef58dc1311ce58b446a3c94e2fe6ac7e74a847d4acb7ac69e1032f9533432e47",
+      "formula": "C3H11O4PS",
+      "index": 15617,
+      "num_atoms": 20
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "97c42eb23d6305863fc26689ec98d9324a37d20727f906a625302cf5d63dcb93",
+      "formula": "C6H2N4O5",
+      "index": 16494,
+      "num_atoms": 17
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "4c2725fc0ab6c5c9bb89e7954084ebfa58f187d8e210aa9e56f02290f364d69e",
+      "formula": "C4H2O4",
+      "index": 16849,
+      "num_atoms": 10
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "c996051d67e065d82e2e7edf77073fde90ec3252f91be823ebf5c22cc541f2c4",
+      "formula": "C11H10ClN3O2",
+      "index": 16944,
+      "num_atoms": 27
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "026fa97c40266d20479ec1815317554512c6e7c84956ceb2070aa27c3703d47a",
+      "formula": "C18H19Cl2F3N6O2",
+      "index": 17068,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "52684d6ddddaf24e73f379c4805ffab238c4c6c6d76e9f687932033f7fc34704",
+      "formula": "C18H21FN2O2",
+      "index": 17447,
+      "num_atoms": 44
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "c07bf52b03699a7c8dc1a805850ff533483bb8f7138d70a125b1ab069cdc1472",
+      "formula": "C8H20",
+      "index": 17748,
+      "num_atoms": 28
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "847b6296076470364934d39a87e2253dbebbdfecbd5348340fe2c5f1ad9a318b",
+      "formula": "C12H24O2S",
+      "index": 18543,
+      "num_atoms": 39
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        16
+      ],
+      "config_type": "DES370K Monomers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "afec98e2a0ba0901f3b7fb3e835ec5bc82d91513a52a23d5af088cfa2f70f8dc",
+      "formula": "C4H10S2",
+      "index": 19708,
+      "num_atoms": 16
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "2d8f9e2c678cc3035db2fef011b93ae6e33e9bfab878f941747c81fc6d450cfb",
+      "formula": "C9H8N4O2S",
+      "index": 20846,
+      "num_atoms": 24
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "2c2e5937ff522dfe4be0dedb7c8197814f93e85a58ec7805aa71198509ffbf36",
+      "formula": "C21H19N5O4",
+      "index": 21051,
+      "num_atoms": 49
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "561768ed7b42adc79870d0cda47a7d34dcb7f98190933c8c4618f35523e7ba7c",
+      "formula": "C15H11Cl3N4S",
+      "index": 21428,
+      "num_atoms": 34
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        53
+      ],
+      "config_type": "DES370K Monomers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "5110544a6d09017e33359aa1995f6e8497f5b49f44f3618cc8a81a18dd2ce2d9",
+      "formula": "CH3I",
+      "index": 22179,
+      "num_atoms": 5
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "7a9c1dd3fb3acbe9b35e9e5400481885be2103d5f4a748261ea7256b6954fa81",
+      "formula": "C20H26O4",
+      "index": 22591,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "bdac9ee66ebab8dc5978e6a59862135c015aed4595c71a5c8b3825fcfda1cfb6",
+      "formula": "C2H8",
+      "index": 23953,
+      "num_atoms": 10
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "e3d1855a55090656553cc14c2f8e1be840c4b3c29aba24a70ffb47e41b6d4351",
+      "formula": "C17H17N5",
+      "index": 23992,
+      "num_atoms": 39
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "25d79f7d3dbe9f8efd263f0d42bc863fb3686a648a83e3575c542976df029d26",
+      "formula": "C14H9NO2S",
+      "index": 25205,
+      "num_atoms": 27
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "ebc07b24e28efc6d918ceae2a75b6353f0b1279687d2bab24619dfdf3155f882",
+      "formula": "C5H16N2O",
+      "index": 25453,
+      "num_atoms": 24
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "9cef0fd0f01a84b8e8b231a742fdc0c8cbcb0e1c22506728fcfee22aa8882a8f",
+      "formula": "C4H10O",
+      "index": 25785,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "5eb4fe411670a0515a954ccf5b5b14191ef4416f808313d9db8f8672a96ede60",
+      "formula": "C12H8F2N4",
+      "index": 25974,
+      "num_atoms": 26
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16,
+        17,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "729141acaed327785c3f6d56ef52948d595d28a256329af4aa3a736d6877e728",
+      "formula": "C13H8BrClN4OS",
+      "index": 26931,
+      "num_atoms": 29
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "d131085b3c9bb192376d9451f83a9b381cca17111e7f5e4a55158e566498f315",
+      "formula": "C20H17Cl2F2N3O",
+      "index": 27039,
+      "num_atoms": 45
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "7ac0cfdc4d4ed99087463b9884e52d6a4817699f26467259ba08ecfec0043f55",
+      "formula": "C23H14Cl2F3N5O3",
+      "index": 27371,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        9,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "f14aa07319a8f453b3333ace5d4bd98118c54917471e4b04e5aa3eae977c7a3d",
+      "formula": "C12H10ClFN2S",
+      "index": 27764,
+      "num_atoms": 27
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "dc70306081f830a2bcc7fa3bef0ca2174877dfd114dc25bcf673bbb685eb9b37",
+      "formula": "CH6O",
+      "index": 28545,
+      "num_atoms": 8
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "85547fad05dcb1a7837cdde9ee68f79f6486d0523ff2aac65e39f7d8872353fd",
+      "formula": "C18H19ClF4N4O2S2",
+      "index": 28621,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "f0b847347d4e62fc6db34a8d5a87c33d72347c25add219285dbe3a22daf73e8e",
+      "formula": "C15H15N",
+      "index": 29556,
+      "num_atoms": 31
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "f514cf21e995cea85a47b23f4891c6fda9507c9ed2cb2310102f7de8e12a725c",
+      "formula": "C3H10O2",
+      "index": 29720,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "Dipeptides",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "4363bab31367970179d65e9b4026cb654edd6b225abe51db5bfcaea524ff028d",
+      "formula": "C11H17N5O3",
+      "index": 29742,
+      "num_atoms": 36
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "6c20f37fc198551a40173a25dc47c947d9b5920f2fa35047836f89834d46577e",
+      "formula": "C20H21N7O",
+      "index": 30429,
+      "num_atoms": 49
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "bab36d49f28c0ceb793def0bc9870b69ff66a9069b850c8e45c3f1feaaa422a8",
+      "formula": "C10H16N4O4",
+      "index": 30525,
+      "num_atoms": 34
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "4ebaf5ea0e70b75aa0fdebc81027750b112aff9b809c0dd656e5fe139412e4a4",
+      "formula": "C10H10F3N3O3",
+      "index": 30530,
+      "num_atoms": 29
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "313a6b1236cc80e7d07ab3163566f2c030149912f2eaf12ca61ac252fa98f38c",
+      "formula": "C20H18N4O3S2",
+      "index": 30709,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "df64a68c237ef932933e8364c9d949b22e5bb148f4c4eaacca53d03b19d80120",
+      "formula": "C8H7N3",
+      "index": 30886,
+      "num_atoms": 18
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "76d09f8affacfaa58caab032f18236206a410fba98312f2c29b2c80a4c3f31e1",
+      "formula": "C3H8O3",
+      "index": 31028,
+      "num_atoms": 14
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "c40b5d8d3c565544e8a319c2028ad56899e814bdad5cf13c0423e96de75e018b",
+      "formula": "C17H27N3",
+      "index": 32875,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "2df8e2ab69fc1f9b4370db4101bf182bd4f6ddcdad7464629002cd8edb1e0dbb",
+      "formula": "C16H10N4O3S3",
+      "index": 33268,
+      "num_atoms": 36
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "6493d01ecdd1e2f39ee27ef48d9009f94791cdf6559353d5a9bb5213677aa29f",
+      "formula": "C17H22N2O2",
+      "index": 33532,
+      "num_atoms": 43
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "7c24bd2b647e38bce1abb82033ef856dab615e4948ffd511f7305958f3806db9",
+      "formula": "C19H20F2N4O2",
+      "index": 33795,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "Dipeptides",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "aa204188788368869c9bda893383730be69b52fa8a88a0eba9be6721a8683fdc",
+      "formula": "C12H20N4O6",
+      "index": 34137,
+      "num_atoms": 42
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "8fce13af1efe4fdf9581895a9d2f8bc10fbefe5e8dbdd82570a1857d4489c9c7",
+      "formula": "C17H22N4O2",
+      "index": 34843,
+      "num_atoms": 45
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "QMugs",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "93766a5865d57689eb7f59d84d2f8eeacb4a97d9bbf82056aa80537021e9b458",
+      "formula": "C20H24ClN5O",
+      "index": 35362,
+      "num_atoms": 51
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "27b9af9ec3fb411197dace0a3978b1f4896e98367ddeb2233e0aa95a32fd0982",
+      "formula": "CH4O3",
+      "index": 35419,
+      "num_atoms": 8
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "bb1c447b75428e6d9c36db91f2c562d78ad3b4bdf37b5ce05343d265d97c61b7",
+      "formula": "C18H23N3O4S",
+      "index": 35600,
+      "num_atoms": 49
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        15
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "054763043dbfd284a94166f724658bb518d918aee4fa3767cc0b2496b38d8b10",
+      "formula": "C18H19N2O2P",
+      "index": 35709,
+      "num_atoms": 42
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "46f4681ca813b5405ba59a6d1eeb0175dab691ca22a5de15a9366277b2bb109a",
+      "formula": "C16H18N2OS",
+      "index": 36348,
+      "num_atoms": 38
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "691f43c64b5f1f9a9893e851b924493831b91e9554083ec2b1e9df3a4ebbe394",
+      "formula": "C20H21BrFNO3",
+      "index": 37623,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        1,
+        8
+      ],
+      "config_type": "water",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "29bbde4162b2e0f029331c21f08c3c6e461aa938d1a48747056599ff25547371",
+      "formula": "H12O6",
+      "index": 37909,
+      "num_atoms": 18
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "Dipeptides",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "9703c224b00b2a7ee6024020f9d886658cbe34b0d6b123216053b70b784e14c0",
+      "formula": "C21H25N3O4",
+      "index": 38347,
+      "num_atoms": 53
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        16,
+        17
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "cb2c34a3147176056f16b2f8b731b32890fb3bcca1cf5207fe4e8f37970e1e59",
+      "formula": "C3H9ClS2",
+      "index": 38427,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "2fbedadd202648121325785e828512090f181af5f2dc56d4d090f1ac4b07ace2",
+      "formula": "C18H17N3O3S2",
+      "index": 38562,
+      "num_atoms": 43
+    },
+    {
+      "atomic_numbers": [
+        6,
+        7,
+        9
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "dc5069205cb9ae9422cc89dbd68c54da1db24bd05362591edf46f7e93b8f6adb",
+      "formula": "C5F11N",
+      "index": 38918,
+      "num_atoms": 17
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "07a9511d60a42ef683e426a69854bc8021a57f713f5c2882db2779acd251b3e9",
+      "formula": "C22H22N4O2",
+      "index": 39104,
+      "num_atoms": 50
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "7e0401f5b62e58040e976e109801a7dff5b8461f38448a28fc5e28f35b9e4ec6",
+      "formula": "C2H6O",
+      "index": 40643,
+      "num_atoms": 9
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "8c554320e3b04e69a6b5be712d896a77223c5e24af9be362cf492a3a5ff989ff",
+      "formula": "C5H12O2S2",
+      "index": 41382,
+      "num_atoms": 21
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        17
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "6db13c56609ca03f0279d404ef47a31a105d7bda2cc79f167cde611b1bb4244a",
+      "formula": "C2H3Cl5O",
+      "index": 41451,
+      "num_atoms": 11
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "822b1b248ad1c0bd507463baba6e8e31b768d7d0d7c1372f3ea155769e61bcc9",
+      "formula": "C15H13ClN2O2S",
+      "index": 42521,
+      "num_atoms": 34
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "c439f778ef6ecc7cf29c27691f99b9b29929aed8cc0844dab9c1b5ba0db7bc73",
+      "formula": "C20H24O2",
+      "index": 43163,
+      "num_atoms": 46
+    },
+    {
+      "atomic_numbers": [
+        1,
+        16
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "f064bb07ae4e6b936822c2486a36daaddaaefd9fae604db40a9df31554563090",
+      "formula": "H4S2",
+      "index": 43244,
+      "num_atoms": 6
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "92d579fbe6c1a0a98a9b9160fd00132606bfb832e2aced4e5aec658cafa7c5a7",
+      "formula": "C7H8N2OS",
+      "index": 43322,
+      "num_atoms": 19
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        16,
+        35
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "8b0fa795d2bddb41fbf77817ac3b388109a497a280be2a54ea1993fa45c71d89",
+      "formula": "C4H10Br2S",
+      "index": 43343,
+      "num_atoms": 17
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "e01d019bd1ec9b6f16bb5a3ec06a5279294ac0bc09353670547a0712646d1e82",
+      "formula": "C2H8",
+      "index": 43480,
+      "num_atoms": 10
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "8c347879a79f239588355ebe41d03d6c8efec35fbe995c90d1fc321bb2815269",
+      "formula": "C16H23N3O4S",
+      "index": 43690,
+      "num_atoms": 47
+    },
+    {
+      "atomic_numbers": [
+        6,
+        7,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "79269c2de3f07a619f0dc043aeff915312c4c4b348090a3d768d5729d000097c",
+      "formula": "C2N2S",
+      "index": 43856,
+      "num_atoms": 5
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "b41a3f84849c50ca7949c5259e6f86d3072e7c41f7794582817bff338ce23ebe",
+      "formula": "C14H20O4",
+      "index": 43995,
+      "num_atoms": 38
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "52f3aa1420d2d2007c02f9e47fa4706118965f50e9d16ea1daccb27adb302a8c",
+      "formula": "C2H4O2",
+      "index": 44522,
+      "num_atoms": 8
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "242d262ffb2c91f80d2cc5fc2acf02962560ed4c1c0fbfa20526507cabbdd3e7",
+      "formula": "C4H10N2O2",
+      "index": 44563,
+      "num_atoms": 18
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "8226b20f0df45b3200fb3a0c87517d92b89aa43a9b934ae41dae516015b199e5",
+      "formula": "C14H15N3O3S",
+      "index": 44740,
+      "num_atoms": 36
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "b0b596e163b369598e0dd1633a33d2d44b2595fe7f6f701b9f5ad6492ca56a56",
+      "formula": "C16H15Cl2N3",
+      "index": 44774,
+      "num_atoms": 36
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        9
+      ],
+      "config_type": "DES370K Monomers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "9096a25b67d896dff97f125edb7c032960d004f966515de259edb0b72e57acdc",
+      "formula": "C6H4F2",
+      "index": 45131,
+      "num_atoms": 12
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "b1ac8f7542710ff0dcd21dadb33d494b2a5aa331d12612d2558c33069f49a2dc",
+      "formula": "C21H22N2O",
+      "index": 45742,
+      "num_atoms": 46
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16,
+        35
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "690a1ce96ffdaa7d01202584ef02ac023b14f3c02783a845d529a158507a85c2",
+      "formula": "C16H16BrNO4S",
+      "index": 46409,
+      "num_atoms": 39
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "4fa54f1a46e8853cb1490b03734df19338778237bb144351bd184b89526dd5b7",
+      "formula": "C19H14N6O2S",
+      "index": 46532,
+      "num_atoms": 42
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "d61e1f4b3337d06d98f06762af391f4cffe58626f12e02d870427ea3e165b48b",
+      "formula": "C5H6N4O",
+      "index": 46778,
+      "num_atoms": 16
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "b3881b82ed172a969a9fe377600c5caa2887055cf73e9f2d8d8f4e90bb82299c",
+      "formula": "C13H19N",
+      "index": 46818,
+      "num_atoms": 33
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "3c503ceac414416f14d760928fc1e8fb9ba9b03446348afd85539f57feda3430",
+      "formula": "C14H14N2O3S",
+      "index": 46890,
+      "num_atoms": 34
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "e108e1d7a701fc8035585ef89ba99eafa2538b7dcc868e48adeab53738928f82",
+      "formula": "C9H7Cl2N7O2",
+      "index": 47665,
+      "num_atoms": 27
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        9,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "b0879cfd430f6fd432b364ff71b9d925a564a59b4894ea06983aa1c9a598f25a",
+      "formula": "C16H16F2N6S",
+      "index": 47716,
+      "num_atoms": 41
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "01c8fedeac209792686dba6fbeab3e0d5aad45f88bf37a4a7bcc127d7a9833c5",
+      "formula": "C2H9NO2",
+      "index": 48653,
+      "num_atoms": 14
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "40a51fed70b4c2cb03bfabe48c3c694151d7843a36c3bbde610a894a925267ff",
+      "formula": "C23H15NO8S2",
+      "index": 48737,
+      "num_atoms": 49
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "DES370K Dimers",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "362457039b9fd2d165db935d28c8313759cb93e960a6071000bb3f00052077c5",
+      "formula": "C2H10N2O",
+      "index": 48980,
+      "num_atoms": 15
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "170a8ed78c7ddf49341e4257f9ddfe0dd606a1b14ff9de57d7b6b32ac7b5ba32",
+      "formula": "C17H22N4O",
+      "index": 49514,
+      "num_atoms": 44
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "B",
+      "exact_structure_sha256": "960afac88cac85dcba0090583f831ee74cfe7a313f6cfc76592a67f643600710",
+      "formula": "C18H19F2N5O2S2",
+      "index": 49549,
+      "num_atoms": 48
+    },
+    {
+      "atomic_numbers": [
+        1,
+        6,
+        8,
+        17
+      ],
+      "config_type": "PubChem",
+      "convergence_fold": "A",
+      "exact_structure_sha256": "a87afb73a894658a04efd4e76f62da858d378f50c89a98b786bfa7201fa4f365",
+      "formula": "C19H23ClO4",
+      "index": 49764,
+      "num_atoms": 47
+    }
+  ],
+  "selected_group_counts": {
+    "DES370K Dimers": 35,
+    "DES370K Monomers": 3,
+    "Dipeptides": 4,
+    "PubChem": 83,
+    "QMugs": 1,
+    "Solvated Amino Acids": 1,
+    "water": 1
+  },
+  "selection": {
+    "rule": "Exclude held-out indices and byte-identical ordered Cartesian geometry hashes. Then take one item per config_type and allocate the remainder proportionally. Rank within groups by SHA-256 of the seed and original frame index. Assign convergence folds deterministically in rare-species-first order, always choosing the fold with lower normalized coverage of the record's species.",
+    "sample_size": 128,
+    "seed": 20260927,
+    "stratification_field": "config_type",
+    "uses_reference_labels": false
+  },
+  "source": {
+    "archive_id": "cb8351dd-f09c-413f-921c-67a702a7f0c5",
+    "archive_md5": "bf1f7c7ff1714e6ac6af2cdc642a130a",
+    "repository_doi": "10.17863/CAM.107498",
+    "source_url": "https://doi.org/10.17863/CAM.107498",
+    "xyz_path": "/work/joy/datasets/mace-off23/test_large_neut_all.xyz",
+    "xyz_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e"
+  }
+}

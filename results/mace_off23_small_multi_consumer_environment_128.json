@@ -1,0 +1,2063 @@
+{
+  "blocks": [
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "discovery_configurations_containing_species": 125,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.16535204135324444,
+        "64": 0.07069607008386346,
+        "80": 0.07455157681017616
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 297.8637128945185,
+          "minimum_eigenvalue": 1.0986581242348334e-07,
+          "trace": 541.9969271594482
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 12,
+          "empirical_rank": 84,
+          "largest_eigenvalue": 0.11283647644821133,
+          "minimum_eigenvalue": 7.992847681262367e-17,
+          "trace": 0.12437926145280763
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 25,
+          "empirical_rank": 71,
+          "largest_eigenvalue": 0.004797851544182959,
+          "minimum_eigenvalue": 5.4176217969413576e-20,
+          "trace": 0.004938661542099145
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 0.0030623602738806778,
+          "minimum_eigenvalue": 1.2140369830500364e-18,
+          "trace": 0.003345548186630402
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 0.0009809760415816406,
+          "minimum_eigenvalue": 2.105176188081084e-18,
+          "trace": 0.0014610533894191665
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "discovery_configurations_containing_species": 125,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.10329407655491012,
+        "64": 0.10345868255391948,
+        "80": 0.11180542369507979
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 128.63412557834468,
+          "minimum_eigenvalue": 4.1643227695182736e-07,
+          "trace": 390.4439995925941
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 0.004243817486213129,
+          "minimum_eigenvalue": 1.8358887632828354e-19,
+          "trace": 0.00637174737509724
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 14,
+          "empirical_rank": 82,
+          "largest_eigenvalue": 0.0002876935701645167,
+          "minimum_eigenvalue": 1.00516185268525e-22,
+          "trace": 0.00037413930215753484
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 8.299977561432396e-05,
+          "minimum_eigenvalue": 2.550653007834237e-21,
+          "trace": 0.0001253992444057926
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 0.00013558821844641942,
+          "minimum_eigenvalue": 3.923458564735377e-21,
+          "trace": 0.00017323466259473407
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "discovery_configurations_containing_species": 125,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.16735088096955786,
+        "64": 0.04522082114133923,
+        "80": 0.024004674989394046
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 86.68048816215439,
+          "minimum_eigenvalue": 2.9182295273384705e-07,
+          "trace": 336.75090892706635
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 0.0007055463638321215,
+          "minimum_eigenvalue": 3.443349320669248e-17,
+          "trace": 0.0011421077241167267
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 2.758244384612476e-05,
+          "minimum_eigenvalue": 2.208903309823539e-20,
+          "trace": 4.582864438981134e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 1.970444274240476e-05,
+          "minimum_eigenvalue": 3.850601306748352e-19,
+          "trace": 3.053830609416669e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 3,
+          "empirical_rank": 93,
+          "largest_eigenvalue": 4.144040722546716e-06,
+          "minimum_eigenvalue": 8.727471485258433e-19,
+          "trace": 1.3122494674803785e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "discovery_configurations_containing_species": 125,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.0927187317231227,
+        "64": 0.09850758153718536,
+        "80": 0.035518643611499257
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 60.837752906500924,
+          "minimum_eigenvalue": 1.9360117801073e-07,
+          "trace": 323.67964619724535
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 4,
+          "empirical_rank": 92,
+          "largest_eigenvalue": 0.00033752240445729273,
+          "minimum_eigenvalue": 1.3253376299005679e-17,
+          "trace": 0.00048489587033152175
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 1.3584179042887277e-05,
+          "minimum_eigenvalue": 1.1784372669032038e-20,
+          "trace": 1.971043470568728e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 4,
+          "empirical_rank": 92,
+          "largest_eigenvalue": 9.120188299411881e-06,
+          "minimum_eigenvalue": 3.017079645124007e-19,
+          "trace": 1.2869246163107617e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 3,
+          "empirical_rank": 93,
+          "largest_eigenvalue": 1.423315331307182e-06,
+          "minimum_eigenvalue": 3.205325853725034e-19,
+          "trace": 4.340780014857357e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "discovery_configurations_containing_species": 125,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.15764327596785885,
+        "64": 0.07618385993864046,
+        "80": 0.08433755845163443
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 431.0040848146944,
+          "minimum_eigenvalue": 2.4162859124032564e-07,
+          "trace": 718.1587576896923
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 0.2395483778869151,
+          "minimum_eigenvalue": 2.1620211595895497e-18,
+          "trace": 0.2943172576816746
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 30,
+          "empirical_rank": 66,
+          "largest_eigenvalue": 0.01625364563448157,
+          "minimum_eigenvalue": 4.0880752706034198e-22,
+          "trace": 0.018956922566130484
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 12,
+          "empirical_rank": 84,
+          "largest_eigenvalue": 0.004447239270646797,
+          "minimum_eigenvalue": 5.1815438046745574e-20,
+          "trace": 0.005156417564956377
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 0.006386925124414363,
+          "minimum_eigenvalue": 6.183637464468012e-20,
+          "trace": 0.009158752780356102
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "discovery_configurations_containing_species": 125,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.10522580638567877,
+        "64": 0.040757994195068536,
+        "80": 0.02882484867945686
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 86.71313020393426,
+          "minimum_eigenvalue": 3.8530806243280505e-07,
+          "trace": 290.57178865802393
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 0.003170062539985361,
+          "minimum_eigenvalue": 1.0357690765116475e-19,
+          "trace": 0.005260138597967302
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 12,
+          "empirical_rank": 84,
+          "largest_eigenvalue": 0.00019088419958026925,
+          "minimum_eigenvalue": 4.7576550941921324e-24,
+          "trace": 0.00027815439125466703
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 6.185085291449455e-05,
+          "minimum_eigenvalue": 1.0400193972006546e-21,
+          "trace": 0.00011518163750007727
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 0.00012418593401142286,
+          "minimum_eigenvalue": 2.853440284292294e-21,
+          "trace": 0.00018455129132229065
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "discovery_configurations_containing_species": 125,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.1554719448866491,
+        "64": 0.04838352731390434,
+        "80": 0.06797593865698279
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 71.5303536702721,
+          "minimum_eigenvalue": 2.322347084540871e-07,
+          "trace": 302.1603319337919
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 0.028403926369700166,
+          "minimum_eigenvalue": 5.123581887173148e-16,
+          "trace": 0.03001124538236395
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 18,
+          "empirical_rank": 78,
+          "largest_eigenvalue": 0.0011490183552640898,
+          "minimum_eigenvalue": 1.2655089954438974e-19,
+          "trace": 0.0012112734893426102
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 0.0007647880064199369,
+          "minimum_eigenvalue": 7.986460155463357e-18,
+          "trace": 0.0007997880931991567
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 0.00012257466045873463,
+          "minimum_eigenvalue": 1.6027943866944052e-17,
+          "trace": 0.0001895156078714198
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "discovery_configurations_containing_species": 125,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.1448268920810184,
+        "64": 0.04941839796512647,
+        "80": 0.06789544494502964
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 109.74417609246822,
+          "minimum_eigenvalue": 7.156114785272163e-07,
+          "trace": 377.9604656093941
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 0.007751375957438091,
+          "minimum_eigenvalue": 9.917262963950206e-18,
+          "trace": 0.008552218372096444
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 20,
+          "empirical_rank": 76,
+          "largest_eigenvalue": 0.0007448466317249575,
+          "minimum_eigenvalue": 5.205757819524706e-22,
+          "trace": 0.0007720654564096696
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 4.796889260361625e-05,
+          "minimum_eigenvalue": 1.4191860987623254e-19,
+          "trace": 6.585398904826059e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 11,
+          "empirical_rank": 85,
+          "largest_eigenvalue": 0.0004594790655770212,
+          "minimum_eigenvalue": 2.992461227282511e-19,
+          "trace": 0.00047318765624890615
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "discovery_configurations_containing_species": 83,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.18776648967541273,
+        "64": 0.14024745772649863,
+        "80": 0.12754461589923882
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 68.10392261010985,
+          "minimum_eigenvalue": 8.903051006627636e-11,
+          "trace": 111.84462942400613
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 11,
+          "empirical_rank": 85,
+          "largest_eigenvalue": 0.029007504239937094,
+          "minimum_eigenvalue": 2.762627271522535e-17,
+          "trace": 0.03779269356144153
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 27,
+          "empirical_rank": 69,
+          "largest_eigenvalue": 0.0020131723386356214,
+          "minimum_eigenvalue": 6.474736413985135e-22,
+          "trace": 0.002238949571282718
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 11,
+          "empirical_rank": 85,
+          "largest_eigenvalue": 0.0005087077837204521,
+          "minimum_eigenvalue": 3.1041214879696797e-19,
+          "trace": 0.0007362552782834839
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 0.0012074780629719843,
+          "minimum_eigenvalue": 5.082205448366332e-19,
+          "trace": 0.001616793679026349
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "discovery_configurations_containing_species": 83,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.18416579391935556,
+        "64": 0.13588452870123707,
+        "80": 0.10442064122581261
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 10.10837446142939,
+          "minimum_eigenvalue": 1.8978399319354467e-09,
+          "trace": 49.860336116670204
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 0.001731004275137329,
+          "minimum_eigenvalue": 6.681792805636158e-21,
+          "trace": 0.0038434893010547352
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 14,
+          "empirical_rank": 82,
+          "largest_eigenvalue": 0.00010629468904531433,
+          "minimum_eigenvalue": 4.913364276728099e-25,
+          "trace": 0.00017326565004179486
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 5.595350351396121e-05,
+          "minimum_eigenvalue": 1.8460778081957096e-22,
+          "trace": 9.554112821146405e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 0.0001260042261031322,
+          "minimum_eigenvalue": 1.9702584991519631e-22,
+          "trace": 0.0001552496351614723
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "discovery_configurations_containing_species": 83,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.1781644886994618,
+        "64": 0.0869536730007765,
+        "80": 0.09640604142703169
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 1,
+          "empirical_rank": 95,
+          "largest_eigenvalue": 15.296247984676258,
+          "minimum_eigenvalue": 2.7838728561517294e-10,
+          "trace": 53.73924417573778
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 0.0055108906837092134,
+          "minimum_eigenvalue": 1.1120892313941421e-17,
+          "trace": 0.0061186468725076
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 18,
+          "empirical_rank": 78,
+          "largest_eigenvalue": 0.00037073142795072413,
+          "minimum_eigenvalue": 3.495289011861268e-21,
+          "trace": 0.0003945583467792554
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 9.116104402286748e-05,
+          "minimum_eigenvalue": 2.367262534149545e-19,
+          "trace": 0.00010702462671549391
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 0.00012242382746966354,
+          "minimum_eigenvalue": 3.2159313707734964e-19,
+          "trace": 0.00013587989064604985
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "discovery_configurations_containing_species": 83,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.13975107516538673,
+        "64": 0.07639695772990467,
+        "80": 0.03154448652495638
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 1,
+          "empirical_rank": 95,
+          "largest_eigenvalue": 19.17011422407222,
+          "minimum_eigenvalue": 1.8247895315152533e-09,
+          "trace": 61.577003734819634
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 0.0013826021817325983,
+          "minimum_eigenvalue": 5.729251856189564e-18,
+          "trace": 0.001613191258013097
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 19,
+          "empirical_rank": 77,
+          "largest_eigenvalue": 0.0001094436209503524,
+          "minimum_eigenvalue": 3.3238919842482146e-21,
+          "trace": 0.00011822476497334771
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 1.680999591919088e-05,
+          "minimum_eigenvalue": 1.3590859220823405e-19,
+          "trace": 2.2826983351752566e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 4.724016294606057e-05,
+          "minimum_eigenvalue": 1.5698012648681786e-19,
+          "trace": 5.221525608662314e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "discovery_configurations_containing_species": 100,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.1694056830848492,
+        "64": 0.14527338865129358,
+        "80": 0.11507143645828459
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 45.50781495127432,
+          "minimum_eigenvalue": 1.2026320744317972e-10,
+          "trace": 92.76576953863838
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 15,
+          "empirical_rank": 81,
+          "largest_eigenvalue": 0.06415516841448447,
+          "minimum_eigenvalue": 1.4947111581211712e-18,
+          "trace": 0.07155400882427931
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 31,
+          "empirical_rank": 65,
+          "largest_eigenvalue": 0.004269964706248489,
+          "minimum_eigenvalue": 1.508710052528591e-22,
+          "trace": 0.004744842814551784
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 16,
+          "empirical_rank": 80,
+          "largest_eigenvalue": 0.0010908636246496181,
+          "minimum_eigenvalue": 2.4513725351097803e-20,
+          "trace": 0.0012019686352970022
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 16,
+          "empirical_rank": 80,
+          "largest_eigenvalue": 0.0027369511681843675,
+          "minimum_eigenvalue": 8.746593207271183e-20,
+          "trace": 0.0031514409544595055
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "discovery_configurations_containing_species": 100,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.14663337784861652,
+        "64": 0.06171342979251501,
+        "80": 0.08303939303811912
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 1,
+          "empirical_rank": 95,
+          "largest_eigenvalue": 14.383761918359179,
+          "minimum_eigenvalue": 1.15271010373838e-09,
+          "trace": 52.870621340018715
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 0.001660035101923631,
+          "minimum_eigenvalue": 1.059647002396549e-20,
+          "trace": 0.0031995303232438474
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 9.205594947679844e-05,
+          "minimum_eigenvalue": 4.024702123767343e-24,
+          "trace": 0.00017668911302084504
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 4.558058583826378e-05,
+          "minimum_eigenvalue": 1.4483723680012704e-22,
+          "trace": 6.721353214152791e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 6.963723235349862e-05,
+          "minimum_eigenvalue": 3.2859847840049538e-22,
+          "trace": 0.0001289125752886487
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "discovery_configurations_containing_species": 100,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.18571883300601824,
+        "64": 0.08555958550486635,
+        "80": 0.05597410287654247
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 1,
+          "empirical_rank": 95,
+          "largest_eigenvalue": 9.58748669118297,
+          "minimum_eigenvalue": 6.272858222090718e-10,
+          "trace": 47.3276303514454
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 0.0032317188832877534,
+          "minimum_eigenvalue": 2.621859014434415e-18,
+          "trace": 0.0037513956572367397
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 17,
+          "empirical_rank": 79,
+          "largest_eigenvalue": 0.00024008085336421717,
+          "minimum_eigenvalue": 5.621775890831875e-21,
+          "trace": 0.0002635452478409894
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 4.593257295547482e-05,
+          "minimum_eigenvalue": 2.4600828576049883e-20,
+          "trace": 5.740335345631629e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 0.00010407228970829921,
+          "minimum_eigenvalue": 7.495873491041758e-20,
+          "trace": 0.00012770766267053673
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "discovery_configurations_containing_species": 100,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.1116327147940985,
+        "64": 0.06877517779706878,
+        "80": 0.06315033331187841
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 0,
+          "empirical_rank": 96,
+          "largest_eigenvalue": 9.956643419101,
+          "minimum_eigenvalue": 1.0403361169379664e-09,
+          "trace": 53.50537864035295
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 0.0003445003892115734,
+          "minimum_eigenvalue": 2.8634309252076065e-18,
+          "trace": 0.0005161856185242377
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 12,
+          "empirical_rank": 84,
+          "largest_eigenvalue": 1.6900739463254732e-05,
+          "minimum_eigenvalue": 3.614897367004145e-21,
+          "trace": 2.437188927426503e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 9.651463205185708e-06,
+          "minimum_eigenvalue": 2.5626172193301197e-20,
+          "trace": 1.2412917390498429e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 7.256843072850439e-06,
+          "minimum_eigenvalue": 8.111604674621228e-20,
+          "trace": 1.4428799878555497e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "discovery_configurations_containing_species": 18,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.30282864684187716,
+        "64": 0.2785096109951592,
+        "80": 0.1967224675191773
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 49,
+          "empirical_rank": 47,
+          "largest_eigenvalue": 7.390839900130715,
+          "minimum_eigenvalue": -4.023341543078537e-16,
+          "trace": 12.243654076771403
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 29,
+          "empirical_rank": 67,
+          "largest_eigenvalue": 0.008923712383063618,
+          "minimum_eigenvalue": 6.952276494496299e-29,
+          "trace": 0.009759998849562428
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 50,
+          "empirical_rank": 46,
+          "largest_eigenvalue": 0.0003331874305653814,
+          "minimum_eigenvalue": -1.3289460034886516e-21,
+          "trace": 0.0003601852913910108
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 49,
+          "empirical_rank": 47,
+          "largest_eigenvalue": 0.0002617434781519762,
+          "minimum_eigenvalue": -4.541399882827063e-21,
+          "trace": 0.00027290673829375074
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 49,
+          "empirical_rank": 47,
+          "largest_eigenvalue": 5.306212706329135e-05,
+          "minimum_eigenvalue": -9.074431518478005e-21,
+          "trace": 7.107753718600409e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "discovery_configurations_containing_species": 18,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.2349377665871192,
+        "64": 0.17759112312459527,
+        "80": 0.13858237693171246
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 31,
+          "empirical_rank": 65,
+          "largest_eigenvalue": 4.432781987680014,
+          "minimum_eigenvalue": -9.526153866366249e-17,
+          "trace": 9.275324787443438
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 0.00017788652097330647,
+          "minimum_eigenvalue": 9.52978046645265e-21,
+          "trace": 0.00026298463279440267
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 19,
+          "empirical_rank": 77,
+          "largest_eigenvalue": 1.334467348921809e-05,
+          "minimum_eigenvalue": 2.4920879933977807e-24,
+          "trace": 1.6962818435408517e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 12,
+          "empirical_rank": 84,
+          "largest_eigenvalue": 2.854795379589428e-06,
+          "minimum_eigenvalue": 1.4978555788696173e-23,
+          "trace": 4.598351794259765e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 5.9804522592301e-06,
+          "minimum_eigenvalue": 1.2501683023125211e-21,
+          "trace": 7.316419825644236e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "discovery_configurations_containing_species": 18,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.2255219766537722,
+        "64": 0.14196932075766078,
+        "80": 0.11237165499850496
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 29,
+          "empirical_rank": 67,
+          "largest_eigenvalue": 2.7184181811244215,
+          "minimum_eigenvalue": -2.0226822517131855e-16,
+          "trace": 7.509829370561633
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 8,
+          "empirical_rank": 88,
+          "largest_eigenvalue": 6.595626318627654e-05,
+          "minimum_eigenvalue": 5.753148288495616e-21,
+          "trace": 0.0001198102891434947
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 16,
+          "empirical_rank": 80,
+          "largest_eigenvalue": 5.338546629294078e-06,
+          "minimum_eigenvalue": 7.689386730874096e-24,
+          "trace": 7.691260018414816e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 8.79244155380621e-07,
+          "minimum_eigenvalue": 8.550990866878542e-23,
+          "trace": 2.1088240089964816e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 2.6639267828315335e-06,
+          "minimum_eigenvalue": 6.335690113786782e-23,
+          "trace": 3.4881172247079344e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "discovery_configurations_containing_species": 18,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.1756665012295042,
+        "64": 0.1425248797475148,
+        "80": 0.13057864986691478
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 28,
+          "empirical_rank": 68,
+          "largest_eigenvalue": 2.3969338095300587,
+          "minimum_eigenvalue": -5.102369110036993e-17,
+          "trace": 8.094100190937585
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 5.1133040994473705e-05,
+          "minimum_eigenvalue": 1.183989423339975e-19,
+          "trace": 8.450831595722863e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 14,
+          "empirical_rank": 82,
+          "largest_eigenvalue": 2.8761948623082627e-06,
+          "minimum_eigenvalue": 4.0844260793192525e-22,
+          "trace": 5.0137719249365385e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 1.2633427101283998e-06,
+          "minimum_eigenvalue": 6.131352179596358e-22,
+          "trace": 1.6435886649204552e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 2.1802212696004454e-06,
+          "minimum_eigenvalue": 2.586240076779238e-21,
+          "trace": 3.336244414057435e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "discovery_configurations_containing_species": 4,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.20257255637106117,
+        "64": 0.1697675773046353,
+        "80": 0.157472500937279
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 92,
+          "empirical_rank": 4,
+          "largest_eigenvalue": 2.5383224497466763,
+          "minimum_eigenvalue": -4.167165924109584e-16,
+          "trace": 3.9722640709245853
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 88,
+          "empirical_rank": 8,
+          "largest_eigenvalue": 0.008223182109872825,
+          "minimum_eigenvalue": -7.353400147984358e-20,
+          "trace": 0.010478798467735194
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 92,
+          "empirical_rank": 4,
+          "largest_eigenvalue": 0.0008100418144011421,
+          "minimum_eigenvalue": -1.0226156848913733e-20,
+          "trace": 0.000822066622312726
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 92,
+          "empirical_rank": 4,
+          "largest_eigenvalue": 0.00011491445225350313,
+          "minimum_eigenvalue": -2.0619943075024765e-20,
+          "trace": 0.00012773382581138257
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 92,
+          "empirical_rank": 4,
+          "largest_eigenvalue": 0.0006631127573645923,
+          "minimum_eigenvalue": -2.0575630790492805e-20,
+          "trace": 0.0007139816510385405
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "discovery_configurations_containing_species": 4,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.30839699714135355,
+        "64": 0.23707962284708695,
+        "80": 0.14585000016175398
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 85,
+          "empirical_rank": 11,
+          "largest_eigenvalue": 0.5329646909051662,
+          "minimum_eigenvalue": -1.1390807072112964e-16,
+          "trace": 1.0580884167849667
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 74,
+          "empirical_rank": 22,
+          "largest_eigenvalue": 0.0035081770306422313,
+          "minimum_eigenvalue": -5.603222226853773e-21,
+          "trace": 0.003752238034480206
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 85,
+          "empirical_rank": 11,
+          "largest_eigenvalue": 3.1846634167563158e-06,
+          "minimum_eigenvalue": -1.4787598209559013e-22,
+          "trace": 5.738103401510699e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 85,
+          "empirical_rank": 11,
+          "largest_eigenvalue": 0.00014682303195945594,
+          "minimum_eigenvalue": -1.6352535548697383e-21,
+          "trace": 0.00015530894291685972
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 85,
+          "empirical_rank": 11,
+          "largest_eigenvalue": 0.00013835088031587204,
+          "minimum_eigenvalue": -9.556497754363457e-22,
+          "trace": 0.0001482991670569317
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "discovery_configurations_containing_species": 4,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.34503970379568705,
+        "64": 0.25517965111346697,
+        "80": 0.23273088517600587
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 79,
+          "empirical_rank": 17,
+          "largest_eigenvalue": 0.6010195246008783,
+          "minimum_eigenvalue": -1.4513335123042387e-16,
+          "trace": 1.324982731155559
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 60,
+          "empirical_rank": 36,
+          "largest_eigenvalue": 0.0003060583650567964,
+          "minimum_eigenvalue": -3.6673205711977505e-22,
+          "trace": 0.00048776276368945275
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 78,
+          "empirical_rank": 18,
+          "largest_eigenvalue": 1.5855689534465523e-05,
+          "minimum_eigenvalue": -5.542717820273691e-23,
+          "trace": 1.6290565154359612e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 78,
+          "empirical_rank": 18,
+          "largest_eigenvalue": 1.2787332226941356e-05,
+          "minimum_eigenvalue": -4.594851788043824e-23,
+          "trace": 1.4287844726096139e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 78,
+          "empirical_rank": 18,
+          "largest_eigenvalue": 2.9501414034183458e-05,
+          "minimum_eigenvalue": -9.744824778080292e-23,
+          "trace": 3.298728746108911e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "discovery_configurations_containing_species": 4,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.32509286020873596,
+        "64": 0.26289582386764515,
+        "80": 0.21703771630235996
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 73,
+          "empirical_rank": 23,
+          "largest_eigenvalue": 0.47443310611146494,
+          "minimum_eigenvalue": -7.891068981509948e-17,
+          "trace": 1.7524092260715856
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 46,
+          "empirical_rank": 50,
+          "largest_eigenvalue": 3.486733609276254e-05,
+          "minimum_eigenvalue": -2.4212434377232886e-23,
+          "trace": 6.626110832118162e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 71,
+          "empirical_rank": 25,
+          "largest_eigenvalue": 1.110906432899114e-06,
+          "minimum_eigenvalue": -7.013486509419673e-24,
+          "trace": 1.8324946807594781e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 71,
+          "empirical_rank": 25,
+          "largest_eigenvalue": 1.1136621962462404e-06,
+          "minimum_eigenvalue": -1.3111550096730774e-23,
+          "trace": 2.0854197355441273e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 71,
+          "empirical_rank": 25,
+          "largest_eigenvalue": 1.6289248942837872e-06,
+          "minimum_eigenvalue": -1.425383577408216e-23,
+          "trace": 2.213313565996681e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "discovery_configurations_containing_species": 42,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.307324031316582,
+        "64": 0.2589158366722128,
+        "80": 0.20521108387328751
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 41,
+          "empirical_rank": 55,
+          "largest_eigenvalue": 17.031185557096105,
+          "minimum_eigenvalue": -9.191579361230692e-16,
+          "trace": 28.702263264045417
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 24,
+          "empirical_rank": 72,
+          "largest_eigenvalue": 0.038556455861136506,
+          "minimum_eigenvalue": 3.0913342584982185e-21,
+          "trace": 0.05207239737005855
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 45,
+          "empirical_rank": 51,
+          "largest_eigenvalue": 0.0019468153803676555,
+          "minimum_eigenvalue": -6.934087079179438e-24,
+          "trace": 0.002139190527716521
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 42,
+          "empirical_rank": 54,
+          "largest_eigenvalue": 0.0012530209008513912,
+          "minimum_eigenvalue": -6.801667261403178e-24,
+          "trace": 0.0013734677920896274
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 42,
+          "empirical_rank": 54,
+          "largest_eigenvalue": 0.001677679586592107,
+          "minimum_eigenvalue": -8.256163912572018e-24,
+          "trace": 0.0018438752866833052
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "discovery_configurations_containing_species": 42,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.23642528319406417,
+        "64": 0.12570971606242137,
+        "80": 0.13170087525750274
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 21,
+          "empirical_rank": 75,
+          "largest_eigenvalue": 6.302105032238304,
+          "minimum_eigenvalue": 3.777639727125995e-15,
+          "trace": 15.925219653031728
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 0.0006280601687231491,
+          "minimum_eigenvalue": 1.2725095219426497e-22,
+          "trace": 0.0012880145022897713
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 15,
+          "empirical_rank": 81,
+          "largest_eigenvalue": 3.1309994077176025e-05,
+          "minimum_eigenvalue": 4.769917828180952e-27,
+          "trace": 5.262005256828038e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 2.074510510184248e-05,
+          "minimum_eigenvalue": 1.0034347419304182e-24,
+          "trace": 3.408404733575476e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 11,
+          "empirical_rank": 85,
+          "largest_eigenvalue": 2.5268582950768264e-05,
+          "minimum_eigenvalue": 4.379350472626433e-25,
+          "trace": 3.75047821047512e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "discovery_configurations_containing_species": 42,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.20918475064567418,
+        "64": 0.1470679547402096,
+        "80": 0.09363005196109457
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 19,
+          "empirical_rank": 77,
+          "largest_eigenvalue": 4.092941864688413,
+          "minimum_eigenvalue": 2.917435847357775e-15,
+          "trace": 12.159303537120024
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 11,
+          "empirical_rank": 85,
+          "largest_eigenvalue": 0.002713167878857088,
+          "minimum_eigenvalue": 1.2209579309603829e-18,
+          "trace": 0.0034294128138545685
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 17,
+          "empirical_rank": 79,
+          "largest_eigenvalue": 6.688108853831277e-05,
+          "minimum_eigenvalue": 9.78269430121538e-22,
+          "trace": 9.013486309977096e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 8.92035396905319e-05,
+          "minimum_eigenvalue": 1.468591290116811e-20,
+          "trace": 0.00010972028139063643
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 2.5676373031890465e-05,
+          "minimum_eigenvalue": 2.0822622667595767e-20,
+          "trace": 3.700624586689972e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "discovery_configurations_containing_species": 42,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.2003167075468713,
+        "64": 0.1401221299148254,
+        "80": 0.13364699628549603
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 19,
+          "empirical_rank": 77,
+          "largest_eigenvalue": 4.624984570066195,
+          "minimum_eigenvalue": 6.5928905275284274e-15,
+          "trace": 13.658524983301362
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 0.00010836000623307513,
+          "minimum_eigenvalue": 1.3323557576537785e-18,
+          "trace": 0.000227032462752914
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 3.62858827274944e-06,
+          "minimum_eigenvalue": 1.2286320291634067e-22,
+          "trace": 7.409318780085724e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 6,
+          "empirical_rank": 90,
+          "largest_eigenvalue": 3.279888092655424e-06,
+          "minimum_eigenvalue": 1.7032070423265247e-20,
+          "trace": 6.71613780194054e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 5,
+          "empirical_rank": 91,
+          "largest_eigenvalue": 1.9496670612579406e-06,
+          "minimum_eigenvalue": 2.6843415571003908e-20,
+          "trace": 5.497824010639246e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "discovery_configurations_containing_species": 22,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.303812522896059,
+        "64": 0.27073252006127607,
+        "80": 0.19365663297920382
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 61,
+          "empirical_rank": 35,
+          "largest_eigenvalue": 3.8303868848319613,
+          "minimum_eigenvalue": -3.4400791597080095e-16,
+          "trace": 7.272797677103513
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 34,
+          "empirical_rank": 62,
+          "largest_eigenvalue": 0.005012973568152106,
+          "minimum_eigenvalue": -5.080605326303633e-24,
+          "trace": 0.008242718433592372
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 61,
+          "empirical_rank": 35,
+          "largest_eigenvalue": 0.00033359179054521967,
+          "minimum_eigenvalue": -1.5820265146287393e-22,
+          "trace": 0.0003906424504245497
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 61,
+          "empirical_rank": 35,
+          "largest_eigenvalue": 0.00017033440143313024,
+          "minimum_eigenvalue": -6.927405835482336e-23,
+          "trace": 0.00019766179372339155
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 61,
+          "empirical_rank": 35,
+          "largest_eigenvalue": 0.00034835120493683134,
+          "minimum_eigenvalue": -3.1499530535472687e-23,
+          "trace": 0.0004128791029735261
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "discovery_configurations_containing_species": 22,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.2652460419161297,
+        "64": 0.18759989874471983,
+        "80": 0.18310645567565262
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 41,
+          "empirical_rank": 55,
+          "largest_eigenvalue": 2.5630357062535047,
+          "minimum_eigenvalue": -1.0542390783247162e-16,
+          "trace": 5.2632647920199265
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 17,
+          "empirical_rank": 79,
+          "largest_eigenvalue": 0.0009095811668184902,
+          "minimum_eigenvalue": 5.640954156824013e-23,
+          "trace": 0.0010157738254082686
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 25,
+          "empirical_rank": 71,
+          "largest_eigenvalue": 1.96316208144066e-05,
+          "minimum_eigenvalue": 9.159780500067952e-28,
+          "trace": 2.3719025079130173e-05
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 25,
+          "empirical_rank": 71,
+          "largest_eigenvalue": 3.123336752912877e-05,
+          "minimum_eigenvalue": 3.8532543976439996e-27,
+          "trace": 3.362925665912536e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 19,
+          "empirical_rank": 77,
+          "largest_eigenvalue": 4.9123902585204854e-06,
+          "minimum_eigenvalue": 2.9127295907228786e-26,
+          "trace": 6.001225766747178e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "discovery_configurations_containing_species": 22,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.22785638288628474,
+        "64": 0.13786517741241974,
+        "80": 0.12188166654639028
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 38,
+          "empirical_rank": 58,
+          "largest_eigenvalue": 1.8956272975876052,
+          "minimum_eigenvalue": -4.176131439785396e-17,
+          "trace": 4.330676601222497
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 8.052661433027786e-05,
+          "minimum_eigenvalue": 4.904872465893129e-20,
+          "trace": 0.00016716320023793294
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 15,
+          "empirical_rank": 81,
+          "largest_eigenvalue": 2.65454066680792e-06,
+          "minimum_eigenvalue": 9.79694130041411e-23,
+          "trace": 6.272415871183397e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 15,
+          "empirical_rank": 81,
+          "largest_eigenvalue": 2.450418618113642e-06,
+          "minimum_eigenvalue": 2.0119305976705893e-22,
+          "trace": 4.634929234605838e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 9.884857774516167e-07,
+          "minimum_eigenvalue": 5.894379565736022e-22,
+          "trace": 1.7188738000155759e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "discovery_configurations_containing_species": 22,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.22587667511067244,
+        "64": 0.13316199132879641,
+        "80": 0.1238776632008831
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 38,
+          "empirical_rank": 58,
+          "largest_eigenvalue": 1.525645492287025,
+          "minimum_eigenvalue": -2.8577798778169905e-17,
+          "trace": 4.277443231773757
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 7,
+          "empirical_rank": 89,
+          "largest_eigenvalue": 1.9011482112964125e-05,
+          "minimum_eigenvalue": 1.8430597884879877e-20,
+          "trace": 4.6925924936523364e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 13,
+          "empirical_rank": 83,
+          "largest_eigenvalue": 1.1436244098427009e-06,
+          "minimum_eigenvalue": 2.127460421201866e-23,
+          "trace": 2.3748153623256216e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 10,
+          "empirical_rank": 86,
+          "largest_eigenvalue": 3.9498955371980784e-07,
+          "minimum_eigenvalue": 7.0288574020808e-23,
+          "trace": 1.0680130706009124e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 9,
+          "empirical_rank": 87,
+          "largest_eigenvalue": 4.1385921122125133e-07,
+          "minimum_eigenvalue": 1.3071038199510826e-22,
+          "trace": 7.945955715061785e-07
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "discovery_configurations_containing_species": 8,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.26944057724572695,
+        "64": 0.24162348107558582,
+        "80": 0.1849843852941171
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 86,
+          "empirical_rank": 10,
+          "largest_eigenvalue": 1.3788833294790137,
+          "minimum_eigenvalue": -2.4043467158719415e-16,
+          "trace": 1.7872431969947027
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 78,
+          "empirical_rank": 18,
+          "largest_eigenvalue": 0.0014947444396124412,
+          "minimum_eigenvalue": -1.1397247554731055e-20,
+          "trace": 0.0017013633391806057
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 87,
+          "empirical_rank": 9,
+          "largest_eigenvalue": 0.00010253729806729018,
+          "minimum_eigenvalue": -2.0286127159516733e-21,
+          "trace": 0.00010375684899036328
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 86,
+          "empirical_rank": 10,
+          "largest_eigenvalue": 2.9482144239405244e-05,
+          "minimum_eigenvalue": -7.244706052183486e-22,
+          "trace": 3.202009656017199e-05
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 87,
+          "empirical_rank": 9,
+          "largest_eigenvalue": 4.138780388521872e-05,
+          "minimum_eigenvalue": -3.6742425742597454e-22,
+          "trace": 4.3732555057225314e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "discovery_configurations_containing_species": 8,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.3448035718802999,
+        "64": 0.26718207439074865,
+        "80": 0.18654031742157848
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 73,
+          "empirical_rank": 23,
+          "largest_eigenvalue": 1.1044921862384414,
+          "minimum_eigenvalue": -2.221597768304573e-16,
+          "trace": 1.590753447787144
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 47,
+          "empirical_rank": 49,
+          "largest_eigenvalue": 3.426979840670873e-05,
+          "minimum_eigenvalue": -9.321731304536652e-25,
+          "trace": 5.202723655047846e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 70,
+          "empirical_rank": 26,
+          "largest_eigenvalue": 1.8531089603528974e-06,
+          "minimum_eigenvalue": -4.27844133667918e-24,
+          "trace": 2.4898184236427293e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 70,
+          "empirical_rank": 26,
+          "largest_eigenvalue": 8.499292931848097e-07,
+          "minimum_eigenvalue": -1.3856884350220365e-24,
+          "trace": 1.238464940090551e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 70,
+          "empirical_rank": 26,
+          "largest_eigenvalue": 5.518737516614274e-07,
+          "minimum_eigenvalue": -5.878489584037622e-25,
+          "trace": 6.972203841083003e-07
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "discovery_configurations_containing_species": 8,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.3240171517345412,
+        "64": 0.2537915451978294,
+        "80": 0.1928071759531975
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 68,
+          "empirical_rank": 28,
+          "largest_eigenvalue": 0.6939664342909585,
+          "minimum_eigenvalue": -6.707583630052285e-17,
+          "trace": 1.18508474848787
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 27,
+          "empirical_rank": 69,
+          "largest_eigenvalue": 2.3422758454784882e-05,
+          "minimum_eigenvalue": 2.5435374040338387e-31,
+          "trace": 4.785713639423864e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 55,
+          "empirical_rank": 41,
+          "largest_eigenvalue": 1.1195405942699804e-06,
+          "minimum_eigenvalue": -1.121736742630402e-23,
+          "trace": 2.0308682239076893e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 54,
+          "empirical_rank": 42,
+          "largest_eigenvalue": 6.085063249597862e-07,
+          "minimum_eigenvalue": -1.9673965653122117e-23,
+          "trace": 1.2376686603368591e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 54,
+          "empirical_rank": 42,
+          "largest_eigenvalue": 2.422086985313702e-07,
+          "minimum_eigenvalue": -9.27962603838093e-25,
+          "trace": 3.777182623774143e-07
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "discovery_configurations_containing_species": 8,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.3179540336228492,
+        "64": 0.26073459974879587,
+        "80": 0.19429479926103166
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 66,
+          "empirical_rank": 30,
+          "largest_eigenvalue": 0.49378835389755904,
+          "minimum_eigenvalue": -1.887959744340781e-16,
+          "trace": 1.1787135968859601
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 21,
+          "empirical_rank": 75,
+          "largest_eigenvalue": 1.5846830170791242e-05,
+          "minimum_eigenvalue": 5.870321356168168e-24,
+          "trace": 2.6203300030212595e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 43,
+          "empirical_rank": 53,
+          "largest_eigenvalue": 7.10716453777419e-07,
+          "minimum_eigenvalue": -8.926138442833668e-27,
+          "trace": 1.1542503311028504e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 43,
+          "empirical_rank": 53,
+          "largest_eigenvalue": 4.09385343152668e-07,
+          "minimum_eigenvalue": -3.48210551574991e-27,
+          "trace": 6.616101553959509e-07
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 41,
+          "empirical_rank": 55,
+          "largest_eigenvalue": 1.3708660508703196e-07,
+          "minimum_eigenvalue": -7.341539106094953e-28,
+          "trace": 2.0025780578069997e-07
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "discovery_configurations_containing_species": 2,
+      "ell": 0,
+      "fold_projector_distances": {
+        "48": 0.10965293662377015,
+        "64": 0.07153528586999428,
+        "80": 0.04469793599446772
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 94,
+          "empirical_rank": 2,
+          "largest_eigenvalue": 0.9228292833292453,
+          "minimum_eigenvalue": -2.8741694599044016e-16,
+          "trace": 1.0147324588614768
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 92,
+          "empirical_rank": 4,
+          "largest_eigenvalue": 0.005815279337758448,
+          "minimum_eigenvalue": -5.515156495190317e-19,
+          "trace": 0.005965601255192714
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 94,
+          "empirical_rank": 2,
+          "largest_eigenvalue": 0.0003745589821251055,
+          "minimum_eigenvalue": -4.7574115074712824e-20,
+          "trace": 0.00037507211544597185
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 94,
+          "empirical_rank": 2,
+          "largest_eigenvalue": 0.00010522580154523518,
+          "minimum_eigenvalue": -6.4625193772578435e-21,
+          "trace": 0.0001079985391852672
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 94,
+          "empirical_rank": 2,
+          "largest_eigenvalue": 9.404387034295834e-05,
+          "minimum_eigenvalue": -7.31302805642451e-21,
+          "trace": 9.618769503359449e-05
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "discovery_configurations_containing_species": 2,
+      "ell": 1,
+      "fold_projector_distances": {
+        "48": 0.2645928502805598,
+        "64": 0.1949884540675911,
+        "80": 0.16981606756421244
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 91,
+          "empirical_rank": 5,
+          "largest_eigenvalue": 0.8596990572703133,
+          "minimum_eigenvalue": -1.6236373713408969e-16,
+          "trace": 0.9566007181858652
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 86,
+          "empirical_rank": 10,
+          "largest_eigenvalue": 0.00012051697416768539,
+          "minimum_eigenvalue": -1.0954761813075793e-21,
+          "trace": 0.00014727008004494224
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 91,
+          "empirical_rank": 5,
+          "largest_eigenvalue": 4.984554675238401e-06,
+          "minimum_eigenvalue": -1.8781440797768775e-22,
+          "trace": 6.193327429842034e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 91,
+          "empirical_rank": 5,
+          "largest_eigenvalue": 3.230955068875986e-06,
+          "minimum_eigenvalue": -8.469171404822928e-23,
+          "trace": 3.830008004376282e-06
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 91,
+          "empirical_rank": 5,
+          "largest_eigenvalue": 6.590078560038245e-07,
+          "minimum_eigenvalue": -2.940858457556479e-23,
+          "trace": 7.697436624317271e-07
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "discovery_configurations_containing_species": 2,
+      "ell": 2,
+      "fold_projector_distances": {
+        "48": 0.28435805652935936,
+        "64": 0.22460743292025198,
+        "80": 0.18942520998544682
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 90,
+          "empirical_rank": 6,
+          "largest_eigenvalue": 0.5412873201221547,
+          "minimum_eigenvalue": -1.0038540342145339e-16,
+          "trace": 0.6494327651817219
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 81,
+          "empirical_rank": 15,
+          "largest_eigenvalue": 3.767310480458514e-05,
+          "minimum_eigenvalue": -7.429917063547419e-22,
+          "trace": 4.5649848551320934e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 88,
+          "empirical_rank": 8,
+          "largest_eigenvalue": 2.370391158749762e-06,
+          "minimum_eigenvalue": -2.788952399454787e-22,
+          "trace": 2.466985618960057e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 88,
+          "empirical_rank": 8,
+          "largest_eigenvalue": 8.105435099566799e-07,
+          "minimum_eigenvalue": -1.6213813075533414e-23,
+          "trace": 9.79463953218499e-07
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 88,
+          "empirical_rank": 8,
+          "largest_eigenvalue": 9.304522916114621e-07,
+          "minimum_eigenvalue": -4.8894421048307966e-23,
+          "trace": 1.0570824955800015e-06
+        }
+      },
+      "support_rank": 96
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "discovery_configurations_containing_species": 2,
+      "ell": 3,
+      "fold_projector_distances": {
+        "48": 0.2901184503137354,
+        "64": 0.23307670250631365,
+        "80": 0.19951161881930488
+      },
+      "spectra": {
+        "activation_pca": {
+          "deterministic_prior_completion_count": 90,
+          "empirical_rank": 6,
+          "largest_eigenvalue": 0.5144341081147542,
+          "minimum_eigenvalue": -1.075107584893945e-16,
+          "trace": 0.6101663101211655
+        },
+        "data_assisted_readout_gradient": {
+          "deterministic_prior_completion_count": 79,
+          "empirical_rank": 17,
+          "largest_eigenvalue": 2.7032533139186235e-05,
+          "minimum_eigenvalue": -2.667509386332842e-22,
+          "trace": 3.2720711493986555e-05
+        },
+        "linear": {
+          "deterministic_prior_completion_count": 87,
+          "empirical_rank": 9,
+          "largest_eigenvalue": 1.876535266802701e-06,
+          "minimum_eigenvalue": -2.1170751266599994e-23,
+          "trace": 2.0581029348961648e-06
+        },
+        "nonlinear": {
+          "deterministic_prior_completion_count": 87,
+          "empirical_rank": 9,
+          "largest_eigenvalue": 4.785751244192147e-07,
+          "minimum_eigenvalue": -3.674407752605235e-23,
+          "trace": 5.920303328819118e-07
+        },
+        "total_energy_gradient": {
+          "deterministic_prior_completion_count": 87,
+          "empirical_rank": 9,
+          "largest_eigenvalue": 6.67799891810659e-07,
+          "minimum_eigenvalue": -2.2864400177451283e-23,
+          "trace": 8.007184313372148e-07
+        }
+      },
+      "support_rank": 96
+    }
+  ],
+  "checkpoint_sha256": "165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f",
+  "claim_boundary": "This is a discovery-data additive-gradient active-subspace pilot for the exact frozen linear and nonlinear readout energies at the first-density cut. It ranks unit additive perturbation directions. It is not the finite projector-loss Hessian, the exact checkpoint-only ODT coefficient environment, or a nonlinear fidelity certificate.",
+  "configuration_count": 128,
+  "dtype": "float64",
+  "exactness_checks": [
+    {
+      "index": 36,
+      "residuals": {
+        "interaction0_density": 0.0,
+        "interaction1_density": 0.0,
+        "interaction1_residual": 0.0,
+        "product0": 0.0,
+        "product1": 0.0,
+        "readout0": 0.0,
+        "readout1": 0.0
+      }
+    },
+    {
+      "index": 390,
+      "residuals": {
+        "interaction0_density": 0.0,
+        "interaction1_density": 0.0,
+        "interaction1_residual": 0.0,
+        "product0": 0.0,
+        "product1": 0.0,
+        "readout0": 4.440892098500626e-16,
+        "readout1": 2.220446049250313e-16
+      }
+    }
+  ],
+  "exactness_tolerance": 5e-09,
+  "excluded_evaluation_indices_sha256": "606f0b938e1cbedb6939c716ebdbd3d42677cd9a436bcd51d1cfef1405df2e8d",
+  "experiment": "T1_data_assisted_readout_gradient_environment",
+  "fold_configuration_counts": {
+    "A": 64,
+    "B": 64
+  },
+  "fold_species_configuration_counts": {
+    "A": {
+      "0": 63,
+      "1": 63,
+      "2": 41,
+      "3": 50,
+      "4": 9,
+      "5": 2,
+      "6": 21,
+      "7": 11,
+      "8": 4,
+      "9": 1
+    },
+    "B": {
+      "0": 62,
+      "1": 62,
+      "2": 42,
+      "3": 50,
+      "4": 9,
+      "5": 2,
+      "6": 21,
+      "7": 11,
+      "8": 4,
+      "9": 1
+    }
+  },
+  "fold_species_gate_passed": true,
+  "gate_passed": true,
+  "manifest": "results/mace_off23_discovery_manifest_128.json",
+  "manifest_sha256": "a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c",
+  "manifest_source_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e",
+  "maximum_absolute_psd_violation": 1.2765713209966529e-15,
+  "maximum_branch_gradient_sum_residual": 2.0708261494473135e-15,
+  "maximum_checkpoint_trace_residual": 4.440892098500626e-16,
+  "maximum_relative_psd_violation": 3.5173569829130234e-16,
+  "method_name": "data_assisted_readout_gradient",
+  "minimum_configurations_per_species_per_fold": 1,
+  "model": "small",
+  "normalization": {
+    "consumer_balance": {
+      "linear_global_trace": 0.05528017568311907,
+      "linear_weight": 0.5,
+      "nonlinear_global_trace": 0.020985778799758274,
+      "nonlinear_weight": 0.5
+    },
+    "dataset": "equal mean over frozen discovery configurations",
+    "magnetic": "mean over every complete magnetic multiplet",
+    "nodes": "sum within each configuration",
+    "per_configuration_energy": "each branch energy is divided by sqrt(num_atoms)"
+  },
+  "npz": "results/mace_off23_small_multi_consumer_environment_128.npz",
+  "npz_sha256": "b2e7cb6457a8584bc754a1fe1301d719f800b26b2fd5676bb17383db314badb2",
+  "psd_absolute_tolerance": 1e-12,
+  "psd_gate_passed": true,
+  "psd_relative_tolerance": 1e-10,
+  "radial_artifact": "results/mace_off23_small_radial_interface.npz",
+  "radial_artifact_sha256": "564776ad8169c5f26cee0335adbe497f64facbee5073dabf5341109aeff8be86",
+  "radial_checkpoint_validation": {
+    "maximum_curve_absolute_error": 0.0,
+    "maximum_metric_relative_error": 1.3356580933756386e-14
+  },
+  "schema_version": 1
+}

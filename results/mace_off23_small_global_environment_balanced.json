@@ -1,6 +1,7 @@
 {
   "algorithm_alignment": "The radial factors orthogonalize the upstream function map as in Dooms Algorithm 1. Every native slot marginal contracts the complete sibling environment as in Algorithm 2. The same equivariant projector is then used in every repeated slot, which is the mixed-order specialization required here rather than verbatim independent tree cuts.",
   "branch_artifact": "results/mace_off23_small_first_branch.npz",
+  "branch_artifact_sha256": "52f751a8d6074346d22be7dda0ab228564806477508b81fe49dafddd96e26b57",
   "central_species": [
     {
       "aggregate": {
@@ -19748,8 +19749,10 @@
   "experiment": "E5_global_mixed_order_environment",
   "gate_passed": true,
   "npz": "results/mace_off23_small_global_environment_balanced.npz",
+  "npz_sha256": "8f7a2225580d60b526554885f7a80e3339b19027a7537e51eae95932f08219a9",
   "order_weight_convention": "coefficient-balanced",
   "order_weight_definition": "beta_z_nu equals the inverse full coefficient norm squared for that central species and order",
   "radial_artifact": "results/mace_off23_small_radial_interface.npz",
+  "radial_artifact_sha256": "564776ad8169c5f26cee0335adbe497f64facbee5073dabf5341109aeff8be86",
   "schema_version": 1
 }
