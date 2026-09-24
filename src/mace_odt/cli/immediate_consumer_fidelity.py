@@ -475,8 +475,13 @@ def _validate_disjoint_manifests(
     evaluation_geometries = load_selected_geometries(xyz, evaluation["selected"])
     discovery_geometries = load_selected_geometries(xyz, discovery["selected"])
     for metadata, atoms in (*evaluation_geometries, *discovery_geometries):
+        if int(metadata.get("num_atoms", -1)) != len(atoms):
+            raise ValueError("manifest atom count differs from the XYZ structure")
+        if metadata.get("formula") != atoms.get_chemical_formula():
+            raise ValueError("manifest formula differs from the XYZ structure")
+    for metadata, atoms in discovery_geometries:
         if metadata.get("exact_structure_sha256") != exact_structure_sha256(atoms):
-            raise ValueError("manifest structure hash differs from the XYZ structure")
+            raise ValueError("discovery structure hash differs from the XYZ structure")
     evaluation_indices = {int(item[0]["index"]) for item in evaluation_geometries}
     discovery_indices = {int(item[0]["index"]) for item in discovery_geometries}
     if len(evaluation_indices) != len(evaluation_geometries) or len(
