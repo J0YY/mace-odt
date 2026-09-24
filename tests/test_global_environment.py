@@ -76,6 +76,52 @@ def test_factorized_marginals_and_norm_match_dense_canonical_oracle() -> None:
     )
 
 
+def test_vector_output_metric_matches_explicit_whitened_outputs() -> None:
+    rng = np.random.default_rng(203)
+    channels = 3
+    angular = 2
+    coefficients = rng.normal(size=(channels, angular, angular))
+    coefficients = 0.5 * (coefficients + coefficients.swapaxes(1, 2))
+    metric = rng.normal(size=(channels, channels, angular))
+    metric = np.einsum("aci,bci->abi", metric, metric)
+    response = rng.normal(size=(5, channels))
+    output_metric = response.T @ response
+
+    expected_norm = 0.0
+    expected_marginal = np.zeros((angular, angular))
+    for output in range(len(response)):
+        for i in range(angular):
+            for j in range(angular):
+                for k in range(angular):
+                    for left in range(channels):
+                        for right in range(channels):
+                            value = (
+                                response[output, left]
+                                * response[output, right]
+                                * coefficients[left, i, k]
+                                * coefficients[right, j, k]
+                                * metric[left, right, k]
+                            )
+                            expected_marginal[i, j] += value
+                            expected_norm += (
+                                value * metric[left, right, i] if i == j else 0.0
+                            )
+
+    actual_marginal = native_slot_marginal(
+        coefficients, metric, slot=0, output_metric=output_metric, pair_chunk=2
+    )
+    np.testing.assert_allclose(
+        actual_marginal.sum(axis=(0, 2)), expected_marginal, atol=1e-9
+    )
+    np.testing.assert_allclose(
+        coefficient_norm_squared(
+            coefficients, metric, output_metric=output_metric, pair_chunk=2
+        ),
+        expected_norm,
+        atol=1e-9,
+    )
+
+
 def test_equivariant_extraction_traces_magnetic_indices() -> None:
     labels = angular_ell_labels({0: 1, 1: 3})
     factors = {0: np.eye(2), 1: np.eye(2)}

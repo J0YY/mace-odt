@@ -40,6 +40,7 @@ def native_slot_marginal(
     coefficients: np.ndarray,
     metric_by_angular: np.ndarray,
     slot: int,
+    output_metric: np.ndarray | None = None,
     pair_chunk: int = 512,
 ) -> np.ndarray:
     """Contract every slot but one, retaining all channel cross terms.
@@ -58,10 +59,19 @@ def native_slot_marginal(
         raise ValueError("every repeated slot must use one angular dimension")
     if metric_by_angular.shape != (channels, channels, angular):
         raise ValueError("the radial metric does not match the coefficient axes")
+    if output_metric is None:
+        output_metric = np.ones((channels, channels), dtype=np.float64)
+    output_metric = np.asarray(output_metric, dtype=np.float64)
+    if (
+        output_metric.shape != (channels, channels)
+        or not np.isfinite(output_metric).all()
+    ):
+        raise ValueError("the output metric must be a finite channel Gram")
 
     moved = np.moveaxis(coefficients, 1 + slot, 1)
     moved_t = torch.as_tensor(moved, dtype=torch.float64)
     metric_t = torch.as_tensor(metric_by_angular, dtype=torch.float64)
+    output_t = torch.as_tensor(output_metric, dtype=torch.float64)
     result = torch.empty(
         (channels, angular, channels, angular), dtype=torch.float64
     )
@@ -72,6 +82,7 @@ def native_slot_marginal(
         right = right_indices[start : start + pair_chunk]
         lhs = moved_t[left].reshape(len(left), angular, -1)
         rhs = moved_t[right]
+        output_weights = output_t[left, right]
         remaining_slots = order - 1
         if remaining_slots == 1:
             rhs = rhs * metric_t[left, right, :][:, None, :]
@@ -81,6 +92,9 @@ def native_slot_marginal(
             rhs = rhs * one_slot_metric[:, None, None, :]
         elif remaining_slots > 2:
             raise ValueError("only orders one through three are supported")
+        rhs = rhs * output_weights.reshape(
+            (len(left),) + (1,) * (rhs.ndim - 1)
+        )
         rhs = rhs.reshape(len(left), angular, -1)
         blocks = torch.bmm(lhs, rhs.transpose(1, 2))
         result[left, :, right, :] = blocks
@@ -90,14 +104,24 @@ def native_slot_marginal(
 def coefficient_norm_squared(
     coefficients: np.ndarray,
     metric_by_angular: np.ndarray,
+    output_metric: np.ndarray | None = None,
     pair_chunk: int = 512,
 ) -> float:
     """Compute the exact coefficient norm with every path cross term."""
     coefficients = np.asarray(coefficients, dtype=np.float64)
     channels = coefficients.shape[0]
     order = coefficients.ndim - 1
+    if output_metric is None:
+        output_metric = np.ones((channels, channels), dtype=np.float64)
+    output_metric = np.asarray(output_metric, dtype=np.float64)
+    if (
+        output_metric.shape != (channels, channels)
+        or not np.isfinite(output_metric).all()
+    ):
+        raise ValueError("the output metric must be a finite channel Gram")
     coefficients_t = torch.as_tensor(coefficients, dtype=torch.float64)
     metric_t = torch.as_tensor(metric_by_angular, dtype=torch.float64)
+    output_t = torch.as_tensor(output_metric, dtype=torch.float64)
     left_indices = torch.arange(channels).repeat_interleave(channels)
     right_indices = torch.arange(channels).repeat(channels)
     total = torch.zeros((), dtype=torch.float64)
@@ -105,6 +129,9 @@ def coefficient_norm_squared(
         left = left_indices[start : start + pair_chunk]
         right = right_indices[start : start + pair_chunk]
         product = coefficients_t[left] * coefficients_t[right]
+        product = product * output_t[left, right].reshape(
+            (len(left),) + (1,) * order
+        )
         one_slot_metric = metric_t[left, right]
         for axis in range(order):
             shape = [len(left)] + [1] * order
