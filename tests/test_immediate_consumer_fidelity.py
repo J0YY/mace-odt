@@ -1,8 +1,12 @@
+from pathlib import Path
+
 import numpy as np
 import pytest
 
+from mace_odt.audit import sha256_file
 from mace_odt.cli.immediate_consumer_fidelity import (
     CONSUMERS,
+    FROZEN_PROTOCOL_SHA256,
     METHOD_DATA,
     METHOD_EXACT,
     METHOD_EXACT_BALANCED,
@@ -13,7 +17,13 @@ from mace_odt.cli.immediate_consumer_fidelity import (
     load_basis_sets,
     tensor_fidelity,
     validate_frozen_protocol,
+    validate_protocol_inputs,
 )
+
+
+def test_checked_in_protocol_matches_frozen_hash() -> None:
+    protocol = Path(__file__).parents[1] / "configs" / "immediate_consumer_fidelity_v1.json"
+    assert sha256_file(protocol) == FROZEN_PROTOCOL_SHA256
 
 
 class Archive(dict):
@@ -228,3 +238,40 @@ def test_frozen_protocol_rejects_changed_environment_objective() -> None:
     }
     with pytest.raises(ValueError, match="consumer_weights"):
         validate_frozen_protocol(protocol, changed, **kwargs)
+
+
+def test_protocol_input_hashes_and_environment_paths_are_enforced(tmp_path) -> None:
+    environment_json = tmp_path / "environment.json"
+    environment_npz = tmp_path / "environment.npz"
+    inputs = {
+        "checkpoint_sha256": "checkpoint",
+        "dataset_sha256": "dataset",
+        "evaluation_manifest_sha256": "evaluation",
+        "discovery_manifest_sha256": "discovery",
+        "radial_npz_sha256": "radial",
+        "first_branch_environment_json_sha256": "first-json",
+        "first_branch_environment_npz_sha256": "first-npz",
+        "multi_consumer_json_sha256": "multi-json",
+        "multi_consumer_npz_sha256": "multi-npz",
+        "immediate_consumer_environment": {
+            "json": str(environment_json),
+            "npz": str(environment_npz),
+        },
+    }
+    kwargs = {
+        "xyz_sha256": "dataset",
+        "evaluation_manifest_sha256": "evaluation",
+        "discovery_manifest_sha256": "discovery",
+        "radial_npz_sha256": "radial",
+        "first_json_sha256": "first-json",
+        "first_npz_sha256": "first-npz",
+        "multi_json_sha256": "multi-json",
+        "multi_npz_sha256": "multi-npz",
+        "checkpoint_sha256": "checkpoint",
+        "environment_json": environment_json,
+        "environment_npz": environment_npz,
+    }
+    validate_protocol_inputs({"inputs": inputs}, **kwargs)
+    changed = {"inputs": {**inputs, "dataset_sha256": "other"}}
+    with pytest.raises(ValueError, match="dataset_sha256"):
+        validate_protocol_inputs(changed, **kwargs)

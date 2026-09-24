@@ -10,6 +10,11 @@ evaluation results.
 First submit the exact environment job. Submit the fidelity job only after the
 environment job succeeds.
 
+The repository tracks the environment JSON but not the regenerable NPZ. On a
+clean checkout, the environment job rebuilds the missing NPZ in a temporary
+directory and accepts it only if its hash and frozen objective match the tracked
+JSON. If both files already exist, it validates and reuses the pair.
+
 ```bash
 environment_job=$(sbatch --parsable cluster/immediate_consumer_environment.sbatch)
 sbatch --dependency="afterok:${environment_job}" cluster/immediate_consumer_fidelity.sbatch

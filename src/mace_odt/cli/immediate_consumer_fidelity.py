@@ -43,6 +43,7 @@ CONSUMERS = (
     "second_interaction_message",
     "second_interaction_skip",
 )
+FROZEN_PROTOCOL_SHA256 = "5e2bb8cd5dd1ea88e53bca94fe4864bea19c81aa64559019a8fd3331343ad775"
 
 
 def validate_frozen_protocol(
@@ -98,6 +99,48 @@ def validate_frozen_protocol(
         raise ValueError("exact environment and requested numerical mode differ")
     if environment.get("rank_ladder") != ranks:
         raise ValueError("exact environment and requested rank ladder differ")
+
+
+def validate_protocol_inputs(
+    protocol: Mapping[str, Any],
+    *,
+    xyz_sha256: str,
+    evaluation_manifest_sha256: str,
+    discovery_manifest_sha256: str,
+    radial_npz_sha256: str,
+    first_json_sha256: str,
+    first_npz_sha256: str,
+    multi_json_sha256: str,
+    multi_npz_sha256: str,
+    checkpoint_sha256: str,
+    environment_json: Path,
+    environment_npz: Path,
+) -> None:
+    """Require every frozen input declaration to match the supplied artifact."""
+    inputs = protocol.get("inputs")
+    if not isinstance(inputs, Mapping):
+        raise ValueError("frozen protocol omitted its input declarations")
+    actual = {
+        "checkpoint_sha256": checkpoint_sha256,
+        "dataset_sha256": xyz_sha256,
+        "evaluation_manifest_sha256": evaluation_manifest_sha256,
+        "discovery_manifest_sha256": discovery_manifest_sha256,
+        "radial_npz_sha256": radial_npz_sha256,
+        "first_branch_environment_json_sha256": first_json_sha256,
+        "first_branch_environment_npz_sha256": first_npz_sha256,
+        "multi_consumer_json_sha256": multi_json_sha256,
+        "multi_consumer_npz_sha256": multi_npz_sha256,
+    }
+    for name, value in actual.items():
+        if inputs.get(name) != value:
+            raise ValueError(f"frozen protocol input {name} differs from supplied data")
+    immediate = inputs.get("immediate_consumer_environment")
+    if not isinstance(immediate, Mapping):
+        raise ValueError("frozen protocol omitted the immediate-consumer pair")
+    if Path(str(immediate.get("json"))).resolve() != environment_json.resolve():
+        raise ValueError("frozen protocol names a different exact environment JSON")
+    if Path(str(immediate.get("npz"))).resolve() != environment_npz.resolve():
+        raise ValueError("frozen protocol names a different exact environment NPZ")
 
 
 def _scalar(archive: Any, name: str) -> str:
@@ -587,6 +630,8 @@ def main() -> None:
     evaluation_manifest = json.loads(args.manifest.read_text())
     discovery_manifest = json.loads(args.discovery_manifest.read_text())
     protocol = json.loads(args.protocol_config.read_text())
+    if sha256_file(args.protocol_config) != FROZEN_PROTOCOL_SHA256:
+        raise ValueError("supplied fidelity protocol differs from frozen v1")
     if discovery_manifest.get("evaluation_manifest_sha256") != sha256_file(args.manifest):
         raise ValueError("discovery manifest is not bound to the evaluation manifest")
     environment_json = json.loads(args.environment_json.read_text())
@@ -685,9 +730,26 @@ def main() -> None:
     if not np.array_equal(model.atomic_numbers.detach().cpu().numpy(), species):
         raise ValueError("checkpoint species order differs from artifacts")
 
+    validate_protocol_inputs(
+        protocol,
+        xyz_sha256=evaluation_manifest["source"]["xyz_sha256"],
+        evaluation_manifest_sha256=sha256_file(args.manifest),
+        discovery_manifest_sha256=sha256_file(args.discovery_manifest),
+        radial_npz_sha256=radial_sha,
+        first_json_sha256=sha256_file(args.first_branch_environment_json),
+        first_npz_sha256=first_sha,
+        multi_json_sha256=sha256_file(args.multi_consumer_json),
+        multi_npz_sha256=multi_sha,
+        checkpoint_sha256=checkpoint_sha,
+        environment_json=args.environment_json,
+        environment_npz=args.environment_npz,
+    )
+
     geometries = _validate_disjoint_manifests(
         args.xyz, evaluation_manifest, discovery_manifest
     )
+    if len(geometries) != protocol["evaluation"]["configuration_count"]:
+        raise ValueError("evaluation count differs from frozen protocol")
 
     support = int(radial["metric_factor_z0_l0"].shape[1])
     ranks = retained_rank_ladder(args.ranks, support)
@@ -699,6 +761,11 @@ def main() -> None:
     bases = load_basis_sets(
         environment, first, multi, support, len(species), args.random_seeds
     )
+    protocol_methods = protocol["evaluation"]["methods"]
+    if len(protocol_methods) != len(set(protocol_methods)) or set(protocol_methods) != set(
+        bases
+    ):
+        raise ValueError("evaluated methods differ from frozen protocol")
     maps = build_maps(radial, bases, ranks, len(species))
     angular_slices = {
         0: slice(0, 1),
