@@ -51,6 +51,22 @@ The next method is the exact immediate-consumer coefficient environment. The
 data-assisted tangent basis remains a useful baseline. It is not renamed ODT
 and receives no coefficient-tail certificate.
 
+### September 24 exact environment update
+
+The exact degree-three immediate-consumer environment now passes its frozen
+checkpoint gates. It combines the first scaled readout, the second interaction
+message, and the second interaction skip under one tied functional projector.
+The largest algebraic or numerical residual is `1.06e-14` with a `5e-9` gate.
+
+The globally trace-balanced spectrum retains `99.7706` percent of its trace at
+rank 16, `99.9992` percent at rank 48, and more than `99.9999998` percent at
+rank 80. This makes the hypothesis worth testing but does not establish model
+fidelity. The frozen T4 evaluation is now running on 64 held-out structures.
+Its primary method is the trace-balanced exact basis. Raw equal weighting,
+single-consumer bases, local radial SVD, the earlier exact first-branch basis,
+the total-energy-gradient basis, reverse order, and five random bases are fixed
+controls. No rank or basis is selected from evaluation labels.
+
 ### Origin
 
 David Olloqui relayed a research hope discussed with Ward. It would be valuable

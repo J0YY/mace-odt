@@ -1,0 +1,3073 @@
+{
+  "api_checks": [
+    {
+      "name": "analytic_coefficient_reconstruction_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 3.179352768557202e-16
+    },
+    {
+      "name": "complete_irrep_metric_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 7.104759492103142e-17
+    },
+    {
+      "name": "consumer_linearity_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 1.0220656133805909e-15
+    },
+    {
+      "name": "dense_action_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 8.268566984156712e-16
+    },
+    {
+      "name": "environment_trace_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 1.3100681040604564e-15
+    },
+    {
+      "name": "equivariant_block_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 2.0862697754151758e-16
+    },
+    {
+      "name": "output_pullback_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 7.771561172376096e-16
+    },
+    {
+      "name": "readout_scale_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 1.5669566504674975e-16
+    },
+    {
+      "name": "tied_factor_three_relative_residual",
+      "passed": true,
+      "tolerance": 5e-09,
+      "value": 1.0556191468656867e-14
+    }
+  ],
+  "blocks": [
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.6779972736376696e-16,
+          "trace": 0.10419835146442273
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.3917312265773886e-16,
+          "trace": 2.3592316243929137
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.6592329451795913e-16,
+          "trace": 2.213275019181413
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 3.8890242454277386,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.009174836304748801,
+            "omitted_trace_fraction": 0.0019618163460132427,
+            "retained_trace": 4.667530158734001,
+            "retained_trace_fraction": 0.9980381836539868
+          },
+          "32": {
+            "omitted_trace": 0.0005160247526472261,
+            "omitted_trace_fraction": 0.00011033938492905741,
+            "retained_trace": 4.676188970286103,
+            "retained_trace_fraction": 0.9998896606150709
+          },
+          "48": {
+            "omitted_trace": 2.589513473605365e-05,
+            "omitted_trace_fraction": 5.537046866014495e-06,
+            "retained_trace": 4.676679099904014,
+            "retained_trace_fraction": 0.999994462953134
+          },
+          "64": {
+            "omitted_trace": 7.571893299029853e-07,
+            "omitted_trace_fraction": 1.6190658395307045e-07,
+            "retained_trace": 4.67670423784942,
+            "retained_trace_fraction": 0.9999998380934161
+          },
+          "80": {
+            "omitted_trace": 1.0925048421484007e-08,
+            "omitted_trace_fraction": 2.3360567820877667e-09,
+            "retained_trace": 4.676704984113702,
+            "retained_trace_fraction": 0.9999999976639432
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 4.67670499503875,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 1.3096349340014161e-15,
+        "trace": 4.67670499503875
+      },
+      "symmetry_relative_residual": 1.8749157583816573e-16
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.6701269869299295e-16,
+          "trace": 0.00026339351482812604
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.731604298596321e-16,
+          "trace": 0.021286554719184125
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.1455540246378613e-16,
+          "trace": 0.011487801275818985
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.011342189739803544,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0005143572314834713,
+            "omitted_trace_fraction": 0.015568773270419362,
+            "retained_trace": 0.03252339227834779,
+            "retained_trace_fraction": 0.9844312267295806
+          },
+          "32": {
+            "omitted_trace": 4.599990959105321e-05,
+            "omitted_trace_fraction": 0.0013923439178980615,
+            "retained_trace": 0.032991749600240206,
+            "retained_trace_fraction": 0.9986076560821019
+          },
+          "48": {
+            "omitted_trace": 3.5606710627258953e-06,
+            "omitted_trace_fraction": 0.0001077758356896048,
+            "retained_trace": 0.03303418883876853,
+            "retained_trace_fraction": 0.9998922241643105
+          },
+          "64": {
+            "omitted_trace": 1.1455982830421707e-07,
+            "omitted_trace_fraction": 3.467543340690526e-06,
+            "retained_trace": 0.033037634950002955,
+            "retained_trace_fraction": 0.9999965324566593
+          },
+          "80": {
+            "omitted_trace": 1.195047782953651e-09,
+            "omitted_trace_fraction": 3.617219092353832e-08,
+            "retained_trace": 0.033037748314783476,
+            "retained_trace_fraction": 0.9999999638278091
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.03303774950983126,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 2.9020937312429998e-18,
+        "trace": 0.03303774950983126
+      },
+      "symmetry_relative_residual": 1.9535694439822196e-16
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.321044660507642e-16,
+          "trace": 4.8170712815467996e-05
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.5348585349560065e-16,
+          "trace": 0.00899876970279396
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.11774639595747e-16,
+          "trace": 0.004675008156268308
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.005397244910015349,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.00018708899131903572,
+            "omitted_trace_fraction": 0.013634287458449074,
+            "retained_trace": 0.013534859580558695,
+            "retained_trace_fraction": 0.9863657125415509
+          },
+          "32": {
+            "omitted_trace": 1.556232163236332e-05,
+            "omitted_trace_fraction": 0.00113411893003719,
+            "retained_trace": 0.013706386250245367,
+            "retained_trace_fraction": 0.9988658810699628
+          },
+          "48": {
+            "omitted_trace": 1.2514868348890984e-06,
+            "omitted_trace_fraction": 9.120328853687309e-05,
+            "retained_trace": 0.013720697085042841,
+            "retained_trace_fraction": 0.9999087967114632
+          },
+          "64": {
+            "omitted_trace": 4.209162874149741e-08,
+            "omitted_trace_fraction": 3.067467314938168e-06,
+            "retained_trace": 0.013721906480248989,
+            "retained_trace_fraction": 0.9999969325326851
+          },
+          "80": {
+            "omitted_trace": 4.672881543515972e-10,
+            "omitted_trace_fraction": 3.4054066877154375e-08,
+            "retained_trace": 0.013721948104589576,
+            "retained_trace_fraction": 0.9999999659459331
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.013721948571877734,
+            "retained_trace_fraction": 1.0000000000000002
+          }
+        },
+        "smallest_eigenvalue": 3.2835230330749625e-16,
+        "trace": 0.01372194857187773
+      },
+      "symmetry_relative_residual": 1.6231219701357423e-16
+    },
+    {
+      "atomic_number": 1,
+      "central_index": 0,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.35253488548725e-16,
+          "trace": 1.759521734300929e-05
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.342693975591746e-16,
+          "trace": 0.0024207480767595197
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.511091093583863e-16,
+          "trace": 0.0015479880809610924
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.0014462215120159935,
+        "ranks": {
+          "16": {
+            "omitted_trace": 7.654403824296479e-05,
+            "omitted_trace_fraction": 0.01920162451164592,
+            "retained_trace": 0.003909787336820655,
+            "retained_trace_fraction": 0.9807983754883541
+          },
+          "32": {
+            "omitted_trace": 8.046439637759625e-06,
+            "omitted_trace_fraction": 0.0020185074648068385,
+            "retained_trace": 0.00397828493542586,
+            "retained_trace_fraction": 0.9979814925351932
+          },
+          "48": {
+            "omitted_trace": 6.304171234084582e-07,
+            "omitted_trace_fraction": 0.00015814468595160306,
+            "retained_trace": 0.0039857009579402115,
+            "retained_trace_fraction": 0.9998418553140483
+          },
+          "64": {
+            "omitted_trace": 1.8010193159750942e-08,
+            "omitted_trace_fraction": 4.517986957234209e-06,
+            "retained_trace": 0.00398631336487046,
+            "retained_trace_fraction": 0.9999954820130428
+          },
+          "80": {
+            "omitted_trace": 1.913738022218947e-10,
+            "omitted_trace_fraction": 4.8007499682296346e-08,
+            "retained_trace": 0.003986331183689818,
+            "retained_trace_fraction": 0.9999999519925004
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.003986331375063622,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 2.101670665380677e-16,
+        "trace": 0.00398633137506362
+      },
+      "symmetry_relative_residual": 2.3042886703527784e-16
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.2431527850150939e-16,
+          "trace": 2.4571705792876624
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.5288317881305587e-16,
+          "trace": 3.26913620740003
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.9326192347947988e-16,
+          "trace": 1.105041923397215
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 5.3481413069103745,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.011465341018635833,
+            "omitted_trace_fraction": 0.0016783422286304782,
+            "retained_trace": 6.819883369066264,
+            "retained_trace_fraction": 0.9983216577713695
+          },
+          "32": {
+            "omitted_trace": 0.0006419813086555592,
+            "omitted_trace_fraction": 9.397577782961408e-05,
+            "retained_trace": 6.830706728776244,
+            "retained_trace_fraction": 0.9999060242221703
+          },
+          "48": {
+            "omitted_trace": 3.676486517090183e-05,
+            "omitted_trace_fraction": 5.381787218185341e-06,
+            "retained_trace": 6.831311945219729,
+            "retained_trace_fraction": 0.9999946182127818
+          },
+          "64": {
+            "omitted_trace": 1.0579885429962133e-06,
+            "omitted_trace_fraction": 1.548725717125725e-07,
+            "retained_trace": 6.8313476520963565,
+            "retained_trace_fraction": 0.9999998451274282
+          },
+          "80": {
+            "omitted_trace": 1.3081818295290759e-08,
+            "omitted_trace_fraction": 1.9149686029024535e-09,
+            "retained_trace": 6.831348697003081,
+            "retained_trace_fraction": 0.9999999980850314
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 6.831348710084902,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 1.3893848349509988e-16,
+        "trace": 6.8313487100848995
+      },
+      "symmetry_relative_residual": 1.0664950677823435e-16
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.805678839800205e-16,
+          "trace": 0.0028581274699564425
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.2766341164519566e-16,
+          "trace": 0.08283433563927159
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.0819065450416135e-16,
+          "trace": 0.027212169608669443
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.07143646903311485,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0009746117848582342,
+            "omitted_trace_fraction": 0.00863216824143426,
+            "retained_trace": 0.11193002093303925,
+            "retained_trace_fraction": 0.9913678317585657
+          },
+          "32": {
+            "omitted_trace": 8.188844584117172e-05,
+            "omitted_trace_fraction": 0.0007252886251866872,
+            "retained_trace": 0.11282274427205631,
+            "retained_trace_fraction": 0.9992747113748133
+          },
+          "48": {
+            "omitted_trace": 6.857398502299605e-06,
+            "omitted_trace_fraction": 6.07362013163219e-05,
+            "retained_trace": 0.11289777531939518,
+            "retained_trace_fraction": 0.9999392637986837
+          },
+          "64": {
+            "omitted_trace": 1.9393129405131937e-07,
+            "omitted_trace_fraction": 1.7176557718041064e-06,
+            "retained_trace": 0.11290443878660343,
+            "retained_trace_fraction": 0.9999982823442282
+          },
+          "80": {
+            "omitted_trace": 1.94355952165548e-09,
+            "omitted_trace_fraction": 1.7214169825180168e-08,
+            "retained_trace": 0.11290463077433796,
+            "retained_trace_fraction": 0.9999999827858301
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.11290463271789748,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 1.0924806717109045e-18,
+        "trace": 0.11290463271789748
+      },
+      "symmetry_relative_residual": 8.386135870379215e-17
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0532202931785058e-16,
+          "trace": 0.0003972702380556914
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.0116221166378715e-16,
+          "trace": 0.011589746975168925
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 7.633951621637108e-17,
+          "trace": 0.0029603201717589515
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.008401689159626594,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.00018639271089963307,
+            "omitted_trace_fraction": 0.012469960776217395,
+            "retained_trace": 0.014760944674083941,
+            "retained_trace_fraction": 0.9875300392237826
+          },
+          "32": {
+            "omitted_trace": 1.955509610038729e-05,
+            "omitted_trace_fraction": 0.0013082661879320909,
+            "retained_trace": 0.014927782288883187,
+            "retained_trace_fraction": 0.9986917338120679
+          },
+          "48": {
+            "omitted_trace": 1.7139379860225956e-06,
+            "omitted_trace_fraction": 0.0001146651033477344,
+            "retained_trace": 0.014945623446997552,
+            "retained_trace_fraction": 0.9998853348966522
+          },
+          "64": {
+            "omitted_trace": 6.83822372008619e-08,
+            "omitted_trace_fraction": 4.574877480825461e-06,
+            "retained_trace": 0.014947269002746373,
+            "retained_trace_fraction": 0.9999954251225192
+          },
+          "80": {
+            "omitted_trace": 5.498277649146344e-10,
+            "omitted_trace_fraction": 3.678432825547937e-08,
+            "retained_trace": 0.01494733683515581,
+            "retained_trace_fraction": 0.9999999632156717
+          },
+          "96": {
+            "omitted_trace": 6.938893903907228e-18,
+            "omitted_trace_fraction": 4.6422273915340895e-16,
+            "retained_trace": 0.014947337384983567,
+            "retained_trace_fraction": 0.9999999999999996
+          }
+        },
+        "smallest_eigenvalue": 2.9121602565845213e-15,
+        "trace": 0.014947337384983574
+      },
+      "symmetry_relative_residual": 8.805427783592109e-17
+    },
+    {
+      "atomic_number": 6,
+      "central_index": 1,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.8188725394172669e-16,
+          "trace": 0.00015265752168923372
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.083435111060575e-16,
+          "trace": 0.002757902986820791
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.1579428887909733e-16,
+          "trace": 0.00071488693318311
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.001583933462217938,
+        "ranks": {
+          "16": {
+            "omitted_trace": 7.194281150956503e-05,
+            "omitted_trace_fraction": 0.019843843461144414,
+            "retained_trace": 0.003553504630183568,
+            "retained_trace_fraction": 0.9801561565388556
+          },
+          "32": {
+            "omitted_trace": 7.714541776440362e-06,
+            "omitted_trace_fraction": 0.002127886805838665,
+            "retained_trace": 0.0036177328999166926,
+            "retained_trace_fraction": 0.9978721131941614
+          },
+          "48": {
+            "omitted_trace": 6.989538385774978e-07,
+            "omitted_trace_fraction": 0.0001927910553989653,
+            "retained_trace": 0.0036247484878545555,
+            "retained_trace_fraction": 0.9998072089446011
+          },
+          "64": {
+            "omitted_trace": 2.351466280763395e-08,
+            "omitted_trace_fraction": 6.4860029515838975e-06,
+            "retained_trace": 0.0036254239270303253,
+            "retained_trace_fraction": 0.9999935139970484
+          },
+          "80": {
+            "omitted_trace": 1.3487925533406386e-10,
+            "omitted_trace_fraction": 3.720347833013225e-08,
+            "retained_trace": 0.0036254473068138776,
+            "retained_trace_fraction": 0.9999999627965217
+          },
+          "96": {
+            "omitted_trace": 1.734723475976807e-18,
+            "omitted_trace_fraction": 4.784853466712147e-16,
+            "retained_trace": 0.0036254474416931312,
+            "retained_trace_fraction": 0.9999999999999996
+          }
+        },
+        "smallest_eigenvalue": 4.331383238670562e-17,
+        "trace": 0.003625447441693133
+      },
+      "symmetry_relative_residual": 1.6587255779320005e-16
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.798522584087261e-16,
+          "trace": 0.42327127826302713
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.1828977224335725e-16,
+          "trace": 4.204825028113616
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.5323845149810807e-16,
+          "trace": 1.521743119373442
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 2.9428773006689313,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.024702114494403737,
+            "omitted_trace_fraction": 0.004016708857628566,
+            "retained_trace": 6.12513731125568,
+            "retained_trace_fraction": 0.9959832911423714
+          },
+          "32": {
+            "omitted_trace": 0.0014907742786860467,
+            "omitted_trace_fraction": 0.00024240865093875518,
+            "retained_trace": 6.148348651471398,
+            "retained_trace_fraction": 0.9997575913490613
+          },
+          "48": {
+            "omitted_trace": 5.6115397718770055e-05,
+            "omitted_trace_fraction": 9.124693156021024e-06,
+            "retained_trace": 6.149783310352365,
+            "retained_trace_fraction": 0.9999908753068439
+          },
+          "64": {
+            "omitted_trace": 1.1787863662959808e-06,
+            "omitted_trace_fraction": 1.916775845171285e-07,
+            "retained_trace": 6.149838246963718,
+            "retained_trace_fraction": 0.9999998083224155
+          },
+          "80": {
+            "omitted_trace": 2.12198587590251e-08,
+            "omitted_trace_fraction": 3.4504736286568905e-09,
+            "retained_trace": 6.149839404530225,
+            "retained_trace_fraction": 0.9999999965495264
+          },
+          "96": {
+            "omitted_trace": 3.552713678800501e-15,
+            "omitted_trace_fraction": 5.776921042726548e-16,
+            "retained_trace": 6.149839425750081,
+            "retained_trace_fraction": 0.9999999999999994
+          }
+        },
+        "smallest_eigenvalue": 8.212419007103567e-15,
+        "trace": 6.149839425750084
+      },
+      "symmetry_relative_residual": 2.899056453113552e-16
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.9646744897457744e-16,
+          "trace": 0.003142850596546034
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 8.307594378769323e-17,
+          "trace": 0.13837818641213234
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.593001658406161e-16,
+          "trace": 0.051809713761553584
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.13722808111066348,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0012929527167603316,
+            "omitted_trace_fraction": 0.006687775801879387,
+            "retained_trace": 0.1920377980534716,
+            "retained_trace_fraction": 0.9933122241981206
+          },
+          "32": {
+            "omitted_trace": 0.00011914153169456654,
+            "omitted_trace_fraction": 0.0006162575338889717,
+            "retained_trace": 0.19321160923853736,
+            "retained_trace_fraction": 0.9993837424661111
+          },
+          "48": {
+            "omitted_trace": 1.0145246163523192e-05,
+            "omitted_trace_fraction": 5.247611217100443e-05,
+            "retained_trace": 0.1933206055240684,
+            "retained_trace_fraction": 0.999947523887829
+          },
+          "64": {
+            "omitted_trace": 3.3756619474689664e-07,
+            "omitted_trace_fraction": 1.7460553657502961e-06,
+            "retained_trace": 0.19333041320403718,
+            "retained_trace_fraction": 0.9999982539446343
+          },
+          "80": {
+            "omitted_trace": 2.532790449594202e-09,
+            "omitted_trace_fraction": 1.310081525832562e-08,
+            "retained_trace": 0.19333074823744148,
+            "retained_trace_fraction": 0.9999999868991848
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.193330750770232,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 4.247452390640531e-19,
+        "trace": 0.19333075077023193
+      },
+      "symmetry_relative_residual": 5.520815273896505e-17
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 9.132707737886256e-17,
+          "trace": 0.0009913180594739769
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.219818121944396e-16,
+          "trace": 0.0169171898073427
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.887606922378148e-16,
+          "trace": 0.00794233793201253
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.01255776443623107,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0003839620448078396,
+            "omitted_trace_fraction": 0.014852978033903605,
+            "retained_trace": 0.025466883754021372,
+            "retained_trace_fraction": 0.9851470219660964
+          },
+          "32": {
+            "omitted_trace": 3.781026661378237e-05,
+            "omitted_trace_fraction": 0.0014626317029632662,
+            "retained_trace": 0.02581303553221543,
+            "retained_trace_fraction": 0.9985373682970368
+          },
+          "48": {
+            "omitted_trace": 3.3907052092337076e-06,
+            "omitted_trace_fraction": 0.00013116418842230968,
+            "retained_trace": 0.025847455093619978,
+            "retained_trace_fraction": 0.9998688358115777
+          },
+          "64": {
+            "omitted_trace": 1.3082236646408396e-07,
+            "omitted_trace_fraction": 5.060660973421957e-06,
+            "retained_trace": 0.025850714976462748,
+            "retained_trace_fraction": 0.9999949393390266
+          },
+          "80": {
+            "omitted_trace": 8.067413057033512e-10,
+            "omitted_trace_fraction": 3.120754005425573e-08,
+            "retained_trace": 0.025850844992087906,
+            "retained_trace_fraction": 0.9999999687924599
+          },
+          "96": {
+            "omitted_trace": 1.0408340855860843e-17,
+            "omitted_trace_fraction": 4.0263057297460795e-16,
+            "retained_trace": 0.0258508457988292,
+            "retained_trace_fraction": 0.9999999999999996
+          }
+        },
+        "smallest_eigenvalue": 2.8795018289089364e-16,
+        "trace": 0.025850845798829212
+      },
+      "symmetry_relative_residual": 2.247957585792449e-16
+    },
+    {
+      "atomic_number": 7,
+      "central_index": 2,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.0888933006920164e-16,
+          "trace": 0.0002095111306947169
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.264411097411975e-16,
+          "trace": 0.009108945167502509
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.798414636362435e-16,
+          "trace": 0.00273294433723149
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.005989698742959956,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.00016675130084652795,
+            "omitted_trace_fraction": 0.013836673917910621,
+            "retained_trace": 0.011884649334582184,
+            "retained_trace_fraction": 0.9861633260820893
+          },
+          "32": {
+            "omitted_trace": 1.6521536627423297e-05,
+            "omitted_trace_fraction": 0.0013709225281958745,
+            "retained_trace": 0.012034879098801288,
+            "retained_trace_fraction": 0.9986290774718041
+          },
+          "48": {
+            "omitted_trace": 1.3708801820007388e-06,
+            "omitted_trace_fraction": 0.00011375276811980052,
+            "retained_trace": 0.012050029755246711,
+            "retained_trace_fraction": 0.9998862472318802
+          },
+          "64": {
+            "omitted_trace": 3.076036050528308e-08,
+            "omitted_trace_fraction": 2.5524303303678876e-06,
+            "retained_trace": 0.012051369875068206,
+            "retained_trace_fraction": 0.9999974475696697
+          },
+          "80": {
+            "omitted_trace": 2.989372308720428e-10,
+            "omitted_trace_fraction": 2.4805185713702608e-08,
+            "retained_trace": 0.01205140033649148,
+            "retained_trace_fraction": 0.9999999751948143
+          },
+          "96": {
+            "omitted_trace": 1.734723475976807e-18,
+            "omitted_trace_fraction": 1.4394372309531112e-16,
+            "retained_trace": 0.01205140063542871,
+            "retained_trace_fraction": 0.9999999999999999
+          }
+        },
+        "smallest_eigenvalue": 2.1603122663380394e-16,
+        "trace": 0.012051400635428712
+      },
+      "symmetry_relative_residual": 9.84370925570333e-17
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.1678857376167667e-16,
+          "trace": 0.8107144059570917
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0909158453107844e-16,
+          "trace": 8.02692671305664
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.8327821637116849e-16,
+          "trace": 2.191083682724798
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 7.563990161683055,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.036161544391598355,
+            "omitted_trace_fraction": 0.0032788509135614637,
+            "retained_trace": 10.992563257346932,
+            "retained_trace_fraction": 0.9967211490864385
+          },
+          "32": {
+            "omitted_trace": 0.0016410652475666865,
+            "omitted_trace_fraction": 0.00014879918368332072,
+            "retained_trace": 11.027083736490964,
+            "retained_trace_fraction": 0.9998512008163167
+          },
+          "48": {
+            "omitted_trace": 8.440781263097108e-05,
+            "omitted_trace_fraction": 7.653451704377039e-06,
+            "retained_trace": 11.0286403939259,
+            "retained_trace_fraction": 0.9999923465482956
+          },
+          "64": {
+            "omitted_trace": 2.430648113005418e-06,
+            "omitted_trace_fraction": 2.203924893132032e-07,
+            "retained_trace": 11.028722371090417,
+            "retained_trace_fraction": 0.9999997796075107
+          },
+          "80": {
+            "omitted_trace": 2.8971896881557768e-08,
+            "omitted_trace_fraction": 2.626948935836239e-09,
+            "retained_trace": 11.028724772766633,
+            "retained_trace_fraction": 0.9999999973730511
+          },
+          "96": {
+            "omitted_trace": 1.7763568394002505e-15,
+            "omitted_trace_fraction": 1.610663854011691e-16,
+            "retained_trace": 11.028724801738528,
+            "retained_trace_fraction": 0.9999999999999999
+          }
+        },
+        "smallest_eigenvalue": 9.574988643143796e-16,
+        "trace": 11.02872480173853
+      },
+      "symmetry_relative_residual": 1.473288505334834e-16
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.045747895494605e-16,
+          "trace": 0.0006546827630120684
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.84185808122081e-16,
+          "trace": 0.04527821331831543
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.738346393372479e-16,
+          "trace": 0.012697752754856757
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.020522166076536872,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.001247001009128966,
+            "omitted_trace_fraction": 0.021268756765989806,
+            "retained_trace": 0.057383647827055274,
+            "retained_trace_fraction": 0.9787312432340102
+          },
+          "32": {
+            "omitted_trace": 0.00011239954302678934,
+            "omitted_trace_fraction": 0.0019170782731884304,
+            "retained_trace": 0.05851824929315745,
+            "retained_trace_fraction": 0.9980829217268116
+          },
+          "48": {
+            "omitted_trace": 9.16469247630447e-06,
+            "omitted_trace_fraction": 0.0001563123154565608,
+            "retained_trace": 0.058621484143707936,
+            "retained_trace_fraction": 0.9998436876845435
+          },
+          "64": {
+            "omitted_trace": 2.6069313455168164e-07,
+            "omitted_trace_fraction": 4.44636277657554e-06,
+            "retained_trace": 0.05863038814304969,
+            "retained_trace_fraction": 0.9999955536372235
+          },
+          "80": {
+            "omitted_trace": 2.3979565694220994e-09,
+            "omitted_trace_fraction": 4.089936947691063e-08,
+            "retained_trace": 0.05863064643822767,
+            "retained_trace_fraction": 0.9999999591006306
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.05863064883618426,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 5.927096777102902e-19,
+        "trace": 0.05863064883618424
+      },
+      "symmetry_relative_residual": 2.281930338687652e-16
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.7864521055252955e-16,
+          "trace": 0.0003838879646567065
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.7714754937746803e-16,
+          "trace": 0.02788850338322155
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.4463260275880854e-16,
+          "trace": 0.00985347255307341
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.019153705659263557,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0005830859771561239,
+            "omitted_trace_fraction": 0.015293711866331492,
+            "retained_trace": 0.03754277792379554,
+            "retained_trace_fraction": 0.9847062881336686
+          },
+          "32": {
+            "omitted_trace": 5.538581024583378e-05,
+            "omitted_trace_fraction": 0.0014527096458646091,
+            "retained_trace": 0.03807047809070583,
+            "retained_trace_fraction": 0.9985472903541354
+          },
+          "48": {
+            "omitted_trace": 4.580749051567856e-06,
+            "omitted_trace_fraction": 0.00012014807227629839,
+            "retained_trace": 0.038121283151900096,
+            "retained_trace_fraction": 0.9998798519277237
+          },
+          "64": {
+            "omitted_trace": 1.5204985567840446e-07,
+            "omitted_trace_fraction": 3.988102566630867e-06,
+            "retained_trace": 0.038125711851095985,
+            "retained_trace_fraction": 0.9999960118974334
+          },
+          "80": {
+            "omitted_trace": 1.2689031284041086e-09,
+            "omitted_trace_fraction": 3.3281950848396e-08,
+            "retained_trace": 0.038125862632048535,
+            "retained_trace_fraction": 0.9999999667180491
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.03812586390095169,
+            "retained_trace_fraction": 1.0000000000000007
+          }
+        },
+        "smallest_eigenvalue": 2.9886516028194317e-16,
+        "trace": 0.03812586390095166
+      },
+      "symmetry_relative_residual": 1.5200407114558133e-16
+    },
+    {
+      "atomic_number": 8,
+      "central_index": 3,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.5868630537452734e-16,
+          "trace": 0.0001603650092776376
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.8862196833844048e-16,
+          "trace": 0.014533999615996784
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.408773523725623e-16,
+          "trace": 0.00397384088027793
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.009315362138017758,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0003306065515776731,
+            "omitted_trace_fraction": 0.0177096053222332,
+            "retained_trace": 0.018337598953974677,
+            "retained_trace_fraction": 0.9822903946777668
+          },
+          "32": {
+            "omitted_trace": 3.0332925746046763e-05,
+            "omitted_trace_fraction": 0.0016248442163883969,
+            "retained_trace": 0.018637872579806303,
+            "retained_trace_fraction": 0.9983751557836116
+          },
+          "48": {
+            "omitted_trace": 2.1670649686805765e-06,
+            "omitted_trace_fraction": 0.00011608319653627351,
+            "retained_trace": 0.01866603844058367,
+            "retained_trace_fraction": 0.9998839168034638
+          },
+          "64": {
+            "omitted_trace": 4.709007891609551e-08,
+            "omitted_trace_fraction": 2.522474851805646e-06,
+            "retained_trace": 0.018668158415473434,
+            "retained_trace_fraction": 0.9999974775251482
+          },
+          "80": {
+            "omitted_trace": 4.0085014127444474e-10,
+            "omitted_trace_fraction": 2.14723445783379e-08,
+            "retained_trace": 0.01866820510470221,
+            "retained_trace_fraction": 0.9999999785276554
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.018668205505552357,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 6.963143953437553e-17,
+        "trace": 0.01866820550555235
+      },
+      "symmetry_relative_residual": 1.3406402214447286e-16
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.6018106568017725e-16,
+          "trace": 0.31493531520506074
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0415009990340458e-16,
+          "trace": 6.414331692352753
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.2763555695465833e-16,
+          "trace": 4.864823270238077
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 8.92866154012943,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.028561804077234854,
+            "omitted_trace_fraction": 0.0024634795307687256,
+            "retained_trace": 11.565528473718652,
+            "retained_trace_fraction": 0.9975365204692312
+          },
+          "32": {
+            "omitted_trace": 0.0013113038844085878,
+            "omitted_trace_fraction": 0.0001131010586419097,
+            "retained_trace": 11.592778973911479,
+            "retained_trace_fraction": 0.9998868989413581
+          },
+          "48": {
+            "omitted_trace": 4.83175701688765e-05,
+            "omitted_trace_fraction": 4.167430907572852e-06,
+            "retained_trace": 11.594041960225718,
+            "retained_trace_fraction": 0.9999958325690924
+          },
+          "64": {
+            "omitted_trace": 1.2976988088553298e-06,
+            "omitted_trace_fraction": 1.1192760947709568e-07,
+            "retained_trace": 11.594088980097078,
+            "retained_trace_fraction": 0.9999998880723905
+          },
+          "80": {
+            "omitted_trace": 1.2178556829667286e-08,
+            "omitted_trace_fraction": 1.0504107297655535e-09,
+            "retained_trace": 11.59409026561733,
+            "retained_trace_fraction": 0.9999999989495892
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 11.594090277795887,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 7.71930004017629e-17,
+        "trace": 11.594090277795887
+      },
+      "symmetry_relative_residual": 1.6800934914149953e-16
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.084677243937205e-16,
+          "trace": 0.0007066758178400074
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.3580208265996894e-16,
+          "trace": 0.09932393217351822
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.39658440004663e-16,
+          "trace": 0.025338806053069207
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.052331155223454405,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0023169188218049863,
+            "omitted_trace_fraction": 0.018480734232226174,
+            "retained_trace": 0.1230524952226224,
+            "retained_trace_fraction": 0.9815192657677738
+          },
+          "32": {
+            "omitted_trace": 0.0002159074209196754,
+            "omitted_trace_fraction": 0.001722169817617269,
+            "retained_trace": 0.12515350662350772,
+            "retained_trace_fraction": 0.9982778301823827
+          },
+          "48": {
+            "omitted_trace": 1.5149539937725498e-05,
+            "omitted_trace_fraction": 0.00012083920191536451,
+            "retained_trace": 0.12535426450448967,
+            "retained_trace_fraction": 0.9998791607980846
+          },
+          "64": {
+            "omitted_trace": 4.295082809968598e-07,
+            "omitted_trace_fraction": 3.4259415206698992e-06,
+            "retained_trace": 0.1253689845361464,
+            "retained_trace_fraction": 0.9999965740584793
+          },
+          "80": {
+            "omitted_trace": 5.33626667853504e-09,
+            "omitted_trace_fraction": 4.256434250098686e-08,
+            "retained_trace": 0.1253694087081607,
+            "retained_trace_fraction": 0.9999999574356575
+          },
+          "96": {
+            "omitted_trace": 2.7755575615628914e-17,
+            "omitted_trace_fraction": 2.2139032735522812e-16,
+            "retained_trace": 0.12536941404442736,
+            "retained_trace_fraction": 0.9999999999999998
+          }
+        },
+        "smallest_eigenvalue": 7.208163508897064e-17,
+        "trace": 0.1253694140444274
+      },
+      "symmetry_relative_residual": 1.9544213917029024e-16
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.7937870379083904e-16,
+          "trace": 0.00040622164836594287
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0017914282704772e-16,
+          "trace": 0.06154917771121942
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.989629823859449e-16,
+          "trace": 0.013730044331476492
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.04155960213362597,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0012256604991176812,
+            "omitted_trace_fraction": 0.016194137727733593,
+            "retained_trace": 0.07445978319194417,
+            "retained_trace_fraction": 0.9838058622722664
+          },
+          "32": {
+            "omitted_trace": 0.00010886326747827635,
+            "omitted_trace_fraction": 0.0014383646599555136,
+            "retained_trace": 0.07557658042358358,
+            "retained_trace_fraction": 0.9985616353400445
+          },
+          "48": {
+            "omitted_trace": 8.408658426314886e-06,
+            "omitted_trace_fraction": 0.00011110007441639553,
+            "retained_trace": 0.07567703503263554,
+            "retained_trace_fraction": 0.9998888999255836
+          },
+          "64": {
+            "omitted_trace": 2.471342769455598e-07,
+            "omitted_trace_fraction": 3.2652814714851882e-06,
+            "retained_trace": 0.0756851965567849,
+            "retained_trace_fraction": 0.9999967347185286
+          },
+          "80": {
+            "omitted_trace": 2.206664781456702e-09,
+            "omitted_trace_fraction": 2.9155735552849777e-08,
+            "retained_trace": 0.07568544148439707,
+            "retained_trace_fraction": 0.9999999708442644
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.07568544369106187,
+            "retained_trace_fraction": 1.0000000000000002
+          }
+        },
+        "smallest_eigenvalue": 4.933436824016325e-17,
+        "trace": 0.07568544369106185
+      },
+      "symmetry_relative_residual": 1.8084697311829355e-16
+    },
+    {
+      "atomic_number": 9,
+      "central_index": 4,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.0924741516596033e-16,
+          "trace": 0.00033412253258661295
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.936088456861544e-16,
+          "trace": 0.029311126674157632
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.8255059828767534e-16,
+          "trace": 0.006945196877514118
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.020107253238625052,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0007459971878348501,
+            "omitted_trace_fraction": 0.020387758764050353,
+            "retained_trace": 0.0358444488964235,
+            "retained_trace_fraction": 0.9796122412359497
+          },
+          "32": {
+            "omitted_trace": 6.811992341258788e-05,
+            "omitted_trace_fraction": 0.0018616860602279973,
+            "retained_trace": 0.03652232616084576,
+            "retained_trace_fraction": 0.998138313939772
+          },
+          "48": {
+            "omitted_trace": 4.6997478606175536e-06,
+            "omitted_trace_fraction": 0.0001284419394558691,
+            "retained_trace": 0.03658574633639773,
+            "retained_trace_fraction": 0.9998715580605442
+          },
+          "64": {
+            "omitted_trace": 1.3426721302139955e-07,
+            "omitted_trace_fraction": 3.6694609492384113e-06,
+            "retained_trace": 0.03659031181704533,
+            "retained_trace_fraction": 0.9999963305390508
+          },
+          "80": {
+            "omitted_trace": 1.2790846021237812e-09,
+            "omitted_trace_fraction": 3.4956791703997805e-08,
+            "retained_trace": 0.03659044480517375,
+            "retained_trace_fraction": 0.9999999650432083
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.03659044608425836,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 2.425853673474226e-16,
+        "trace": 0.03659044608425835
+      },
+      "symmetry_relative_residual": 1.7106823630226776e-16
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.916628060064694e-16,
+          "trace": 0.251485857173561
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 6.579183751078791e-16,
+          "trace": 1.399674956503611
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 5.286961230401422e-16,
+          "trace": 0.8589488347441501
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.7993953251590417,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.02031575906945715,
+            "omitted_trace_fraction": 0.008093574351317401,
+            "retained_trace": 2.4897938893518647,
+            "retained_trace_fraction": 0.9919064256486826
+          },
+          "32": {
+            "omitted_trace": 0.0008153157101693509,
+            "omitted_trace_fraction": 0.0003248127868366729,
+            "retained_trace": 2.5092943327111525,
+            "retained_trace_fraction": 0.9996751872131633
+          },
+          "48": {
+            "omitted_trace": 3.537707384015931e-05,
+            "omitted_trace_fraction": 1.40938360451341e-05,
+            "retained_trace": 2.5100742713474817,
+            "retained_trace_fraction": 0.9999859061639549
+          },
+          "64": {
+            "omitted_trace": 7.328465940759088e-07,
+            "omitted_trace_fraction": 2.919580005346844e-07,
+            "retained_trace": 2.510108915574728,
+            "retained_trace_fraction": 0.9999997080419994
+          },
+          "80": {
+            "omitted_trace": 7.788179434697895e-09,
+            "omitted_trace_fraction": 3.1027247911644414e-09,
+            "retained_trace": 2.5101096406331425,
+            "retained_trace_fraction": 0.9999999968972753
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 2.5101096484213232,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 5.638288446999918e-16,
+        "trace": 2.510109648421322
+      },
+      "symmetry_relative_residual": 3.7356408863092056e-16
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 6.589659835385193e-16,
+          "trace": 0.0006369578713207202
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.4127407751248617e-16,
+          "trace": 0.14091634207027048
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.545553747952036e-16,
+          "trace": 0.1335477887289415
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.2147827590744101,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0024572407638368543,
+            "omitted_trace_fraction": 0.008932137548825556,
+            "retained_trace": 0.2726438479066959,
+            "retained_trace_fraction": 0.9910678624511744
+          },
+          "32": {
+            "omitted_trace": 0.00021980445967467732,
+            "omitted_trace_fraction": 0.0007989952374849381,
+            "retained_trace": 0.27488128421085806,
+            "retained_trace_fraction": 0.999201004762515
+          },
+          "48": {
+            "omitted_trace": 1.6249375812071865e-05,
+            "omitted_trace_fraction": 5.906692659996153e-05,
+            "retained_trace": 0.27508483929472066,
+            "retained_trace_fraction": 0.9999409330734
+          },
+          "64": {
+            "omitted_trace": 4.065876216263753e-07,
+            "omitted_trace_fraction": 1.477957152373591e-06,
+            "retained_trace": 0.2751006820829111,
+            "retained_trace_fraction": 0.9999985220428477
+          },
+          "80": {
+            "omitted_trace": 3.6141954984358904e-09,
+            "omitted_trace_fraction": 1.3137699730313799e-08,
+            "retained_trace": 0.27510108505633724,
+            "retained_trace_fraction": 0.9999999868623003
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.2751010886705328,
+            "retained_trace_fraction": 1.0000000000000002
+          }
+        },
+        "smallest_eigenvalue": 9.069072330757605e-18,
+        "trace": 0.27510108867053273
+      },
+      "symmetry_relative_residual": 1.251103093251112e-16
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.7115586347640776e-16,
+          "trace": 0.00027913253539873297
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.7714559250787794e-16,
+          "trace": 0.027896943866868355
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.395154815458212e-16,
+          "trace": 0.013902743169308831
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.01812212524610403,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0009176963178776434,
+            "omitted_trace_fraction": 0.021808984358904018,
+            "retained_trace": 0.04116112325369827,
+            "retained_trace_fraction": 0.978191015641096
+          },
+          "32": {
+            "omitted_trace": 9.089745491591694e-05,
+            "omitted_trace_fraction": 0.00216017121776196,
+            "retained_trace": 0.04198792211666,
+            "retained_trace_fraction": 0.9978398287822381
+          },
+          "48": {
+            "omitted_trace": 6.126189163055407e-06,
+            "omitted_trace_fraction": 0.00014558842727597864,
+            "retained_trace": 0.04207269338241286,
+            "retained_trace_fraction": 0.999854411572724
+          },
+          "64": {
+            "omitted_trace": 1.6146621155399554e-07,
+            "omitted_trace_fraction": 3.837232441355493e-06,
+            "retained_trace": 0.04207865810536436,
+            "retained_trace_fraction": 0.9999961627675586
+          },
+          "80": {
+            "omitted_trace": 1.5952541024266687e-09,
+            "omitted_trace_fraction": 3.7911094433463074e-08,
+            "retained_trace": 0.04207881797632181,
+            "retained_trace_fraction": 0.9999999620889055
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.04207881957157597,
+            "retained_trace_fraction": 1.0000000000000013
+          }
+        },
+        "smallest_eigenvalue": 6.001510168458061e-16,
+        "trace": 0.042078819571575915
+      },
+      "symmetry_relative_residual": 1.1596136541636881e-16
+    },
+    {
+      "atomic_number": 15,
+      "central_index": 5,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 5.141602761218233e-16,
+          "trace": 0.00017383215883551404
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.5453312232921753e-16,
+          "trace": 0.01116526027340411
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.818915512688047e-16,
+          "trace": 0.006152499521697852
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.008897711224138363,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0004356855403905846,
+            "omitted_trace_fraction": 0.024908284022284715,
+            "retained_trace": 0.017055906413546887,
+            "retained_trace_fraction": 0.9750917159777153
+          },
+          "32": {
+            "omitted_trace": 4.320336110797893e-05,
+            "omitted_trace_fraction": 0.0024699502036035987,
+            "retained_trace": 0.017448388592829493,
+            "retained_trace_fraction": 0.9975300497963964
+          },
+          "48": {
+            "omitted_trace": 3.2097638044230326e-06,
+            "omitted_trace_fraction": 0.00018350324046408444,
+            "retained_trace": 0.01748838219013305,
+            "retained_trace_fraction": 0.9998164967595359
+          },
+          "64": {
+            "omitted_trace": 8.359849065081582e-08,
+            "omitted_trace_fraction": 4.779352895434841e-06,
+            "retained_trace": 0.01749150835544682,
+            "retained_trace_fraction": 0.9999952206471046
+          },
+          "80": {
+            "omitted_trace": 8.029438433587721e-10,
+            "omitted_trace_fraction": 4.5904560629658655e-08,
+            "retained_trace": 0.017491591150993628,
+            "retained_trace_fraction": 0.9999999540954394
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.01749159195393747,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 5.032001388517924e-17,
+        "trace": 0.01749159195393747
+      },
+      "symmetry_relative_residual": 1.3208350621434425e-16
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.303721162379708e-16,
+          "trace": 0.16843495617095972
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.2767783278088317e-16,
+          "trace": 7.7724999074854075
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.013414606818886e-16,
+          "trace": 2.2034219831444926
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 5.48948799167277,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.04673855640660207,
+            "omitted_trace_fraction": 0.004607345454467292,
+            "retained_trace": 10.097618290394253,
+            "retained_trace_fraction": 0.9953926545455327
+          },
+          "32": {
+            "omitted_trace": 0.0018464142062324385,
+            "omitted_trace_fraction": 0.00018201392499463654,
+            "retained_trace": 10.142510432594623,
+            "retained_trace_fraction": 0.9998179860750054
+          },
+          "48": {
+            "omitted_trace": 0.00010394002938163283,
+            "omitted_trace_fraction": 1.0246093562295333e-05,
+            "retained_trace": 10.144252906771474,
+            "retained_trace_fraction": 0.9999897539064377
+          },
+          "64": {
+            "omitted_trace": 2.2968095336750594e-06,
+            "omitted_trace_fraction": 2.264125334273297e-07,
+            "retained_trace": 10.144354549991322,
+            "retained_trace_fraction": 0.9999997735874666
+          },
+          "80": {
+            "omitted_trace": 3.433725836998747e-08,
+            "omitted_trace_fraction": 3.3848630217317457e-09,
+            "retained_trace": 10.144356812463597,
+            "retained_trace_fraction": 0.9999999966151369
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 10.144356846800859,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 2.325055822957507e-16,
+        "trace": 10.144356846800855
+      },
+      "symmetry_relative_residual": 2.33027556001531e-16
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 5.522328208210618e-16,
+          "trace": 0.001363567445258569
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.6623451148943104e-16,
+          "trace": 0.08103397200562926
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.149137632025833e-16,
+          "trace": 0.03334283095672569
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.0417097042429224,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0029733533591265737,
+            "omitted_trace_fraction": 0.025689855222123813,
+            "retained_trace": 0.1127670170484869,
+            "retained_trace_fraction": 0.9743101447778761
+          },
+          "32": {
+            "omitted_trace": 0.00026494969598578333,
+            "omitted_trace_fraction": 0.0022891726979331903,
+            "retained_trace": 0.1154754207116277,
+            "retained_trace_fraction": 0.9977108273020668
+          },
+          "48": {
+            "omitted_trace": 2.0307880120182253e-05,
+            "omitted_trace_fraction": 0.00017546064565598097,
+            "retained_trace": 0.1157200625274933,
+            "retained_trace_fraction": 0.999824539354344
+          },
+          "64": {
+            "omitted_trace": 5.12459748386318e-07,
+            "omitted_trace_fraction": 4.427666393165509e-06,
+            "retained_trace": 0.1157398579478651,
+            "retained_trace_fraction": 0.9999955723336068
+          },
+          "80": {
+            "omitted_trace": 4.153602295442482e-09,
+            "omitted_trace_fraction": 3.588723866023895e-08,
+            "retained_trace": 0.11574036625401118,
+            "retained_trace_fraction": 0.9999999641127614
+          },
+          "96": {
+            "omitted_trace": 1.3877787807814457e-17,
+            "omitted_trace_fraction": 1.19904470315239e-16,
+            "retained_trace": 0.11574037040761347,
+            "retained_trace_fraction": 0.9999999999999999
+          }
+        },
+        "smallest_eigenvalue": 3.601754488842409e-20,
+        "trace": 0.11574037040761348
+      },
+      "symmetry_relative_residual": 1.40969597226137e-16
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.6075487757789578e-16,
+          "trace": 0.0012952366713880168
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.440008722536355e-16,
+          "trace": 0.11936291391722925
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.4508896430839656e-16,
+          "trace": 0.02479359687002456
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.11189991641288125,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0010941398181572581,
+            "omitted_trace_fraction": 0.007522355951538973,
+            "retained_trace": 0.14435760764048458,
+            "retained_trace_fraction": 0.9924776440484611
+          },
+          "32": {
+            "omitted_trace": 0.00011647813304574428,
+            "omitted_trace_fraction": 0.0008008025691053592,
+            "retained_trace": 0.1453352693255961,
+            "retained_trace_fraction": 0.9991991974308947
+          },
+          "48": {
+            "omitted_trace": 8.192912260646112e-06,
+            "omitted_trace_fraction": 5.6327355317444424e-05,
+            "retained_trace": 0.1454435545463812,
+            "retained_trace_fraction": 0.9999436726446825
+          },
+          "64": {
+            "omitted_trace": 2.8374323030044835e-07,
+            "omitted_trace_fraction": 1.9507722338030258e-06,
+            "retained_trace": 0.14545146371541154,
+            "retained_trace_fraction": 0.9999980492277663
+          },
+          "80": {
+            "omitted_trace": 2.4970656653522383e-09,
+            "omitted_trace_fraction": 1.716765669014916e-08,
+            "retained_trace": 0.14545174496157617,
+            "retained_trace_fraction": 0.9999999828323433
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.14545174745864195,
+            "retained_trace_fraction": 1.0000000000000007
+          }
+        },
+        "smallest_eigenvalue": 3.001539060757371e-16,
+        "trace": 0.14545174745864184
+      },
+      "symmetry_relative_residual": 3.678564562136318e-16
+    },
+    {
+      "atomic_number": 16,
+      "central_index": 6,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.6024323630329625e-16,
+          "trace": 9.153806263025419e-05
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0804832319954164e-16,
+          "trace": 0.011712116588413809
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.611157093696858e-16,
+          "trace": 0.004438694632681759
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.0060344403358005404,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0004337440327384645,
+            "omitted_trace_fraction": 0.026704513316497803,
+            "retained_trace": 0.01580860525098735,
+            "retained_trace_fraction": 0.9732954866835022
+          },
+          "32": {
+            "omitted_trace": 4.027102420733897e-05,
+            "omitted_trace_fraction": 0.002479384201378364,
+            "retained_trace": 0.016202078259518474,
+            "retained_trace_fraction": 0.9975206157986216
+          },
+          "48": {
+            "omitted_trace": 3.06101004432513e-06,
+            "omitted_trace_fraction": 0.0001884585776881513,
+            "retained_trace": 0.016239288273681488,
+            "retained_trace_fraction": 0.9998115414223119
+          },
+          "64": {
+            "omitted_trace": 6.947088606115703e-08,
+            "omitted_trace_fraction": 4.277145186796598e-06,
+            "retained_trace": 0.016242279812839752,
+            "retained_trace_fraction": 0.9999957228548132
+          },
+          "80": {
+            "omitted_trace": 8.654801285368219e-10,
+            "omitted_trace_fraction": 5.328540307922072e-08,
+            "retained_trace": 0.016242348418245685,
+            "retained_trace_fraction": 0.9999999467145969
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.016242349283725813,
+            "retained_trace_fraction": 1.0
+          }
+        },
+        "smallest_eigenvalue": 3.989806204379882e-16,
+        "trace": 0.016242349283725813
+      },
+      "symmetry_relative_residual": 1.5915915406960437e-16
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 6.983308566920505e-16,
+          "trace": 0.04960303939490723
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.9739291548166585e-16,
+          "trace": 8.95352713243883
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.710227874144178e-16,
+          "trace": 15.03692176063174
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 18.855370253912856,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.06326219755392515,
+            "omitted_trace_fraction": 0.0026315333149713868,
+            "retained_trace": 23.976789734911545,
+            "retained_trace_fraction": 0.9973684666850287
+          },
+          "32": {
+            "omitted_trace": 0.0026678894723701774,
+            "omitted_trace_fraction": 0.00011097685977821293,
+            "retained_trace": 24.0373840429931,
+            "retained_trace_fraction": 0.9998890231402218
+          },
+          "48": {
+            "omitted_trace": 0.00011911233497841067,
+            "omitted_trace_fraction": 4.9547453272158926e-06,
+            "retained_trace": 24.039932820130492,
+            "retained_trace_fraction": 0.9999950452546728
+          },
+          "64": {
+            "omitted_trace": 2.6106355868193987e-06,
+            "omitted_trace_fraction": 1.0859525570715604e-07,
+            "retained_trace": 24.040049321829883,
+            "retained_trace_fraction": 0.9999998914047443
+          },
+          "80": {
+            "omitted_trace": 2.946165622574881e-08,
+            "omitted_trace_fraction": 1.2255238178567163e-09,
+            "retained_trace": 24.040051903003814,
+            "retained_trace_fraction": 0.9999999987744762
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 24.04005193246548,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 7.178642445275688e-16,
+        "trace": 24.04005193246547
+      },
+      "symmetry_relative_residual": 2.044338034765013e-16
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0948792329133863e-16,
+          "trace": 0.001665515996188065
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.393254603414028e-16,
+          "trace": 0.17809479605765577
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.932911890848828e-16,
+          "trace": 0.06635602220022527
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.08966078322824358,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0050088810992862665,
+            "omitted_trace_fraction": 0.020351680901095882,
+            "retained_trace": 0.24110745315478274,
+            "retained_trace_fraction": 0.9796483190989042
+          },
+          "32": {
+            "omitted_trace": 0.00038540896529962176,
+            "omitted_trace_fraction": 0.0015659625618418289,
+            "retained_trace": 0.2457309252887694,
+            "retained_trace_fraction": 0.9984340374381582
+          },
+          "48": {
+            "omitted_trace": 2.8984770373718938e-05,
+            "omitted_trace_fraction": 0.00011776857664309916,
+            "retained_trace": 0.2460873494836953,
+            "retained_trace_fraction": 0.9998822314233569
+          },
+          "64": {
+            "omitted_trace": 7.076765045077593e-07,
+            "omitted_trace_fraction": 2.875373983821878e-06,
+            "retained_trace": 0.2461156265775645,
+            "retained_trace_fraction": 0.9999971246260162
+          },
+          "80": {
+            "omitted_trace": 7.254400274936401e-09,
+            "omitted_trace_fraction": 2.9475492948987255e-08,
+            "retained_trace": 0.24611632699966873,
+            "retained_trace_fraction": 0.9999999705245071
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.2461163342540691,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 7.744260412566756e-19,
+        "trace": 0.246116334254069
+      },
+      "symmetry_relative_residual": 1.69676894285524e-16
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.462136675418412e-16,
+          "trace": 0.0004761169150949366
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.567428207339168e-16,
+          "trace": 0.11376508250912575
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.4495563794319077e-16,
+          "trace": 0.06525871557280488
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.09067911728634544,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.003072413627840498,
+            "omitted_trace_fraction": 0.01711651856710578,
+            "retained_trace": 0.1764275013691851,
+            "retained_trace_fraction": 0.9828834814328942
+          },
+          "32": {
+            "omitted_trace": 0.00024948679882280667,
+            "omitted_trace_fraction": 0.0013898992588767564,
+            "retained_trace": 0.1792504281982028,
+            "retained_trace_fraction": 0.9986101007411232
+          },
+          "48": {
+            "omitted_trace": 1.674665503131889e-05,
+            "omitted_trace_fraction": 9.329617248897522e-05,
+            "retained_trace": 0.1794831683419943,
+            "retained_trace_fraction": 0.999906703827511
+          },
+          "64": {
+            "omitted_trace": 5.421932484650505e-07,
+            "omitted_trace_fraction": 3.020576630769072e-06,
+            "retained_trace": 0.17949937280377715,
+            "retained_trace_fraction": 0.9999969794233692
+          },
+          "80": {
+            "omitted_trace": 3.8933005985786195e-09,
+            "omitted_trace_fraction": 2.168970719926599e-08,
+            "retained_trace": 0.179499911103725,
+            "retained_trace_fraction": 0.9999999783102927
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.17949991499702567,
+            "retained_trace_fraction": 1.0000000000000002
+          }
+        },
+        "smallest_eigenvalue": 6.545332889019468e-16,
+        "trace": 0.1794999149970256
+      },
+      "symmetry_relative_residual": 1.9546913391555312e-16
+    },
+    {
+      "atomic_number": 17,
+      "central_index": 7,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.8270154465595666e-16,
+          "trace": 0.0003327605021569887
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.7948070465616997e-16,
+          "trace": 0.05304794696081967
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.0537716655427584e-16,
+          "trace": 0.018280974392257975
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.028668039003769373,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0016698992031394105,
+            "omitted_trace_fraction": 0.023302539933584197,
+            "retained_trace": 0.0699917826520952,
+            "retained_trace_fraction": 0.9766974600664158
+          },
+          "32": {
+            "omitted_trace": 0.00017376522938583605,
+            "omitted_trace_fraction": 0.002424799765889714,
+            "retained_trace": 0.07148791662584877,
+            "retained_trace_fraction": 0.9975752002341103
+          },
+          "48": {
+            "omitted_trace": 1.3212862743638976e-05,
+            "omitted_trace_fraction": 0.0001843783511853738,
+            "retained_trace": 0.07164846899249097,
+            "retained_trace_fraction": 0.9998156216488147
+          },
+          "64": {
+            "omitted_trace": 2.797128326875731e-07,
+            "omitted_trace_fraction": 3.90324125036065e-06,
+            "retained_trace": 0.07166140214240192,
+            "retained_trace_fraction": 0.9999960967587497
+          },
+          "80": {
+            "omitted_trace": 2.320538289302121e-09,
+            "omitted_trace_fraction": 3.238185637325528e-08,
+            "retained_trace": 0.07166167953469632,
+            "retained_trace_fraction": 0.9999999676181436
+          },
+          "96": {
+            "omitted_trace": 2.7755575615628914e-17,
+            "omitted_trace_fraction": 3.873140414384717e-16,
+            "retained_trace": 0.07166168185523458,
+            "retained_trace_fraction": 0.9999999999999997
+          }
+        },
+        "smallest_eigenvalue": 2.0389511347717762e-16,
+        "trace": 0.07166168185523461
+      },
+      "symmetry_relative_residual": 2.19762159894089e-16
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 5.495908660026999e-16,
+          "trace": 0.10881108108112666
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.3606540820837377e-16,
+          "trace": 19.958628983881148
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.8372449983027774e-16,
+          "trace": 20.570021600693764
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 27.16401767708095,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.09086980947964918,
+            "omitted_trace_fraction": 0.002236109386636371,
+            "retained_trace": 40.5465918561764,
+            "retained_trace_fraction": 0.9977638906133637
+          },
+          "32": {
+            "omitted_trace": 0.003907866238762381,
+            "omitted_trace_fraction": 9.616413227071802e-05,
+            "retained_trace": 40.633553799417285,
+            "retained_trace_fraction": 0.9999038358677292
+          },
+          "48": {
+            "omitted_trace": 0.000131618487650087,
+            "omitted_trace_fraction": 3.2388461841680865e-06,
+            "retained_trace": 40.6373300471684,
+            "retained_trace_fraction": 0.9999967611538159
+          },
+          "64": {
+            "omitted_trace": 2.374806570060173e-06,
+            "omitted_trace_fraction": 5.843885106798376e-08,
+            "retained_trace": 40.63745929084948,
+            "retained_trace_fraction": 0.9999999415611489
+          },
+          "80": {
+            "omitted_trace": 1.442462149725543e-08,
+            "omitted_trace_fraction": 3.5495872296192446e-10,
+            "retained_trace": 40.637461651231426,
+            "retained_trace_fraction": 0.9999999996450413
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 40.63746166565606,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 4.752079570030352e-15,
+        "trace": 40.63746166565605
+      },
+      "symmetry_relative_residual": 1.6803113178724951e-16
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.937800003302959e-16,
+          "trace": 0.007945751490872628
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0567007262134136e-16,
+          "trace": 0.6232380449874466
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.2524567127897866e-16,
+          "trace": 0.24747204793606997
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.40860386951609134,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.010242080184579616,
+            "omitted_trace_fraction": 0.011656532247168757,
+            "retained_trace": 0.8684137642298091,
+            "retained_trace_fraction": 0.9883434677528312
+          },
+          "32": {
+            "omitted_trace": 0.0007014656019327381,
+            "omitted_trace_fraction": 0.0007983394253756482,
+            "retained_trace": 0.877954378812456,
+            "retained_trace_fraction": 0.9992016605746243
+          },
+          "48": {
+            "omitted_trace": 4.554656912425514e-05,
+            "omitted_trace_fraction": 5.183664276951491e-05,
+            "retained_trace": 0.8786102978452645,
+            "retained_trace_fraction": 0.9999481633572305
+          },
+          "64": {
+            "omitted_trace": 1.1305704709085873e-06,
+            "omitted_trace_fraction": 1.286704547742576e-06,
+            "retained_trace": 0.8786547138439178,
+            "retained_trace_fraction": 0.9999987132954523
+          },
+          "80": {
+            "omitted_trace": 1.097173851771771e-08,
+            "omitted_trace_fraction": 1.2486957877154068e-08,
+            "retained_trace": 0.8786558334426502,
+            "retained_trace_fraction": 0.9999999875130421
+          },
+          "96": {
+            "omitted_trace": 3.3306690738754696e-16,
+            "omitted_trace_fraction": 3.790641233480114e-16,
+            "retained_trace": 0.8786558444143884,
+            "retained_trace_fraction": 0.9999999999999997
+          }
+        },
+        "smallest_eigenvalue": 1.5530051743189308e-18,
+        "trace": 0.8786558444143887
+      },
+      "symmetry_relative_residual": 1.8961781584741104e-16
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.598554001049789e-16,
+          "trace": 0.000899189740958744
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.564217641355689e-16,
+          "trace": 0.1856319058351173
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.2767744089091037e-16,
+          "trace": 0.060231998832455044
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.11636965643375179,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0037573940479384005,
+            "omitted_trace_fraction": 0.015226726091049135,
+            "retained_trace": 0.24300570036059263,
+            "retained_trace_fraction": 0.9847732739089509
+          },
+          "32": {
+            "omitted_trace": 0.0002772802357472459,
+            "omitted_trace_fraction": 0.001123669795160665,
+            "retained_trace": 0.24648581417278378,
+            "retained_trace_fraction": 0.9988763302048393
+          },
+          "48": {
+            "omitted_trace": 1.8824263611411096e-05,
+            "omitted_trace_fraction": 7.628476071971445e-05,
+            "retained_trace": 0.24674427014491962,
+            "retained_trace_fraction": 0.9999237152392803
+          },
+          "64": {
+            "omitted_trace": 4.557711661690167e-07,
+            "omitted_trace_fraction": 1.8469989090607704e-06,
+            "retained_trace": 0.24676263863736486,
+            "retained_trace_fraction": 0.999998153001091
+          },
+          "80": {
+            "omitted_trace": 4.007728010568812e-09,
+            "omitted_trace_fraction": 1.6241196926853976e-08,
+            "retained_trace": 0.24676309040080302,
+            "retained_trace_fraction": 0.9999999837588031
+          },
+          "96": {
+            "omitted_trace": 1.942890293094024e-16,
+            "omitted_trace_fraction": 7.873504333178174e-16,
+            "retained_trace": 0.24676309440853084,
+            "retained_trace_fraction": 0.9999999999999992
+          }
+        },
+        "smallest_eigenvalue": 3.445339621603014e-16,
+        "trace": 0.24676309440853103
+      },
+      "symmetry_relative_residual": 2.223856283040812e-16
+    },
+    {
+      "atomic_number": 35,
+      "central_index": 8,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.091128356230116e-16,
+          "trace": 0.000879796154871704
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.0932218373099685e-16,
+          "trace": 0.14205309914703884
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.0155270609855845e-16,
+          "trace": 0.055969740471000055
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.0788215837307861,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.003308514978552446,
+            "omitted_trace_fraction": 0.016633841807555592,
+            "retained_trace": 0.19559412079435834,
+            "retained_trace_fraction": 0.9833661581924444
+          },
+          "32": {
+            "omitted_trace": 0.00029002515868783996,
+            "omitted_trace_fraction": 0.0014581262714837258,
+            "retained_trace": 0.19861261061422295,
+            "retained_trace_fraction": 0.9985418737285163
+          },
+          "48": {
+            "omitted_trace": 1.677482945958153e-05,
+            "omitted_trace_fraction": 8.433688872144222e-05,
+            "retained_trace": 0.1988858609434512,
+            "retained_trace_fraction": 0.9999156631112786
+          },
+          "64": {
+            "omitted_trace": 4.847395111973185e-07,
+            "omitted_trace_fraction": 2.4370693194370268e-06,
+            "retained_trace": 0.1989021510333996,
+            "retained_trace_fraction": 0.9999975629306805
+          },
+          "80": {
+            "omitted_trace": 2.9440860027651894e-09,
+            "omitted_trace_fraction": 1.4801643986892577e-08,
+            "retained_trace": 0.19890263282882478,
+            "retained_trace_fraction": 0.999999985198356
+          },
+          "96": {
+            "omitted_trace": 5.551115123125783e-17,
+            "omitted_trace_fraction": 2.790870569188208e-16,
+            "retained_trace": 0.19890263577291073,
+            "retained_trace_fraction": 0.9999999999999997
+          }
+        },
+        "smallest_eigenvalue": 2.4811367096664144e-16,
+        "trace": 0.19890263577291079
+      },
+      "symmetry_relative_residual": 1.4139998651035279e-16
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.2871989018927746e-16,
+          "trace": 0.5206217155709228
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.860699660588516e-16,
+          "trace": 25.790041956741316
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 9.880160468103536e-17,
+          "trace": 36.096887651227206
+        }
+      },
+      "dimension": 96,
+      "ell": 0,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 51.265851691690074,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.07104370910643354,
+            "omitted_trace_fraction": 0.001138383218051958,
+            "retained_trace": 62.336507614432996,
+            "retained_trace_fraction": 0.9988616167819481
+          },
+          "32": {
+            "omitted_trace": 0.0021335119367407174,
+            "omitted_trace_fraction": 3.418675931827469e-05,
+            "retained_trace": 62.40541781160269,
+            "retained_trace_fraction": 0.9999658132406817
+          },
+          "48": {
+            "omitted_trace": 6.510610626264679e-05,
+            "omitted_trace_fraction": 1.043240839960492e-06,
+            "retained_trace": 62.40748621743317,
+            "retained_trace_fraction": 0.9999989567591601
+          },
+          "64": {
+            "omitted_trace": 8.144113294861199e-07,
+            "omitted_trace_fraction": 1.304988438440675e-08,
+            "retained_trace": 62.4075505091281,
+            "retained_trace_fraction": 0.9999999869501156
+          },
+          "80": {
+            "omitted_trace": 2.854207536984177e-09,
+            "omitted_trace_fraction": 4.5734970792029805e-11,
+            "retained_trace": 62.40755132068522,
+            "retained_trace_fraction": 0.999999999954265
+          },
+          "96": {
+            "omitted_trace": 1.4210854715202004e-14,
+            "omitted_trace_fraction": 2.2771049999268003e-16,
+            "retained_trace": 62.407551323539415,
+            "retained_trace_fraction": 0.9999999999999998
+          }
+        },
+        "smallest_eigenvalue": 4.022065651034793e-16,
+        "trace": 62.40755132353943
+      },
+      "symmetry_relative_residual": 7.140709570564853e-17
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.259701641351362e-16,
+          "trace": 0.0035947827761399704
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.6363115104963295e-16,
+          "trace": 0.7158181963548
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 1.0939615208429529e-16,
+          "trace": 0.23756848343307624
+        }
+      },
+      "dimension": 96,
+      "ell": 1,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.767010304550751,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.005597942682965429,
+            "omitted_trace_fraction": 0.00584958319669746,
+            "retained_trace": 0.9513835198810509,
+            "retained_trace_fraction": 0.9941504168033025
+          },
+          "32": {
+            "omitted_trace": 0.00035316033448651307,
+            "omitted_trace_fraction": 0.0003690357110369719,
+            "retained_trace": 0.9566283022295298,
+            "retained_trace_fraction": 0.999630964288963
+          },
+          "48": {
+            "omitted_trace": 2.173557614271182e-05,
+            "omitted_trace_fraction": 2.27126407281456e-05,
+            "retained_trace": 0.9569597269878736,
+            "retained_trace_fraction": 0.9999772873592718
+          },
+          "64": {
+            "omitted_trace": 4.225886962583303e-07,
+            "omitted_trace_fraction": 4.415850387802696e-07,
+            "retained_trace": 0.95698103997532,
+            "retained_trace_fraction": 0.9999995584149612
+          },
+          "80": {
+            "omitted_trace": 1.3094525463941409e-09,
+            "omitted_trace_fraction": 1.3683154769641595e-09,
+            "retained_trace": 0.9569814612545637,
+            "retained_trace_fraction": 0.9999999986316845
+          },
+          "96": {
+            "omitted_trace": 1.1102230246251565e-16,
+            "omitted_trace_fraction": 1.1601301258757553e-16,
+            "retained_trace": 0.9569814625640162,
+            "retained_trace_fraction": 0.9999999999999999
+          }
+        },
+        "smallest_eigenvalue": 3.0984452383214967e-19,
+        "trace": 0.9569814625640163
+      },
+      "symmetry_relative_residual": 1.1544609642499713e-16
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 3.027072924568667e-16,
+          "trace": 0.000894101616391596
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.6397069280469363e-16,
+          "trace": 0.2997515462901296
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.8300133766255097e-16,
+          "trace": 0.17014128686980376
+        }
+      },
+      "dimension": 96,
+      "ell": 2,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.23263197777503858,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.003580842677934959,
+            "omitted_trace_fraction": 0.007606079127145382,
+            "retained_trace": 0.4672060920983899,
+            "retained_trace_fraction": 0.9923939208728546
+          },
+          "32": {
+            "omitted_trace": 0.0001744960912081206,
+            "omitted_trace_fraction": 0.00037064769286986537,
+            "retained_trace": 0.47061243868511676,
+            "retained_trace_fraction": 0.9996293523071301
+          },
+          "48": {
+            "omitted_trace": 8.975524157017745e-06,
+            "omitted_trace_fraction": 1.9064938922491757e-05,
+            "retained_trace": 0.47077795925216787,
+            "retained_trace_fraction": 0.9999809350610775
+          },
+          "64": {
+            "omitted_trace": 2.451598847819092e-07,
+            "omitted_trace_fraction": 5.207448777192317e-07,
+            "retained_trace": 0.4707866896164401,
+            "retained_trace_fraction": 0.9999994792551222
+          },
+          "80": {
+            "omitted_trace": 8.567744846921244e-10,
+            "omitted_trace_fraction": 1.819877361505764e-09,
+            "retained_trace": 0.4707869339195504,
+            "retained_trace_fraction": 0.9999999981801226
+          },
+          "96": {
+            "omitted_trace": 0.0,
+            "omitted_trace_fraction": 0.0,
+            "retained_trace": 0.4707869347763251,
+            "retained_trace_fraction": 1.0000000000000004
+          }
+        },
+        "smallest_eigenvalue": 1.5199127836238808e-17,
+        "trace": 0.4707869347763249
+      },
+      "symmetry_relative_residual": 2.0359321054662158e-16
+    },
+    {
+      "atomic_number": 53,
+      "central_index": 9,
+      "consumer_sum_relative_residual": 0.0,
+      "consumers": {
+        "first_readout": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 4.79111681385382e-16,
+          "trace": 0.0006719701667179528
+        },
+        "second_interaction_message": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.2552105905650517e-16,
+          "trace": 0.10000673656820486
+        },
+        "second_interaction_skip": {
+          "aggregate_weight": 1.0,
+          "psd_relative_violation": 0.0,
+          "symmetry_relative_residual": 2.803430318280403e-16,
+          "trace": 0.04366559163196785
+        }
+      },
+      "dimension": 96,
+      "ell": 3,
+      "psd_relative_violation": 0.0,
+      "spectrum": {
+        "largest_eigenvalue": 0.06596456676495187,
+        "ranks": {
+          "16": {
+            "omitted_trace": 0.0019076628149366226,
+            "omitted_trace_fraction": 0.013216059356135937,
+            "retained_trace": 0.14243663555195404,
+            "retained_trace_fraction": 0.9867839406438641
+          },
+          "32": {
+            "omitted_trace": 0.00012773880112920688,
+            "omitted_trace_fraction": 0.0008849591052396378,
+            "retained_trace": 0.14421655956576146,
+            "retained_trace_fraction": 0.9991150408947603
+          },
+          "48": {
+            "omitted_trace": 6.383129619424999e-06,
+            "omitted_trace_fraction": 4.422155701086663e-05,
+            "retained_trace": 0.14433791523727124,
+            "retained_trace_fraction": 0.9999557784429891
+          },
+          "64": {
+            "omitted_trace": 1.4500827794083904e-07,
+            "omitted_trace_fraction": 1.0045999709130227e-06,
+            "retained_trace": 0.14434415335861273,
+            "retained_trace_fraction": 0.9999989954000291
+          },
+          "80": {
+            "omitted_trace": 4.31296248715185e-10,
+            "omitted_trace_fraction": 2.9879687219714572e-09,
+            "retained_trace": 0.14434429793559442,
+            "retained_trace_fraction": 0.9999999970120312
+          },
+          "96": {
+            "omitted_trace": 1.1102230246251565e-16,
+            "omitted_trace_fraction": 7.691492058821886e-16,
+            "retained_trace": 0.14434429836689056,
+            "retained_trace_fraction": 0.9999999999999992
+          }
+        },
+        "smallest_eigenvalue": 3.575953850433138e-18,
+        "trace": 0.14434429836689067
+      },
+      "symmetry_relative_residual": 1.3117310478966984e-16
+    }
+  ],
+  "claim_boundary": "This is an exact immediate-consumer coefficient environment under the declared frozen discrete edge measure and output metric. It uses no DFT labels and does not certify continuous radial integration. It does not establish finite shared-projector fidelity, speedup, useful compression, cross-checkpoint recurrence, or physical interpretation.",
+  "data_usage": {
+    "formal_message_measure": "uniform-species-radial-quadrature-o3-haar-v1",
+    "label_fitting": false,
+    "radial_integration_scope": "exact_for_frozen_discrete_radial_quadrature",
+    "rank_selection_from_evaluation_data": false,
+    "reference_energies_read": false,
+    "reference_forces_read": false,
+    "xyz_bytes_hashed_only": true
+  },
+  "device": "cpu",
+  "dtype": "float64",
+  "environment": {
+    "executable": "/work/joy/envs/mace-odt-cpu/bin/python",
+    "git": {
+      "commit": null,
+      "status": null
+    },
+    "hostname": "cnode403",
+    "packages": {
+      "ase": "3.29.0",
+      "e3nn": "0.4.4",
+      "mace-torch": "0.3.16",
+      "numpy": "2.2.6",
+      "opt-einsum": "3.4.0",
+      "scipy": "1.15.3",
+      "torch": "2.6.0+cpu",
+      "torch-ema": "0.3",
+      "torchmetrics": "1.9.0"
+    },
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "schema_version": 1,
+    "slurm": {
+      "job_id": "409289",
+      "node_list": "cnode403",
+      "partition": "compute"
+    },
+    "torch": {
+      "cuda_available": false,
+      "cuda_version": null,
+      "default_dtype": "torch.float32",
+      "device_count": 0,
+      "version": "2.6.0+cpu"
+    }
+  },
+  "exactness_tolerance": 5e-09,
+  "experiment": "T3_exact_immediate_consumer_environment",
+  "gate_passed": true,
+  "maximum_numerical_residual": 6.983308566920505e-16,
+  "method": {
+    "analytic_product_coefficients": true,
+    "coefficient_only": true,
+    "complete_output_irreps": true,
+    "consumer_blocks_weighted": false,
+    "consumer_weight_scope": "global_by_consumer",
+    "consumer_weights": {
+      "first_readout": 1.0,
+      "second_interaction_message": 1.0,
+      "second_interaction_skip": 1.0
+    },
+    "message_measure_schema": "uniform-species-radial-quadrature-o3-haar-v1",
+    "message_measure_scope": "exact_finite_radial_quadrature_one_directed_edge",
+    "message_unique_linear_maps": 128,
+    "order_weight_scope": "global_by_order",
+    "order_weights": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "order_weights_applied_to_consumer_blocks": true,
+    "output_metric": {
+      "first_readout": {
+        "dimension": 1,
+        "metric": "euclidean_identity",
+        "normalization": "checkpoint_scaled_node_output"
+      },
+      "second_interaction_message": {
+        "dimension": 1536,
+        "layout": [
+          96,
+          16
+        ],
+        "metric": "euclidean_identity_on_complete_irreps",
+        "normalization": "one_free_directed_edge"
+      },
+      "second_interaction_skip": {
+        "dimension": 96,
+        "metric": "euclidean_identity",
+        "normalization": "per_node_output"
+      }
+    },
+    "readout_checkpoint_scale_included": true,
+    "uses_discovery_geometries": false,
+    "uses_reference_labels": false
+  },
+  "npz": "results/mace_off23_small_immediate_consumer_environment.npz",
+  "npz_sha256": "514cb527bad7fe3a0c8ccc4d5d1882bd27e895547bbcd7a30468e5128b332d71",
+  "provenance": {
+    "checkpoint_candidates": [
+      "/work/joy/cache/mace-odt/mace/MACE-OFF23_small.model"
+    ],
+    "checkpoint_sha256": "165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f",
+    "immediate_consumer_source": "/work/joy/mace-odt/src/mace_odt/immediate_consumer.py",
+    "immediate_consumer_source_sha256": "4e0f54655dc0f81c8a741d9db22a6e2d83d1686ab18584b417ff30b63cd3d276",
+    "manifest": "results/mace_off23_discovery_manifest_128.json",
+    "manifest_sha256": "a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c",
+    "radial_npz": "results/mace_off23_small_radial_interface.npz",
+    "radial_npz_sha256": "564776ad8169c5f26cee0335adbe497f64facbee5073dabf5341109aeff8be86",
+    "runner_source": "/work/joy/mace-odt/src/mace_odt/cli/immediate_consumer_environment.py",
+    "runner_source_sha256": "0500007c90f8019cf31cb7fd7ebb5ec1f1e48fcd057f2ceb6a666671d9914526",
+    "xyz": "/work/joy/datasets/mace-off23/test_large_neut_all.xyz",
+    "xyz_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e"
+  },
+  "radial_checkpoint_validation": {
+    "maximum_curve_absolute_error": 0.0,
+    "maximum_metric_relative_error": 1.3356580933756386e-14
+  },
+  "rank_ladder": [
+    16,
+    32,
+    48,
+    64,
+    80,
+    96
+  ],
+  "requested_model": "small",
+  "required_consumers": [
+    "first_readout",
+    "second_interaction_message",
+    "second_interaction_skip"
+  ],
+  "schema_version": 1
+}

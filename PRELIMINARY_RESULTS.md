@@ -343,3 +343,36 @@ tail bound for its declared immediate-consumer norm.
 4. Evaluate its basis through the same frozen T2 rank ladder.
 5. Only after the exact method passes, compile the sixteen nonlinear-head
    preactivations as a factorized degree-nine target.
+
+## Exact immediate-consumer environment, September 24
+
+The exact coefficient environment now compiles for the frozen MACE-OFF23 small
+checkpoint. It includes the first scaled readout, the second interaction
+message density, and the second interaction skip path. The message term uses a
+declared one-free-directed-edge measure with the frozen 128-point radial
+quadrature and uniform checkpoint species weights. It uses no DFT labels and no
+discovery geometry activations.
+
+All exactness gates passed. The largest independent numerical residual was
+`1.06e-14`, against a tolerance of `5e-9`. The analytic product coefficients
+reconstruct the native product, the complete-irrep message pullback is rotation
+invariant, the environment trace identity holds, and the tied-projector loss
+obeys the degree-three factor bound under the declared metric.
+
+The spectrum is sharply concentrated. For the preregistered globally
+trace-balanced consumer objective, the retained trace fractions are:
+
+| Multiplicity rank per irrep | Retained trace fraction |
+|---:|---:|
+| 16 | 0.997706 |
+| 32 | 0.999868 |
+| 48 | 0.999992 |
+| 64 | 0.999999805 |
+| 80 | 0.999999998 |
+| 96 | 1.0 |
+
+This is encouraging evidence that the exact declared objective has a compact
+functional spectrum. It is not yet evidence that finite simultaneous
+projection preserves the full potential. The frozen 64-structure held-out
+rank ladder is the deciding test. It evaluates energy, forces, all three
+immediate consumers, and the final nonlinear output without retraining.
