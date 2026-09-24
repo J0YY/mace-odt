@@ -1,6 +1,8 @@
 import numpy as np
+import pytest
 
 from mace_odt.cli.immediate_consumer_fidelity import (
+    CONSUMERS,
     METHOD_DATA,
     METHOD_EXACT,
     METHOD_EXACT_BALANCED,
@@ -10,6 +12,7 @@ from mace_odt.cli.immediate_consumer_fidelity import (
     decision_summary,
     load_basis_sets,
     tensor_fidelity,
+    validate_frozen_protocol,
 )
 
 
@@ -152,3 +155,76 @@ def test_decision_rules_use_named_baselines_and_full_rank_gate() -> None:
     failed_gate = decision_summary(records, (64, 80), False)
     assert not failed_gate["weak_feasibility_passed"]
     assert not failed_gate["strong_feasibility_passed"]
+    assert not failed_gate["exact_no_go_triggered"]
+
+
+def test_invalid_full_rank_replay_cannot_emit_no_go() -> None:
+    records = []
+    for rank in (64, 80):
+        records.extend(
+            [
+                record(METHOD_EXACT, rank, 4e-3, 5e-5),
+                record(METHOD_LOCAL, rank, 2e-3, 6e-5),
+                record(METHOD_FIRST, rank, 3e-3, 6e-5),
+                record(METHOD_DATA, rank, 1e-3, 6e-5),
+            ]
+        )
+    assert decision_summary(records, (64, 80), True)["exact_no_go_triggered"]
+    assert not decision_summary(records, (64, 80), False)["exact_no_go_triggered"]
+
+
+def test_frozen_protocol_rejects_changed_environment_objective() -> None:
+    method = {
+        "consumer_weights": {
+            "first_readout": 1.0,
+            "second_interaction_message": 1.0,
+            "second_interaction_skip": 1.0,
+        },
+        "order_weights": {"1": 1.0, "2": 1.0, "3": 1.0},
+    }
+    objective = {
+        "experiment": "T3_exact_immediate_consumer_environment",
+        "exactness_tolerance": 5e-9,
+        "required_consumers": list(CONSUMERS),
+        "method": method,
+    }
+    protocol = {
+        "experiment": "T4_exact_immediate_consumer_heldout_fidelity",
+        "model": "MACE-OFF23-small",
+        "dtype": "float64",
+        "device": "cpu",
+        "environment_objective": objective,
+        "evaluation": {
+            "ranks": [64, 80, 96],
+            "random_seeds": [17],
+            "primary_exact_method": METHOD_EXACT,
+        },
+    }
+    environment = {
+        "experiment": objective["experiment"],
+        "exactness_tolerance": objective["exactness_tolerance"],
+        "required_consumers": objective["required_consumers"],
+        "method": method,
+        "requested_model": "small",
+        "dtype": "float64",
+        "device": "cpu",
+        "rank_ladder": [64, 80, 96],
+    }
+    kwargs = {
+        "model": "small",
+        "device": "cpu",
+        "dtype": "float64",
+        "ranks": [64, 80, 96],
+        "random_seeds": [17],
+    }
+    validate_frozen_protocol(protocol, environment, **kwargs)
+    changed = dict(environment)
+    changed["method"] = {
+        **method,
+        "consumer_weights": {
+            **method["consumer_weights"],
+            "first_readout": 2.0,
+        },
+    }
+    with pytest.raises(ValueError, match="consumer_weights"):
+        validate_frozen_protocol(protocol, changed, **kwargs)

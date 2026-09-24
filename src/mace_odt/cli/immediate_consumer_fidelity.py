@@ -45,6 +45,61 @@ CONSUMERS = (
 )
 
 
+def validate_frozen_protocol(
+    protocol: Mapping[str, Any],
+    environment: Mapping[str, Any],
+    *,
+    model: str,
+    device: str,
+    dtype: str,
+    ranks: list[int],
+    random_seeds: list[int],
+) -> None:
+    """Bind the evaluator to the declared T4 objective before loading structures."""
+    if protocol.get("experiment") != "T4_exact_immediate_consumer_heldout_fidelity":
+        raise ValueError("unsupported frozen fidelity protocol")
+    if protocol.get("model") != f"MACE-OFF23-{model}":
+        raise ValueError("frozen protocol and requested model differ")
+    if protocol.get("dtype") != dtype or protocol.get("device") != device:
+        raise ValueError("frozen protocol and requested numerical mode differ")
+    evaluation = protocol.get("evaluation")
+    if not isinstance(evaluation, Mapping):
+        raise ValueError("frozen protocol omitted evaluation settings")
+    if evaluation.get("ranks") != ranks:
+        raise ValueError("frozen protocol and requested rank ladder differ")
+    if evaluation.get("random_seeds") != random_seeds:
+        raise ValueError("frozen protocol and requested random seeds differ")
+    if evaluation.get("primary_exact_method") != METHOD_EXACT:
+        raise ValueError("frozen protocol selected a different primary method")
+
+    objective = protocol.get("environment_objective")
+    if not isinstance(objective, Mapping):
+        raise ValueError("frozen protocol omitted the exact environment objective")
+    if environment.get("experiment") != objective.get("experiment"):
+        raise ValueError("exact environment experiment differs from frozen protocol")
+    if environment.get("exactness_tolerance") != objective.get(
+        "exactness_tolerance"
+    ):
+        raise ValueError("exact environment tolerance differs from frozen protocol")
+    if environment.get("required_consumers") != objective.get("required_consumers"):
+        raise ValueError("exact environment consumers differ from frozen protocol")
+    method = environment.get("method")
+    expected_method = objective.get("method")
+    if not isinstance(method, Mapping) or not isinstance(expected_method, Mapping):
+        raise ValueError("exact environment method metadata is incomplete")
+    for name, expected in expected_method.items():
+        if method.get(name) != expected:
+            raise ValueError(
+                f"exact environment method field {name} differs from frozen protocol"
+            )
+    if environment.get("requested_model") != model:
+        raise ValueError("exact environment and requested model differ")
+    if environment.get("dtype") != dtype or environment.get("device") != device:
+        raise ValueError("exact environment and requested numerical mode differ")
+    if environment.get("rank_ladder") != ranks:
+        raise ValueError("exact environment and requested rank ladder differ")
+
+
 def _scalar(archive: Any, name: str) -> str:
     if name not in archive:
         raise ValueError(f"artifact omitted {name}")
@@ -428,7 +483,7 @@ def decision_summary(
         continue_not_compact = (
             full_rank_gate and not strong and rank_80_relative and rank_80_absolute
         )
-        no_go = all(
+        no_go = full_rank_gate and all(
             _record_lookup(records, METHOD_EXACT, rank)["force_rmse_eV_per_A"][
                 "mean"
             ]
@@ -513,6 +568,7 @@ def main() -> None:
     parser.add_argument("--first-branch-environment-json", type=Path, required=True)
     parser.add_argument("--multi-consumer-npz", type=Path, required=True)
     parser.add_argument("--multi-consumer-json", type=Path, required=True)
+    parser.add_argument("--protocol-config", type=Path, required=True)
     parser.add_argument("--model", choices=("small",), default="small")
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--dtype", choices=("float64",), default="float64")
@@ -530,11 +586,21 @@ def main() -> None:
 
     evaluation_manifest = json.loads(args.manifest.read_text())
     discovery_manifest = json.loads(args.discovery_manifest.read_text())
+    protocol = json.loads(args.protocol_config.read_text())
     if discovery_manifest.get("evaluation_manifest_sha256") != sha256_file(args.manifest):
         raise ValueError("discovery manifest is not bound to the evaluation manifest")
     environment_json = json.loads(args.environment_json.read_text())
     first_json = json.loads(args.first_branch_environment_json.read_text())
     multi_json = json.loads(args.multi_consumer_json.read_text())
+    validate_frozen_protocol(
+        protocol,
+        environment_json,
+        model=args.model,
+        device=args.device,
+        dtype=args.dtype,
+        ranks=args.ranks,
+        random_seeds=args.random_seeds,
+    )
     if environment_json.get("experiment") != "T3_exact_immediate_consumer_environment":
         raise ValueError("unsupported exact environment")
     if not environment_json.get("gate_passed"):

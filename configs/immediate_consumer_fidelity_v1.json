@@ -21,6 +21,35 @@
       "binding_rule": "The environment JSON must pass its exactness gate and its embedded npz_sha256 must match the NPZ before any held-out configuration is evaluated. The basis is frozen by that pair before T4 begins."
     }
   },
+  "environment_objective": {
+    "experiment": "T3_exact_immediate_consumer_environment",
+    "exactness_tolerance": 5e-9,
+    "required_consumers": [
+      "first_readout",
+      "second_interaction_message",
+      "second_interaction_skip"
+    ],
+    "method": {
+      "analytic_product_coefficients": true,
+      "coefficient_only": true,
+      "complete_output_irreps": true,
+      "consumer_blocks_weighted": false,
+      "consumer_weight_scope": "global_by_consumer",
+      "consumer_weights": {
+        "first_readout": 1.0,
+        "second_interaction_message": 1.0,
+        "second_interaction_skip": 1.0
+      },
+      "message_measure_schema": "uniform-species-radial-quadrature-o3-haar-v1",
+      "message_measure_scope": "exact_finite_radial_quadrature_one_directed_edge",
+      "order_weight_scope": "global_by_order",
+      "order_weights": {"1": 1.0, "2": 1.0, "3": 1.0},
+      "order_weights_applied_to_consumer_blocks": true,
+      "readout_checkpoint_scale_included": true,
+      "uses_discovery_geometries": false,
+      "uses_reference_labels": false
+    }
+  },
   "evaluation": {
     "configuration_count": 64,
     "ranks": [16, 32, 48, 64, 80, 96],

@@ -38,7 +38,7 @@ require_sha256 results/mace_off23_small_global_environment_balanced.json 082deae
 require_sha256 results/mace_off23_small_global_environment_balanced.npz 8f7a2225580d60b526554885f7a80e3339b19027a7537e51eae95932f08219a9
 require_sha256 results/mace_off23_small_multi_consumer_environment_128.json 26c1ca405ccfa09b66438c301548dd686e36ca897c6fd62450b27d9fab89f46f
 require_sha256 results/mace_off23_small_multi_consumer_environment_128.npz b2e7cb6457a8584bc754a1fe1301d719f800b26b2fd5676bb17383db314badb2
-require_sha256 configs/immediate_consumer_fidelity_v1.json 1ea5cdea05b7054f787d2b88cda3045ae14ff505300e990e63af6e7a1ddb570b
+require_sha256 configs/immediate_consumer_fidelity_v1.json 5e2bb8cd5dd1ea88e53bca94fe4864bea19c81aa64559019a8fd3331343ad775
 
 test -s results/mace_off23_small_immediate_consumer_environment.json
 test -s results/mace_off23_small_immediate_consumer_environment.npz
@@ -55,6 +55,7 @@ test ! -e results/mace_off23_small_immediate_consumer_fidelity_64.json
   --first-branch-environment-json results/mace_off23_small_global_environment_balanced.json \
   --multi-consumer-npz results/mace_off23_small_multi_consumer_environment_128.npz \
   --multi-consumer-json results/mace_off23_small_multi_consumer_environment_128.json \
+  --protocol-config configs/immediate_consumer_fidelity_v1.json \
   --model small \
   --device cpu \
   --dtype float64 \
