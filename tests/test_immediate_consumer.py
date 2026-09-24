@@ -214,3 +214,12 @@ def test_shape_and_provenance_checks_reject_mismatches() -> None:
             edge_index,
             cutoff,
         )
+    with pytest.raises(TypeError, match="torch.int64"):
+        action(
+            density,
+            attrs,
+            edge_attrs,
+            edge_feats,
+            edge_index.to(torch.int32),
+            cutoff,
+        )

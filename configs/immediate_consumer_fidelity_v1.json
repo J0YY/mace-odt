@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "experiment": "T4_exact_immediate_consumer_heldout_fidelity",
+  "frozen_date": "2026-09-24",
+  "model": "MACE-OFF23-small",
+  "dtype": "float64",
+  "device": "cpu",
+  "inputs": {
+    "checkpoint_sha256": "165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f",
+    "dataset_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e",
+    "evaluation_manifest_sha256": "5e7314c41fedbb614a457d7f4b91c87e615f08f95a35e843b224cd0b9aa82835",
+    "discovery_manifest_sha256": "a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c",
+    "radial_npz_sha256": "564776ad8169c5f26cee0335adbe497f64facbee5073dabf5341109aeff8be86",
+    "first_branch_environment_json_sha256": "082deae6e5f1d1416c15d0c28c201348ed208a7773b93965bee89886c86267f8",
+    "first_branch_environment_npz_sha256": "8f7a2225580d60b526554885f7a80e3339b19027a7537e51eae95932f08219a9",
+    "multi_consumer_json_sha256": "26c1ca405ccfa09b66438c301548dd686e36ca897c6fd62450b27d9fab89f46f",
+    "multi_consumer_npz_sha256": "b2e7cb6457a8584bc754a1fe1301d719f800b26b2fd5676bb17383db314badb2",
+    "immediate_consumer_environment": {
+      "json": "results/mace_off23_small_immediate_consumer_environment.json",
+      "npz": "results/mace_off23_small_immediate_consumer_environment.npz",
+      "binding_rule": "The environment JSON must pass its exactness gate and its embedded npz_sha256 must match the NPZ before any held-out configuration is evaluated. The basis is frozen by that pair before T4 begins."
+    }
+  },
+  "evaluation": {
+    "configuration_count": 64,
+    "ranks": [16, 32, 48, 64, 80, 96],
+    "primary_rank": 64,
+    "secondary_rank": 80,
+    "full_rank": 96,
+    "primary_exact_method": "exact_immediate_consumer_trace_balanced",
+    "secondary_exact_ablation": "exact_immediate_consumer_equal",
+    "random_seeds": [20260924, 20260925, 20260926, 20260927, 20260928],
+    "methods": [
+      "exact_immediate_consumer_trace_balanced",
+      "exact_immediate_consumer_equal",
+      "exact_consumer_first_readout",
+      "exact_consumer_second_interaction_message",
+      "exact_consumer_second_interaction_skip",
+      "local_radial_svd",
+      "first_branch_global",
+      "total_energy_gradient",
+      "canonical_reverse",
+      "canonical_random_seed_20260924",
+      "canonical_random_seed_20260925",
+      "canonical_random_seed_20260926",
+      "canonical_random_seed_20260927",
+      "canonical_random_seed_20260928"
+    ],
+    "metrics": [
+      "energy_absolute_error_per_atom_eV",
+      "force_rmse_eV_per_A",
+      "first_readout_rmse",
+      "second_message_rmse",
+      "second_skip_rmse",
+      "final_output_rmse"
+    ],
+    "uses_reference_labels": false,
+    "offset_fitting": false,
+    "rank_selection_on_evaluation": false
+  },
+  "statistics": {
+    "paired_bootstrap_replicates": 10000,
+    "paired_sign_flip_replicates": 10000,
+    "confidence_level": 0.95,
+    "force_comparison_orientation": "baseline_minus_primary_exact",
+    "named_nonrandom_baselines": [
+      "local_radial_svd",
+      "first_branch_global",
+      "total_energy_gradient"
+    ],
+    "multiple_comparison_correction": "Holm across the three rank-64 named force comparisons and separately across the two rank-80 fallback comparisons",
+    "random_and_reverse_role": "sanity controls only, not go or no-go prerequisites"
+  },
+  "decision": {
+    "prerequisite": "The exact-environment gate and rank-96 full-rank replay gate must pass. Rank-96 maximum energy or force error must be at most 5e-9 in stored eV or eV/A units.",
+    "weak_go": "At rank 64, exact_immediate_consumer_trace_balanced must have lower mean force RMSE than all three named nonrandom baselines. Every paired baseline-minus-exact force 95 percent interval must be strictly positive and every Holm-adjusted sign-flip p-value must be below 0.05. The paired local-minus-exact energy interval lower bound may be no smaller than minus 10 percent of the local mean energy error.",
+    "strong_go": "The weak_go rule must pass. In addition, rank-64 mean force RMSE must be at most 0.001 eV/A and mean absolute energy error must be at most 0.0001 eV/atom.",
+    "continue_not_compact": "If rank 64 misses strong_go but the primary trace-balanced exact method beats local and total-energy-gradient force RMSE with positive paired intervals and Holm-adjusted sign-flip p-values below 0.05 at rank 80, and reaches the strong absolute thresholds at rank 80, continue only as a direction-selection result. Do not claim a compact representation.",
+    "no_go": "Trigger no-go for this exact immediate-consumer objective and frozen measure if the primary trace-balanced exact method fails to beat both local_radial_svd and total_energy_gradient in mean force RMSE at both ranks 64 and 80. The raw equal ablation cannot rescue this preregistered primary no-go.",
+    "invalid": "Any provenance mismatch, discovery/evaluation overlap, nonfinite value, incomplete configuration or method coverage, failed exact-environment gate, or failed full-rank gate invalidates the run before scientific interpretation."
+  },
+  "claim_boundary": "This is a frozen-model held-out fidelity test of exact coefficient objectives under one declared discrete measure. Global trace balancing is the preregistered primary method and raw equal weighting is an ablation. It is not label fitting, rank tuning, a speedup measurement, a storage result, a cross-checkpoint recurrence result, or a physical interpretation result."
+}

@@ -135,6 +135,18 @@ def _dimension(value: Any, name: str) -> int:
     return result
 
 
+def _irrep_signature(value: Any, name: str) -> tuple[tuple[int, int, int], ...]:
+    try:
+        result = tuple(
+            (int(item.mul), int(item.ir.l), int(item.ir.p)) for item in value
+        )
+    except (AttributeError, TypeError, ValueError) as exc:
+        raise TypeError(f"cannot infer {name} irreps") from exc
+    if not result or any(multiplicity < 1 for multiplicity, _, _ in result):
+        raise ValueError(f"{name} irreps must be nonempty")
+    return result
+
+
 def _floating_reference(module: torch.nn.Module) -> torch.Tensor | None:
     for value in module.parameters():
         if value.is_floating_point():
@@ -225,14 +237,8 @@ class ImmediateConsumerAction(torch.nn.Module):
             raise ValueError("edge_attrs shape does not match the compiled fragment")
         if edge_feats.shape != (edges, shape.edge_feature_dimension):
             raise ValueError("edge_feats shape does not match the compiled fragment")
-        if edge_index.dtype not in (
-            torch.int8,
-            torch.int16,
-            torch.int32,
-            torch.int64,
-            torch.uint8,
-        ):
-            raise TypeError("edge_index must be integral")
+        if edge_index.dtype != torch.int64:
+            raise TypeError("edge_index must use torch.int64")
         if edges and (
             int(edge_index.min().detach().cpu()) < 0
             or int(edge_index.max().detach().cpu()) >= nodes
@@ -466,6 +472,19 @@ def compile_mace_off23_immediate_consumer(
         raise TypeError("interaction1 target does not form a rectangular field")
     if int(getattr(contractions[0], "num_features", -1)) != channels:
         raise TypeError("product0 contraction and interaction1 channel counts differ")
+    scalar_signature = ((channels, 0, 1),)
+    complete_density_signature = tuple(
+        (channels, ell, 1 if ell % 2 == 0 else -1) for ell in range(4)
+    )
+    if _irrep_signature(interaction1.node_feats_irreps, "product channel") != scalar_signature:
+        raise TypeError("the shared product must contain only even scalar channels")
+    if _irrep_signature(interaction1.target_irreps, "interaction target") != complete_density_signature:
+        raise TypeError("interaction1 must output complete ell-zero through ell-three irreps")
+    spherical_irreps = getattr(getattr(model, "spherical_harmonics", None), "irreps_out", None)
+    if _irrep_signature(spherical_irreps, "spherical harmonics") != tuple(
+        (1, ell, 1 if ell % 2 == 0 else -1) for ell in range(4)
+    ):
+        raise TypeError("checkpoint spherical harmonics must be complete through ell three")
     num_elements = int(getattr(model, "atomic_numbers").numel())
     readout_linear = getattr(readout0, "linear", None)
     if readout_linear is None:
@@ -612,12 +631,8 @@ def _message_pullback(
     ):
         raise ValueError("message Jacobian has an unexpected shape")
     gram = jacobian.T @ jacobian
-    x = torch.randn(
-        channels, generator=generator, dtype=zero.dtype, device=zero.device
-    )
-    y = torch.randn(
-        channels, generator=generator, dtype=zero.dtype, device=zero.device
-    )
+    x = torch.randn(channels, generator=generator, dtype=zero.dtype).to(zero.device)
+    y = torch.randn(channels, generator=generator, dtype=zero.dtype).to(zero.device)
     response = message(x)
     pullback = torch.dot(x, gram @ x)
     pullback_residual = float(
@@ -751,9 +766,11 @@ def build_immediate_consumer_environment(
         * action.readout_scale
     ).detach()
     readout_gram = readout_response @ readout_response.T
+    readout_scale_residual = 0.0
     skip_grams: list[torch.Tensor] = []
     pullback_residuals: list[float] = []
     linearity_residuals: list[float] = []
+    dense_action_residuals: list[float] = []
     for central in range(shape.num_elements):
         onehot = torch.zeros(
             (shape.channels, shape.num_elements),
@@ -765,6 +782,29 @@ def build_immediate_consumer_environment(
         if response.shape != (shape.channels, shape.channels):
             raise ValueError("skip response has an unexpected shape")
         skip_grams.append(response @ response.T)
+        probe = torch.randn(
+            shape.channels, generator=generator, dtype=reference.dtype
+        ).to(reference.device)
+        readout_value = action.readout_scale * action.readout0(probe[None]).reshape(-1)
+        readout_quadratic = torch.dot(probe, readout_gram @ probe)
+        pullback_residuals.append(
+            float(
+                torch.abs(torch.dot(readout_value, readout_value) - readout_quadratic)
+                / torch.clamp(torch.abs(torch.dot(readout_value, readout_value)), min=1.0)
+            )
+        )
+        one_node_attrs = torch.zeros(
+            (1, shape.num_elements), dtype=reference.dtype, device=reference.device
+        )
+        one_node_attrs[0, central] = 1.0
+        skip_value = action.interaction1.skip_tp(probe[None], one_node_attrs).reshape(-1)
+        skip_quadratic = torch.dot(probe, skip_grams[-1] @ probe)
+        pullback_residuals.append(
+            float(
+                torch.abs(torch.dot(skip_value, skip_value) - skip_quadratic)
+                / torch.clamp(torch.abs(torch.dot(skip_value, skip_value)), min=1.0)
+            )
+        )
 
     message_grams = [
         torch.zeros_like(readout_gram) for _ in range(shape.num_elements)
@@ -803,6 +843,60 @@ def build_immediate_consumer_environment(
                     )
                     pullback_residuals.append(rotated_pullback)
                     linearity_residuals.append(rotated_linearity)
+
+                if not dense_action_residuals:
+                    context_density = torch.randn(
+                        2,
+                        shape.channels,
+                        shape.angular_dimension,
+                        generator=generator,
+                        dtype=reference.dtype,
+                        device="cpu",
+                    ).to(reference.device)
+                    attrs, edge_attrs, edge_feats, edge_index, cutoff = context
+                    observed = action(
+                        context_density,
+                        attrs,
+                        edge_attrs,
+                        edge_feats,
+                        edge_index,
+                        cutoff,
+                    )
+                    compiled_raw = _evaluate_product0_coefficients(
+                        orders_t, context_density, attrs
+                    )
+                    expected_product = action.product0.linear(compiled_raw)
+                    expected_readout = (
+                        action.readout_scale * action.readout0(expected_product)
+                    )
+                    expected_density, expected_skip = action.interaction1(
+                        node_attrs=attrs,
+                        node_feats=expected_product,
+                        edge_attrs=edge_attrs,
+                        edge_feats=edge_feats,
+                        edge_index=edge_index,
+                        cutoff=cutoff,
+                        first_layer=False,
+                    )
+                    dense_action_residuals.extend(
+                        [
+                            _relative_residual(observed.product0, expected_product),
+                            _relative_residual(
+                                action.readout_scale * observed.readout0,
+                                expected_readout,
+                            ),
+                            _relative_residual(
+                                observed.interaction1_density, expected_density
+                            ),
+                            _relative_residual(
+                                observed.interaction1_skip, expected_skip
+                            ),
+                        ]
+                    )
+                    readout_scale_residual = _relative_residual(
+                        action.readout_scale * observed.readout0,
+                        expected_readout,
+                    )
 
     output_metrics: dict[str, dict[int, np.ndarray]] = {
         name: {} for name in required_consumers
@@ -946,6 +1040,7 @@ def build_immediate_consumer_environment(
 
     maximum_pullback = max(pullback_residuals, default=0.0)
     maximum_linearity = max(linearity_residuals, default=0.0)
+    maximum_dense_action = max(dense_action_residuals, default=0.0)
     maximum_trace = max(trace_residuals, default=0.0)
     maximum_equivariance = max(
         [angular_check or 0.0, *equivariance_residuals], default=0.0
@@ -954,6 +1049,18 @@ def build_immediate_consumer_environment(
     checks = {
         "analytic_coefficient_reconstruction_relative_residual": {
             "value": reconstruction_residual,
+            "tolerance": exactness_tolerance,
+        },
+        "complete_irrep_metric_relative_residual": {
+            "value": angular_check or 0.0,
+            "tolerance": exactness_tolerance,
+        },
+        "dense_action_relative_residual": {
+            "value": maximum_dense_action,
+            "tolerance": exactness_tolerance,
+        },
+        "readout_scale_relative_residual": {
+            "value": readout_scale_residual,
             "tolerance": exactness_tolerance,
         },
         "consumer_linearity_relative_residual": {

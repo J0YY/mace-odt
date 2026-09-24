@@ -12,6 +12,24 @@ import torch
 from mace_odt.decomposition import symmetric_eigh_descending
 
 
+def _validated_output_metric(
+    output_metric: np.ndarray, channels: int
+) -> np.ndarray:
+    metric = np.asarray(output_metric, dtype=np.float64)
+    if metric.shape != (channels, channels) or not np.isfinite(metric).all():
+        raise ValueError("the output metric must be a finite channel Gram")
+    scale = max(float(np.linalg.norm(metric)), np.finfo(np.float64).tiny)
+    symmetry_residual = float(np.linalg.norm(metric - metric.T) / scale)
+    if symmetry_residual > 1e-10:
+        raise ValueError("the output metric must be symmetric")
+    metric = 0.5 * (metric + metric.T)
+    eigenvalues = np.linalg.eigvalsh(metric)
+    spectral_scale = max(float(np.max(np.abs(eigenvalues))), 1.0)
+    if float(eigenvalues[0]) < -1e-12 * spectral_scale:
+        raise ValueError("the output metric must be positive semidefinite")
+    return metric
+
+
 def angular_ell_labels(block_dimensions: Mapping[int, int]) -> np.ndarray:
     labels: list[int] = []
     for ell, dimension in block_dimensions.items():
@@ -61,12 +79,7 @@ def native_slot_marginal(
         raise ValueError("the radial metric does not match the coefficient axes")
     if output_metric is None:
         output_metric = np.ones((channels, channels), dtype=np.float64)
-    output_metric = np.asarray(output_metric, dtype=np.float64)
-    if (
-        output_metric.shape != (channels, channels)
-        or not np.isfinite(output_metric).all()
-    ):
-        raise ValueError("the output metric must be a finite channel Gram")
+    output_metric = _validated_output_metric(output_metric, channels)
 
     moved = np.moveaxis(coefficients, 1 + slot, 1)
     moved_t = torch.as_tensor(moved, dtype=torch.float64)
@@ -113,12 +126,7 @@ def coefficient_norm_squared(
     order = coefficients.ndim - 1
     if output_metric is None:
         output_metric = np.ones((channels, channels), dtype=np.float64)
-    output_metric = np.asarray(output_metric, dtype=np.float64)
-    if (
-        output_metric.shape != (channels, channels)
-        or not np.isfinite(output_metric).all()
-    ):
-        raise ValueError("the output metric must be a finite channel Gram")
+    output_metric = _validated_output_metric(output_metric, channels)
     coefficients_t = torch.as_tensor(coefficients, dtype=torch.float64)
     metric_t = torch.as_tensor(metric_by_angular, dtype=torch.float64)
     output_t = torch.as_tensor(output_metric, dtype=torch.float64)

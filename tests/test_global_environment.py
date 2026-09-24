@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 from mace_odt.decomposition import apply_projector_all_slots, slot_marginal
 from mace_odt.global_environment import (
@@ -120,6 +121,24 @@ def test_vector_output_metric_matches_explicit_whitened_outputs() -> None:
         expected_norm,
         atol=1e-9,
     )
+
+
+def test_output_metric_rejects_non_gram_matrices() -> None:
+    coefficients = np.ones((2, 1), dtype=np.float64)
+    metric = np.ones((2, 2, 1), dtype=np.float64)
+    with pytest.raises(ValueError, match="symmetric"):
+        coefficient_norm_squared(
+            coefficients,
+            metric,
+            output_metric=np.asarray([[1.0, 1.0], [0.0, 1.0]]),
+        )
+    with pytest.raises(ValueError, match="positive semidefinite"):
+        native_slot_marginal(
+            coefficients,
+            metric,
+            slot=0,
+            output_metric=np.asarray([[1.0, 0.0], [0.0, -1.0]]),
+        )
 
 
 def test_equivariant_extraction_traces_magnetic_indices() -> None:
