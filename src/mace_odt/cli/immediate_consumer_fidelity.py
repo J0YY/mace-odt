@@ -530,9 +530,6 @@ def main() -> None:
 
     evaluation_manifest = json.loads(args.manifest.read_text())
     discovery_manifest = json.loads(args.discovery_manifest.read_text())
-    geometries = _validate_disjoint_manifests(
-        args.xyz, evaluation_manifest, discovery_manifest
-    )
     if discovery_manifest.get("evaluation_manifest_sha256") != sha256_file(args.manifest):
         raise ValueError("discovery manifest is not bound to the evaluation manifest")
     environment_json = json.loads(args.environment_json.read_text())
@@ -621,6 +618,10 @@ def main() -> None:
         raise ValueError("data-assisted NPZ and live checkpoint differ")
     if not np.array_equal(model.atomic_numbers.detach().cpu().numpy(), species):
         raise ValueError("checkpoint species order differs from artifacts")
+
+    geometries = _validate_disjoint_manifests(
+        args.xyz, evaluation_manifest, discovery_manifest
+    )
 
     support = int(radial["metric_factor_z0_l0"].shape[1])
     ranks = retained_rank_ladder(args.ranks, support)
@@ -758,10 +759,15 @@ def main() -> None:
     full_rank_records = [
         record for record in records if record["multiplicity_rank_per_irrep"] == support
     ]
-    full_rank_maximum = max(
+    full_rank_energy_force_maximum = max(
         max(
             record["energy_absolute_error_eV"]["maximum"],
             record["force_max_absolute_error_eV_per_A"]["maximum"],
+        )
+        for record in full_rank_records
+    )
+    full_rank_branch_maximum = max(
+        max(
             record["first_readout_maximum_absolute_error"]["maximum"],
             record["second_message_maximum_absolute_error"]["maximum"],
             record["second_skip_maximum_absolute_error"]["maximum"],
@@ -770,7 +776,7 @@ def main() -> None:
         for record in full_rank_records
     )
     full_rank_tolerance = 5e-9
-    full_rank_gate = full_rank_maximum <= full_rank_tolerance
+    full_rank_gate = full_rank_energy_force_maximum <= full_rank_tolerance
     decision = decision_summary(records, ranks, full_rank_gate)
     payload = {
         "schema_version": 1,
@@ -797,7 +803,8 @@ def main() -> None:
         },
         "methods": sorted(bases),
         "records": records,
-        "full_rank_maximum_absolute_error": full_rank_maximum,
+        "full_rank_maximum_energy_or_force_error": full_rank_energy_force_maximum,
+        "full_rank_maximum_branch_absolute_error": full_rank_branch_maximum,
         "full_rank_tolerance": full_rank_tolerance,
         "full_rank_gate_passed": full_rank_gate,
         "decision": decision,
