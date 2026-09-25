@@ -44,7 +44,13 @@ No spectrum is interpreted before the exactness gates above it pass.
 | T0 discovery split | Passed | Athena job 400135, 128 configurations disjoint from the frozen 64 |
 | T1 data-assisted readout-gradient pilot | Passed | Athena job 400136, every numerical and provenance gate passed |
 | T2 frozen full-model fidelity | Passed weak criterion | Athena job 400155, final consumer-specific ablation included |
-| Exact two-layer coefficient extension | Not started | Separate from the tangent pilot and required for an ODT theorem claim |
+| T3 exact immediate-consumer environment | Passed | Exact coefficient and symmetry gates passed |
+| T4 exact immediate-consumer fidelity | No-go for frozen objective | Athena job 409297, full-rank replay passed |
+| T5 existing-artifact diagnosis | Next | Principal angles, tail analysis, hybrid matrices, and rank allocation |
+| T6 tangent calibration | Planned | Energy and force tangent loss with force-probe convergence |
+| T7 graph-pullback projector optimization | Planned | Joint species and irrep Grassmann optimization |
+| T8 fresh held-out decision | Planned | New manifest disjoint from all inspected configurations |
+| Exact two-layer coefficient extension | Deferred | Required only for a stricter weight-only polynomial theorem route |
 
 ## Common experimental rules
 
@@ -321,3 +327,27 @@ The smallest credible preliminary package contains five artifacts.
 
 Items 1 through 3 are exactness results. Item 4 is the first compression result.
 Item 5 is the first interpretation result.
+
+## T5 through T8: objective pivot after exact T4
+
+T4 showed that an almost vanishing immediate-consumer coefficient tail does
+not guarantee full-model force fidelity. The next objective therefore pulls
+energy and force sensitivity through the complete frozen graph while retaining
+the same canonical function space and symmetry-tied projectors.
+
+The complete mathematical objective, its relation to Dooms et al., the
+Dooms-proximity ablation, leakage controls, numerical gates, and decision rules
+are specified in `GRAPH_PULLBACK_OBJECTIVE.md`.
+
+The experimental order is fixed.
+
+1. T5 uses existing artifacts only and makes no new held-out claim.
+2. T6 checks whether full-graph tangent loss predicts finite projector loss.
+3. T7 optimizes only the tied subspaces while keeping MACE frozen.
+4. T8 evaluates the frozen candidates once on a new disjoint manifest.
+
+The study must report D0 structural ODT, G0 total-energy-gradient, D1-E
+energy-only spectral pullback, D1-EF energy-force spectral pullback, D2 joint
+tangent graph-pullback ODT, and D3 finite ODT-parameterized compression as
+distinct methods. D1-E and D1-EF reveal whether a useful force-aware method can
+retain the literal spectral mechanics of Dooms Algorithms 1 through 3.

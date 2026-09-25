@@ -278,3 +278,43 @@ frozen measure. The broader lean-space hypothesis remains open. The experiment
 shows that the exact local coefficient tail is not by itself a reliable proxy
 for whole-model force error. The next credible method should combine exact
 equivariant consumer structure with global energy or force sensitivity.
+
+### 2026-09-24: objective pivot after T4
+
+The failure is now localized more precisely. T4 does not reject generalized
+ODT or a compact functional representation. It rejects a geometry-free
+immediate-consumer coefficient norm as the final ranking rule for the nonlinear
+full-model projector.
+
+The exact structural environment remains useful as a gauge-stable physical
+coordinate system and as a regularizer. It has no established bound on the
+finite full-model energy and force error. The next primary objective is the
+full-graph tangent energy and force loss under the actual tied projector. The
+definitive empirical target is the finite frozen-model energy and force loss.
+
+This pivot is farther from the literal Dooms Algorithms 1 through 3 because it
+uses molecular geometries, full-model derivatives, and a joint Grassmann
+optimization rather than one weight-only bond eigendecomposition. It remains
+close to the central Dooms principle because the subspace is selected by
+pulling the rest of the computation back to a registered internal cut.
+
+The next study will include a Dooms-proximity ablation. A global-adjoint block
+environment with spectral truncation will be compared directly with the full
+tied tangent objective and finite projector optimization. This will determine
+whether the departure from the original algorithm is necessary. The frozen
+mathematical objective and experiment order are recorded in
+`GRAPH_PULLBACK_OBJECTIVE.md`.
+
+The frozen ladder now separates six objects. D0 is the structural coefficient
+environment. G0 is the existing total-energy-gradient baseline. D1-E is a
+spectral activation-aware energy pullback. D1-EF adds force sensitivity while
+retaining spectral truncation. D2 optimizes the coherent tangent objective
+jointly. D3 optimizes the finite frozen-model loss.
+
+A full claim about the minimum departure from Dooms requires D1-E, D1-EF, D2,
+and D3 all to complete under matched discovery folds. If one is infeasible, the
+result will be described only as the earliest supported method among completed
+rungs. D1-EF succeeding without a D2 or D3 gain would support a close spectral
+extension. A D2 gain would show that the separable spectral upper bound is
+insufficient. A result requiring D3 would support structured frozen compression
+rather than a classical ODT generalization.

@@ -7,6 +7,8 @@ Contents:
 - `MACE_ODT_Research_Specification.md`: research design, mathematics, source mapping, experiments, and limitations.
 - `RESEARCH_LOG.md`: dated decisions, hypotheses, and claim boundaries.
 - `EXPERIMENTS.md`: executable experiment map with gates and required outputs.
+- `GRAPH_PULLBACK_OBJECTIVE.md`: post-T4 mathematical objective, Dooms-distance
+  ladder, and frozen T5 through T8 decision protocol.
 - `PRELIMINARY_RESULTS.md`: real-checkpoint results and their claim boundaries.
 - `ALGORITHM_ALIGNMENT.md`: exact mapping from Dooms Algorithms 1 through 3 to
   the tied mixed-order MACE implementation.
