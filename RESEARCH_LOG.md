@@ -262,3 +262,19 @@ environment discounts. A full-model method must add the later consumer to the
 environment objective or solve an explicitly multi-consumer projection
 problem. Reusing the first-branch score is not sufficient evidence for general
 MACE compression.
+
+### 2026-09-24: exact immediate-consumer held-out verdict
+
+The frozen 64-structure evaluation completed and its rank-96 replay gate
+passed. The trace-balanced exact method reached force RMSE `0.008060 eV/A` and
+energy error `0.000568 eV/atom` at rank 64. It was better than the prior exact
+first-branch basis, but worse than local radial SVD and the
+total-energy-gradient basis. At rank 80 it met the absolute error targets, with
+force RMSE `0.000986 eV/A` and energy error `0.0000429 eV/atom`, but it still
+lost both relative comparisons.
+
+The preregistered outcome is no-go for this immediate-consumer objective and
+frozen measure. The broader lean-space hypothesis remains open. The experiment
+shows that the exact local coefficient tail is not by itself a reliable proxy
+for whole-model force error. The next credible method should combine exact
+equivariant consumer structure with global energy or force sensitivity.

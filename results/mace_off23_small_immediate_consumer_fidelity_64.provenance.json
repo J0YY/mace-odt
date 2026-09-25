@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment": "T4_exact_immediate_consumer_heldout_fidelity",
+  "result": {
+    "path": "results/mace_off23_small_immediate_consumer_fidelity_64.json",
+    "sha256": "e871b41b41caf089b1a98acad881ad14007d9e1d4aca7304bec99ed50d16d86f"
+  },
+  "frozen_protocol": {
+    "path": "configs/immediate_consumer_fidelity_v1.json",
+    "sha256": "5e2bb8cd5dd1ea88e53bca94fe4864bea19c81aa64559019a8fd3331343ad775"
+  },
+  "implementation": {
+    "git_commit": "7edd2c7e55efbb9d3ac8e0bafbf128d595f1cb1a",
+    "evaluator_path": "src/mace_odt/cli/immediate_consumer_fidelity.py",
+    "evaluator_sha256": "354e0f833ff2a0292777906690972f43308f307136a9c1b47dffa3c0d99cd324",
+    "runner_path": "cluster/immediate_consumer_fidelity.sbatch",
+    "runner_sha256": "3a51ee8affb05440b7d663c808fd9265c99ddd1034b3e22074f3ff3222ee419d"
+  },
+  "inputs": {
+    "checkpoint_sha256": "165cce4cfec5a34b9c64d4ebf95de15d71106bb584b7291c8470f0749977c46f",
+    "dataset_sha256": "c65a7fcf9140fb127ccc6cc7fce243ab5052665a8741516cde143592a319745e",
+    "evaluation_manifest_sha256": "5e7314c41fedbb614a457d7f4b91c87e615f08f95a35e843b224cd0b9aa82835",
+    "discovery_manifest_sha256": "a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c",
+    "radial_npz_sha256": "564776ad8169c5f26cee0335adbe497f64facbee5073dabf5341109aeff8be86",
+    "exact_environment_json_sha256": "f3037883b3baa116d8512aa88e340f7fea040561e1d0000fa90cbe0dea76cc51",
+    "exact_environment_npz_sha256": "514cb527bad7fe3a0c8ccc4d5d1882bd27e895547bbcd7a30468e5128b332d71",
+    "first_branch_environment_npz_sha256": "8f7a2225580d60b526554885f7a80e3339b19027a7537e51eae95932f08219a9",
+    "data_assisted_environment_npz_sha256": "b2e7cb6457a8584bc754a1fe1301d719f800b26b2fd5676bb17383db314badb2"
+  },
+  "slurm": {
+    "job_id": "409297",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:12:27",
+    "node": "cnode403",
+    "remote_log_path": "/work/joy/mace-odt/logs/run_1790279570_200924282.out",
+    "remote_log_sha256": "de7eddd1a55b509714b92a10d2031b765ce483ec75e76ebd6de47e3a5fb41ff3"
+  },
+  "validation": {
+    "configuration_count": 64,
+    "method_count": 14,
+    "rank_count": 6,
+    "record_count": 84,
+    "all_values_finite": true,
+    "discovery_evaluation_index_overlap": 0,
+    "discovery_evaluation_exact_structure_overlap": 0,
+    "full_rank_gate_passed": true,
+    "full_rank_maximum_energy_or_force_error": 2.409014765447637e-9,
+    "full_rank_tolerance": 5e-9,
+    "independent_result_audit_passed": true
+  },
+  "decision": {
+    "weak_feasibility_passed": false,
+    "strong_feasibility_passed": false,
+    "continue_not_compact_passed": false,
+    "exact_no_go_triggered": true,
+    "scope": "No-go for the frozen exact immediate-consumer objective and measure, not for the broader lean physically motivated representation hypothesis."
+  }
+}

@@ -331,6 +331,9 @@ tail bound for its declared immediate-consumer norm.
 | `results/mace_off23_discovery_manifest_128.json` | `a624def23b363155da28a148998802438ab756f7c698161bc388ebed230d653c` |
 | `results/mace_off23_small_multi_consumer_environment_128.json` | `26c1ca405ccfa09b66438c301548dd686e36ca897c6fd62450b27d9fab89f46f` |
 | `results/mace_off23_small_multi_consumer_fidelity_64.json` | `8e0741c33dd64066e160b33703e956c3306ec9f2282c45bf28325ba9b56db32c` |
+| `results/mace_off23_small_immediate_consumer_environment.json` | `f3037883b3baa116d8512aa88e340f7fea040561e1d0000fa90cbe0dea76cc51` |
+| `results/mace_off23_small_immediate_consumer_fidelity_64.json` | `e871b41b41caf089b1a98acad881ad14007d9e1d4aca7304bec99ed50d16d86f` |
+| `results/mace_off23_small_immediate_consumer_fidelity_64.provenance.json` | `2039abbf7dc73043b45d02a5f34260ede71fc9842ce4df48917bafdc8d6fb555` |
 
 ## Immediate next implementation
 
@@ -376,3 +379,45 @@ functional spectrum. It is not yet evidence that finite simultaneous
 projection preserves the full potential. The frozen 64-structure held-out
 rank ladder is the deciding test. It evaluates energy, forces, all three
 immediate consumers, and the final nonlinear output without retraining.
+
+## Held-out immediate-consumer result, September 24
+
+The frozen T4 run completed on all 64 held-out structures and all 84 declared
+method-rank combinations. The rank-96 replay gate passed. Its largest stored
+energy or force discrepancy was `2.41e-9`, below the frozen `5e-9` tolerance.
+
+The preregistered trace-balanced exact method did not pass the weak or strong
+rank-64 rule. It also triggered the preregistered no-go rule for this objective
+and measure.
+
+| Method | Rank | Force RMSE, eV/A | Energy error, eV/atom |
+|---|---:|---:|---:|
+| Exact immediate consumers, trace balanced | 64 | 0.008060 | 0.000568 |
+| Local radial SVD | 64 | 0.007631 | 0.000420 |
+| Prior exact first-branch basis | 64 | 0.009254 | 0.000754 |
+| Total-energy-gradient basis | 64 | 0.004040 | 0.000151 |
+| Exact immediate consumers, trace balanced | 80 | 0.000986 | 0.0000429 |
+| Local radial SVD | 80 | 0.000913 | 0.0000986 |
+| Total-energy-gradient basis | 80 | 0.000446 | 0.0000146 |
+
+At rank 64, the exact method significantly improved on the prior exact
+first-branch basis. The paired force improvement was `0.001194 eV/A`, with a
+95 percent interval from `0.000580` to `0.001818` and Holm-adjusted
+`p = 0.0010`. This confirms that including the actual downstream message and
+skip consumers improves the earlier exact ODT construction.
+
+It did not beat local radial SVD or the total-energy-gradient basis. The paired
+force difference against local radial SVD was negative and its interval crossed
+zero. The total-energy-gradient basis was decisively better at ranks 64 and 80.
+At rank 80, the exact method met the absolute force and energy targets, but it
+still lost both preregistered relative comparisons. It therefore cannot be
+claimed as a superior compact direction-selection rule.
+
+The result rejects the present exact immediate-consumer objective under its
+frozen discrete measure. It does not reject the broader goal of a lean
+physically motivated MACE parameterization. The sharp coefficient spectrum was
+not enough to predict held-out force fidelity. Small omitted directions can be
+amplified by simultaneous intervention at every node and by the remaining
+nonlinear graph. A successful analytic objective will need a closer proxy for
+whole-model force sensitivity, or a hybrid with the total-energy-gradient
+basis, while preserving the exact equivariant block structure.
